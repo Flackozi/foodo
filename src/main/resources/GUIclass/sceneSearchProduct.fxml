@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo_fx.GUIclass.SearchProductControllerGUI">
+   <children>
+      <ImageView fitHeight="845.0" fitWidth="390.0">
+         <image>
+            <Image url="@../image/sceneSearchProduct.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttonSearchProduct" layoutY="775.0" mnemonicParsing="false" onAction="#showSearchProduct" prefHeight="68.0" prefWidth="138.0" style="-fx-background-color: 0000;" />
+      <Button fx:id="buttonPantry" layoutX="251.0" layoutY="775.0" mnemonicParsing="false" onAction="#showPantry" prefHeight="68.0" prefWidth="138.0" style="-fx-background-color: 0000;" />
+      <Button fx:id="buttonHome" layoutX="139.0" layoutY="760.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="112.0" style="-fx-background-color: 0000; -fx-background-radius: 60;" />
+      <TextField layoutX="33.0" layoutY="206.0" prefHeight="32.0" prefWidth="217.0" />
+      <Button fx:id="buttonSearch" layoutX="254.0" layoutY="208.0" mnemonicParsing="false" onAction="#actionSearch" prefHeight="32.0" prefWidth="52.0" style="-fx-background-color: 0000;" />
+      <CheckBox layoutX="78.0" layoutY="275.0" mnemonicParsing="false" />
+      <CheckBox layoutX="78.0" layoutY="309.0" mnemonicParsing="false" />
+      <CheckBox layoutX="149.0" layoutY="275.0" mnemonicParsing="false" />
+      <CheckBox layoutX="149.0" layoutY="309.0" mnemonicParsing="false" />
+      <CheckBox layoutX="217.0" layoutY="275.0" mnemonicParsing="false" />
+      <CheckBox layoutX="217.0" layoutY="309.0" mnemonicParsing="false" />
+      <CheckBox layoutX="290.0" layoutY="275.0" mnemonicParsing="false" />
+      <TableView layoutX="14.0" layoutY="374.0" prefHeight="200.0" prefWidth="353.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Name" />
+          <TableColumn prefWidth="75.0" text="Quantity" />
+            <TableColumn prefWidth="75.0" text="Expiration" />
+            <TableColumn prefWidth="127.0" text="Type of food" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo_fx.GUIclass.homeUserControllerGUI">
+   <children>
+      <ImageView fitHeight="844.0" fitWidth="390.0">
+         <image>
+            <Image url="@../image/sceneHomeUser.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="bottonPantryUser" layoutX="36.0" layoutY="312.0" mnemonicParsing="false" onAction="#showPantryUser" prefHeight="132.0" prefWidth="152.0" style="-fx-background-color: 00000; -fx-background-radius: 23;" />
+      <Button fx:id="bottonProfileUser" layoutX="203.0" layoutY="312.0" mnemonicParsing="false" onAction="#showProfileUser" prefHeight="132.0" prefWidth="152.0" style="-fx-background-color: 00000;" />
+      <Button fx:id="bottonKitchenUser" layoutX="36.0" layoutY="471.0" mnemonicParsing="false" onAction="#showKitchenUser" prefHeight="132.0" prefWidth="152.0" style="-fx-background-color: 00000; -fx-background-radius: 23;" />
+      <Button fx:id="bottonMyChefUser" layoutX="203.0" layoutY="471.0" mnemonicParsing="false" onAction="#showMyCHefUser" prefHeight="132.0" prefWidth="152.0" style="-fx-background-color: 00000; -fx-background-radius: 23;" />
+   </children>
+</AnchorPane>

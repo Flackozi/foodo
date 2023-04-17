@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo_fx.GUIclass.pantryControllerGUI">
+   <children>
+      <ImageView fitHeight="844.0" fitWidth="390.0">
+         <image>
+            <Image url="@../image/FOODO.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="HomeButton" layoutX="139.0" layoutY="760.0" mnemonicParsing="false" onAction="#backHome" prefHeight="86.0" prefWidth="112.0" style="-fx-background-radius: 60; -fx-background-color: 0000;" />
+      <Button fx:id="addProduct" layoutX="263.0" layoutY="317.0" mnemonicParsing="false" onAction="#addNewProduct" prefHeight="43.0" prefWidth="41.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />
+      <TableView fx:id="tablePantry" layoutX="17.0" layoutY="422.0" prefHeight="128.0" prefWidth="357.0">
+        <columns>
+          <TableColumn fx:id="Name" minWidth="69.0" prefWidth="33.0" text="Name" />
+            <TableColumn fx:id="Quantity" minWidth="69.0" prefWidth="33.0" text="Quantity" />
+            <TableColumn fx:id="Expiration" minWidth="69.0" prefWidth="33.0" text="Expiration" />
+            <TableColumn fx:id="TypeOfFood" minWidth="135.0" prefWidth="149.0" text="Type of Food" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="typeOfFOod" layoutX="136.0" layoutY="355.0" prefHeight="37.0" prefWidth="119.0" />
+      <Button fx:id="deleteButton" layoutX="14.0" layoutY="588.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="28.0" prefWidth="84.0" style="-fx-background-color: #19E1E1; -fx-background-radius: 60;" text="DELETE">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="nameField" layoutX="15.0" layoutY="296.0" prefHeight="37.0" prefWidth="112.0" />
+      <TextField fx:id="quantityField" layoutX="15.0" layoutY="355.0" prefHeight="37.0" prefWidth="112.0" />
+      <TextField fx:id="expirationField" layoutX="136.0" layoutY="296.0" prefHeight="37.0" prefWidth="112.0" />
+      <Button fx:id="searchProductButton" layoutY="775.0" mnemonicParsing="false" onAction="#searchProduct" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />
+      <Button fx:id="showPantryButton" layoutX="248.0" layoutY="775.0" mnemonicParsing="false" onAction="#showPantry" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />
+   </children>
+</Pane>
