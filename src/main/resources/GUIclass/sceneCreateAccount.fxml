@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo_fx.GUIclass.CreateAccountControllerGUI">
+<AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.GUIclass.CreateAccountControllerGUI">
    <children>
       <ImageView fitHeight="844.0" fitWidth="390.0">
          <image>

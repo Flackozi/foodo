@@ -4,10 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="ciao">
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="2-inserimento classe product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/CreateAccountControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/CreateAccountControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/ControllerAppl/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/ChefMainPageControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ChefMainPageControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/CreateAccountControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/CreateAccountControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/SearchProductControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/SearchProductControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/accessControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/AccessControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/controllerGUIMainUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ControllerGUIMainUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/homeUserControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/HomeUserControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/loginControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/LoginControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/myKitchenControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/MyKitchenControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/pantryControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/PantryControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/profileControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/GUIclass/searchControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/SearchControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/Session/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/Session/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/bean/ChefBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/ChefBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/bean/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/LoginBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/bean/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/UserBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/connection/ConnectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/ConnectionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/connection/connection.properties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/connection.properties.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/dao/LoginDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/LoginDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/dao/chefDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/chefDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/dao/queries/basicQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/basicQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/dao/userDAOJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/userDAOJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/exception/ConnectionDbException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/exception/ConnectionDbException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/engineering/exception/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/exception/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/model/ChefModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/ChefModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/model/GenericUserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/GenericUserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo_fx/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/chefMainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/chefMainPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/mainSceneLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/mainSceneLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/myKitchen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/myKitchen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneCreateAccount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneCreateAccount.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneHomeUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneHomeUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneMyPantry.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneMyPantry.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneSearchProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneSearchProduct.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +76,14 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/flavi/Desktop/mysql-connector-j-8.0.31/mysql-connector-j-8.0.31.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
@@ -62,8 +109,25 @@
       <option name="presentableId" value="Default" />
       <updated>1681722011948</updated>
       <workItem from="1681722015322" duration="1591000" />
-      <workItem from="1681726624825" duration="97000" />
+      <workItem from="1681726624825" duration="631000" />
+      <workItem from="1681727662245" duration="737000" />
+      <workItem from="1681747954474" duration="2496000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1681726734682</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681726734682</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2-inserimento classe product">
+      <created>1681726894646</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681726894647</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +146,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ciao" />
-    <option name="LAST_COMMIT_MESSAGE" value="ciao" />
+    <MESSAGE value="1" />
+    <MESSAGE value="2-inserimento classe product" />
+    <option name="LAST_COMMIT_MESSAGE" value="2-inserimento classe product" />
   </component>
 </project>
