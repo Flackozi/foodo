@@ -21,4 +21,6 @@ public class basicQueries {
         String sql="SELECT * FROM chef_table WHERE username = '" + username + "';";
         return stmt.executeQuery(sql);
     }
+
+
 }

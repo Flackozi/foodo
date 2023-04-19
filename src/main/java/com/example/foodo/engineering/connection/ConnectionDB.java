@@ -59,7 +59,7 @@ public class ConnectionDB {
 
     private static Properties loadProperties() throws IOException{
         Properties properties= new Properties();
-        FileInputStream fileInputStream= new FileInputStream("src/main/java/com/example/foodo_fx/engineering/connection/connection.properties.properties");
+        FileInputStream fileInputStream= new FileInputStream("src/main/java/com/example/foodo/engineering/connection/connection.properties.properties");
         properties.load(fileInputStream);
         return properties;
     }

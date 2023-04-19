@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.GUIclass.ProfileControllerGUI">
    <children>
@@ -12,5 +14,35 @@
             <Image url="@../image/sceneProfile.png" />
          </image>
       </ImageView>
+      <Button fx:id="btnLoadImage" layoutX="119.0" layoutY="155.0" minWidth="50.0" mnemonicParsing="false" onAction="#LoadImage" prefHeight="155.0" prefWidth="152.0" style="-fx-background-color: 0000;" styleClass="transparent">
+         <graphic>
+            <ImageView fitHeight="102.0" fitWidth="102.0">
+               <image>
+                  <Image url="@../image/user(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="labelUsername" layoutX="140.0" layoutY="347.0" prefHeight="25.0" prefWidth="236.0">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelFavoriteFood" layoutX="163.0" layoutY="407.0" prefHeight="30.0" prefWidth="197.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTypeOfDiet" layoutX="153.0" layoutY="481.0" prefHeight="25.0" prefWidth="215.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAccountType" layoutX="164.0" layoutY="550.0" prefHeight="25.0" prefWidth="215.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnHome" layoutX="136.0" layoutY="755.0" mnemonicParsing="false" onAction="#BackHome" prefHeight="89.0" prefWidth="116.0" style="-fx-background-color: 0000; -fx-background-radius: 30;" />
    </children>
 </AnchorPane>
