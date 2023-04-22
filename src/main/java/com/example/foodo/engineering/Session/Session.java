@@ -35,7 +35,7 @@ public class Session {
         return userBean;
     }
 
-    public ChefBean getShelterBean() {
+    public ChefBean getChefBean() {
         return chefBean;
     }
 

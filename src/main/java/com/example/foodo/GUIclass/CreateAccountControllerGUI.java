@@ -18,6 +18,19 @@ import java.io.IOException;
 
 public class CreateAccountControllerGUI {
 
+    @FXML
+    private Label registrationMessageLabel;
+
+    @FXML
+    private PasswordField setPasswordField;
+    @FXML
+    private TextField usernameTextField;
+
+    @FXML
+    private TextField favoriteFoodTextField;
+
+    @FXML
+    private TextField typeOfDietTextField;
 
     @FXML
     public void backHome(ActionEvent event) throws IOException {
@@ -58,23 +71,6 @@ public class CreateAccountControllerGUI {
         window.setScene(scenePantryView);
         window.show();
     }
-
-    @FXML
-    private Label registrationMessageLabel;
-
-    @FXML
-    private PasswordField setPasswordField;
-    @FXML
-    private TextField usernameTextField;
-
-    @FXML
-    private TextField favoriteFoodTextField;
-
-    @FXML
-    private TextField typeOfDietTextField;
-
-
-
 
 
     public void confirmButtonAction(ActionEvent event) throws IOException{
