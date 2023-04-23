@@ -1,7 +1,7 @@
 package com.example.foodo.engineering.dao;
 
 import com.example.foodo.engineering.connection.ConnectionDB;
-import com.example.foodo.engineering.dao.queries.basicQueries;
+import com.example.foodo.engineering.dao.queries.BasicQueries;
 
 import java.sql.ResultSet;
 import java.sql.*;
@@ -16,7 +16,7 @@ public class LoginDAO {
         int type = 0;
         try{
             statement = ConnectionDB.getConnection();
-            ResultSet resultSet = basicQueries.checkLogin(statement, username, password);
+            ResultSet resultSet = BasicQueries.checkLogin(statement, username, password);
 
             //verifico resultset
 //            if(!resultSet.first()){

@@ -1,6 +1,6 @@
 package com.example.foodo.engineering.dao;
 
-import com.example.foodo.engineering.dao.queries.basicQueries;
+import com.example.foodo.engineering.dao.queries.BasicQueries;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.engineering.exception.NotFoundException;
 import com.example.foodo.model.ChefModel;
@@ -26,7 +26,7 @@ public class ChefDAO {
         try{
             stmt=ConnectionDB.getConnection();
 
-            ResultSet resultSet= basicQueries.selectChefByUsername(stmt, username);
+            ResultSet resultSet= BasicQueries.selectChefByUsername(stmt, username);
 
             if(!resultSet.first()){
                 throw new NotFoundException("No chef find with the username: " + username);

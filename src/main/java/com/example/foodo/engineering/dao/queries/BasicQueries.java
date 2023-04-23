@@ -2,10 +2,11 @@ package com.example.foodo.engineering.dao.queries;
 
 import java.sql.SQLException;
 import java.sql.*;
+import java.util.Date;
 
-public class basicQueries {
+public class BasicQueries {
 
-    private basicQueries(){}
+    private BasicQueries(){}
 
     public static ResultSet checkLogin(Statement statement, String username, String password) throws SQLException {
         String sql = "SELECT CASE WHEN EXISTS (SELECT username, password FROM chef_table WHERE username = '" + username + "' AND password = '" + password + "') THEN 1 WHEN EXISTS (SELECT username, password FROM user_table WHERE username = '" + username + "' AND password = '" + password + "') THEN 2 END;";
@@ -22,5 +23,8 @@ public class basicQueries {
         return stmt.executeQuery(sql);
     }
 
-
+    public static void InsertProduct(Statement stmt, String name, int quantity, Date expiration, String type) throws SQLException{
+        String updateStatement  = String.format("INSERT INTO pantry set name=%s, quantity=%d, expiration=%d/%m/%Y type=%s", name, quantity, expiration, type);
+        stmt.executeQuery(updateStatement);
+    }
 }

@@ -1,7 +1,7 @@
 package com.example.foodo.engineering.dao;
 
 import com.example.foodo.engineering.connection.ConnectionDB;
-import com.example.foodo.engineering.dao.queries.basicQueries;
+import com.example.foodo.engineering.dao.queries.BasicQueries;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.model.UserModel;
 import com.example.foodo.engineering.exception.NotFoundException;
@@ -21,7 +21,7 @@ public class userDAOJDBC {
             statement = ConnectionDB.getConnection();
 
             //result set query
-            ResultSet resultSet = basicQueries.selectUserByUsername(statement, username);
+            ResultSet resultSet = BasicQueries.selectUserByUsername(statement, username);
 
             //verifico result set vuoto
             if(!resultSet.first()){

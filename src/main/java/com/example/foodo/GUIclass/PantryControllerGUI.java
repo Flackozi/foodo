@@ -1,9 +1,11 @@
 package com.example.foodo.GUIclass;
+import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.model.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -86,6 +88,27 @@ public class PantryControllerGUI implements Initializable {
     }
 
     public void addNewProduct(ActionEvent actionEvent) {
+        ProductBean productBean = new ProductBean();
+
+        //prendiamo i dati e li mettiamo nella bean
+
+        productBean.setName(nameText.getText());
+        productBean.setQuantity(quantityText.getText());
+        productBean.setTypeOfFood(typePicker.getValue());
+
+        int year;
+        int month;
+        int day;
+
+        year = expirationDate.getValue().getYear();
+        month = expirationDate.getValue().getMonthValue();
+        day = expirationDate.getValue().getDayOfMonth();
+
+        productBean.setDay(day);
+        productBean.setMonth(month);
+        productBean.setYear(year);
+
+        //continuare da qua: observer/ controller app
     }
 
     public void deleteProduct(ActionEvent actionEvent) {
@@ -96,4 +119,5 @@ public class PantryControllerGUI implements Initializable {
 
     public void showPantry(ActionEvent actionEvent) {
     }
+
 }

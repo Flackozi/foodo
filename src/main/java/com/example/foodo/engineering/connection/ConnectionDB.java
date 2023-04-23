@@ -63,5 +63,9 @@ public class ConnectionDB {
         properties.load(fileInputStream);
         return properties;
     }
+
+    public static PreparedStatement insertProduct() throws SQLException{
+        return connection.prepareStatement("INSERT INTO pantry (name, quantity, expiration, type) VALUES (?,?,?,?)");
+    }
 }
 

@@ -1,13 +1,15 @@
 package com.example.foodo.model;
 
+import java.util.Date;
+
 public class Product {
     private String Name;
-    private String Quantity;
+    private int Quantity;
     private String TypeOfFood;
-    private String Expiration;
+    private Date Expiration;
 
 
-    public Product(String name, String quantity, String expiration, String typeOfFood) {
+    public Product(String name, int quantity, Date expiration, String typeOfFood) {
         this.Name = name;
         this.Quantity = quantity;
         this.TypeOfFood = typeOfFood;
@@ -18,7 +20,7 @@ public class Product {
         return Name;
     }
 
-    public String getQuantity() {
+    public int getQuantity() {
         return Quantity;
     }
 
@@ -26,7 +28,7 @@ public class Product {
         return TypeOfFood;
     }
 
-    public String getExpiration() {
-        return Expiration;
+    public java.sql.Date getExpiration() {
+        return (java.sql.Date) Expiration;
     }
 }
