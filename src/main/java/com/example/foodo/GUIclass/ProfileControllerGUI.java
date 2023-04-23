@@ -4,6 +4,7 @@ import com.example.foodo.ControllerAppl.ProfileController;
 import com.example.foodo.Main;
 import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.ImageConverterSupport;
+import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.UserBean;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,6 +37,13 @@ public class ProfileControllerGUI {
     @FXML
     private Label labelAccountType;
 
+    @FXML
+    private Label labelWorkplace;
+
+    @FXML
+    private Label labelTypeOfCuisine;
+
+
     private UserBean userBean;
     private Parent root;
     private Stage stage;
@@ -61,6 +69,15 @@ public class ProfileControllerGUI {
         labelTypeOfDiet.setText(userBean.getUserTypeOfDietBean());
         labelAccountType.setText("utente base");
 //        userImg.setImage(ImageConverterSupport.fromFileToImage(userBean.getProfileImg()));
+    }
+
+    public void setChefInfoProfile(ChefBean chefBean) throws IOException {
+        ProfileController profileController = new ProfileController();
+        chefBean= Session.getCurrentSession().getChefBean();
+        labelUsername.setText(chefBean.getUsername());
+        labelTypeOfCuisine.setText(chefBean.getTypeOfCuisine());
+        labelWorkplace.setText(chefBean.getWorkplace());
+        labelAccountType.setText("chef");
     }
 
 

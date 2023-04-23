@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class chefDAO {
+public class ChefDAO {
 
     private static final String CUISINE="typeOfCuisine";
     private static final String WORKPLACE="workplace";
@@ -18,7 +18,7 @@ public class chefDAO {
 
 
 
-    private chefDAO(){}
+    private ChefDAO(){}
 
     public static ChefModel retrieveChefByUsername(String username) throws NotFoundException {
         Statement stmt;

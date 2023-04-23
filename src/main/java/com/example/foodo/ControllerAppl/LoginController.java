@@ -6,7 +6,7 @@ import com.example.foodo.engineering.bean.LoginBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.dao.LoginDAO;
 import com.example.foodo.engineering.dao.userDAOJDBC;
-import com.example.foodo.engineering.dao.chefDAO;
+import com.example.foodo.engineering.dao.ChefDAO;
 import com.example.foodo.engineering.exception.NotFoundException;
 import com.example.foodo.model.UserModel;
 import com.example.foodo.model.ChefModel;
@@ -21,7 +21,7 @@ public class LoginController {
 
 
     public void completeChefLogin(LoginBean loginBean) throws NotFoundException {
-        ChefModel chefModel = chefDAO.retrieveChefByUsername(loginBean.getUsername());
+        ChefModel chefModel = ChefDAO.retrieveChefByUsername(loginBean.getUsername());
         ChefBean chefBean = new ChefBean(chefModel.getUsername(), chefModel.getTypeOfCuisine(), chefModel.getWorkplace(), chefModel.getProfileType());
         Session.setSessionInstance(chefBean);
     }
