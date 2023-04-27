@@ -8,10 +8,10 @@ public class ProductDAOSupport {
 
     private ProductDAOSupport(){}
 
-    public static void prepareProductInfo(PreparedStatement preparedStatement, String name, int quanity, Date date, String type) throws SQLException {
+    public static void prepareProductInfo(PreparedStatement preparedStatement, String name, int quantity, Date date, String type) throws SQLException {
         preparedStatement.setString(1, name);
-        preparedStatement.setInt(2, quanity);
-        preparedStatement.setDate(3, date);
+        preparedStatement.setInt(2, quantity);
+        preparedStatement.setDate(3, (java.sql.Date) date);
         preparedStatement.setString(4, type);
     }
 

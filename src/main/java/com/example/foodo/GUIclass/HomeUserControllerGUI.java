@@ -20,7 +20,12 @@ public class HomeUserControllerGUI {
     private Scene scene;
 
     private UserBean userBean;
-    public void showPantryUser(ActionEvent actionEvent) {
+    public void showPantryUser(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUIclass/sceneMyPantry.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void showProfileUser(ActionEvent event) throws IOException {

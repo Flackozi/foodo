@@ -65,7 +65,7 @@ public class ConnectionDB {
     }
 
     public static PreparedStatement insertProduct() throws SQLException{
-        return connection.prepareStatement("INSERT INTO pantry (name, quantity, expiration, type) VALUES (?,?,?,?)");
+        return connection.prepareStatement("INSERT INTO pantry (name, quantity, type, expirationDay, expirationMonth, expirationYear) VALUES (?,?,?,?,?,?)");
     }
 }
 

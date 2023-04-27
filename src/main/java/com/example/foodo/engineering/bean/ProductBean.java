@@ -2,8 +2,11 @@ package com.example.foodo.engineering.bean;
 
 public class ProductBean {
     private String Name;
-    private String Quantity;
+    private int Quantity;
     private String TypeOfFood;
+    private int day;
+    private int month;
+    private int year;
 
     public int getDay() {
         return day;
@@ -29,10 +32,6 @@ public class ProductBean {
         this.year = year;
     }
 
-    private int day;
-    private int month;
-    private int year;
-
     public String getName() {
         return Name;
     }
@@ -41,11 +40,11 @@ public class ProductBean {
         Name = name;
     }
 
-    public String getQuantity() {
+    public int getQuantity() {
         return Quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(int quantity) {
         Quantity = quantity;
     }
 

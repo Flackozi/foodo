@@ -34,7 +34,7 @@
             <Font name="Arial" size="12.0" />
          </font>
       </Button>
-      <TextField fx:id="nameField" layoutX="15.0" layoutY="296.0" prefHeight="37.0" prefWidth="112.0" />
+      <TextField fx:id="nameText" layoutX="15.0" layoutY="296.0" prefHeight="37.0" prefWidth="112.0" />
       <TextField fx:id="quantityField" layoutX="15.0" layoutY="355.0" prefHeight="37.0" prefWidth="112.0" />
       <Button fx:id="searchProductButton" layoutY="775.0" mnemonicParsing="false" onAction="#searchProduct" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />
       <Button fx:id="showPantryButton" layoutX="248.0" layoutY="775.0" mnemonicParsing="false" onAction="#showPantry" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />

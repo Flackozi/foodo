@@ -1,11 +1,11 @@
 package com.example.foodo.GUIclass;
+import com.example.foodo.ControllerAppl.PantryController;
 import com.example.foodo.engineering.bean.ProductBean;
-import com.example.foodo.model.Product;
+import com.example.foodo.model.ProductModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,23 +15,24 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class PantryControllerGUI implements Initializable {
+public class PantryControllerGUI  {
     @FXML
-    private TableColumn<Product, DatePicker> Expiration;
+    private TableColumn<ProductModel, DatePicker> Expiration;
 
     @FXML
     private Button HomeButton;
 
     @FXML
-    private TableColumn<Product, String> Name;
+    private TableColumn<ProductModel, String> Name;
 
     @FXML
-    private TableColumn<Product, String> Quantity;
+    private TableColumn<ProductModel, Integer> Quantity;
 
     @FXML
-    private TableColumn<Product, String> TypeOfFood;
+    private TableColumn<ProductModel, String> TypeOfFood;
 
     @FXML
     private ImageView addNewProduct;
@@ -40,16 +41,16 @@ public class PantryControllerGUI implements Initializable {
     private DatePicker expirationDate;
 
     @FXML
-    private TextArea nameText;
+    private TextField nameText;
 
     @FXML
-    private TextArea quantityText;
+    private TextField quantityField;
 
     @FXML
     private ChoiceBox<String> typePicker;
 
     @FXML
-    private TableView<Product> tablePantry;
+    private TableView<ProductModel> tablePantry;
 
 
     public void backHome(ActionEvent event) throws IOException {
@@ -80,20 +81,21 @@ public class PantryControllerGUI implements Initializable {
         window.show();
     }
 
-    private String[] typeOfFood = {"spices", "fruit", "meat", "vegetable", "sweet", "sweet", "liquid", "fish"};
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle){
+//    private String[] typeOfFood = {"spices", "fruit", "meat", "vegetable", "sweet", "sweet", "liquid", "fish"};
+//
+//    public void initialize(URL url, ResourceBundle resourceBundle){
+//
+//        typePicker.getItems().addAll(typeOfFood);
+//    }
 
-        typePicker.getItems().addAll(typeOfFood);
-    }
-
-    public void addNewProduct(ActionEvent actionEvent) {
+    public void addNewProduct(ActionEvent actionEvent) throws SQLException {
         ProductBean productBean = new ProductBean();
+        PantryController pantryController= new PantryController();
 
         //prendiamo i dati e li mettiamo nella bean
 
         productBean.setName(nameText.getText());
-        productBean.setQuantity(quantityText.getText());
+        productBean.setQuantity(Integer.parseInt(quantityField.getText()));
         productBean.setTypeOfFood(typePicker.getValue());
 
         int year;
@@ -107,6 +109,8 @@ public class PantryControllerGUI implements Initializable {
         productBean.setDay(day);
         productBean.setMonth(month);
         productBean.setYear(year);
+
+        pantryController.addNewProduct(productBean);
 
         //continuare da qua: observer/ controller app
     }

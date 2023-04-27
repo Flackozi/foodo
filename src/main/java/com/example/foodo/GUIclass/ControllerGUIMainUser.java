@@ -2,7 +2,7 @@ package com.example.foodo.GUIclass;
 
 
 
-import com.example.foodo.model.Product;
+import com.example.foodo.model.ProductModel;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,19 +37,19 @@ public class ControllerGUIMainUser {
 
 
     @FXML
-    private TableColumn<Product, String> Expiration;
+    private TableColumn<ProductModel, String> Expiration;
 
     @FXML
     private Button HomeButton;
 
     @FXML
-    private TableColumn<Product, String> Name;
+    private TableColumn<ProductModel, String> Name;
 
     @FXML
-    private TableColumn<Product, String> Quantity;
+    private TableColumn<ProductModel, String> Quantity;
 
     @FXML
-    private TableColumn<Product, String> TypeOfFood;
+    private TableColumn<ProductModel, String> TypeOfFood;
 
     @FXML
     private ImageView addNewProduct;
@@ -67,7 +67,7 @@ public class ControllerGUIMainUser {
     private ChoiceBox<String> typePicker;
 
     @FXML
-    private TableView<Product> tablePantry;
+    private TableView<ProductModel> tablePantry;
 
 
 
@@ -85,15 +85,15 @@ public class ControllerGUIMainUser {
     }
     */
 
-    @FXML
-    void addNewProduct(ActionEvent event) {
-        Product product = new Product(nameText.getText(),
-                quantityText.getText(), expirationDate.getText(),
-                typePicker.getTypeSelector());
-                ObservableList<Product> products = tablePantry.getItems();
-                products.add(product);
-                tablePantry.setItems(products);
-    }
+//    @FXML
+//    void addNewProduct(ActionEvent event) {
+//        ProductModel product = new ProductModel(nameText.getText(),
+//                quantityText.getText(), expirationDate.getText(),
+//                typePicker.getTypeSelector());
+//                ObservableList<ProductModel> products = tablePantry.getItems();
+//                products.add(product);
+//                tablePantry.setItems(products);
+//    }
     @FXML
     public void showPantry(ActionEvent event) throws IOException {
         Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/GUIclass/sceneMyPantry.fxml"));

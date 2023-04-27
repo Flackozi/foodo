@@ -1,21 +1,17 @@
 package com.example.foodo.engineering.dao;
 
 import com.example.foodo.engineering.connection.ConnectionDB;
-import com.example.foodo.engineering.dao.queries.BasicQueries;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.model.Product;
+import com.example.foodo.model.ProductModel;
 
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Date;
 
 public class ProductDAO {
 
-    private ProductDAO(){}
 
-    public static void InsProduct(Product product) throws SQLException{
+    public static void InsProduct(ProductModel product) throws SQLException{
 
         Statement stmt;
         PreparedStatement preparedStatement;
@@ -25,8 +21,10 @@ public class ProductDAO {
             preparedStatement= ConnectionDB.insertProduct();
             preparedStatement.setString(1, product.getName());
             preparedStatement.setInt(2, product.getQuantity());
-            preparedStatement.setDate(3, product.getExpiration());
             preparedStatement.setString(4, product.getTypeOfFood());
+            preparedStatement.setInt(3, product.getExpirationDay());
+            preparedStatement.setInt(3, product.getExpirationMonth());
+            preparedStatement.setInt(3, product.getExpirationYear());
             preparedStatement.executeUpdate();
 
         } catch(SQLException | ConnectionDbException e){
