@@ -28,7 +28,7 @@
             <TableColumn fx:id="TypeOfFood" minWidth="135.0" prefWidth="149.0" text="Type of Food" />
         </columns>
       </TableView>
-      <ChoiceBox fx:id="typeOfFOod" layoutX="136.0" layoutY="355.0" prefHeight="37.0" prefWidth="119.0" />
+      <ChoiceBox fx:id="typeOfFoodPicker" layoutX="136.0" layoutY="355.0" prefHeight="37.0" prefWidth="119.0" />
       <Button fx:id="deleteButton" layoutX="14.0" layoutY="588.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="28.0" prefWidth="84.0" style="-fx-background-color: #19E1E1; -fx-background-radius: 60;" text="DELETE">
          <font>
             <Font name="Arial" size="12.0" />
@@ -38,6 +38,6 @@
       <TextField fx:id="quantityField" layoutX="15.0" layoutY="355.0" prefHeight="37.0" prefWidth="112.0" />
       <Button fx:id="searchProductButton" layoutY="775.0" mnemonicParsing="false" onAction="#searchProduct" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />
       <Button fx:id="showPantryButton" layoutX="248.0" layoutY="775.0" mnemonicParsing="false" onAction="#showPantry" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />
-      <DatePicker fx:id="expirationPicker" layoutX="132.0" layoutY="295.0" prefHeight="37.0" prefWidth="112.0" />
+      <DatePicker fx:id="expirationDate" layoutX="132.0" layoutY="295.0" prefHeight="37.0" prefWidth="112.0" />
    </children>
 </Pane>

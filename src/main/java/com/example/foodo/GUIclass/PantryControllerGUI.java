@@ -18,7 +18,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class PantryControllerGUI  {
+public class PantryControllerGUI  implements Initializable{
     @FXML
     private TableColumn<ProductModel, DatePicker> Expiration;
 
@@ -47,7 +47,7 @@ public class PantryControllerGUI  {
     private TextField quantityField;
 
     @FXML
-    private ChoiceBox<String> typePicker;
+    private ChoiceBox<String> typeOfFoodPicker;
 
     @FXML
     private TableView<ProductModel> tablePantry;
@@ -81,13 +81,16 @@ public class PantryControllerGUI  {
         window.show();
     }
 
-//    private String[] typeOfFood = {"spices", "fruit", "meat", "vegetable", "sweet", "sweet", "liquid", "fish"};
-//
-//    public void initialize(URL url, ResourceBundle resourceBundle){
-//
-//        typePicker.getItems().addAll(typeOfFood);
-//    }
+    private String[] typeOfFood = {"spices", "fruit", "meat", "vegetable", "sweet", "sweet", "liquid", "fish"};
 
+    public void initialize(URL url, ResourceBundle resourceBundle){
+
+        typeOfFoodPicker.getItems().addAll(typeOfFood);
+        typeOfFoodPicker.setOnAction(this::getType);
+    }
+    public void getType(ActionEvent event){
+        String myType = typeOfFoodPicker.getValue();
+    }
     public void addNewProduct(ActionEvent actionEvent) throws SQLException {
         ProductBean productBean = new ProductBean();
         PantryController pantryController= new PantryController();
@@ -96,7 +99,7 @@ public class PantryControllerGUI  {
 
         productBean.setName(nameText.getText());
         productBean.setQuantity(Integer.parseInt(quantityField.getText()));
-        productBean.setTypeOfFood(typePicker.getValue());
+        productBean.setTypeOfFood(typeOfFoodPicker.getValue());
 
         int year;
         int month;

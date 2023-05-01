@@ -21,10 +21,10 @@ public class ProductDAO {
             preparedStatement= ConnectionDB.insertProduct();
             preparedStatement.setString(1, product.getName());
             preparedStatement.setInt(2, product.getQuantity());
-            preparedStatement.setString(4, product.getTypeOfFood());
-            preparedStatement.setInt(3, product.getExpirationDay());
-            preparedStatement.setInt(3, product.getExpirationMonth());
-            preparedStatement.setInt(3, product.getExpirationYear());
+            preparedStatement.setString(3, product.getTypeOfFood());
+            preparedStatement.setInt(4, product.getExpirationDay());
+            preparedStatement.setInt(5, product.getExpirationMonth());
+            preparedStatement.setInt(6, product.getExpirationYear());
             preparedStatement.executeUpdate();
 
         } catch(SQLException | ConnectionDbException e){
