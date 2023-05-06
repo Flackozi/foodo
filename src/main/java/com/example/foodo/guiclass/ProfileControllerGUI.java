@@ -1,6 +1,6 @@
 package com.example.foodo.guiclass;
 
-import com.example.foodo.controllerAppl.ProfileController;
+import com.example.foodo.controllerappl.ProfileController;
 import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.ImageConverterSupport;
 import com.example.foodo.engineering.bean.ChefBean;

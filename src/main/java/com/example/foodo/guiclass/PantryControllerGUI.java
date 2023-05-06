@@ -1,5 +1,5 @@
 package com.example.foodo.guiclass;
-import com.example.foodo.controllerAppl.PantryController;
+import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.model.ProductModel;
 import javafx.event.ActionEvent;
