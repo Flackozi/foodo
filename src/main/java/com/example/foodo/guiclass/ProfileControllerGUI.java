@@ -1,4 +1,4 @@
-package com.example.foodo.GUIclass;
+package com.example.foodo.guiclass;
 
 import com.example.foodo.controllerAppl.ProfileController;
 import com.example.foodo.engineering.Session.Session;
@@ -80,7 +80,7 @@ public class ProfileControllerGUI {
 
 
     public void BackHome(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUIclass/sceneHomeUser.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneHomeUser.fxml")));
         scene = new Scene(root);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);

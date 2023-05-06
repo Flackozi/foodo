@@ -1,4 +1,4 @@
-package com.example.foodo.GUIclass;
+package com.example.foodo.guiclass;
 
 import com.example.foodo.Main;
 import com.example.foodo.engineering.bean.ChefBean;
@@ -21,7 +21,7 @@ public class ChefMainPageControllerGUI {
     private ChefBean chefBean;
 
     public void showKitchenChef(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/GUIclass/myKitchen.fxml"));
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/myKitchen.fxml"));
         Scene scenePantryView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -48,7 +48,7 @@ public class ChefMainPageControllerGUI {
     }
     @FXML
     public void showPantry(ActionEvent event) throws IOException{
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/GUIclass/sceneMyPantry.fxml"));
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneMyPantry.fxml"));
         Scene scenePantryView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -57,7 +57,7 @@ public class ChefMainPageControllerGUI {
     }
 
     public void showChefProfile(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/GUIclass/sceneChefProfile.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/sceneChefProfile.fxml"));
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
         ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();

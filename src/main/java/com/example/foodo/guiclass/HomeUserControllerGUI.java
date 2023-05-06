@@ -1,10 +1,9 @@
-package com.example.foodo.GUIclass;
+package com.example.foodo.guiclass;
 
 import com.example.foodo.Main;
 import com.example.foodo.engineering.bean.UserBean;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,7 +20,7 @@ public class HomeUserControllerGUI {
 
     private UserBean userBean;
     public void showPantryUser(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUIclass/sceneMyPantry.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneMyPantry.fxml")));
         scene = new Scene(root);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -29,7 +28,7 @@ public class HomeUserControllerGUI {
     }
 
     public void showProfileUser(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/GUIclass/sceneProfile.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/sceneProfile.fxml"));
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
         ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();

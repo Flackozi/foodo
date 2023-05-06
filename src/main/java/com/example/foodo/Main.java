@@ -11,7 +11,7 @@ public class Main extends Application {
     private static Stage stage;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/GUIclass/mainSceneLogin.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/mainSceneLogin.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 390, 844);
         stage.setTitle("Foodo");
         stage.setScene(scene);

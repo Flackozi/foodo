@@ -1,4 +1,4 @@
-package com.example.foodo.GUIclass;
+package com.example.foodo.guiclass;
 import com.example.foodo.controllerAppl.PantryController;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.model.ProductModel;
@@ -54,7 +54,7 @@ public class PantryControllerGUI  implements Initializable{
 
 
     public void backHome(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/GUIclass/sceneHomeUser.fxml"));
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
         Scene sceneMainView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -63,7 +63,7 @@ public class PantryControllerGUI  implements Initializable{
     }
     @FXML
     public void showSearch(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/GUIclass/sceneSearchProduct.fxml"));
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneSearchProduct.fxml"));
         Scene scenePantryView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -73,7 +73,7 @@ public class PantryControllerGUI  implements Initializable{
 
     @FXML
     public void showLogin(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/GUIclass/sceneLogin.fxml"));
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneLogin.fxml"));
         Scene scenePantryView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

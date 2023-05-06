@@ -1,4 +1,4 @@
-package com.example.foodo.GUIclass;
+package com.example.foodo.guiclass;
 
 
 import javafx.event.ActionEvent;
@@ -14,7 +14,7 @@ import java.io.IOException;
 public class AccessControllerGUI {
     @FXML
     public void showLogin(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/GUIclass/sceneLogin.fxml"));
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneLogin.fxml"));
         Scene scenePantryView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -24,7 +24,7 @@ public class AccessControllerGUI {
 
     @FXML
     public void showCreateAccount(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/GUIclass/sceneCreateAccount.fxml"));
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneCreateAccount.fxml"));
         Scene scenePantryView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

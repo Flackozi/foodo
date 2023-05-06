@@ -1,4 +1,4 @@
-package com.example.foodo.GUIclass;
+package com.example.foodo.guiclass;
 
 import com.example.foodo.controllerAppl.LoginController;
 import com.example.foodo.Main;
@@ -49,7 +49,7 @@ public class LoginControllerGUI {
 
 
     public void showUserHomePage(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUIclass/sceneHomeUser.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneHomeUser.fxml")));
         scene = new Scene(root);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -58,7 +58,7 @@ public class LoginControllerGUI {
     }
 
     public void showChefHomePage(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUIclass/chefMainPage.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/chefMainPage.fxml")));
         scene = new Scene(root);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);

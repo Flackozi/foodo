@@ -1,9 +1,8 @@
-package com.example.foodo.GUIclass;
+package com.example.foodo.guiclass;
 
 
 
 import com.example.foodo.model.ProductModel;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -96,7 +95,7 @@ public class ControllerGUIMainUser {
 //    }
     @FXML
     public void showPantry(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/GUIclass/sceneMyPantry.fxml"));
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneMyPantry.fxml"));
         Scene scenePantryView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
