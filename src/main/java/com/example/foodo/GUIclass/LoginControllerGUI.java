@@ -1,6 +1,6 @@
 package com.example.foodo.GUIclass;
 
-import com.example.foodo.ControllerAppl.LoginController;
+import com.example.foodo.controllerAppl.LoginController;
 import com.example.foodo.Main;
 import com.example.foodo.engineering.bean.LoginBean;
 import javafx.event.ActionEvent;

@@ -1,7 +1,6 @@
 package com.example.foodo.GUIclass;
 
-import com.example.foodo.ControllerAppl.ProfileController;
-import com.example.foodo.Main;
+import com.example.foodo.controllerAppl.ProfileController;
 import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.ImageConverterSupport;
 import com.example.foodo.engineering.bean.ChefBean;
@@ -16,9 +15,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
