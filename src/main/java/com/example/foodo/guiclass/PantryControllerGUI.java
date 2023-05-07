@@ -1,7 +1,13 @@
 package com.example.foodo.guiclass;
 import com.example.foodo.controllerappl.PantryController;
+import com.example.foodo.engineering.Utils.TableColumns;
 import com.example.foodo.engineering.bean.ProductBean;
+import com.example.foodo.engineering.connection.ConnectionDB;
+import com.example.foodo.engineering.dao.ProductDAO;
+import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.model.ProductModel;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +22,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class PantryControllerGUI  implements Initializable{
@@ -50,7 +58,8 @@ public class PantryControllerGUI  implements Initializable{
     private ChoiceBox<String> typeOfFoodPicker;
 
     @FXML
-    private TableView<ProductModel> tablePantry;
+    private TableView tablePantry;
+
 
 
     public void backHome(ActionEvent event) throws IOException {
@@ -81,13 +90,26 @@ public class PantryControllerGUI  implements Initializable{
         window.show();
     }
 
-    private String[] typeOfFood = {"spices", "fruit", "meat", "vegetable", "sweet", "sweet", "liquid", "fish"};
-
+    private String[] typeOfFood = {"spices", "fruit", "meat", "vegetable", "sweet", "liquid", "fish", "other"};
+private ProductDAO productDAO = new ProductDAO();
     public void initialize(URL url, ResourceBundle resourceBundle){
 
         typeOfFoodPicker.getItems().addAll(typeOfFood);
         typeOfFoodPicker.setOnAction(this::getType);
+        try{
+            PantryController pantryController = new PantryController();
+            List<ProductBean> productBeans = new ArrayList<>();
+
+            productBeans = pantryController.retriveAllProduct();
+            tablePantry.getColumns().setAll(TableColumns.setcols());
+            tablePantry.setItems(productDAO.getAllProduct());
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
+
     public void getType(ActionEvent event){
         String myType = typeOfFoodPicker.getValue();
     }
@@ -117,6 +139,8 @@ public class PantryControllerGUI  implements Initializable{
 
         //continuare da qua: observer/ controller app
     }
+
+
 
     public void deleteProduct(ActionEvent actionEvent) {
     }

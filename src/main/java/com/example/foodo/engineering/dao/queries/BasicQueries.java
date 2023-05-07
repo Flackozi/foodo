@@ -27,4 +27,9 @@ public class BasicQueries {
         String updateStatement  = String.format("INSERT INTO pantry set name=%s, quantity=%d, expiration=%d/%m/%Y type=%s", name, quantity, expiration, type);
         stmt.executeQuery(updateStatement);
     }
+
+    public static ResultSet retriveProduct(Statement stmt) throws SQLException{
+        String sql = "SELECT * FROM pantry;";
+        return stmt.executeQuery(sql);
+    }
 }

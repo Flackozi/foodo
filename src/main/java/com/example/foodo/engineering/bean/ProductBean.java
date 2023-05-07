@@ -8,6 +8,10 @@ public class ProductBean {
     private int month;
     private int year;
 
+    public ProductBean(String name, int quantity, int expirationDay, int expirationMonth, int expirationYear) {
+    }
+    public ProductBean(){}
+
     public int getDay() {
         return day;
     }

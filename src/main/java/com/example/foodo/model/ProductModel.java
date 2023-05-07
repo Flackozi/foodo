@@ -6,7 +6,29 @@ public class ProductModel {
     private String TypeOfFood;
     private int expirationDay;
     private int expirationMonth;
-    private int expirationYear;
+    private  int expirationYear;
+    private String Expiration;
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public void setQuantity(int quantity) {
+        Quantity = quantity;
+    }
+
+    public void setTypeOfFood(String typeOfFood) {
+        TypeOfFood = typeOfFood;
+    }
+
+    public String getExpiration() {
+        return Expiration;
+    }
+
+    public void setExpiration(String expiration) {
+        Expiration = expiration;
+    }
+
 
 
 
@@ -18,7 +40,12 @@ public class ProductModel {
         this.expirationMonth=expirationMonth;
         this.expirationYear=expirationYear;
     }
-
+    public ProductModel(String name, int quantity, String typeOfFood, String expiration) {
+        this.Name = name;
+        this.Quantity = quantity;
+        this.TypeOfFood = typeOfFood;
+        this.Expiration=expiration;
+    }
     public String getName() {
         return Name;
     }
