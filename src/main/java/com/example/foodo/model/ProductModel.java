@@ -46,6 +46,10 @@ public class ProductModel {
         this.TypeOfFood = typeOfFood;
         this.Expiration=expiration;
     }
+
+    public ProductModel(String Name){
+        this.Name=Name;
+    }
     public String getName() {
         return Name;
     }

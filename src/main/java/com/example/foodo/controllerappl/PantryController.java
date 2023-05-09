@@ -35,11 +35,21 @@ public class PantryController {
         do{
             ProductModel productModel = productModelList.get(i);
             i++;
-            ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getExpirationDay(), productModel.getExpirationMonth(), productModel.getExpirationYear());
+            ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpirationDay(), productModel.getExpirationMonth(), productModel.getExpirationYear());
             productBeans.add(productBean);
         }while(i != lenght);
 
         return productBeans;
+
+    }
+
+    public void deleteProduct(ProductBean productBean) throws SQLException, ConnectionDbException {
+
+        System.out.println(productBean.getName());
+
+        ProductModel productModel= new ProductModel(productBean.getName());
+        ProductDAO productDAO=new ProductDAO();
+        productDAO.DelProduct(productModel);
 
     }
 }

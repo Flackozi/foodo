@@ -32,4 +32,9 @@ public class BasicQueries {
         String sql = "SELECT * FROM pantry;";
         return stmt.executeQuery(sql);
     }
+
+    public static ResultSet deleteProduct(Statement stmt, String name) throws SQLException {
+        String sql= String.format("DELETE FROM pantry WHERE name = %s", name);
+        return stmt.executeQuery(sql);
+    }
 }

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class TableColumns {
     public static ArrayList setcols(){
-        String[] arrCols = {"name", "quantity", "expiration", "type"};
+        String[] arrCols = {"Name", "Quantity", "Expiration", "TypeOfFood"};
         ArrayList tbc = new ArrayList<>();
         for(int i = 0; i < arrCols.length; i++){
             TableColumn tc = new TableColumn(arrCols[i]);

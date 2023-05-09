@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -101,7 +102,12 @@ private ProductDAO productDAO = new ProductDAO();
             List<ProductBean> productBeans = new ArrayList<>();
 
             productBeans = pantryController.retriveAllProduct();
-            tablePantry.getColumns().setAll(TableColumns.setcols());
+//            tablePantry.getColumns().setAll(TableColumns.setcols());
+            Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+            Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
+            Expiration.setCellValueFactory(new PropertyValueFactory<>("Expiration"));
+            TypeOfFood.setCellValueFactory(new PropertyValueFactory<>("TypeOfFood"));
+
             tablePantry.setItems(productDAO.getAllProduct());
 
         }catch(Exception e){
@@ -137,12 +143,45 @@ private ProductDAO productDAO = new ProductDAO();
 
         pantryController.addNewProduct(productBean);
 
+        String exp = day + "/" + month + "/" + year;
+
+        ProductModel product= new ProductModel(nameText.getText(), Integer.parseInt(quantityField.getText()), typeOfFoodPicker.getValue(), exp);
+        tablePantry.getItems().add(product);
+
         //continuare da qua: observer/ controller app
     }
 
 
 
-    public void deleteProduct(ActionEvent actionEvent) {
+    public void deleteProduct(ActionEvent actionEvent) throws SQLException, ConnectionDbException {
+        int year;
+        int month;
+        int day;
+
+        PantryController pantryController= new PantryController();
+
+
+        ObservableList<ProductModel> allProduct, SingleProduct;
+        allProduct=tablePantry.getItems();
+        SingleProduct=tablePantry.getSelectionModel().getSelectedItems();
+        String Name= SingleProduct.get(0).getName();
+        SingleProduct.forEach(allProduct::remove);
+
+//        String date= SingleProduct.get(0).getExpiration();
+
+//        int Quantity=SingleProduct.get(0).getQuantity();
+//        String TypeOfFood=SingleProduct.get(0).getTypeOfFood();
+//
+//        day=Integer.parseInt(String.valueOf(date.charAt(0)+date.charAt(1)));
+//        month=Integer.parseInt(String.valueOf(date.charAt(3)+date.charAt(4)));
+//        year=Integer.parseInt(String.valueOf(date.charAt(6)+date.charAt(7)+date.charAt(8)+date.charAt(9)));
+
+
+        ProductBean productBean = new ProductBean(Name);
+
+        pantryController.deleteProduct(productBean);
+
+
     }
 
     public void searchProduct(ActionEvent actionEvent) {

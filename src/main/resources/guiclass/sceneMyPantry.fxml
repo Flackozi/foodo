@@ -25,7 +25,7 @@
           <TableColumn fx:id="Name" minWidth="69.0" prefWidth="33.0" text="Name" />
             <TableColumn fx:id="Quantity" minWidth="69.0" prefWidth="33.0" text="Quantity" />
             <TableColumn fx:id="Expiration" minWidth="69.0" prefWidth="33.0" text="Expiration" />
-            <TableColumn fx:id="TypeOfFood" minWidth="135.0" prefWidth="149.0" text="Type of Food" />
+            <TableColumn fx:id="TypeOfFood" minWidth="135.0" prefWidth="149.0" text="TypeOfFood" />
         </columns>
       </TableView>
       <ChoiceBox fx:id="typeOfFoodPicker" layoutX="136.0" layoutY="355.0" prefHeight="37.0" prefWidth="119.0" />

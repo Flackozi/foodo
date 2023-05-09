@@ -8,7 +8,11 @@ public class ProductBean {
     private int month;
     private int year;
 
-    public ProductBean(String name, int quantity, int expirationDay, int expirationMonth, int expirationYear) {
+    public ProductBean(String name, int quantity, String TypeOfFood, int expirationDay, int expirationMonth, int expirationYear) {
+    }
+
+    public ProductBean (String name){
+        this.Name=name;
     }
     public ProductBean(){}
 

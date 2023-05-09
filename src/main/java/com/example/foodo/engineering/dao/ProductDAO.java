@@ -62,4 +62,10 @@ public class ProductDAO {
         return obl;
     }
 
+    public void DelProduct(ProductModel productModel) throws ConnectionDbException, SQLException {
+        Statement stmt;
+        stmt=ConnectionDB.getConnection();
+        System.out.println(productModel.getName());
+        BasicQueries.deleteProduct(stmt, productModel.getName());
+    }
 }
