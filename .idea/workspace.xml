@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: pantry&#10;descrizione: tasto delete da sistemare">
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: search product&#10;descrizione: sistemazione interfacce">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/PantryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/PantryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +83,7 @@
       <workItem from="1683382767377" duration="4661000" />
       <workItem from="1683449407860" duration="5928000" />
       <workItem from="1683468466556" duration="5769000" />
-      <workItem from="1683640906688" duration="701000" />
+      <workItem from="1683640906688" duration="1900000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1681726734682</created>
@@ -137,7 +134,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683640987676</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="caso d'uso: pantry&#10;descrizione: fine caso d'uso">
+      <created>1683641708456</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683641708456</updated>
+    </task>
+    <task id="LOCAL-00009" summary="caso d'uso: search product&#10;descrizione: sistemazione interfacce">
+      <created>1683642792315</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683642792315</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +174,8 @@
     <MESSAGE value="use case: profile &#10;first try" />
     <MESSAGE value="continuo pantry: manca da sistemare il type picker, per poter inserire le info nel db" />
     <MESSAGE value="caso d'uso: pantry&#10;descrizione: tasto delete da sistemare" />
-    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: pantry&#10;descrizione: tasto delete da sistemare" />
+    <MESSAGE value="caso d'uso: pantry&#10;descrizione: fine caso d'uso" />
+    <MESSAGE value="caso d'uso: search product&#10;descrizione: sistemazione interfacce" />
+    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: search product&#10;descrizione: sistemazione interfacce" />
   </component>
 </project>

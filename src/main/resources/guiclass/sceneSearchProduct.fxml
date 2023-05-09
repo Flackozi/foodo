@@ -19,9 +19,9 @@
       <Button fx:id="buttonSearchProduct" layoutY="775.0" mnemonicParsing="false" onAction="#showSearchProduct" prefHeight="68.0" prefWidth="138.0" style="-fx-background-color: 0000;" />
       <Button fx:id="buttonPantry" layoutX="251.0" layoutY="775.0" mnemonicParsing="false" onAction="#showPantry" prefHeight="68.0" prefWidth="138.0" style="-fx-background-color: 0000;" />
       <Button fx:id="buttonHome" layoutX="139.0" layoutY="760.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="112.0" style="-fx-background-color: 0000; -fx-background-radius: 60;" />
-      <TextField layoutX="33.0" layoutY="206.0" prefHeight="32.0" prefWidth="217.0" />
+      <TextField fx:id="searchBar" layoutX="33.0" layoutY="206.0" prefHeight="32.0" prefWidth="217.0" />
       <Button fx:id="buttonSearch" layoutX="254.0" layoutY="208.0" mnemonicParsing="false" onAction="#actionSearch" prefHeight="32.0" prefWidth="52.0" style="-fx-background-color: 0000;" />
-      <CheckBox layoutX="78.0" layoutY="275.0" mnemonicParsing="false" />
+      <CheckBox fx:id="spicesCheckBox" layoutX="78.0" layoutY="275.0" mnemonicParsing="false" />
       <CheckBox layoutX="78.0" layoutY="309.0" mnemonicParsing="false" />
       <CheckBox layoutX="149.0" layoutY="275.0" mnemonicParsing="false" />
       <CheckBox layoutX="149.0" layoutY="309.0" mnemonicParsing="false" />
