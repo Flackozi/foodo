@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: search product&#10;descrizione: sistemazione interfacce">
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risolti alcuni code smell">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_7_2023_12_33_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_7_2023_12_33_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/SearchControllerGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/SearchProductControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/SearchProductControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/sceneSearchProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/sceneSearchProduct.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
