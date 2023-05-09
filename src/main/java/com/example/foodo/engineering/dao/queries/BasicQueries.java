@@ -33,8 +33,8 @@ public class BasicQueries {
         return stmt.executeQuery(sql);
     }
 
-    public static ResultSet deleteProduct(Statement stmt, String name) throws SQLException {
-        String sql= String.format("DELETE FROM pantry WHERE name = %s", name);
-        return stmt.executeQuery(sql);
+    public static void deleteProduct(Statement stmt, String name) throws SQLException {
+        String updateStatement= String.format("DELETE FROM pantry WHERE name = '%s'", name);
+        stmt.executeUpdate(updateStatement);
     }
 }

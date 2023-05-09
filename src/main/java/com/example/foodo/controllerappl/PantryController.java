@@ -45,8 +45,6 @@ public class PantryController {
 
     public void deleteProduct(ProductBean productBean) throws SQLException, ConnectionDbException {
 
-        System.out.println(productBean.getName());
-
         ProductModel productModel= new ProductModel(productBean.getName());
         ProductDAO productDAO=new ProductDAO();
         productDAO.DelProduct(productModel);
