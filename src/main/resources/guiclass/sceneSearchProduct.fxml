@@ -9,7 +9,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.guiclass.SearchProductControllerGUI">
    <children>
       <ImageView fitHeight="845.0" fitWidth="390.0">
@@ -29,7 +28,7 @@
       <CheckBox layoutX="217.0" layoutY="275.0" mnemonicParsing="false" />
       <CheckBox layoutX="217.0" layoutY="309.0" mnemonicParsing="false" />
       <CheckBox layoutX="290.0" layoutY="275.0" mnemonicParsing="false" />
-      <TableView layoutX="14.0" layoutY="374.0" prefHeight="200.0" prefWidth="353.0">
+      <TableView layoutX="17.0" layoutY="372.0" prefHeight="306.0" prefWidth="357.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Name" />
           <TableColumn prefWidth="75.0" text="Quantity" />
@@ -37,5 +36,10 @@
             <TableColumn prefWidth="127.0" text="Type of food" />
         </columns>
       </TableView>
+      <ImageView fitHeight="53.0" fitWidth="321.0" layoutX="25.0" layoutY="139.0">
+         <image>
+            <Image url="@../image/legend.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
