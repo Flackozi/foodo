@@ -8,9 +8,18 @@ public class ProductBean {
     private int month;
     private int year;
 
+
+
+    private String Expiration;
+
     public ProductBean(String name, int quantity, String TypeOfFood, int expirationDay, int expirationMonth, int expirationYear) {
     }
-
+    public ProductBean(String name, int quantity, String TypeOfFood, String expiration) {
+        this.setName(name);
+        this.setQuantity(quantity);
+        this.setTypeOfFood(TypeOfFood);
+        this.setExpiration(expiration);
+    }
     public ProductBean (String name){
         this.Name=name;
     }
@@ -45,7 +54,7 @@ public class ProductBean {
     }
 
     public void setName(String name) {
-        Name = name;
+        this.Name = name;
     }
 
     public int getQuantity() {
@@ -53,7 +62,7 @@ public class ProductBean {
     }
 
     public void setQuantity(int quantity) {
-        Quantity = quantity;
+        this.Quantity = quantity;
     }
 
     public String getTypeOfFood() {
@@ -61,9 +70,15 @@ public class ProductBean {
     }
 
     public void setTypeOfFood(String typeOfFood) {
-        TypeOfFood = typeOfFood;
+        this.TypeOfFood = typeOfFood;
+    }
+    public String getExpiration() {
+        return Expiration;
     }
 
+    public void setExpiration(String expiration) {
+        this.Expiration = expiration;
+    }
 
 
 }

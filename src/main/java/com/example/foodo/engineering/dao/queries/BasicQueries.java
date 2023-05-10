@@ -6,6 +6,8 @@ import java.util.Date;
 
 public class BasicQueries {
 
+
+
     private BasicQueries(){}
 
     public static ResultSet checkLogin(Statement statement, String username, String password) throws SQLException {
@@ -36,5 +38,11 @@ public class BasicQueries {
     public static void deleteProduct(Statement stmt, String name) throws SQLException {
         String updateStatement= String.format("DELETE FROM pantry WHERE name = '%s'", name);
         stmt.executeUpdate(updateStatement);
+    }
+
+    public static ResultSet retriveByType(Statement stmt, String type) throws  SQLException{
+
+        String sql = "SELECT * FROM pantry WHERE type = '" + type + "';";
+        return stmt.executeQuery(sql);
     }
 }

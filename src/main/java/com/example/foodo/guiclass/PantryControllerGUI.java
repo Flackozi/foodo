@@ -184,8 +184,7 @@ private ProductDAO productDAO = new ProductDAO();
 
     }
 
-    public void searchProduct(ActionEvent actionEvent) {
-    }
+
 
     public void showPantry(ActionEvent actionEvent) {
     }
