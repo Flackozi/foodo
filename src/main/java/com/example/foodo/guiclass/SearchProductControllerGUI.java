@@ -10,14 +10,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class SearchProductControllerGUI {
     public Button buttonSearchProduct;
@@ -29,39 +33,79 @@ public class SearchProductControllerGUI {
     public CheckBox sweetCheckBox;
     public CheckBox liquidCheckBox;
     public CheckBox fishCheckBox;
-    public TableView productTable;
+    public TableView<ProductModel> productTable;
     @FXML
-    public  TableColumn<ProductModel, String> Name;
-
-    @FXML
-    public  TableColumn<ProductModel, Integer> Quantity;
+    private    TableColumn<ProductModel, String> Name;
 
     @FXML
-    public  TableColumn<ProductModel, String> TypeOfFood;
+    private  TableColumn<ProductModel, Integer> Quantity;
+
     @FXML
-    public  TableColumn<ProductModel, DatePicker> Expiration;
+    private  TableColumn<ProductModel, String> TypeOfFood;
+    @FXML
+    private  TableColumn<ProductModel, String> Expiration;
 
 
+    public void showPantry(ActionEvent event) throws IOException {
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneMyPantry.fxml"));
+        Scene sceneMainView = new Scene(scenePantryParent);
 
-    public void showPantry(ActionEvent actionEvent) {
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(sceneMainView);
+        window.show();
+    }
+    public void backHome(ActionEvent event) throws IOException {
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        Scene sceneMainView = new Scene(scenePantryParent);
+
+
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(sceneMainView);
+        window.show();
     }
     public void actionSearch(ActionEvent actionEvent) {
-        try{
+        try {
             SearchBean searchBean = new SearchBean(searchBar.getText(), spicesCheckBox.isSelected(), fruitCheckBox.isSelected(), meatCheckBox.isSelected(), vegetableCheckBox.isSelected(), sweetCheckBox.isSelected(), liquidCheckBox.isSelected(), fishCheckBox.isSelected());
             SearchProductController searchProductController = new SearchProductController();
-            ObservableList obl = FXCollections.observableArrayList(searchProductController.searchProduct(searchBean));
-            Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
-            Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
-            Expiration.setCellValueFactory(new PropertyValueFactory<>("Expiration"));
-            TypeOfFood.setCellValueFactory(new PropertyValueFactory<>("TypeOfFood"));
-            productTable.setItems(obl);
-        }catch(Exception e){
+            //ObservableList obl = FXCollections.observableArrayList(searchProductController.searchProduct(searchBean));
+            productTable.getItems().clear();
+
+            setTable(searchProductController.searchProduct(searchBean));
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
+    }
 
+    private void setTable(List<ProductBean> productBeans){
+        Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
+        TypeOfFood.setCellValueFactory(new PropertyValueFactory<>("TypeOfFood"));
+        Expiration.setCellValueFactory(new PropertyValueFactory<>("Expiration"));
 
+        Iterator<ProductBean> iteratorProduct=productBeans.iterator();
+
+        ObservableList<ProductModel> obl= productTable.getItems();
+
+        while(iteratorProduct.hasNext()) {
+            ProductBean productBean = iteratorProduct.next();
+            ProductModel productModel=new ProductModel(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getExpiration());
+            obl.add(productModel);
+        }
+        productTable.setItems(obl);
 
     }
 
 
+//    public void initialize(URL url, ResourceBundle resourceBundle) {
+//        try{
+//
+//        }catch(Exception e){
+//            e.printStackTrace();
+//        }
+//
+//    }
 }
+
+
+

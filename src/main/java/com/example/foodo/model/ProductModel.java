@@ -30,7 +30,7 @@ public class ProductModel {
     }
 
 
-
+    public ProductModel(){}
 
     public ProductModel(String name, int quantity, String typeOfFood, int expirationDay, int expirationMonth, int expirationYear) {
         this.Name = name;

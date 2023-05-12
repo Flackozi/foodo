@@ -45,4 +45,9 @@ public class BasicQueries {
         String sql = "SELECT * FROM pantry WHERE type = '" + type + "';";
         return stmt.executeQuery(sql);
     }
+
+    public static ResultSet retriveByText(Statement stmt, String searchText) throws SQLException {
+        String sql = "SELECT * FROM pantry WHERE name = '" + searchText + "';";
+        return stmt.executeQuery(sql);
+    }
 }

@@ -17,9 +17,32 @@ import java.util.List;
 
 public class SearchDAO {
 
+    public static ProductModel retriveBySearchText(String searchText){
+        Statement stmt;
+        ProductModel productModel=new ProductModel();
+        try{
+            stmt = ConnectionDB.getConnection();
+            ResultSet resultSet = BasicQueries.retriveByText(stmt, searchText);
+            resultSet.next();
+            resultSet.first();
 
+            do{
+                int expDay = resultSet.getInt("expirationDay");
+                int expMonth = resultSet.getInt("expirationMonth");
+                int expYear = resultSet.getInt("expirationYear");
+                String exp = expDay + "/" + expMonth + "/" + expYear;
+                productModel.setName(resultSet.getString("name"));
+                productModel.setQuantity(resultSet.getInt("quantity"));
+                productModel.setTypeOfFood(resultSet.getString("type"));
+                productModel.setExpiration(exp);
+            }while(resultSet.next());
+        }catch(SQLException | ConnectionDbException e){
+            e.printStackTrace();;
+        }
+        return productModel;
+    }
 
-    public static List<ProductModel> retriveByTypeOfFood(String type) {
+    public static ObservableList retriveByTypeOfFood(String type) {
         Statement stmt;
         List<ProductModel> productModelList = new ArrayList<>();
 
@@ -27,7 +50,7 @@ public class SearchDAO {
             stmt = ConnectionDB.getConnection();
             ResultSet resultSet = BasicQueries.retriveByType(stmt, type);
             resultSet.next();
-            resultSet.first();
+            //resultSet.first();
 
             do{
                 String name = resultSet.getString("name");
@@ -44,6 +67,7 @@ public class SearchDAO {
             e.printStackTrace();;
         }
 
-        return productModelList;
+        ObservableList obl = FXCollections.observableArrayList(productModelList);
+        return obl;
     }
 }
