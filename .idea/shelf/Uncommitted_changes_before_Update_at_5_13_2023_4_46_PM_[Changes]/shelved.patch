@@ -1,0 +1,786 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM_[Changes]/shelved.patch	(revision 89277dbabbd46838fc365f68811e0ab3a6072f86)
++++ /dev/null	(revision 89277dbabbd46838fc365f68811e0ab3a6072f86)
+@@ -1,470 +0,0 @@
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]/shelved.patch
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]/shelved.patch
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]/shelved.patch	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-+++ /dev/null	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-@@ -1,79 +0,0 @@
+--Index: .idea/workspace.xml
+--IDEA additional info:
+--Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+--<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"fine caso d'uso del profilo, ma manca la persistenza dell'immagine\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/LoginController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/LoginController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ChefMainPageControllerGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ChefMainPageControllerGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/chefDAO.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAO.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/GUIclass/chefMainPage.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/GUIclass/chefMainPage.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/GUIclass/sceneChefProfile.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/GUIclass/sceneChefProfile.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OY02nPhaoLa5wBNKWzOCDTczBl\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/carlo/Desktop/PROGETTO ISPW/foodo\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"org.jetbrains.plugins.github.ui.GithubSettingsConfigurable\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"\" />\r\n      <created>1681722011948</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681722011948</updated>\r\n      <workItem from=\"1681722015322\" duration=\"1591000\" />\r\n      <workItem from=\"1681726624825\" duration=\"631000\" />\r\n      <workItem from=\"1681727662245\" duration=\"737000\" />\r\n      <workItem from=\"1681747954474\" duration=\"2824000\" />\r\n      <workItem from=\"1681911650126\" duration=\"1984000\" />\r\n      <workItem from=\"1681914955160\" duration=\"10089000\" />\r\n      <workItem from=\"1681925637833\" duration=\"20000\" />\r\n      <workItem from=\"1682147987802\" duration=\"3907000\" />\r\n      <workItem from=\"1682155795042\" duration=\"263000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"1\">\r\n      <created>1681726734682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726734682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"2-inserimento classe product\">\r\n      <created>1681726894646</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726894647</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"risoluzione  alcuni code smells\">\r\n      <created>1681750520298</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681750520298</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"commit\">\r\n      <created>1681911710383</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681911710383</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"use case: profile &#10;first try\">\r\n      <created>1681925097599</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681925097599</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ciao\" />\r\n    <MESSAGE value=\"1\" />\r\n    <MESSAGE value=\"2-inserimento classe product\" />\r\n    <MESSAGE value=\"risoluzione  alcuni code smells\" />\r\n    <MESSAGE value=\"commit\" />\r\n    <MESSAGE value=\"use case: profile &#10;first try\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"use case: profile &#10;first try\" />\r\n  </component>\r\n</project>
+--Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+--<+>UTF-8
+--===================================================================
+--diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+----- a/.idea/workspace.xml	(revision b1f536bb42d9562d1f559446c26fe33ec0622657)
+--+++ b/.idea/workspace.xml	(date 1682604366108)
+--@@ -4,15 +4,8 @@
+--     <option name="autoReloadType" value="SELECTIVE" />
+--   </component>
+--   <component name="ChangeListManager">
+---    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="fine caso d'uso del profilo, ma manca la persistenza dell'immagine">
+---      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml" afterDir="false" />
+--+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="fatto profilo anche per lo chef, inizio pantry">
+--       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/LoginController.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ChefMainPageControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ChefMainPageControllerGUI.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/chefDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAO.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/chefMainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/chefMainPage.fxml" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneChefProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneChefProfile.fxml" afterDir="false" />
+--     </list>
+--     <option name="SHOW_DIALOG" value="false" />
+--     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+--@@ -51,7 +44,7 @@
+--     "RunOnceActivity.ShowReadmeOnStart": "true",
+--     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+--     "WebServerToolWindowFactoryState": "false",
+---    "last_opened_file_path": "C:/Users/carlo/Desktop/PROGETTO ISPW/foodo",
+--+    "last_opened_file_path": "C:/Users/carlo/Desktop/PROGETTO ISPW/esameISPW-francesca",
+--     "node.js.detected.package.eslint": "true",
+--     "node.js.detected.package.tslint": "true",
+--     "node.js.selected.package.eslint": "(autodetect)",
+--@@ -79,6 +72,8 @@
+--       <workItem from="1681925637833" duration="20000" />
+--       <workItem from="1682147987802" duration="3907000" />
+--       <workItem from="1682155795042" duration="263000" />
+--+      <workItem from="1682236314082" duration="3043000" />
+--+      <workItem from="1682604057672" duration="309000" />
+--     </task>
+--     <task id="LOCAL-00001" summary="1">
+--       <created>1681726734682</created>
+--@@ -115,7 +110,21 @@
+--       <option name="project" value="LOCAL" />
+--       <updated>1681925097599</updated>
+--     </task>
+---    <option name="localTasksCounter" value="6" />
+--+    <task id="LOCAL-00006" summary="fine caso d'uso del profilo, ma manca la persistenza dell'immagine">
+--+      <created>1682236368894</created>
+--+      <option name="number" value="00006" />
+--+      <option name="presentableId" value="LOCAL-00006" />
+--+      <option name="project" value="LOCAL" />
+--+      <updated>1682236368894</updated>
+--+    </task>
+--+    <task id="LOCAL-00007" summary="fatto profilo anche per lo chef, inizio pantry">
+--+      <created>1682236480798</created>
+--+      <option name="number" value="00007" />
+--+      <option name="presentableId" value="LOCAL-00007" />
+--+      <option name="project" value="LOCAL" />
+--+      <updated>1682236480798</updated>
+--+    </task>
+--+    <option name="localTasksCounter" value="8" />
+--     <servers />
+--   </component>
+--   <component name="TypeScriptGeneratedFilesManager">
+--@@ -139,6 +148,8 @@
+--     <MESSAGE value="risoluzione  alcuni code smells" />
+--     <MESSAGE value="commit" />
+--     <MESSAGE value="use case: profile &#10;first try" />
+---    <option name="LAST_COMMIT_MESSAGE" value="use case: profile &#10;first try" />
+--+    <MESSAGE value="fine caso d'uso del profilo, ma manca la persistenza dell'immagine" />
+--+    <MESSAGE value="fatto profilo anche per lo chef, inizio pantry" />
+--+    <option name="LAST_COMMIT_MESSAGE" value="fatto profilo anche per lo chef, inizio pantry" />
+--   </component>
+-- </project>
+--\ No newline at end of file
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53__Changes_.xml
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53__Changes_.xml
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53__Changes_.xml	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-+++ /dev/null	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-@@ -1,4 +0,0 @@
+--<changelist name="Uncommitted_changes_before_Update_at_23_04_2023_09_53_[Changes]" date="1682236429815" recycled="true" deleted="true">
+--  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53_[Changes]/shelved.patch" />
+--  <option name="DESCRIPTION" value="Uncommitted changes before Update at 23/04/2023 09:53 [Changes]" />
+--</changelist>
+-\ No newline at end of file
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-+++ /dev/null	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-@@ -1,4 +0,0 @@
+--<changelist name="Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]" date="1682604613925" recycled="true" deleted="true">
+--  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]/shelved.patch" />
+--  <option name="DESCRIPTION" value="Uncommitted changes before Update at 4/27/2023 4:10 PM [Changes]" />
+--</changelist>
+-\ No newline at end of file
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-+++ /dev/null	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-@@ -1,4 +0,0 @@
+--<changelist name="Uncommitted_changes_before_Update_at_22_04_2023_10_27_[Changes]" date="1682152097065" recycled="true" deleted="true">
+--  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27_[Changes]/shelved.patch" />
+--  <option name="DESCRIPTION" value="Uncommitted changes before Update at 22/04/2023 10:27 [Changes]" />
+--</changelist>
+-\ No newline at end of file
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM__Changes_.xml
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM__Changes_.xml
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM__Changes_.xml	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-+++ /dev/null	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-@@ -1,4 +0,0 @@
+--<changelist name="Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM_[Changes]" date="1682153354459" recycled="true" deleted="true">
+--  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM_[Changes]/shelved.patch" />
+--  <option name="DESCRIPTION" value="Uncommitted changes before Update at 4/22/2023 10:49 AM [Changes]" />
+--</changelist>
+-\ No newline at end of file
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53_[Changes]/shelved.patch
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53_[Changes]/shelved.patch
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53_[Changes]/shelved.patch	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-+++ /dev/null	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-@@ -1,53 +0,0 @@
+--Index: .idea/workspace.xml
+--IDEA additional info:
+--Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+--<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"use case: profile &#10;first try\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"FxmlFile\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OY02nPhaoLa5wBNKWzOCDTczBl\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/carlo/Desktop/PROGETTO ISPW/esameISPW-francesca/AdoptMe-master&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"\" />\r\n      <created>1681722011948</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681722011948</updated>\r\n      <workItem from=\"1681722015322\" duration=\"1591000\" />\r\n      <workItem from=\"1681726624825\" duration=\"631000\" />\r\n      <workItem from=\"1681727662245\" duration=\"737000\" />\r\n      <workItem from=\"1681747954474\" duration=\"2824000\" />\r\n      <workItem from=\"1681911650126\" duration=\"1984000\" />\r\n      <workItem from=\"1681914955160\" duration=\"10089000\" />\r\n      <workItem from=\"1681925637833\" duration=\"20000\" />\r\n      <workItem from=\"1682147987802\" duration=\"3907000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"1\">\r\n      <created>1681726734682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726734682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"2-inserimento classe product\">\r\n      <created>1681726894646</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726894647</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"risoluzione  alcuni code smells\">\r\n      <created>1681750520298</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681750520298</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"commit\">\r\n      <created>1681911710383</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681911710383</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"use case: profile &#10;first try\">\r\n      <created>1681925097599</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681925097599</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ciao\" />\r\n    <MESSAGE value=\"1\" />\r\n    <MESSAGE value=\"2-inserimento classe product\" />\r\n    <MESSAGE value=\"risoluzione  alcuni code smells\" />\r\n    <MESSAGE value=\"commit\" />\r\n    <MESSAGE value=\"use case: profile &#10;first try\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"use case: profile &#10;first try\" />\r\n  </component>\r\n</project>
+--Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+--<+>UTF-8
+--===================================================================
+--diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+----- a/.idea/workspace.xml	(revision 838bcb55655f602b29362477a99d5638fa190c8f)
+--+++ b/.idea/workspace.xml	(date 1682155784660)
+--@@ -4,7 +4,7 @@
+--     <option name="autoReloadType" value="SELECTIVE" />
+--   </component>
+--   <component name="ChangeListManager">
+---    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="use case: profile &#10;first try">
+--+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="aggiunta interfaccia profilo chef">
+--       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--     </list>
+--     <option name="SHOW_DIALOG" value="false" />
+--@@ -71,6 +71,7 @@
+--       <workItem from="1681914955160" duration="10089000" />
+--       <workItem from="1681925637833" duration="20000" />
+--       <workItem from="1682147987802" duration="3907000" />
+--+      <workItem from="1682155071248" duration="633000" />
+--     </task>
+--     <task id="LOCAL-00001" summary="1">
+--       <created>1681726734682</created>
+--@@ -107,7 +108,14 @@
+--       <option name="project" value="LOCAL" />
+--       <updated>1681925097599</updated>
+--     </task>
+---    <option name="localTasksCounter" value="6" />
+--+    <task id="LOCAL-00006" summary="aggiunta interfaccia profilo chef">
+--+      <created>1682153329158</created>
+--+      <option name="number" value="00006" />
+--+      <option name="presentableId" value="LOCAL-00006" />
+--+      <option name="project" value="LOCAL" />
+--+      <updated>1682153329158</updated>
+--+    </task>
+--+    <option name="localTasksCounter" value="7" />
+--     <servers />
+--   </component>
+--   <component name="TypeScriptGeneratedFilesManager">
+--@@ -131,6 +139,7 @@
+--     <MESSAGE value="risoluzione  alcuni code smells" />
+--     <MESSAGE value="commit" />
+--     <MESSAGE value="use case: profile &#10;first try" />
+---    <option name="LAST_COMMIT_MESSAGE" value="use case: profile &#10;first try" />
+--+    <MESSAGE value="aggiunta interfaccia profilo chef" />
+--+    <option name="LAST_COMMIT_MESSAGE" value="aggiunta interfaccia profilo chef" />
+--   </component>
+-- </project>
+--\ No newline at end of file
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM_[Changes]/shelved.patch
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM_[Changes]/shelved.patch
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM_[Changes]/shelved.patch	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-+++ /dev/null	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-@@ -1,108 +0,0 @@
+--Index: src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java
+--IDEA additional info:
+--Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+--<+>package com.example.foodo.GUIclass;\r\n\r\nimport com.example.foodo.ControllerAppl.ProfileController;\r\nimport com.example.foodo.Main;\r\nimport com.example.foodo.engineering.Session.Session;\r\nimport com.example.foodo.engineering.Utils.ImageConverterSupport;\r\nimport com.example.foodo.engineering.bean.UserBean;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Node;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.stage.FileChooser;\r\nimport javafx.stage.Stage;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.control.TextField;\r\n\r\nimport java.awt.*;\r\nimport java.io.File;\r\nimport java.io.IOException;\r\nimport java.util.Objects;\r\n\r\npublic class ProfileControllerGUI {\r\n    @FXML\r\n    private File file = null;\r\n    @FXML\r\n    private ImageView userImg;\r\n    @FXML\r\n    private Label labelUsername;\r\n    @FXML\r\n    private Label labelFavoriteFood;\r\n    @FXML\r\n    private Label labelTypeOfDiet;\r\n    @FXML\r\n    private Label labelAccountType;\r\n\r\n    private UserBean userBean;\r\n    private Parent root;\r\n    private Stage stage;\r\n    private Scene scene;\r\n\r\n\r\n    public void LoadImage(ActionEvent event) throws IOException {\r\n        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();\r\n        FileChooser fileChooser=new FileChooser();\r\n        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter(\"Imagine Files\",\"*.png\",\"*.jpg\"));\r\n        file = fileChooser.showOpenDialog(stage).getAbsoluteFile();\r\n        userImg.setImage(ImageConverterSupport.fromFileToImage(file));\r\n//        UserBean userBean= Session.getCurrentSession().getUserBean();\r\n//        userBean.setProfileImg(file);\r\n    }\r\n\r\n\r\n    public void setUserInfoProfile(UserBean userBean) throws IOException {\r\n        ProfileController profileController = new ProfileController();\r\n        userBean= Session.getCurrentSession().getUserBean();\r\n        labelUsername.setText(userBean.getUserUsernameBean());\r\n        labelFavoriteFood.setText(userBean.getUserFavoriteFoodBean());\r\n        labelTypeOfDiet.setText(userBean.getUserTypeOfDietBean());\r\n        labelAccountType.setText(\"utente base\");\r\n//        userImg.setImage(ImageConverterSupport.fromFileToImage(userBean.getProfileImg()));\r\n    }\r\n\r\n\r\n\r\n    public void BackHome(ActionEvent event) throws IOException {\r\n        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(\"/GUIclass/sceneHomeUser.fxml\")));\r\n        scene = new Scene(root);\r\n        stage = (Stage)((Node)event.getSource()).getScene().getWindow();\r\n        stage.setScene(scene);\r\n        stage.show();\r\n    }\r\n}\r\n
+--Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+--<+>UTF-8
+--===================================================================
+--diff --git a/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java b/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java
+----- a/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java	(revision 53823b729dd35c26b5dabb1e8569052eb09fe232)
+--+++ b/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java	(date 1682153145585)
+--@@ -4,6 +4,7 @@
+-- import com.example.foodo.Main;
+-- import com.example.foodo.engineering.Session.Session;
+-- import com.example.foodo.engineering.Utils.ImageConverterSupport;
+--+import com.example.foodo.engineering.bean.ChefBean;
+-- import com.example.foodo.engineering.bean.UserBean;
+-- import javafx.event.ActionEvent;
+-- import javafx.fxml.FXML;
+--@@ -36,6 +37,13 @@
+--     @FXML
+--     private Label labelAccountType;
+-- 
+--+    @FXML
+--+    private Label labelWorkplace;
+--+
+--+    @FXML
+--+    private Label labelTypeOfCuisine;
+--+
+--+
+--     private UserBean userBean;
+--     private Parent root;
+--     private Stage stage;
+--@@ -63,6 +71,15 @@
+-- //        userImg.setImage(ImageConverterSupport.fromFileToImage(userBean.getProfileImg()));
+--     }
+-- 
+--+    public void setChefInfoProfile(ChefBean chefBean) throws IOException {
+--+        ProfileController profileController = new ProfileController();
+--+        chefBean= Session.getCurrentSession().getChefBean();
+--+        labelUsername.setText(chefBean.getUsername());
+--+        labelTypeOfCuisine.setText(chefBean.getTypeOfCuisine());
+--+        labelWorkplace.setText(chefBean.getWorkplace());
+--+        labelAccountType.setText("chef");
+--+    }
+--+
+-- 
+-- 
+--     public void BackHome(ActionEvent event) throws IOException {
+--Index: .idea/workspace.xml
+--IDEA additional info:
+--Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+--<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"use case: profile &#10;first try\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/CreateAccountControllerGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/CreateAccountControllerGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/Session/Session.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/Session/Session.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/UserBean.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/UserBean.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/GUIclass/sceneProfile.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/GUIclass/sceneProfile.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OY02nPhaoLa5wBNKWzOCDTczBl\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/carlo/Desktop/PROGETTO ISPW/esameISPW-francesca/AdoptMe-master\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"org.jetbrains.plugins.github.ui.GithubSettingsConfigurable\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"\" />\r\n      <created>1681722011948</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681722011948</updated>\r\n      <workItem from=\"1681722015322\" duration=\"1591000\" />\r\n      <workItem from=\"1681726624825\" duration=\"631000\" />\r\n      <workItem from=\"1681727662245\" duration=\"737000\" />\r\n      <workItem from=\"1681747954474\" duration=\"2824000\" />\r\n      <workItem from=\"1681911650126\" duration=\"1984000\" />\r\n      <workItem from=\"1681914955160\" duration=\"10089000\" />\r\n      <workItem from=\"1681925637833\" duration=\"20000\" />\r\n      <workItem from=\"1682147987802\" duration=\"3907000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"1\">\r\n      <created>1681726734682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726734682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"2-inserimento classe product\">\r\n      <created>1681726894646</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726894647</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"risoluzione  alcuni code smells\">\r\n      <created>1681750520298</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681750520298</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"commit\">\r\n      <created>1681911710383</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681911710383</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"use case: profile &#10;first try\">\r\n      <created>1681925097599</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681925097599</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ciao\" />\r\n    <MESSAGE value=\"1\" />\r\n    <MESSAGE value=\"2-inserimento classe product\" />\r\n    <MESSAGE value=\"risoluzione  alcuni code smells\" />\r\n    <MESSAGE value=\"commit\" />\r\n    <MESSAGE value=\"use case: profile &#10;first try\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"use case: profile &#10;first try\" />\r\n  </component>\r\n</project>
+--Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+--<+>UTF-8
+--===================================================================
+--diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+----- a/.idea/workspace.xml	(revision 53823b729dd35c26b5dabb1e8569052eb09fe232)
+--+++ b/.idea/workspace.xml	(date 1682153146166)
+--@@ -4,13 +4,8 @@
+--     <option name="autoReloadType" value="SELECTIVE" />
+--   </component>
+--   <component name="ChangeListManager">
+---    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="use case: profile &#10;first try">
+---      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/CreateAccountControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/CreateAccountControllerGUI.java" afterDir="false" />
+--+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="fine caso d'uso del profilo, ma manca la persistenza dell'immagine">
+--       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/Session/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/Session/Session.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/UserBean.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneProfile.fxml" afterDir="false" />
+--     </list>
+--     <option name="SHOW_DIALOG" value="false" />
+--     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+--@@ -74,7 +69,7 @@
+--       <workItem from="1681911650126" duration="1984000" />
+--       <workItem from="1681914955160" duration="10089000" />
+--       <workItem from="1681925637833" duration="20000" />
+---      <workItem from="1682147987802" duration="3907000" />
+--+      <workItem from="1682147987802" duration="5142000" />
+--     </task>
+--     <task id="LOCAL-00001" summary="1">
+--       <created>1681726734682</created>
+--@@ -111,7 +106,14 @@
+--       <option name="project" value="LOCAL" />
+--       <updated>1681925097599</updated>
+--     </task>
+---    <option name="localTasksCounter" value="6" />
+--+    <task id="LOCAL-00006" summary="fine caso d'uso del profilo, ma manca la persistenza dell'immagine">
+--+      <created>1682151971792</created>
+--+      <option name="number" value="00006" />
+--+      <option name="presentableId" value="LOCAL-00006" />
+--+      <option name="project" value="LOCAL" />
+--+      <updated>1682151971793</updated>
+--+    </task>
+--+    <option name="localTasksCounter" value="7" />
+--     <servers />
+--   </component>
+--   <component name="TypeScriptGeneratedFilesManager">
+--@@ -135,6 +137,7 @@
+--     <MESSAGE value="risoluzione  alcuni code smells" />
+--     <MESSAGE value="commit" />
+--     <MESSAGE value="use case: profile &#10;first try" />
+---    <option name="LAST_COMMIT_MESSAGE" value="use case: profile &#10;first try" />
+--+    <MESSAGE value="fine caso d'uso del profilo, ma manca la persistenza dell'immagine" />
+--+    <option name="LAST_COMMIT_MESSAGE" value="fine caso d'uso del profilo, ma manca la persistenza dell'immagine" />
+--   </component>
+-- </project>
+--\ No newline at end of file
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27_[Changes]/shelved.patch
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27_[Changes]/shelved.patch
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27_[Changes]/shelved.patch	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-+++ /dev/null	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-@@ -1,95 +0,0 @@
+--Index: .idea/workspace.xml
+--IDEA additional info:
+--Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+--<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"use case: profile &#10;first try\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OY02nPhaoLa5wBNKWzOCDTczBl\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/flavi/Desktop/AdoptMe-master\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"org.jetbrains.plugins.github.ui.GithubSettingsConfigurable\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"\" />\r\n      <created>1681722011948</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681722011948</updated>\r\n      <workItem from=\"1681722015322\" duration=\"1591000\" />\r\n      <workItem from=\"1681726624825\" duration=\"631000\" />\r\n      <workItem from=\"1681727662245\" duration=\"737000\" />\r\n      <workItem from=\"1681747954474\" duration=\"2824000\" />\r\n      <workItem from=\"1681911650126\" duration=\"1984000\" />\r\n      <workItem from=\"1681914955160\" duration=\"10089000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"1\">\r\n      <created>1681726734682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726734682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"2-inserimento classe product\">\r\n      <created>1681726894646</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726894647</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"risoluzione  alcuni code smells\">\r\n      <created>1681750520298</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681750520298</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"commit\">\r\n      <created>1681911710383</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681911710383</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"use case: profile &#10;first try\">\r\n      <created>1681925097599</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681925097599</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ciao\" />\r\n    <MESSAGE value=\"1\" />\r\n    <MESSAGE value=\"2-inserimento classe product\" />\r\n    <MESSAGE value=\"risoluzione  alcuni code smells\" />\r\n    <MESSAGE value=\"commit\" />\r\n    <MESSAGE value=\"use case: profile &#10;first try\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"use case: profile &#10;first try\" />\r\n  </component>\r\n</project>
+--Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+--<+>UTF-8
+--===================================================================
+--diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+----- a/.idea/workspace.xml	(revision c936f11060817df22e5c72e519eecd93504268e6)
+--+++ b/.idea/workspace.xml	(date 1682148656907)
+--@@ -4,7 +4,7 @@
+--     <option name="autoReloadType" value="SELECTIVE" />
+--   </component>
+--   <component name="ChangeListManager">
+---    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="use case: profile &#10;first try">
+--+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="use case: profile &#10;second try">
+--       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--     </list>
+--     <option name="SHOW_DIALOG" value="false" />
+--@@ -37,23 +37,23 @@
+--     <option name="hideEmptyMiddlePackages" value="true" />
+--     <option name="showLibraryContents" value="true" />
+--   </component>
+---  <component name="PropertiesComponent"><![CDATA[{
+---  "keyToString": {
+---    "RunOnceActivity.OpenProjectViewOnStart": "true",
+---    "RunOnceActivity.ShowReadmeOnStart": "true",
+---    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+---    "WebServerToolWindowFactoryState": "false",
+---    "last_opened_file_path": "C:/Users/flavi/Desktop/AdoptMe-master",
+---    "node.js.detected.package.eslint": "true",
+---    "node.js.detected.package.tslint": "true",
+---    "node.js.selected.package.eslint": "(autodetect)",
+---    "node.js.selected.package.tslint": "(autodetect)",
+---    "project.structure.last.edited": "Modules",
+---    "project.structure.proportion": "0.15",
+---    "project.structure.side.proportion": "0.2",
+---    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+--+  <component name="PropertiesComponent">{
+--+  &quot;keyToString&quot;: {
+--+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+--+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+--+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+--+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+--+    &quot;last_opened_file_path&quot;: &quot;C:/Users/flavi/Desktop/AdoptMe-master&quot;,
+--+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+--+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+--+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+--+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+--+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+--+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+--+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+--+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+--   }
+---}]]></component>
+--+}</component>
+--   <component name="RunManager">
+--     <configuration default="true" type="JetRunConfigurationType">
+--       <method v="2">
+--@@ -81,6 +81,9 @@
+--       <workItem from="1681747954474" duration="2824000" />
+--       <workItem from="1681911650126" duration="1984000" />
+--       <workItem from="1681914955160" duration="10089000" />
+--+      <workItem from="1681925159611" duration="246000" />
+--+      <workItem from="1682147985923" duration="11000" />
+--+      <workItem from="1682148632927" duration="24000" />
+--     </task>
+--     <task id="LOCAL-00001" summary="1">
+--       <created>1681726734682</created>
+--@@ -117,7 +120,14 @@
+--       <option name="project" value="LOCAL" />
+--       <updated>1681925097599</updated>
+--     </task>
+---    <option name="localTasksCounter" value="6" />
+--+    <task id="LOCAL-00006" summary="use case: profile &#10;second try">
+--+      <created>1681925235468</created>
+--+      <option name="number" value="00006" />
+--+      <option name="presentableId" value="LOCAL-00006" />
+--+      <option name="project" value="LOCAL" />
+--+      <updated>1681925235468</updated>
+--+    </task>
+--+    <option name="localTasksCounter" value="7" />
+--     <servers />
+--   </component>
+--   <component name="TypeScriptGeneratedFilesManager">
+--@@ -141,6 +151,7 @@
+--     <MESSAGE value="risoluzione  alcuni code smells" />
+--     <MESSAGE value="commit" />
+--     <MESSAGE value="use case: profile &#10;first try" />
+---    <option name="LAST_COMMIT_MESSAGE" value="use case: profile &#10;first try" />
+--+    <MESSAGE value="use case: profile &#10;second try" />
+--+    <option name="LAST_COMMIT_MESSAGE" value="use case: profile &#10;second try" />
+--   </component>
+-- </project>
+--\ No newline at end of file
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"fatto profilo anche per lo chef, inizio pantry\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/model/ProductModel.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/PantryController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/PantryController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ControllerGUIMainUser.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ControllerGUIMainUser.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/HomeUserControllerGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/HomeUserControllerGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/PantryControllerGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/PantryControllerGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/Utils/ProductDAOSupport.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/Utils/ProductDAOSupport.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/ProductBean.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/ProductBean.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/ConnectionDB.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/ConnectionDB.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/model/Product.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/GUIclass/sceneMyPantry.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/GUIclass/sceneMyPantry.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OY02nPhaoLa5wBNKWzOCDTczBl\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/flavi/Desktop/AdoptMe-master&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"\" />\r\n      <created>1681722011948</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681722011948</updated>\r\n      <workItem from=\"1681722015322\" duration=\"1591000\" />\r\n      <workItem from=\"1681726624825\" duration=\"631000\" />\r\n      <workItem from=\"1681727662245\" duration=\"737000\" />\r\n      <workItem from=\"1681747954474\" duration=\"2824000\" />\r\n      <workItem from=\"1681911650126\" duration=\"1984000\" />\r\n      <workItem from=\"1681914955160\" duration=\"10089000\" />\r\n      <workItem from=\"1681925637833\" duration=\"20000\" />\r\n      <workItem from=\"1682147987802\" duration=\"3907000\" />\r\n      <workItem from=\"1682155795042\" duration=\"263000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"1\">\r\n      <created>1681726734682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726734682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"2-inserimento classe product\">\r\n      <created>1681726894646</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726894647</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"risoluzione  alcuni code smells\">\r\n      <created>1681750520298</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681750520298</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"commit\">\r\n      <created>1681911710383</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681911710383</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"use case: profile &#10;first try\">\r\n      <created>1681925097599</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681925097599</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ciao\" />\r\n    <MESSAGE value=\"1\" />\r\n    <MESSAGE value=\"2-inserimento classe product\" />\r\n    <MESSAGE value=\"risoluzione  alcuni code smells\" />\r\n    <MESSAGE value=\"commit\" />\r\n    <MESSAGE value=\"use case: profile &#10;first try\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"use case: profile &#10;first try\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 7c4490cb35beea6f4699343877298fc332a87d30)
+-+++ b/.idea/workspace.xml	(date 1682611817740)
+-@@ -4,21 +4,7 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="fatto profilo anche per lo chef, inizio pantry">
+--      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/ProductModel.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53__Changes_.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/PantryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/PantryController.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ControllerGUIMainUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ControllerGUIMainUser.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/HomeUserControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/HomeUserControllerGUI.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/PantryControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/PantryControllerGUI.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/Utils/ProductDAOSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/Utils/ProductDAOSupport.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/ProductBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/ProductBean.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/ConnectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/ConnectionDB.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/Product.java" beforeDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneMyPantry.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneMyPantry.fxml" afterDir="false" />
+--    </list>
+-+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="continuo pantry: manca da sistemare il type picker, per poter inserire le info nel db" />
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-@@ -120,7 +106,14 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1681925097599</updated>
+-     </task>
+--    <option name="localTasksCounter" value="6" />
+-+    <task id="LOCAL-00006" summary="continuo pantry: manca da sistemare il type picker, per poter inserire le info nel db">
+-+      <created>1682611793495</created>
+-+      <option name="number" value="00006" />
+-+      <option name="presentableId" value="LOCAL-00006" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1682611793495</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="7" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-@@ -144,6 +137,7 @@
+-     <MESSAGE value="risoluzione  alcuni code smells" />
+-     <MESSAGE value="commit" />
+-     <MESSAGE value="use case: profile &#10;first try" />
+--    <option name="LAST_COMMIT_MESSAGE" value="use case: profile &#10;first try" />
+-+    <MESSAGE value="continuo pantry: manca da sistemare il type picker, per poter inserire le info nel db" />
+-+    <option name="LAST_COMMIT_MESSAGE" value="continuo pantry: manca da sistemare il type picker, per poter inserire le info nel db" />
+-   </component>
+- </project>
+-\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43__Changes_.xml	(revision 89277dbabbd46838fc365f68811e0ab3a6072f86)
++++ /dev/null	(revision 89277dbabbd46838fc365f68811e0ab3a6072f86)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_06_05_2023_09_43_[Changes]" date="1683359028836" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 06/05/2023 09:43 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM__Changes_.xml	(revision 89277dbabbd46838fc365f68811e0ab3a6072f86)
++++ /dev/null	(revision 89277dbabbd46838fc365f68811e0ab3a6072f86)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM_[Changes]" date="1683357835749" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 5/6/2023 9:23 AM [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43_[Changes]/shelved.patch	(revision 89277dbabbd46838fc365f68811e0ab3a6072f86)
++++ /dev/null	(revision 89277dbabbd46838fc365f68811e0ab3a6072f86)
+@@ -1,154 +0,0 @@
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]/shelved.patch
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]/shelved.patch
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]/shelved.patch	(revision c4e028d4b9fe70f5529bfb31ed618b1b3c6384df)
+-+++ /dev/null	(revision c4e028d4b9fe70f5529bfb31ed618b1b3c6384df)
+-@@ -1,79 +0,0 @@
+--Index: .idea/workspace.xml
+--IDEA additional info:
+--Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+--<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"fine caso d'uso del profilo, ma manca la persistenza dell'immagine\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/LoginController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/LoginController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ChefMainPageControllerGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ChefMainPageControllerGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/chefDAO.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAO.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/GUIclass/chefMainPage.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/GUIclass/chefMainPage.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/GUIclass/sceneChefProfile.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/GUIclass/sceneChefProfile.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OY02nPhaoLa5wBNKWzOCDTczBl\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/carlo/Desktop/PROGETTO ISPW/foodo\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"org.jetbrains.plugins.github.ui.GithubSettingsConfigurable\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"\" />\r\n      <created>1681722011948</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681722011948</updated>\r\n      <workItem from=\"1681722015322\" duration=\"1591000\" />\r\n      <workItem from=\"1681726624825\" duration=\"631000\" />\r\n      <workItem from=\"1681727662245\" duration=\"737000\" />\r\n      <workItem from=\"1681747954474\" duration=\"2824000\" />\r\n      <workItem from=\"1681911650126\" duration=\"1984000\" />\r\n      <workItem from=\"1681914955160\" duration=\"10089000\" />\r\n      <workItem from=\"1681925637833\" duration=\"20000\" />\r\n      <workItem from=\"1682147987802\" duration=\"3907000\" />\r\n      <workItem from=\"1682155795042\" duration=\"263000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"1\">\r\n      <created>1681726734682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726734682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"2-inserimento classe product\">\r\n      <created>1681726894646</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726894647</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"risoluzione  alcuni code smells\">\r\n      <created>1681750520298</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681750520298</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"commit\">\r\n      <created>1681911710383</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681911710383</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"use case: profile &#10;first try\">\r\n      <created>1681925097599</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681925097599</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ciao\" />\r\n    <MESSAGE value=\"1\" />\r\n    <MESSAGE value=\"2-inserimento classe product\" />\r\n    <MESSAGE value=\"risoluzione  alcuni code smells\" />\r\n    <MESSAGE value=\"commit\" />\r\n    <MESSAGE value=\"use case: profile &#10;first try\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"use case: profile &#10;first try\" />\r\n  </component>\r\n</project>
+--Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+--<+>UTF-8
+--===================================================================
+--diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+----- a/.idea/workspace.xml	(revision b1f536bb42d9562d1f559446c26fe33ec0622657)
+--+++ b/.idea/workspace.xml	(date 1682604366108)
+--@@ -4,15 +4,8 @@
+--     <option name="autoReloadType" value="SELECTIVE" />
+--   </component>
+--   <component name="ChangeListManager">
+---    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="fine caso d'uso del profilo, ma manca la persistenza dell'immagine">
+---      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml" afterDir="false" />
+--+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="fatto profilo anche per lo chef, inizio pantry">
+--       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/ControllerAppl/LoginController.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ChefMainPageControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ChefMainPageControllerGUI.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/ProfileControllerGUI.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/chefDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAO.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/chefMainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/chefMainPage.fxml" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneChefProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneChefProfile.fxml" afterDir="false" />
+--     </list>
+--     <option name="SHOW_DIALOG" value="false" />
+--     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+--@@ -51,7 +44,7 @@
+--     "RunOnceActivity.ShowReadmeOnStart": "true",
+--     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+--     "WebServerToolWindowFactoryState": "false",
+---    "last_opened_file_path": "C:/Users/carlo/Desktop/PROGETTO ISPW/foodo",
+--+    "last_opened_file_path": "C:/Users/carlo/Desktop/PROGETTO ISPW/esameISPW-francesca",
+--     "node.js.detected.package.eslint": "true",
+--     "node.js.detected.package.tslint": "true",
+--     "node.js.selected.package.eslint": "(autodetect)",
+--@@ -79,6 +72,8 @@
+--       <workItem from="1681925637833" duration="20000" />
+--       <workItem from="1682147987802" duration="3907000" />
+--       <workItem from="1682155795042" duration="263000" />
+--+      <workItem from="1682236314082" duration="3043000" />
+--+      <workItem from="1682604057672" duration="309000" />
+--     </task>
+--     <task id="LOCAL-00001" summary="1">
+--       <created>1681726734682</created>
+--@@ -115,7 +110,21 @@
+--       <option name="project" value="LOCAL" />
+--       <updated>1681925097599</updated>
+--     </task>
+---    <option name="localTasksCounter" value="6" />
+--+    <task id="LOCAL-00006" summary="fine caso d'uso del profilo, ma manca la persistenza dell'immagine">
+--+      <created>1682236368894</created>
+--+      <option name="number" value="00006" />
+--+      <option name="presentableId" value="LOCAL-00006" />
+--+      <option name="project" value="LOCAL" />
+--+      <updated>1682236368894</updated>
+--+    </task>
+--+    <task id="LOCAL-00007" summary="fatto profilo anche per lo chef, inizio pantry">
+--+      <created>1682236480798</created>
+--+      <option name="number" value="00007" />
+--+      <option name="presentableId" value="LOCAL-00007" />
+--+      <option name="project" value="LOCAL" />
+--+      <updated>1682236480798</updated>
+--+    </task>
+--+    <option name="localTasksCounter" value="8" />
+--     <servers />
+--   </component>
+--   <component name="TypeScriptGeneratedFilesManager">
+--@@ -139,6 +148,8 @@
+--     <MESSAGE value="risoluzione  alcuni code smells" />
+--     <MESSAGE value="commit" />
+--     <MESSAGE value="use case: profile &#10;first try" />
+---    <option name="LAST_COMMIT_MESSAGE" value="use case: profile &#10;first try" />
+--+    <MESSAGE value="fine caso d'uso del profilo, ma manca la persistenza dell'immagine" />
+--+    <MESSAGE value="fatto profilo anche per lo chef, inizio pantry" />
+--+    <option name="LAST_COMMIT_MESSAGE" value="fatto profilo anche per lo chef, inizio pantry" />
+--   </component>
+-- </project>
+--\ No newline at end of file
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml	(revision c4e028d4b9fe70f5529bfb31ed618b1b3c6384df)
+-+++ /dev/null	(revision c4e028d4b9fe70f5529bfb31ed618b1b3c6384df)
+-@@ -1,4 +0,0 @@
+--<changelist name="Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]" date="1682604613925" recycled="true" deleted="true">
+--  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM_[Changes]/shelved.patch" />
+--  <option name="DESCRIPTION" value="Uncommitted changes before Update at 4/27/2023 4:10 PM [Changes]" />
+--</changelist>
+-\ No newline at end of file
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"fatto profilo anche per lo chef, inizio pantry\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27_[Changes]/shelved.patch\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53_[Changes]/shelved.patch\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM_[Changes]/shelved.patch\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/PantryControllerGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/PantryControllerGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/GUIclass/sceneMyPantry.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/GUIclass/sceneMyPantry.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OY02nPhaoLa5wBNKWzOCDTczBl\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/flavi/Desktop/AdoptMe-master&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"\" />\r\n      <created>1681722011948</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681722011948</updated>\r\n      <workItem from=\"1681722015322\" duration=\"1591000\" />\r\n      <workItem from=\"1681726624825\" duration=\"631000\" />\r\n      <workItem from=\"1681727662245\" duration=\"737000\" />\r\n      <workItem from=\"1681747954474\" duration=\"2824000\" />\r\n      <workItem from=\"1681911650126\" duration=\"1984000\" />\r\n      <workItem from=\"1681914955160\" duration=\"10089000\" />\r\n      <workItem from=\"1681925637833\" duration=\"20000\" />\r\n      <workItem from=\"1682147987802\" duration=\"3907000\" />\r\n      <workItem from=\"1682155795042\" duration=\"263000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"1\">\r\n      <created>1681726734682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726734682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"2-inserimento classe product\">\r\n      <created>1681726894646</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726894647</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"risoluzione  alcuni code smells\">\r\n      <created>1681750520298</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681750520298</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"commit\">\r\n      <created>1681911710383</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681911710383</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"use case: profile &#10;first try\">\r\n      <created>1681925097599</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681925097599</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ciao\" />\r\n    <MESSAGE value=\"1\" />\r\n    <MESSAGE value=\"2-inserimento classe product\" />\r\n    <MESSAGE value=\"risoluzione  alcuni code smells\" />\r\n    <MESSAGE value=\"commit\" />\r\n    <MESSAGE value=\"use case: profile &#10;first try\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"use case: profile &#10;first try\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision c4e028d4b9fe70f5529bfb31ed618b1b3c6384df)
+-+++ b/.idea/workspace.xml	(date 1682956288615)
+-@@ -4,18 +4,8 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="fatto profilo anche per lo chef, inizio pantry">
+--      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27_[Changes]/shelved.patch" beforeDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_04_2023_10_27__Changes_.xml" beforeDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53_[Changes]/shelved.patch" beforeDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_04_2023_09_53__Changes_.xml" beforeDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM_[Changes]/shelved.patch" beforeDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_22_2023_10_49_AM__Changes_.xml" beforeDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_4_10_PM__Changes_.xml" afterDir="false" />
+-+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: pantry&#10;descrizione: ho finito la parte che imposta le info delle texfield nel db">
+-       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/PantryControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/GUIclass/PantryControllerGUI.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneMyPantry.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUIclass/sceneMyPantry.fxml" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -118,7 +108,14 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1681925097599</updated>
+-     </task>
+--    <option name="localTasksCounter" value="6" />
+-+    <task id="LOCAL-00006" summary="caso d'uso: pantry&#10;descrizione: ho finito la parte che imposta le info delle texfield nel db">
+-+      <created>1682956278892</created>
+-+      <option name="number" value="00006" />
+-+      <option name="presentableId" value="LOCAL-00006" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1682956278892</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="7" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-@@ -142,6 +139,7 @@
+-     <MESSAGE value="risoluzione  alcuni code smells" />
+-     <MESSAGE value="commit" />
+-     <MESSAGE value="use case: profile &#10;first try" />
+--    <option name="LAST_COMMIT_MESSAGE" value="use case: profile &#10;first try" />
+-+    <MESSAGE value="caso d'uso: pantry&#10;descrizione: ho finito la parte che imposta le info delle texfield nel db" />
+-+    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: pantry&#10;descrizione: ho finito la parte che imposta le info delle texfield nel db" />
+-   </component>
+- </project>
+-\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"caso d'uso: search product&#10;descrizione: sistemazione interfacce\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_03__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_03__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_16__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_16__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_34__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_34__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_38__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_38__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/SearchProductControllerGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/SearchProductControllerGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/model/ProductModel.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/foodo/model/ProductModel.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/guiclass/sceneSearchProduct.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/guiclass/sceneSearchProduct.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OY02nPhaoLa5wBNKWzOCDTczBl\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"ToolWindowRun.ShowToolbar\": \"false\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/carlo/Desktop/PROGETTO ISPW/foodo\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"org.jetbrains.plugins.github.ui.GithubSettingsConfigurable\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"com.example.foodo.engineering.Utils\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d22a01e0-7639-4ce4-994c-0b814fac931a\" name=\"Changes\" comment=\"\" />\r\n      <created>1681722011948</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681722011948</updated>\r\n      <workItem from=\"1681722015322\" duration=\"1591000\" />\r\n      <workItem from=\"1681726624825\" duration=\"631000\" />\r\n      <workItem from=\"1681727662245\" duration=\"737000\" />\r\n      <workItem from=\"1681747954474\" duration=\"2824000\" />\r\n      <workItem from=\"1681911650126\" duration=\"1984000\" />\r\n      <workItem from=\"1681914955160\" duration=\"10089000\" />\r\n      <workItem from=\"1681925637833\" duration=\"20000\" />\r\n      <workItem from=\"1682147987802\" duration=\"3907000\" />\r\n      <workItem from=\"1682155795042\" duration=\"263000\" />\r\n      <workItem from=\"1683382767377\" duration=\"4661000\" />\r\n      <workItem from=\"1683449407860\" duration=\"5928000\" />\r\n      <workItem from=\"1683468466556\" duration=\"5769000\" />\r\n      <workItem from=\"1683640906688\" duration=\"1900000\" />\r\n      <workItem from=\"1683703995882\" duration=\"6998000\" />\r\n      <workItem from=\"1683726708099\" duration=\"1785000\" />\r\n      <workItem from=\"1683875028544\" duration=\"7552000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"1\">\r\n      <created>1681726734682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726734682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"2-inserimento classe product\">\r\n      <created>1681726894646</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681726894647</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"risoluzione  alcuni code smells\">\r\n      <created>1681750520298</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681750520298</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"commit\">\r\n      <created>1681911710383</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681911710383</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"use case: profile &#10;first try\">\r\n      <created>1681925097599</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681925097599</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"continuo pantry: manca da sistemare il type picker, per poter inserire le info nel db\">\r\n      <created>1683358472297</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683358472298</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"caso d'uso: pantry&#10;descrizione: tasto delete da sistemare\">\r\n      <created>1683640987676</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683640987676</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"caso d'uso: pantry&#10;descrizione: fine caso d'uso\">\r\n      <created>1683641708456</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683641708456</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"caso d'uso: search product&#10;descrizione: sistemazione interfacce\">\r\n      <created>1683642792315</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683642792315</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"caso d'uso: search product&#10;descrizione: inizio\">\r\n      <created>1683646228479</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683646228479</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"11\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ciao\" />\r\n    <MESSAGE value=\"1\" />\r\n    <MESSAGE value=\"2-inserimento classe product\" />\r\n    <MESSAGE value=\"risoluzione  alcuni code smells\" />\r\n    <MESSAGE value=\"commit\" />\r\n    <MESSAGE value=\"use case: profile &#10;first try\" />\r\n    <MESSAGE value=\"continuo pantry: manca da sistemare il type picker, per poter inserire le info nel db\" />\r\n    <MESSAGE value=\"caso d'uso: pantry&#10;descrizione: tasto delete da sistemare\" />\r\n    <MESSAGE value=\"caso d'uso: pantry&#10;descrizione: fine caso d'uso\" />\r\n    <MESSAGE value=\"caso d'uso: search product&#10;descrizione: sistemazione interfacce\" />\r\n    <MESSAGE value=\"caso d'uso: search product&#10;descrizione: inizio\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"caso d'uso: search product&#10;descrizione: inizio\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 89277dbabbd46838fc365f68811e0ab3a6072f86)
++++ b/.idea/workspace.xml	(date 1683989166794)
+@@ -4,19 +4,13 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: search product&#10;descrizione: sistemazione interfacce">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_03__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_16__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_34__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_05_2023_16_38__Changes_.xml" afterDir="false" />
++    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: search product&#10;descrizione: fine caso d'uso">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_09_43__Changes_.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_9_23_AM__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/SearchProductControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/SearchProductControllerGUI.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/ProductModel.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/sceneSearchProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/sceneSearchProduct.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/IngredientBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/IngredientBean.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -52,27 +46,30 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "ToolWindowRun.ShowToolbar": "false",
+-    "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "C:/Users/carlo/Desktop/PROGETTO ISPW/foodo",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/carlo/Desktop/PROGETTO ISPW/Fruits-Market-master&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CreateClassDialog.RecentsKey">
+       <recent name="com.example.foodo.engineering.Utils" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\carlo\Desktop\PROGETTO ISPW\foodo\src\main\java\com\example\foodo\guiclass" />
+     </key>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+@@ -98,7 +95,9 @@
+       <workItem from="1683640906688" duration="1900000" />
+       <workItem from="1683703995882" duration="6998000" />
+       <workItem from="1683726708099" duration="1785000" />
+-      <workItem from="1683875028544" duration="7552000" />
++      <workItem from="1683875028544" duration="8216000" />
++      <workItem from="1683962276675" duration="4467000" />
++      <workItem from="1683985899259" duration="3263000" />
+     </task>
+     <task id="LOCAL-00001" summary="1">
+       <created>1681726734682</created>
+@@ -170,7 +169,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1683646228479</updated>
+     </task>
+-    <option name="localTasksCounter" value="11" />
++    <task id="LOCAL-00011" summary="caso d'uso: search product&#10;descrizione: sistemazione interfacce">
++      <created>1683882692267</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1683882692267</updated>
++    </task>
++    <option name="localTasksCounter" value="12" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -197,8 +203,9 @@
+     <MESSAGE value="continuo pantry: manca da sistemare il type picker, per poter inserire le info nel db" />
+     <MESSAGE value="caso d'uso: pantry&#10;descrizione: tasto delete da sistemare" />
+     <MESSAGE value="caso d'uso: pantry&#10;descrizione: fine caso d'uso" />
+-    <MESSAGE value="caso d'uso: search product&#10;descrizione: sistemazione interfacce" />
+     <MESSAGE value="caso d'uso: search product&#10;descrizione: inizio" />
+-    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: search product&#10;descrizione: inizio" />
++    <MESSAGE value="caso d'uso: search product&#10;descrizione: sistemazione interfacce" />
++    <MESSAGE value="caso d'uso: search product&#10;descrizione: fine caso d'uso" />
++    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: search product&#10;descrizione: fine caso d'uso" />
+   </component>
+ </project>
+\ No newline at end of file
