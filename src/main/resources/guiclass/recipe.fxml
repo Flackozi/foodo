@@ -8,8 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiclass.Recipe">
+<AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.guiclass.RecipeInspectControllerGUI">
    <children>
       <ImageView fitHeight="844.0" fitWidth="390.0">
          <image>
@@ -26,7 +25,7 @@
       <Button layoutX="2.0" layoutY="772.0" mnemonicParsing="false" onAction="#backAction" prefHeight="72.0" prefWidth="134.0" style="-fx-background-color: 0000;" />
       <ImageView layoutX="93.0" layoutY="677.0">
          <image>
-            <Image url="@../../../../../../../../../Pictures/Screenshots/Screenshot%202023-05-13%20181105.png" />
+            <Image url="@../image/recipe.png" />
          </image>
       </ImageView>
       <Label layoutX="96.0" layoutY="696.0" prefHeight="28.0" prefWidth="100.0" />

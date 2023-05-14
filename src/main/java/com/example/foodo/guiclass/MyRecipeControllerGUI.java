@@ -2,6 +2,7 @@ package com.example.foodo.guiclass;
 
 import com.example.foodo.model.RecipeModel;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -20,6 +21,7 @@ import java.util.ResourceBundle;
 public class MyRecipeControllerGUI implements Initializable {
 
     private GridPane grid;
+    @FXML
     private ScrollPane scroll;
 
     private List<RecipeModel> recipes= new ArrayList<>();
@@ -47,4 +49,6 @@ public class MyRecipeControllerGUI implements Initializable {
         window.show();
     }
 
+    public void showAddNewRecipes(ActionEvent actionEvent) {
+    }
 }
