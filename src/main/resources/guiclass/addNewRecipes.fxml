@@ -9,7 +9,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.guiclass.NewRecipeControllerGUI">
    <children>
       <ImageView fitHeight="844.0" fitWidth="390.0">
@@ -17,17 +16,23 @@
             <Image url="@../image/addNewRecipe.png" />
          </image>
       </ImageView>
-      <Button layoutX="308.0" layoutY="249.0" mnemonicParsing="false" fx:id="addButton" onAction="#addIngredient" prefHeight="44.0" prefWidth="46.0" style="-fx-background-color: 0000;" />
+      <Button fx:id="addButton" layoutX="308.0" layoutY="249.0" mnemonicParsing="false" onAction="#addIngredient" prefHeight="44.0" prefWidth="46.0" style="-fx-background-color: 0000;" />
       <TextField fx:id="NameTextField" layoutX="102.0" layoutY="232.0" prefHeight="30.0" prefWidth="158.0" />
       <TextField fx:id="QuantiyTextField" layoutX="102.0" layoutY="286.0" prefHeight="30.0" prefWidth="158.0" />
       <TextArea fx:id="DescriptionTextArea" layoutX="20.0" layoutY="575.0" prefHeight="111.0" prefWidth="349.0" />
       <Button layoutX="138.0" layoutY="756.0" mnemonicParsing="false" onAction="#backHome" prefHeight="87.0" prefWidth="112.0" style="-fx-background-color: 0000;" />
-      <Button layoutX="14.0" layoutY="709.0" mnemonicParsing="false" fx:id="confirmButton" onAction="#confirmRecipe" prefHeight="38.0" prefWidth="96.0" style="-fx-background-color: 0000;" />
+      <Button fx:id="confirmButton" layoutX="14.0" layoutY="709.0" mnemonicParsing="false" onAction="#confirmRecipe" prefHeight="38.0" prefWidth="96.0" style="-fx-background-color: 0000;" />
       <TableView fx:id="IngredientsTable" layoutX="24.0" layoutY="336.0" prefHeight="182.0" prefWidth="349.0">
         <columns>
           <TableColumn fx:id="Name" prefWidth="174.0" text="Name" />
           <TableColumn fx:id="Quantity" minWidth="0.0" prefWidth="174.0" text="Quantity" />
         </columns>
       </TableView>
+      <TextField fx:id="RecipeName" layoutX="102.0" layoutY="129.0" prefHeight="30.0" prefWidth="158.0" />
+      <ImageView layoutX="20.0" layoutY="122.0">
+         <image>
+            <Image url="@../image/RecipeName.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

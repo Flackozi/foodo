@@ -96,15 +96,6 @@ public class SearchProductControllerGUI {
 
     }
 
-
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//        try{
-//
-//        }catch(Exception e){
-//            e.printStackTrace();
-//        }
-//
-//    }
 }
 
 

@@ -4,6 +4,13 @@ public class IngredientBean {
     private String Name;
     private String Quantity;
 
+    public IngredientBean(String name, String quantity) {
+        this.Name = name;
+        this.Quantity = quantity;
+    }
+
+
+
     public String getName() {
         return Name;
     }

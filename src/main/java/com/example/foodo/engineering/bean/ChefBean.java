@@ -6,7 +6,7 @@ public class ChefBean {
     private String workplace;
     private int profileType;
 
-    //public ChefBean() {}
+    public ChefBean() {}
 
 
     public ChefBean(String username,String typeOfCuisine, String workplace, int profileType){

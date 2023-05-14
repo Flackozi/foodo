@@ -18,7 +18,7 @@
       </ImageView>
       <HBox layoutX="11.0" layoutY="155.0" prefHeight="595.0" prefWidth="369.0">
          <children>
-            <ScrollPane fx:id="scroll" prefHeight="595.0" prefWidth="369.0">
+            <ScrollPane fx:id="scrollPane" prefHeight="595.0" prefWidth="369.0">
                <content>
                   <GridPane fx:id="grind" prefHeight="0.0" prefWidth="11.0">
                     <columnConstraints>

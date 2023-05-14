@@ -38,13 +38,13 @@ public class ChefMainPageControllerGUI {
 //        window.show();
     }
 
-    public void showMyRecipes(ActionEvent actionEvent) {
-//        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/GUIclass/sceneMyPantry.fxml"));
-//        Scene scenePantryView = new Scene(scenePantryParent);
-//
-//        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-//        window.setScene(scenePantryView);
-//        window.show();
+    public void showMyRecipes(ActionEvent event) throws IOException{
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/myRecipes.fxml"));
+        Scene scenePantryView = new Scene(scenePantryParent);
+
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scenePantryView);
+        window.show();
     }
     @FXML
     public void showPantry(ActionEvent event) throws IOException{
@@ -66,6 +66,5 @@ public class ChefMainPageControllerGUI {
         stage.setScene(scene);
         stage.show();
     }
-
 
 }

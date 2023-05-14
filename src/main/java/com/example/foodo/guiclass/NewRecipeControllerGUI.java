@@ -1,34 +1,49 @@
 package com.example.foodo.guiclass;
 
+import com.example.foodo.controllerappl.PantryController;
+import com.example.foodo.controllerappl.RecipeController;
+import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.IngredientBean;
+import com.example.foodo.engineering.bean.ProductBean;
+import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.model.IngredientModel;
 import com.example.foodo.model.ProductModel;
 import com.example.foodo.model.RecipeModel;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class NewRecipeControllerGUI {
+public class NewRecipeControllerGUI{
+
+    public Button confirmButton;
+
+    public TextField RecipeName;
+    public TextField QuantiyTextField;
+    @FXML
+    public TextField NameTextField;
 
     @FXML
-    private TextField NameTextField;
+    public Button addButton;
 
-    @FXML
-    private TextField QuantityTextField;
-
-    @FXML
-    private Button addButton;
-
-    private List<IngredientModel> ingredients;
+    public List<IngredientModel> ingredients;
 
     @FXML
     private TableView IngredientsTable;
@@ -40,28 +55,42 @@ public class NewRecipeControllerGUI {
     private TableColumn<IngredientModel, Integer> Quantity;
 
     @FXML
-    private TextArea DescriptionTextArea;
+    public TextArea DescriptionTextArea;
 
     @FXML
-    private Button confirmButton;
+    public ScrollPane scrollPane;
+
+    List<IngredientModel> ingredientModels=new ArrayList<>();
+
 
     public void addIngredient(javafx.event.ActionEvent event){
-        IngredientBean ingredientBean=new IngredientBean();
+        try{
+            Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+            Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
+            System.out.print(NameTextField.getText());
+            IngredientModel ingredientModel=new IngredientModel(NameTextField.getText(), QuantiyTextField.getText());
+            IngredientsTable.getItems().add(ingredientModel);
+            ingredientModels.add(ingredientModel);
 
-        ingredientBean.setName(Name.getText());
-        ingredientBean.setQuantity(Quantity.getText());
-        IngredientModel ingredientModel=new IngredientModel(Name.getText(), Quantity.getText());
+        }catch(Exception e){
+            e.printStackTrace();
+        }
 
-        ingredients.add(ingredientModel);
-        IngredientsTable.getItems().add(ingredientModel);
 
     }
 
-    public void confirmRecipe (javafx.event.ActionEvent event){
+    public void confirmRecipe (javafx.event.ActionEvent event) throws SQLException, IOException {
+        RecipeBean recipeBean=new RecipeBean();
+        recipeBean.setRecipeName(RecipeName.getText());
+        recipeBean.setDescription(DescriptionTextArea.getText());
+        ChefBean chefBean=new ChefBean();
+        chefBean= Session.getCurrentSession().getChefBean();
+        recipeBean.setChefName(chefBean.getUsername());
 
+        //verificato che tutti i dati in RecipeModel siano stati inseriti correttamente
+        RecipeController recipeController=new RecipeController();
+        recipeController.saveRecipe(recipeBean);
 
-
-        RecipeModel recipeModel= new RecipeModel();
     }
 
     public void backHome(javafx.event.ActionEvent event) throws IOException {
@@ -72,7 +101,6 @@ public class NewRecipeControllerGUI {
         window.setScene(sceneMainView);
         window.show();
     }
-
 
 
 }

@@ -2,7 +2,6 @@ package com.example.foodo.guiclass;
 
 import com.example.foodo.model.RecipeModel;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -20,9 +19,8 @@ import java.util.ResourceBundle;
 
 public class MyRecipeControllerGUI implements Initializable {
 
-    private GridPane grid;
-    @FXML
-    private ScrollPane scroll;
+    public GridPane grid;
+    public ScrollPane scroll;
 
     private List<RecipeModel> recipes= new ArrayList<>();
 
@@ -40,15 +38,12 @@ public class MyRecipeControllerGUI implements Initializable {
         window.show();
     }
 
-    public void newRecipe(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/AddNewRecipe.fxml"));
+    public void showAddNewRecipes(ActionEvent event) throws IOException{
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/addNewRecipes.fxml"));
         Scene sceneMainView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(sceneMainView);
         window.show();
-    }
-
-    public void showAddNewRecipes(ActionEvent actionEvent) {
     }
 }
