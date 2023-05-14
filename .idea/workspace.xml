@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: &#10;descrizione: fine file fxml">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_7_2023_12_33_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_7_2023_12_33_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: nessuno&#10;descrizione: sistemazione file fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/KitchenSearchControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/KitchenSearchControllerGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/MyRecipeControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/MyRecipeControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/myChef.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/myChef.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/myRecipes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/myRecipes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/myKitchen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/myKitchen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipe.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipe.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeItem.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +93,7 @@
       <workItem from="1683726708099" duration="1785000" />
       <workItem from="1683875028544" duration="7552000" />
       <workItem from="1683993425055" duration="976000" />
-      <workItem from="1684072238244" duration="1192000" />
+      <workItem from="1684072238244" duration="3931000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1681726734682</created>
@@ -182,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683997663693</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="caso d'uso: nessuno&#10;descrizione: sistemazione file fxml">
+      <created>1684073798431</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684073798431</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +216,7 @@
     <MESSAGE value="caso d'uso: search product&#10;descrizione: sistemazione interfacce" />
     <MESSAGE value="caso d'uso: search product&#10;descrizione: inizio" />
     <MESSAGE value="caso d'uso: &#10;descrizione: fine file fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: &#10;descrizione: fine file fxml" />
+    <MESSAGE value="caso d'uso: nessuno&#10;descrizione: sistemazione file fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: nessuno&#10;descrizione: sistemazione file fxml" />
   </component>
 </project>

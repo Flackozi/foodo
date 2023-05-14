@@ -21,8 +21,6 @@ import java.util.ResourceBundle;
 public class MyRecipeControllerGUI implements Initializable {
 
     private GridPane grid;
-    @FXML
-    private ScrollPane scroll;
 
     private List<RecipeModel> recipes= new ArrayList<>();
 
