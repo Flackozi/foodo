@@ -1,18 +1,20 @@
 package com.example.foodo.model;
 
-import java.util.List;
+import java.io.File;
 
 public class RecipeModel {
     private String RecipeName;
 //    private List<IngredientModel> Ingredients;
     private String Description;
     private String ChefName;
+    private File RecipeImage;
 
-    public RecipeModel(String name, String description, String chefName){
+    public RecipeModel(String name, String description, String chefName, File recipeImage){
         this.setRecipeName(name);
 //        this.setIngredients(ingredients);
         this.setDescription(description);
         this.setChefName(chefName);
+        this.setRecipeImage(recipeImage);
     }
 
     public String getRecipeName() {
@@ -22,14 +24,6 @@ public class RecipeModel {
     public void setRecipeName(String name) {
         RecipeName = name;
     }
-
-//    public List<IngredientModel> getIngredients() {
-//        return Ingredients;
-//    }
-//
-//    public void setIngredients(List<IngredientModel> ingredients) {
-//        this.Ingredients = ingredients;
-//    }
 
     public String getDescription() {
         return Description;
@@ -46,5 +40,12 @@ public class RecipeModel {
 
     public void setChefName(String chefName) {
         ChefName = chefName;
+    }
+    public File getRecipeImage() {
+        return RecipeImage;
+    }
+
+    public void setRecipeImage(File recipeImage) {
+        RecipeImage = recipeImage;
     }
 }

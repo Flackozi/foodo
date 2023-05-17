@@ -3,6 +3,7 @@ package com.example.foodo.guiclass;
 import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.controllerappl.RecipeController;
 import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.Utils.ImageConverterSupport;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.IngredientBean;
 import com.example.foodo.engineering.bean.ProductBean;
@@ -20,9 +21,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -42,8 +46,10 @@ public class NewRecipeControllerGUI{
 
     @FXML
     public Button addButton;
+    public ImageView RecipeImage;
+    public Button imageButton;
 
-    public List<IngredientModel> ingredients;
+    private File file;
 
     @FXML
     private TableView IngredientsTable;
@@ -60,7 +66,7 @@ public class NewRecipeControllerGUI{
     @FXML
     public ScrollPane scrollPane;
 
-    List<IngredientModel> ingredientModels=new ArrayList<>();
+    List<IngredientBean> ingredients=new ArrayList<>();
 
 
     public void addIngredient(javafx.event.ActionEvent event){
@@ -68,9 +74,9 @@ public class NewRecipeControllerGUI{
             Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
             Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
             System.out.print(NameTextField.getText());
-            IngredientModel ingredientModel=new IngredientModel(NameTextField.getText(), QuantiyTextField.getText());
-            IngredientsTable.getItems().add(ingredientModel);
-            ingredientModels.add(ingredientModel);
+            IngredientBean ingredientBean=new IngredientBean(NameTextField.getText(), QuantiyTextField.getText());
+            IngredientsTable.getItems().add(ingredientBean);
+            ingredients.add(ingredientBean);
 
         }catch(Exception e){
             e.printStackTrace();
@@ -86,15 +92,17 @@ public class NewRecipeControllerGUI{
         ChefBean chefBean=new ChefBean();
         chefBean= Session.getCurrentSession().getChefBean();
         recipeBean.setChefName(chefBean.getUsername());
+        recipeBean.setRecipeImage(file);
 
         //verificato che tutti i dati in RecipeModel siano stati inseriti correttamente
         RecipeController recipeController=new RecipeController();
         recipeController.saveRecipe(recipeBean);
+        recipeController.saveIngredients(ingredients);
 
     }
 
     public void backHome(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
         Scene sceneMainView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -103,6 +111,11 @@ public class NewRecipeControllerGUI{
     }
 
 
-    public void insertImage(ActionEvent event) {
+    public void insertImage(ActionEvent event) throws IOException{
+        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        FileChooser fileChooser=new FileChooser();
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Imagine Files","*.png","*.jpg"));
+        file = fileChooser.showOpenDialog(stage).getAbsoluteFile();
+        RecipeImage.setImage(ImageConverterSupport.fromFileToImage(file));
     }
 }
