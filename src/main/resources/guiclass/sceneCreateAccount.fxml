@@ -17,17 +17,17 @@
             <Image url="@../image/createAccount.png" />
          </image>
       </ImageView>
-      <Button fx:id="backButton" layoutX="157.0" layoutY="575.0" mnemonicParsing="false" onAction="#showMainLogScene" prefHeight="47.0" prefWidth="85.0" style="-fx-background-radius: 9.5; -fx-background-color: 0000;" />
-      <TextField fx:id="usernameTextField" layoutX="151.0" layoutY="187.0" prefHeight="35.0" prefWidth="210.0" promptText="username" style="-fx-background-color: 0000;" />
-      <TextField fx:id="favoriteFoodTextField" layoutX="151.0" layoutY="339.0" prefHeight="35.0" prefWidth="210.0" promptText="favorite food" style="-fx-background-color: 0000;" />
-      <TextField fx:id="typeOfDietTextField" layoutX="151.0" layoutY="422.0" prefHeight="35.0" prefWidth="210.0" promptText="type of diet" style="-fx-background-color: 0000;" />
-      <PasswordField fx:id="setPasswordField" layoutX="151.0" layoutY="256.0" prefHeight="35.0" prefWidth="210.0" promptText="password" style="-fx-background-color: 0000;" />
+      <Button fx:id="backButton" layoutX="157.0" layoutY="575.0" mnemonicParsing="false" onAction="#showMainLogScene" opacity="0.0" prefHeight="47.0" prefWidth="85.0" style="-fx-background-radius: 9.5;" />
+      <TextField fx:id="usernameTextField" layoutX="151.0" layoutY="187.0" opacity="0.0" prefHeight="35.0" prefWidth="210.0" promptText="username" />
+      <TextField fx:id="favoriteFoodTextField" layoutX="151.0" layoutY="339.0" opacity="0.0" prefHeight="35.0" prefWidth="210.0" promptText="favorite food" />
+      <TextField fx:id="typeOfDietTextField" layoutX="151.0" layoutY="422.0" opacity="0.0" prefHeight="35.0" prefWidth="210.0" promptText="type of diet" />
+      <PasswordField fx:id="setPasswordField" layoutX="151.0" layoutY="256.0" opacity="0.0" prefHeight="35.0" prefWidth="210.0" promptText="password" />
       <Label fx:id="registrationMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="148.0" prefHeight="17.0" prefWidth="376.0" textFill="#406eda">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <CheckBox layoutX="28.0" layoutY="507.0" mnemonicParsing="false" prefWidth="16.0" />
-      <Button fx:id="confirmButton" layoutX="28.0" layoutY="575.0" mnemonicParsing="false" onAction="#confirmButtonAction" prefHeight="47.0" prefWidth="112.0" style="-fx-background-color: 0000;" />
+      <CheckBox layoutX="28.0" layoutY="507.0" mnemonicParsing="false" opacity="0.0" prefWidth="16.0" />
+      <Button fx:id="confirmButton" layoutX="28.0" layoutY="575.0" mnemonicParsing="false" onAction="#confirmButtonAction" opacity="0.0" prefHeight="47.0" prefWidth="112.0" />
    </children>
 </AnchorPane>

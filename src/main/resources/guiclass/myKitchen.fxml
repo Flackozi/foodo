@@ -22,10 +22,10 @@
       <TextField layoutX="48.0" layoutY="287.0" prefHeight="32.0" prefWidth="160.0" />
       <TextField layoutX="48.0" layoutY="326.0" prefHeight="32.0" prefWidth="160.0" />
       <TextField layoutX="48.0" layoutY="364.0" prefHeight="32.0" prefWidth="160.0" />
-      <Button fx:id="confirmButton" layoutX="38.0" layoutY="408.0" mnemonicParsing="false" onAction="#confirmIngredients" prefHeight="38.0" prefWidth="113.0" style="-fx-background-color: 0000;" />
-      <Button fx:id="searchProductButton" layoutY="773.0" mnemonicParsing="false" onAction="#searchProduct" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />
-      <Button fx:id="HomeButton" layoutX="139.0" layoutY="756.0" mnemonicParsing="false" onAction="#backHome" prefHeight="86.0" prefWidth="112.0" style="-fx-background-radius: 60; -fx-background-color: 0000;" />
-      <Button fx:id="generateRecipe" layoutX="250.0" layoutY="774.0" mnemonicParsing="false" onAction="#showPantry" prefHeight="69.0" prefWidth="141.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />
+      <Button fx:id="confirmButton" layoutX="38.0" layoutY="408.0" mnemonicParsing="false" onAction="#confirmIngredients" opacity="0.0" prefHeight="38.0" prefWidth="113.0" />
+      <Button fx:id="searchProductButton" layoutY="773.0" mnemonicParsing="false" onAction="#searchProduct" opacity="0.0" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60;" />
+      <Button fx:id="HomeButton" layoutX="139.0" layoutY="756.0" mnemonicParsing="false" onAction="#backHome" opacity="0.0" prefHeight="86.0" prefWidth="112.0" style="-fx-background-radius: 60;" />
+      <Button fx:id="generateRecipe" layoutX="250.0" layoutY="774.0" mnemonicParsing="false" onAction="#showPantry" opacity="0.0" prefHeight="69.0" prefWidth="141.0" style="-fx-background-radius: 60;" />
       <HBox layoutX="9.0" layoutY="472.0" prefHeight="277.0" prefWidth="371.0">
          <children>
             <ScrollPane fx:id="scroll" prefHeight="518.0" prefWidth="374.0">

@@ -6,7 +6,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.guiclass.KitchenSearchControllerGUI">
    <children>
       <ImageView fitHeight="844.0" fitWidth="390.0">
@@ -15,8 +14,8 @@
          </image>
       </ImageView>
       <TextField fx:id="searchTextField" layoutX="34.0" layoutY="159.0" prefHeight="44.0" prefWidth="253.0" />
-      <Button fx:id="searchButton" layoutX="300.0" layoutY="160.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="69.0" style="-fx-background-color: 0000;" />
-      <Button layoutX="251.0" layoutY="775.0" mnemonicParsing="false" onAction="#showGenerateRecipe" prefHeight="68.0" prefWidth="139.0" style="-fx-background-color: 0000;" />
-      <Button layoutX="139.0" layoutY="754.0" mnemonicParsing="false" onAction="#backHome" prefHeight="89.0" prefWidth="112.0" style="-fx-background-color: 0000;" />
+      <Button fx:id="searchButton" layoutX="300.0" layoutY="160.0" mnemonicParsing="false" opacity="0.0" prefHeight="44.0" prefWidth="69.0" />
+      <Button layoutX="251.0" layoutY="775.0" mnemonicParsing="false" onAction="#showGenerateRecipe" opacity="0.0" prefHeight="68.0" prefWidth="139.0" />
+      <Button layoutX="139.0" layoutY="754.0" mnemonicParsing="false" onAction="#backHome" opacity="0.0" prefHeight="89.0" prefWidth="112.0" />
    </children>
 </AnchorPane>

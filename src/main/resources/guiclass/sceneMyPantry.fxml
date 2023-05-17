@@ -18,8 +18,8 @@
             <Image url="@../image/FOODO.png" />
          </image>
       </ImageView>
-      <Button fx:id="HomeButton" layoutX="139.0" layoutY="760.0" mnemonicParsing="false" onAction="#backHome" prefHeight="86.0" prefWidth="112.0" style="-fx-background-radius: 60; -fx-background-color: 0000;" />
-      <Button fx:id="addProduct" layoutX="263.0" layoutY="317.0" mnemonicParsing="false" onAction="#addNewProduct" prefHeight="43.0" prefWidth="41.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />
+      <Button fx:id="HomeButton" layoutX="139.0" layoutY="760.0" mnemonicParsing="false" onAction="#backHome" opacity="0.0" prefHeight="86.0" prefWidth="112.0" style="-fx-background-radius: 60;" />
+      <Button fx:id="addProduct" layoutX="263.0" layoutY="317.0" mnemonicParsing="false" onAction="#addNewProduct" opacity="0.0" prefHeight="43.0" prefWidth="41.0" style="-fx-background-radius: 60;" />
       <TableView fx:id="tablePantry" layoutX="17.0" layoutY="422.0" prefHeight="213.0" prefWidth="357.0">
         <columns>
           <TableColumn fx:id="Name" minWidth="69.0" prefWidth="33.0" text="Name" />
@@ -36,8 +36,8 @@
       </Button>
       <TextField fx:id="nameText" layoutX="15.0" layoutY="296.0" prefHeight="37.0" prefWidth="112.0" />
       <TextField fx:id="quantityField" layoutX="15.0" layoutY="355.0" prefHeight="37.0" prefWidth="112.0" />
-      <Button fx:id="searchProductButton" layoutY="775.0" mnemonicParsing="false" onAction="#showSearch" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />
-      <Button fx:id="showPantryButton" layoutX="248.0" layoutY="775.0" mnemonicParsing="false" onAction="#showPantry" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60; -fx-background-color: 0;" />
+      <Button fx:id="searchProductButton" layoutY="775.0" mnemonicParsing="false" onAction="#showSearch" opacity="0.0" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60;" />
+      <Button fx:id="showPantryButton" layoutX="248.0" layoutY="775.0" mnemonicParsing="false" onAction="#showPantry" opacity="0.0" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60;" />
       <DatePicker fx:id="expirationDate" layoutX="132.0" layoutY="295.0" prefHeight="37.0" prefWidth="112.0" />
    </children>
 </Pane>

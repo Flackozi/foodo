@@ -11,6 +11,7 @@ import com.example.foodo.model.IngredientModel;
 import com.example.foodo.model.ProductModel;
 import com.example.foodo.model.RecipeModel;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,7 +23,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -79,7 +79,7 @@ public class NewRecipeControllerGUI{
 
     }
 
-    public void confirmRecipe (javafx.event.ActionEvent event) throws SQLException, IOException {
+    public void confirmRecipe (ActionEvent event) throws SQLException, IOException {
         RecipeBean recipeBean=new RecipeBean();
         recipeBean.setRecipeName(RecipeName.getText());
         recipeBean.setDescription(DescriptionTextArea.getText());
@@ -93,7 +93,7 @@ public class NewRecipeControllerGUI{
 
     }
 
-    public void backHome(javafx.event.ActionEvent event) throws IOException {
+    public void backHome(ActionEvent event) throws IOException {
         Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
         Scene sceneMainView = new Scene(scenePantryParent);
 
@@ -103,4 +103,6 @@ public class NewRecipeControllerGUI{
     }
 
 
+    public void insertImage(ActionEvent event) {
+    }
 }

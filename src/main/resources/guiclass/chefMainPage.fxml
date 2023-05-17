@@ -12,10 +12,10 @@
             <Image url="@../image/mainChefPage.png" />
          </image>
       </ImageView>
-      <Button fx:id="buttonProfileChef" layoutX="202.0" layoutY="298.0" mnemonicParsing="false" onAction="#showChefProfile" prefHeight="136.0" prefWidth="152.0" style="-fx-background-color: 0000; -fx-background-radius: 23;" />
-      <Button fx:id="buttonKitchenChef" layoutX="34.0" layoutY="456.0" mnemonicParsing="false" onAction="#showKitchenChef" prefHeight="136.0" prefWidth="152.0" style="-fx-background-color: 0000; -fx-background-radius: 23;" />
-      <Button fx:id="buttonMyChefChef" layoutX="202.0" layoutY="456.0" mnemonicParsing="false" onAction="#showMyChef" prefHeight="136.0" prefWidth="152.0" style="-fx-background-color: 0000; -fx-background-radius: 23;" />
-      <Button fx:id="buttonMyRecipes" layoutX="32.0" layoutY="618.0" mnemonicParsing="false" onAction="#showMyRecipes" prefHeight="110.0" prefWidth="323.0" style="-fx-background-color: 0000; -fx-background-radius: 23;" />
-      <Button fx:id="buttonPantryChef" layoutX="34.0" layoutY="298.0" mnemonicParsing="false" onAction="#showPantry" prefHeight="136.0" prefWidth="152.0" style="-fx-background-color: 0000; -fx-background-radius: 23;" />
+      <Button fx:id="buttonProfileChef" layoutX="202.0" layoutY="298.0" mnemonicParsing="false" onAction="#showChefProfile" opacity="0.0" prefHeight="136.0" prefWidth="152.0" style="-fx-background-radius: 23;" />
+      <Button fx:id="buttonKitchenChef" layoutX="34.0" layoutY="456.0" mnemonicParsing="false" onAction="#showKitchenChef" opacity="0.0" prefHeight="136.0" prefWidth="152.0" style="-fx-background-radius: 23;" />
+      <Button fx:id="buttonMyChefChef" layoutX="202.0" layoutY="456.0" mnemonicParsing="false" onAction="#showMyChef" opacity="0.0" prefHeight="136.0" prefWidth="152.0" style="-fx-background-radius: 23;" />
+      <Button fx:id="buttonMyRecipes" layoutX="32.0" layoutY="618.0" mnemonicParsing="false" onAction="#showMyRecipes" opacity="0.0" prefHeight="110.0" prefWidth="323.0" style="-fx-background-radius: 23;" />
+      <Button fx:id="buttonPantryChef" layoutX="34.0" layoutY="298.0" mnemonicParsing="false" onAction="#showPantry" opacity="0.0" prefHeight="136.0" prefWidth="152.0" style="-fx-background-radius: 23;" />
    </children>
 </AnchorPane>

@@ -16,11 +16,11 @@
             <Image url="@../image/sceneSearchProduct.png" />
          </image>
       </ImageView>
-      <Button fx:id="buttonSearchProduct" layoutY="775.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="138.0" style="-fx-background-color: 0000;" />
-      <Button fx:id="buttonPantry" layoutX="251.0" layoutY="775.0" mnemonicParsing="false" onAction="#showPantry" prefHeight="68.0" prefWidth="138.0" style="-fx-background-color: 0000;" />
-      <Button fx:id="buttonHome" layoutX="139.0" layoutY="760.0" mnemonicParsing="false" onAction="#backHome" prefHeight="85.0" prefWidth="112.0" style="-fx-background-color: 0000; -fx-background-radius: 60;" />
+      <Button fx:id="buttonSearchProduct" layoutY="775.0" mnemonicParsing="false" opacity="0.0" prefHeight="68.0" prefWidth="138.0" />
+      <Button fx:id="buttonPantry" layoutX="251.0" layoutY="775.0" mnemonicParsing="false" onAction="#showPantry" opacity="0.0" prefHeight="68.0" prefWidth="138.0" />
+      <Button fx:id="buttonHome" layoutX="139.0" layoutY="760.0" mnemonicParsing="false" onAction="#backHome" opacity="0.0" prefHeight="85.0" prefWidth="112.0" style="-fx-background-radius: 60;" />
       <TextField fx:id="searchBar" layoutX="33.0" layoutY="206.0" prefHeight="32.0" prefWidth="217.0" />
-      <Button fx:id="buttonSearch" layoutX="254.0" layoutY="208.0" mnemonicParsing="false" onAction="#actionSearch" prefHeight="32.0" prefWidth="52.0" style="-fx-background-color: 0000;" />
+      <Button fx:id="buttonSearch" layoutX="254.0" layoutY="208.0" mnemonicParsing="false" onAction="#actionSearch" opacity="0.0" prefHeight="32.0" prefWidth="52.0" />
       <CheckBox fx:id="spicesCheckBox" layoutX="78.0" layoutY="275.0" mnemonicParsing="false" />
       <CheckBox fx:id="fruitCheckBox" layoutX="78.0" layoutY="309.0" mnemonicParsing="false" />
       <CheckBox fx:id="meatCheckBox" layoutX="149.0" layoutY="275.0" mnemonicParsing="false" />
@@ -30,10 +30,10 @@
       <CheckBox fx:id="fishCheckBox" layoutX="290.0" layoutY="275.0" mnemonicParsing="false" />
       <TableView fx:id="productTable" layoutX="17.0" layoutY="372.0" prefHeight="306.0" prefWidth="357.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Name" fx:id="Name" />
-          <TableColumn prefWidth="75.0" text="Quantity" fx:id="Quantity" />
-            <TableColumn prefWidth="75.0" text="Expiration" fx:id="TypeOfFood"/>
-            <TableColumn prefWidth="127.0" text="Type of food" fx:id="Expiration" />
+          <TableColumn fx:id="Name" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="Quantity" prefWidth="75.0" text="Quantity" />
+            <TableColumn fx:id="TypeOfFood" prefWidth="75.0" text="Expiration" />
+            <TableColumn fx:id="Expiration" prefWidth="127.0" text="Type of food" />
         </columns>
       </TableView>
       <ImageView fitHeight="53.0" fitWidth="321.0" layoutX="25.0" layoutY="139.0">

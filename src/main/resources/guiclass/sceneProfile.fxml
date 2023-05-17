@@ -38,7 +38,7 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnHome" layoutX="136.0" layoutY="755.0" mnemonicParsing="false" onAction="#BackHome" prefHeight="89.0" prefWidth="116.0" style="-fx-background-color: 0000; -fx-background-radius: 30;" />
+      <Button fx:id="btnHome" layoutX="136.0" layoutY="755.0" mnemonicParsing="false" onAction="#BackHome" opacity="0.0" prefHeight="89.0" prefWidth="116.0" style="-fx-background-radius: 30;" />
       <Label fx:id="labelTypeOfDiet" layoutX="153.0" layoutY="483.0" prefHeight="25.0" prefWidth="236.0">
          <font>
             <Font name="Arial Bold" size="20.0" />

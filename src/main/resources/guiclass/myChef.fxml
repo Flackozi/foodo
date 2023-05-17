@@ -29,6 +29,6 @@
             </ScrollPane>
          </children>
       </HBox>
-      <Button layoutX="139.0" layoutY="763.0" mnemonicParsing="false" onAction="#backHome" prefHeight="85.0" prefWidth="111.0" style="-fx-background-color: 0000;" />
+      <Button layoutX="139.0" layoutY="763.0" mnemonicParsing="false" onAction="#backHome" opacity="0.0" prefHeight="85.0" prefWidth="111.0" />
    </children>
 </AnchorPane>

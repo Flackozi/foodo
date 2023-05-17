@@ -12,7 +12,7 @@
             <Image url="@../image/mainLogScene.png" />
          </image>
       </ImageView>
-      <Button fx:id="buttonLoginMainScene" layoutX="19.0" layoutY="303.0" mnemonicParsing="false" onAction="#showLogin" prefHeight="93.0" prefWidth="348.0" style="-fx-background-radius: 80; -fx-background-color: 0000;" />
-      <Button fx:id="buttonCreateAccount" layoutX="18.0" layoutY="537.0" mnemonicParsing="false" onAction="#showCreateAccount" prefHeight="93.0" prefWidth="348.0" style="-fx-background-radius: 80; -fx-background-color: 0000;" />
+      <Button fx:id="buttonLoginMainScene" layoutX="19.0" layoutY="303.0" mnemonicParsing="false" onAction="#showLogin" opacity="0.0" prefHeight="93.0" prefWidth="348.0" style="-fx-background-radius: 80;" />
+      <Button fx:id="buttonCreateAccount" layoutX="18.0" layoutY="537.0" mnemonicParsing="false" onAction="#showCreateAccount" opacity="0.0" prefHeight="93.0" prefWidth="348.0" style="-fx-background-radius: 80;" />
    </children>
 </AnchorPane>

@@ -16,13 +16,13 @@
             <Image url="@../image/sceneLogin.png" />
          </image>
       </ImageView>
-      <Button layoutX="153.0" layoutY="382.0" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="87.0" style="-fx-background-radius: 9.5; -fx-background-color: 0000;" />
+      <Button layoutX="153.0" layoutY="382.0" mnemonicParsing="false" onAction="#login" opacity="0.0" prefHeight="32.0" prefWidth="87.0" style="-fx-background-radius: 9.5;" />
       <TextField fx:id="usernameTextField" layoutX="153.0" layoutY="204.0" prefHeight="38.0" prefWidth="207.0" promptText="username" />
       <PasswordField fx:id="passwordPasswordField" layoutX="153.0" layoutY="266.0" prefHeight="38.0" prefWidth="207.0" promptText="password" />
       <Label fx:id="loginMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="147.0" prefHeight="32.0" prefWidth="345.0" textFill="RED">
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Button fx:id="backButton" layoutX="153.0" layoutY="462.0" mnemonicParsing="false" onAction="#backHome" prefHeight="38.0" prefWidth="87.0" style="-fx-background-color: 0000;" />
+      <Button fx:id="backButton" layoutX="153.0" layoutY="462.0" mnemonicParsing="false" onAction="#backHome" opacity="0.0" prefHeight="38.0" prefWidth="87.0" />
    </children>
 </Pane>

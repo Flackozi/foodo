@@ -32,11 +32,11 @@ public class LoginControllerGUI {
 
     @FXML
     public void backHome(ActionEvent event) throws IOException {
-        ((Node)event.getSource()).getScene().getWindow().hide();
-        Stage stage = Main.getStage();
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("mainSceneLogin.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/mainSceneLogin.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
+        stage.show();
     }
 
 //    public void loginButtonOnAction (ActionEvent event) throws IOException {
