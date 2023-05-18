@@ -10,7 +10,9 @@ public abstract class GenericUserModel {
         setUsername(username);
         setProfileType(profileType);
     }
-
+    protected GenericUserModel(String username){
+        setUsername(username);
+    }
     public String getUsername() {
         return username;
     }

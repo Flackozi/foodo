@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="182.0" prefWidth="143.0" style="-fx-background-radius: 30; -fx-background-color: 0000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.guiclass.RecipeItemControllerGUI">
+<AnchorPane prefHeight="182.0" prefWidth="143.0" style="-fx-background-radius: 30; -fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.guiclass.ItemController">
    <children>
       <ImageView fitHeight="123.0" fitWidth="130.0" layoutX="7.0" layoutY="30.0">
          <image>
@@ -16,7 +16,7 @@
       <Label fx:id="chefLabel" layoutX="12.0" layoutY="145.0" prefHeight="17.0" prefWidth="121.0" />
       <Label fx:id="recipeNameLabel" layoutX="12.0" layoutY="22.0" prefHeight="17.0" prefWidth="121.0" />
       <Button layoutX="27.0" layoutY="59.0" mnemonicParsing="false" opacity="0.0" prefHeight="65.0" prefWidth="89.0" />
-      <ImageView fitHeight="53.0" fitWidth="49.0" layoutX="48.0" layoutY="59.0">
+      <ImageView fx:id="img" fitHeight="53.0" fitWidth="49.0" layoutX="48.0" layoutY="59.0">
          <image>
             <Image url="@../../../../../../../../../Downloads/gallery(1).png" />
          </image>

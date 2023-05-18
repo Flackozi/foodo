@@ -3,6 +3,10 @@ package com.example.foodo.model;
 public class ChefModel extends GenericUserModel{
     String typeOfCuisine;
     String workplace;
+    public ChefModel(String username){
+        super(username);
+
+    }
     public ChefModel(String username, String typeOfCuisine, String workplace, int profileType){
         super(username,profileType);
         this.typeOfCuisine=typeOfCuisine;

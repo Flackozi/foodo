@@ -50,4 +50,14 @@ public class BasicQueries {
         String sql = "SELECT * FROM pantry WHERE name = '" + searchText + "';";
         return stmt.executeQuery(sql);
     }
+
+    public static ResultSet retriveItem(Statement stmt, String name) throws SQLException {
+        String sql = "SELECT * FROM recipes WHERE chefName = '" + name +"';";
+        return stmt.executeQuery(sql);
+    }
+
+    public static ResultSet retriveFavoriteChef(Statement stmt, String userName) throws SQLException {
+        String sql = "SELECT * FROM favorite WHERE userName = '" + userName + "';";
+        return stmt.executeQuery(sql);
+    }
 }

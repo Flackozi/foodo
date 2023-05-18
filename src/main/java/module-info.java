@@ -3,6 +3,8 @@ module com.example.foodo_fx {
     requires javafx.fxml;
     requires java.sql;
     requires java.desktop;
+    requires javafx.graphics;
+
 
 
     opens com.example.foodo to javafx.fxml;
