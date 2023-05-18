@@ -22,9 +22,9 @@ public class ItemController {
         this.recipeItemBean = recipeItemBean;
         this.myListener = myListener;
         recipeNameLabel.setText(recipeItemBean.getRecipeName());
-        //System.out.println(recipeItemBean.getImgSrc());
+        String path = recipeItemBean.getImgSrc();
         chefLabel.setText(recipeItemBean.getChefName());
-        Image image = new Image(getClass().getResourceAsStream(recipeItemBean.getImgSrc()));
+        Image image = new Image(path);
         img.setImage(image);
 
     }
