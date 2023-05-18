@@ -1,21 +1,15 @@
 package com.example.foodo.guiclass;
 
-import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.controllerappl.RecipeController;
 import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.ImageConverterSupport;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.IngredientBean;
-import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.model.IngredientModel;
-import com.example.foodo.model.ProductModel;
-import com.example.foodo.model.RecipeModel;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -25,15 +19,11 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ResourceBundle;
 
 public class NewRecipeControllerGUI{
 
@@ -55,10 +45,10 @@ public class NewRecipeControllerGUI{
     private TableView IngredientsTable;
 
     @FXML
-    private TableColumn<IngredientModel, String> Name;
+    private TableColumn<IngredientModel, String> NameColumn;
 
     @FXML
-    private TableColumn<IngredientModel, Integer> Quantity;
+    private TableColumn<IngredientModel, Integer> QuantityColumn;
 
     @FXML
     public TextArea DescriptionTextArea;
@@ -68,11 +58,13 @@ public class NewRecipeControllerGUI{
 
     List<IngredientBean> ingredients=new ArrayList<>();
 
+    String path;
+
 
     public void addIngredient(javafx.event.ActionEvent event){
         try{
-            Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
-            Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
+            NameColumn.setCellValueFactory(new PropertyValueFactory<>("NameColumn"));
+            QuantityColumn.setCellValueFactory(new PropertyValueFactory<>("QuantityColumn"));
             System.out.print(NameTextField.getText());
             IngredientBean ingredientBean=new IngredientBean(NameTextField.getText(), QuantiyTextField.getText());
             IngredientsTable.getItems().add(ingredientBean);
@@ -92,7 +84,7 @@ public class NewRecipeControllerGUI{
         ChefBean chefBean=new ChefBean();
         chefBean= Session.getCurrentSession().getChefBean();
         recipeBean.setChefName(chefBean.getUsername());
-        recipeBean.setRecipeImage(file);
+        recipeBean.setPath(path);
 
         //verificato che tutti i dati in RecipeModel siano stati inseriti correttamente
         RecipeController recipeController=new RecipeController();
@@ -117,5 +109,6 @@ public class NewRecipeControllerGUI{
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Imagine Files","*.png","*.jpg"));
         file = fileChooser.showOpenDialog(stage).getAbsoluteFile();
         RecipeImage.setImage(ImageConverterSupport.fromFileToImage(file));
+        path= file.getPath();
     }
 }

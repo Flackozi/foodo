@@ -31,8 +31,8 @@
       <Button fx:id="confirmButton" layoutX="14.0" layoutY="709.0" mnemonicParsing="false" onAction="#confirmRecipe" opacity="0.0" prefHeight="38.0" prefWidth="96.0" />
       <TableView fx:id="IngredientsTable" layoutX="24.0" layoutY="336.0" prefHeight="182.0" prefWidth="349.0">
         <columns>
-          <TableColumn fx:id="Name" prefWidth="174.0" text="Name" />
-          <TableColumn fx:id="Quantity" minWidth="0.0" prefWidth="174.0" text="Quantity" />
+          <TableColumn fx:id="NameColumn" prefWidth="174.0" text="Name" />
+          <TableColumn fx:id="QuantityColumn" minWidth="0.0" prefWidth="174.0" text="Quantity" />
         </columns>
       </TableView>
       <TextField fx:id="RecipeName" layoutX="11.0" layoutY="129.0" prefHeight="30.0" prefWidth="158.0" promptText="Recipe Name">

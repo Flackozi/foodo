@@ -7,14 +7,16 @@ public class RecipeModel {
 //    private List<IngredientModel> Ingredients;
     private String Description;
     private String ChefName;
-    private File RecipeImage;
+    private String Path;
 
-    public RecipeModel(String name, String description, String chefName, File recipeImage){
+    public RecipeModel(){}
+
+    public RecipeModel(String name, String description, String chefName, String path){
         this.setRecipeName(name);
 //        this.setIngredients(ingredients);
         this.setDescription(description);
         this.setChefName(chefName);
-        this.setRecipeImage(recipeImage);
+        this.setPath(path);
     }
 
     public String getRecipeName() {
@@ -41,11 +43,13 @@ public class RecipeModel {
     public void setChefName(String chefName) {
         ChefName = chefName;
     }
-    public File getRecipeImage() {
-        return RecipeImage;
+    public String getPath() {
+        return Path;
     }
 
-    public void setRecipeImage(File recipeImage) {
-        RecipeImage = recipeImage;
+    public void setPath(String path) {
+        Path = path;
     }
+
+
 }

@@ -19,12 +19,11 @@ public class RecipeDAO {
         PreparedStatement preparedStatement;
         try{
             stmt = ConnectionDB.getConnection();
-            InputStream inputStream= new FileInputStream(recipe.getRecipeImage());
             preparedStatement= ConnectionDB.addRecipe();
             preparedStatement.setString(1, recipe.getRecipeName());
             preparedStatement.setString(2, recipe.getDescription());
             preparedStatement.setString(3, recipe.getChefName());
-            preparedStatement.setBlob(4, inputStream);
+            preparedStatement.setString(4, recipe.getPath());
 
             preparedStatement.executeUpdate();
         }catch(SQLException | ConnectionDbException e){

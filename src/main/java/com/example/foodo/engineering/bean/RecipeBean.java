@@ -6,15 +6,15 @@ public class RecipeBean {
     private String RecipeName;
     private String Description;
     private String ChefName;
-    private File RecipeImage;
+    private String Path;
 
     public RecipeBean(){}
 
-    public RecipeBean(String recipeName, String description, String chefName, File recipeImage) {
+    public RecipeBean(String recipeName, String description, String chefName, String path) {
         this.RecipeName = recipeName;
         this.Description = description;
         this.ChefName = chefName;
-        this.RecipeImage=recipeImage;
+        this.Path=path;
     }
 
     public String getRecipeName() {
@@ -41,12 +41,12 @@ public class RecipeBean {
         ChefName = chefName;
     }
 
-    public File getRecipeImage() {
-        return RecipeImage;
+    public String getPath() {
+        return Path;
     }
 
-    public void setRecipeImage(File recipeImage) {
-        RecipeImage = recipeImage;
+    public void setPath(String path) {
+        Path = path;
     }
 
 }
