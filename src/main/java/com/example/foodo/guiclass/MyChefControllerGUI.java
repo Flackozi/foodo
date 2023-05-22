@@ -77,7 +77,7 @@ public class MyChefControllerGUI implements Initializable {
                 ItemController itemController = fxmlLoader.getController();
                 itemController.setData(recipeItembeanList.get(i),myListener);
 
-                if (column == 3) {
+                if (column == 2) {
                     column = 0;
                     row++;
                 }

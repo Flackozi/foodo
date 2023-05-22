@@ -1,6 +1,8 @@
 package com.example.foodo.guiclass;
 
 import com.example.foodo.Main;
+import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import javafx.event.ActionEvent;
@@ -34,7 +36,14 @@ public class HomeUserControllerGUI {
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
         ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
-        profileControllerGUI.setUserInfoProfile(userBean);
+        if((userBean= Session.getCurrentSession().getUserBean()) != null){
+            profileControllerGUI.setUserInfoProfile(userBean);
+        }else{
+            ChefBean chefBean = Session.getCurrentSession().getChefBean();
+            profileControllerGUI.setChefInfoProfile(chefBean);
+        }
+
+
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();

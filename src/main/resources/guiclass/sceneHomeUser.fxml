@@ -12,9 +12,9 @@
             <Image url="@../image/sceneHomeUser.png" />
          </image>
       </ImageView>
-      <Button fx:id="bottonPantryUser" layoutX="36.0" layoutY="312.0" mnemonicParsing="false" onAction="#showPantryUser" prefHeight="132.0" prefWidth="152.0" style="-fx-background-color: 00000; -fx-background-radius: 23;" />
-      <Button fx:id="bottonProfileUser" layoutX="203.0" layoutY="312.0" mnemonicParsing="false" onAction="#showProfileUser" prefHeight="132.0" prefWidth="152.0" style="-fx-background-color: 00000;" />
-      <Button fx:id="bottonKitchenUser" layoutX="36.0" layoutY="471.0" mnemonicParsing="false" onAction="#showKitchenUser" prefHeight="132.0" prefWidth="152.0" style="-fx-background-color: 00000; -fx-background-radius: 23;" />
-      <Button fx:id="bottonMyChefUser" layoutX="203.0" layoutY="471.0" mnemonicParsing="false" onAction="#showMyChefUser" prefHeight="132.0" prefWidth="152.0" style="-fx-background-color: 00000; -fx-background-radius: 23;" />
+      <Button fx:id="bottonPantryUser" layoutX="36.0" layoutY="312.0" mnemonicParsing="false" onAction="#showPantryUser" opacity="0.0" prefHeight="132.0" prefWidth="152.0" style="-fx-background-radius: 23;" />
+      <Button fx:id="bottonProfileUser" layoutX="203.0" layoutY="312.0" mnemonicParsing="false" onAction="#showProfileUser" opacity="0.0" prefHeight="132.0" prefWidth="152.0" />
+      <Button fx:id="bottonKitchenUser" layoutX="36.0" layoutY="471.0" mnemonicParsing="false" onAction="#showKitchenUser" opacity="0.0" prefHeight="132.0" prefWidth="152.0" style="-fx-background-radius: 23;" />
+      <Button fx:id="bottonMyChefUser" layoutX="203.0" layoutY="471.0" mnemonicParsing="false" onAction="#showMyChefUser" opacity="0.0" prefHeight="132.0" prefWidth="152.0" style="-fx-background-radius: 23;" />
    </children>
 </AnchorPane>

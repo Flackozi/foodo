@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -27,6 +28,9 @@
             <TableColumn fx:id="Expiration" minWidth="69.0" prefWidth="33.0" text="Expiration" />
             <TableColumn fx:id="TypeOfFood" minWidth="135.0" prefWidth="149.0" text="TypeOfFood" />
         </columns>
+         <effect>
+            <Blend />
+         </effect>
       </TableView>
       <ChoiceBox fx:id="typeOfFoodPicker" layoutX="136.0" layoutY="355.0" prefHeight="37.0" prefWidth="119.0" />
       <Button fx:id="deleteButton" layoutX="14.0" layoutY="658.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="28.0" prefWidth="84.0" style="-fx-background-color: #19E1E1; -fx-background-radius: 60;" text="DELETE">

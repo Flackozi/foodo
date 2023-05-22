@@ -18,7 +18,7 @@ public class ChefDAO {
 
 
 
-    private ChefDAO(){}
+    public ChefDAO(){}
 
     public static ChefModel retrieveChefByUsername(String username) throws NotFoundException {
         Statement stmt;

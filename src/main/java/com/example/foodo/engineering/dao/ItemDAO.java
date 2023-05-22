@@ -48,7 +48,6 @@ public class ItemDAO {
                 String img = resultSet1.getString("image");
                 RecipeItemBean recipeItemBean = new RecipeItemBean(nameR, nameC, img);
                 recipeItemBeanList.add(recipeItemBean);
-                System.out.println(img);
             }
 
         }
