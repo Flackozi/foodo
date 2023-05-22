@@ -31,17 +31,15 @@
       <Button fx:id="confirmButton" layoutX="14.0" layoutY="709.0" mnemonicParsing="false" onAction="#confirmRecipe" opacity="0.0" prefHeight="38.0" prefWidth="96.0" />
       <TableView fx:id="IngredientsTable" layoutX="24.0" layoutY="336.0" prefHeight="182.0" prefWidth="349.0">
         <columns>
-          <TableColumn fx:id="NameColumn" prefWidth="174.0" text="Name" />
-          <TableColumn fx:id="QuantityColumn" minWidth="0.0" prefWidth="174.0" text="Quantity" />
+          <TableColumn fx:id="Name" prefWidth="174.0" text="Name" />
+          <TableColumn fx:id="Quantity" minWidth="0.0" prefWidth="174.0" text="Quantity" />
         </columns>
       </TableView>
       <TextField fx:id="RecipeName" layoutX="11.0" layoutY="129.0" prefHeight="30.0" prefWidth="158.0" promptText="Recipe Name">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font></TextField>
-      <Button fx:id="imageButton" layoutX="222.0" layoutY="125.0" mnemonicParsing="false" onAction="#insertImage" opacity="0.0" prefHeight="151.0" prefWidth="170.0">
-         <graphic>
-            <ImageView fx:id="RecipeImage" fitHeight="137.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" />
-         </graphic></Button>
+      <ImageView fx:id="RecipeImage" fitHeight="138.0" fitWidth="151.0" layoutX="227.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="imageButton" layoutX="227.0" layoutY="126.0" mnemonicParsing="false" onAction="#insertImage" opacity="0.0" prefHeight="148.0" prefWidth="151.0" />
    </children>
 </AnchorPane>

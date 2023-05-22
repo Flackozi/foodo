@@ -15,7 +15,7 @@ import java.sql.Statement;
 import java.util.List;
 
 public class IngredientDAO {
-    public static void addIngredient(List<IngredientModel> ingredients) {
+    public static void addIngredient(List<IngredientModel> ingredients, int recipeId) {
         Statement stmt;
         PreparedStatement preparedStatement;
         try{
@@ -26,8 +26,10 @@ public class IngredientDAO {
                 IngredientModel ingredientModel=ingredients.get(i);
                 i++;
                 preparedStatement= ConnectionDB.addIngredient();
+                System.out.print(recipeId);
                 preparedStatement.setString(1, ingredientModel.getName());
                 preparedStatement.setString(2, ingredientModel.getQuantity());
+                preparedStatement.setInt(3, recipeId);
                 preparedStatement.executeUpdate();
             }while(i != lenght);
 

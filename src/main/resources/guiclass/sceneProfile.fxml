@@ -14,15 +14,12 @@
             <Image url="@../image/sceneProfile.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnLoadImage" layoutX="119.0" layoutY="148.0" minWidth="50.0" mnemonicParsing="false" onAction="#LoadImage" prefHeight="171.0" prefWidth="152.0" style="-fx-background-color: 0000;" styleClass="transparent">
-         <graphic>
-            <ImageView fx:id="userImg" fitHeight="110.0" fitWidth="109.0">
-               <image>
-                  <Image url="@../image/user(1).png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      <ImageView fx:id="userImg" fitHeight="110.0" fitWidth="109.0" layoutX="141.0" layoutY="179.0">
+         <image>
+            <Image url="@../image/user(1).png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLoadImage" layoutX="119.0" layoutY="148.0" minWidth="50.0" mnemonicParsing="false" onAction="#LoadImage" opacity="0.0" prefHeight="171.0" prefWidth="152.0" styleClass="transparent" />
       <Label fx:id="labelUsername" layoutX="144.0" layoutY="350.0" prefHeight="25.0" prefWidth="236.0">
          <font>
             <Font name="Arial Bold" size="20.0" />

@@ -73,7 +73,7 @@ public class ConnectionDB {
     }
 
     public static PreparedStatement addIngredient() throws SQLException{
-        return connection.prepareStatement("INSERT INTO ingredients (name, quantity) VALUES (?,?)");
+        return connection.prepareStatement("INSERT INTO ingredients (name, quantity, recipeId) VALUES (?,?,?)");
     }
 }
 

@@ -6,6 +6,7 @@ import com.example.foodo.engineering.Utils.ImageConverterSupport;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.IngredientBean;
 import com.example.foodo.engineering.bean.RecipeBean;
+import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.model.IngredientModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -45,10 +46,10 @@ public class NewRecipeControllerGUI{
     private TableView IngredientsTable;
 
     @FXML
-    private TableColumn<IngredientModel, String> NameColumn;
+    private TableColumn<IngredientModel, String> Name;
 
     @FXML
-    private TableColumn<IngredientModel, Integer> QuantityColumn;
+    private TableColumn<IngredientModel, Integer> Quantity;
 
     @FXML
     public TextArea DescriptionTextArea;
@@ -63,11 +64,11 @@ public class NewRecipeControllerGUI{
 
     public void addIngredient(javafx.event.ActionEvent event){
         try{
-            NameColumn.setCellValueFactory(new PropertyValueFactory<>("NameColumn"));
-            QuantityColumn.setCellValueFactory(new PropertyValueFactory<>("QuantityColumn"));
-            System.out.print(NameTextField.getText());
+            Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+            Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
             IngredientBean ingredientBean=new IngredientBean(NameTextField.getText(), QuantiyTextField.getText());
-            IngredientsTable.getItems().add(ingredientBean);
+            IngredientModel ingredientModel=new IngredientModel(NameTextField.getText(), QuantiyTextField.getText());
+            IngredientsTable.getItems().add(ingredientModel);
             ingredients.add(ingredientBean);
 
         }catch(Exception e){
@@ -77,7 +78,7 @@ public class NewRecipeControllerGUI{
 
     }
 
-    public void confirmRecipe (ActionEvent event) throws SQLException, IOException {
+    public void confirmRecipe (ActionEvent event) throws SQLException, IOException, ConnectionDbException {
         RecipeBean recipeBean=new RecipeBean();
         recipeBean.setRecipeName(RecipeName.getText());
         recipeBean.setDescription(DescriptionTextArea.getText());
@@ -100,6 +101,7 @@ public class NewRecipeControllerGUI{
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(sceneMainView);
         window.show();
+        ingredients.clear();
     }
 
 
@@ -108,7 +110,9 @@ public class NewRecipeControllerGUI{
         FileChooser fileChooser=new FileChooser();
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Imagine Files","*.png","*.jpg"));
         file = fileChooser.showOpenDialog(stage).getAbsoluteFile();
+        RecipeImage.setFitHeight(150);
+        RecipeImage.setFitWidth(150);
         RecipeImage.setImage(ImageConverterSupport.fromFileToImage(file));
-        path= file.getPath();
+        path= file.getAbsolutePath();
     }
 }

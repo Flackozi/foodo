@@ -14,7 +14,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductDAO {
+public class   ProductDAO {
 
 
     public static void InsProduct(ProductModel product) throws SQLException{
