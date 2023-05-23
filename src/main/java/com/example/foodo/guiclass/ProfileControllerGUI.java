@@ -82,7 +82,7 @@ public class ProfileControllerGUI {
     public void BackHome(ActionEvent event) throws IOException {
         //ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
         if((userBean= Session.getCurrentSession().getUserBean()) != null){
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneHomeUser.fxml")));
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneProfile")));
             scene = new Scene(root);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
@@ -95,5 +95,21 @@ public class ProfileControllerGUI {
             stage.show();
         }
 
+    }
+
+    public void showInfo(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneProfile.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void showContact(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneProfile2.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }

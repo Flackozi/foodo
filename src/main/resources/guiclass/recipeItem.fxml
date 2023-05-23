@@ -21,7 +21,7 @@
       <Button layoutX="27.0" layoutY="59.0" mnemonicParsing="false" opacity="0.0" prefHeight="65.0" prefWidth="89.0" />
       <ImageView fx:id="img" fitHeight="97.0" fitWidth="114.0" layoutX="19.0" layoutY="48.0" style="-fx-background-radius: 50;">
          <image>
-            <Image url="@../../../../../../../../../Downloads/gallery(1).png" />
+            <Image url="@../image/gallery(1).png" />
          </image>
       </ImageView>
       <ImageView fitHeight="33.0" fitWidth="75.0" layoutX="12.0" layoutY="151.0">
