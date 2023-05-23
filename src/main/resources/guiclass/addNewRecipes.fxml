@@ -40,6 +40,6 @@
             <Font name="Arial Bold Italic" size="14.0" />
          </font></TextField>
       <ImageView fx:id="RecipeImage" fitHeight="138.0" fitWidth="151.0" layoutX="227.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="imageButton" layoutX="227.0" layoutY="126.0" mnemonicParsing="false" onAction="#insertImage" opacity="0.0" prefHeight="148.0" prefWidth="151.0" />
+      <Button fx:id="imageButton" layoutX="227.0" layoutY="126.0" mnemonicParsing="false" onAction="#insertImage" opacity="0.0" prefHeight="148.0" prefWidth="158.0" />
    </children>
 </AnchorPane>
