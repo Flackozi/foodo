@@ -62,8 +62,8 @@ public class BasicQueries {
     }
 
     public static ResultSet retrieveRecipeId(Statement stmt, String recipeName, String chefName, String description ) throws SQLException {
-//        String sql = "SELECT recipeId FROM recipes WHERE recipeName = '" + recipeName + "' AND description = '" + description + "' AND chefName = '" + chefName + "' AND image = '" + path + "';";
-        String sql = "SELECT recipeId FROM recipes WHERE recipeName = 'cannoli' AND description = 'bene' AND chefName = 'carlo';";
+        String sql = "SELECT recipeId FROM recipes WHERE recipeName = '" + recipeName + "' AND description = '" + description + "' AND chefName = '" + chefName + "';";
+        //String sql = "SELECT recipeId FROM recipes WHERE recipeName = 'cannoli' AND description = 'bene' AND chefName = 'carlo';";
         return stmt.executeQuery(sql);
     }
 }
