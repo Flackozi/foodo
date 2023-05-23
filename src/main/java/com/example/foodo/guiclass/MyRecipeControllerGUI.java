@@ -30,7 +30,7 @@ public class MyRecipeControllerGUI implements Initializable {
     }
 
     public void backHome(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
         Scene sceneMainView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

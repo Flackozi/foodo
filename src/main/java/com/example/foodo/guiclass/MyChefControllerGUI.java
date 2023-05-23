@@ -4,7 +4,6 @@ import com.example.foodo.controllerappl.MyChefController;
 import com.example.foodo.engineering.Utils.MyListener;
 import com.example.foodo.engineering.bean.RecipeItemBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.model.RecipeItemModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,7 +16,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -74,7 +72,7 @@ public class MyChefControllerGUI implements Initializable {
                 fxmlLoader.setLocation(getClass().getResource("/guiclass/recipeItem.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
-                ItemController itemController = fxmlLoader.getController();
+                ItemControllerGUI itemController = fxmlLoader.getController();
                 itemController.setData(recipeItembeanList.get(i),myListener);
 
                 if (column == 2) {

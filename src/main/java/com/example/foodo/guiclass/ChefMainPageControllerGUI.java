@@ -1,6 +1,7 @@
 package com.example.foodo.guiclass;
 
 import com.example.foodo.Main;
+import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.ChefBean;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -60,6 +61,7 @@ public class ChefMainPageControllerGUI {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/sceneChefProfile.fxml"));
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
+        ChefBean chefBean = Session.getCurrentSession().getChefBean();
         ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
         profileControllerGUI.setChefInfoProfile(chefBean);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
