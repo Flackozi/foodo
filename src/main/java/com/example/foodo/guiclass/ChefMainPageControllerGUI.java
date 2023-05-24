@@ -2,6 +2,7 @@ package com.example.foodo.guiclass;
 
 import com.example.foodo.Main;
 import com.example.foodo.engineering.bean.ChefBean;
+import javafx.scene.control.ScrollPane;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 
 
@@ -19,6 +21,7 @@ public class ChefMainPageControllerGUI {
     private Stage stage;
     private Scene scene;
     private ChefBean chefBean;
+    private ScrollPane scroll;
 
     public void showKitchenChef(ActionEvent event) throws IOException {
         Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/myKitchen.fxml"));

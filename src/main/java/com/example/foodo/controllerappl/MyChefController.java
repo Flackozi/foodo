@@ -3,6 +3,7 @@ package com.example.foodo.controllerappl;
 import com.example.foodo.engineering.bean.RecipeItemBean;
 import com.example.foodo.engineering.dao.ItemDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
+import com.example.foodo.model.RecipeItemModel;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -12,9 +13,19 @@ public class MyChefController {
 
     public List<RecipeItemBean> retriveItem() throws SQLException, ConnectionDbException {
         List<RecipeItemBean> recipeItemBeans = new ArrayList<>();
-        ItemDAO itemDAO = new ItemDAO();
-        recipeItemBeans = itemDAO.getItem();
+        List<RecipeItemModel> recipeItemModels = new ArrayList<>();
 
+        ItemDAO itemDAO = new ItemDAO();
+        recipeItemModels = itemDAO.getItem();
+        int i;
+        int lenght =recipeItemModels.size();
+        for(i=0; i<lenght; i++){
+            String recipeName= recipeItemModels.get(i).getRecipeName();
+            String chefName= recipeItemModels.get(i).getChefName();
+            String img= recipeItemModels.get(i).getImgSrc();
+            RecipeItemBean recipeItemBean= new RecipeItemBean(recipeName, chefName, img);
+            recipeItemBeans.add(recipeItemBean);
+        }
         return recipeItemBeans;
     }
 }

@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class ItemController {
+public class ItemControllerGUI {
     @FXML
     public Label recipeNameLabel;
     @FXML

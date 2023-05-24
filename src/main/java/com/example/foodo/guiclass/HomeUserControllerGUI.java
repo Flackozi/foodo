@@ -4,7 +4,6 @@ import com.example.foodo.Main;
 import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.UserBean;
-import com.example.foodo.engineering.exception.ConnectionDbException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,7 +12,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.Objects;
 
 public class HomeUserControllerGUI {

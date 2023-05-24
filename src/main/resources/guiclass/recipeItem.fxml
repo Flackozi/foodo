@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="200.0" prefWidth="152.0" style="-fx-background-radius: 30; -fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.guiclass.ItemController">
+<AnchorPane prefHeight="200.0" prefWidth="152.0" style="-fx-background-radius: 30; -fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.guiclass.ItemControllerGUI">
    <children>
       <Label fx:id="chefLabel" layoutX="90.0" layoutY="152.0" prefHeight="27.0" prefWidth="53.0">
          <font>
@@ -21,12 +21,12 @@
       <Button layoutX="27.0" layoutY="59.0" mnemonicParsing="false" opacity="0.0" prefHeight="65.0" prefWidth="89.0" />
       <ImageView fx:id="img" fitHeight="97.0" fitWidth="114.0" layoutX="19.0" layoutY="48.0" style="-fx-background-radius: 50;">
          <image>
-            <Image url="@../image/gallery(1).png" />
+            <Image url="@../../../../../../foodo/src/main/resources/image/tibmty.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="33.0" fitWidth="75.0" layoutX="12.0" layoutY="151.0">
          <image>
-            <Image url="@../image/Screenshot%202023-05-20%20112313.png" />
+            <Image url="@../image/chef.jpg" />
          </image>
       </ImageView>
    </children>
