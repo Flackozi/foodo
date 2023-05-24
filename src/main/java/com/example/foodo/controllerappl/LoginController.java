@@ -23,7 +23,7 @@ public class LoginController {
     public void completeChefLogin(LoginBean loginBean) throws NotFoundException {
         ChefDAO chefDao=new ChefDAO();
         ChefModel chefModel = chefDao.retrieveChefByUsername(loginBean.getUsername());
-        ChefBean chefBean = new ChefBean(chefModel.getUsername(), chefModel.getTypeOfCuisine(), chefModel.getWorkplace(), chefModel.getProfileType());
+        ChefBean chefBean = new ChefBean(chefModel.getUsername(), chefModel.getTypeOfCuisine(), chefModel.getWorkplace(), chefModel.getProfileType(), chefModel.getEmail(), chefModel.getNumber(), chefModel.getLocation());
         Session.setSessionInstance(chefBean);
     }
 

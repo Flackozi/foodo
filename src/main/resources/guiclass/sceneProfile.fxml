@@ -41,6 +41,5 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="buttonContact" layoutX="256.0" layoutY="291.0" mnemonicParsing="false" onAction="#showContact" opacity="0.0" prefHeight="55.0" prefWidth="48.0" />
    </children>
 </AnchorPane>

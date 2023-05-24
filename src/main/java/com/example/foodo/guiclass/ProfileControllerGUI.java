@@ -1,5 +1,6 @@
 package com.example.foodo.guiclass;
 
+import com.example.foodo.Main;
 import com.example.foodo.controllerappl.ProfileController;
 import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.ImageConverterSupport;
@@ -21,6 +22,9 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class ProfileControllerGUI {
+    public Label labelEmail;
+    public Label labelPhone;
+    public Label labelLocation;
     @FXML
     private File file = null;
     @FXML
@@ -33,6 +37,8 @@ public class ProfileControllerGUI {
     private Label labelTypeOfDiet;
     @FXML
     private Label labelAccountType;
+    private ChefBean chefBean;
+
 
     @FXML
     private Label labelWorkplace;
@@ -71,6 +77,7 @@ public class ProfileControllerGUI {
     public void setChefInfoProfile(ChefBean chefBean) throws IOException {
         ProfileController profileController = new ProfileController();
         chefBean= Session.getCurrentSession().getChefBean();
+        //System.out.print(chefBean.getEmail());
         labelUsername.setText(chefBean.getUsername());
         labelTypeOfCuisine.setText(chefBean.getTypeOfCuisine());
         labelWorkplace.setText(chefBean.getWorkplace());
@@ -82,7 +89,7 @@ public class ProfileControllerGUI {
     public void BackHome(ActionEvent event) throws IOException {
         //ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
         if((userBean= Session.getCurrentSession().getUserBean()) != null){
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneProfile")));
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneHomeUser.fxml")));
             scene = new Scene(root);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
@@ -98,18 +105,32 @@ public class ProfileControllerGUI {
     }
 
     public void showInfo(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneProfile.fxml")));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/sceneChefProfile.fxml"));
+        Parent root = fxmlLoader.load();
         scene = new Scene(root);
+        ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
+        profileControllerGUI.setChefInfoProfile(chefBean);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
 
     public void showContact(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneProfile2.fxml")));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/sceneProfile2.fxml"));
+        Parent root = fxmlLoader.load();
         scene = new Scene(root);
+        ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
+        profileControllerGUI.setChefInfoProfile2(chefBean);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+
+    private void setChefInfoProfile2(ChefBean chefBean) {
+        ProfileController profileController = new ProfileController();
+        chefBean= Session.getCurrentSession().getChefBean();
+        labelEmail.setText(chefBean.getEmail());
+        labelPhone.setText(chefBean.getNumber());
+        labelLocation.setText(chefBean.getLocation());
     }
 }

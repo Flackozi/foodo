@@ -14,6 +14,9 @@ public class ChefDAO {
 
     private static final String CUISINE="typeOfCuisine";
     private static final String WORKPLACE="workplace";
+    private static final String EMAIL="email";
+    private static final String NUMBER="number";
+    private static final String LOCATION="location";
     //private static final Integer CHEFTYPE="";
 
 
@@ -52,7 +55,10 @@ public class ChefDAO {
             //int chefTypeOfUser=resultSet.getInt(CHEFTYPE);
             String typeOfCuisine=resultSet.getString(CUISINE);
             String workplace=resultSet.getString(WORKPLACE);
-            chefModel=new ChefModel(username, typeOfCuisine, workplace, 1);
+            String email = resultSet.getString(EMAIL);
+            String number = resultSet.getString(NUMBER);
+            String location = resultSet.getString(LOCATION);
+            chefModel=new ChefModel(username, typeOfCuisine, workplace, 1, email, number, location);
 
         }
         catch(Exception e){

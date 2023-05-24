@@ -36,9 +36,6 @@ public class HomeUserControllerGUI {
         ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
         if((userBean= Session.getCurrentSession().getUserBean()) != null){
             profileControllerGUI.setUserInfoProfile(userBean);
-        }else{
-            ChefBean chefBean = Session.getCurrentSession().getChefBean();
-            profileControllerGUI.setChefInfoProfile(chefBean);
         }
 
 
