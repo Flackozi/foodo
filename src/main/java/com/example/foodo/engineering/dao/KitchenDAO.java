@@ -18,7 +18,6 @@ public class KitchenDAO {
     public List<RecipeModel> searchProduct(KitchenModel kitchenModel) throws ConnectionDbException, SQLException {
         Statement stmt;
         List<RecipeModel> recipeModels= new ArrayList<>();
-        ResultSet resultSet=null;
         String ingredient1= kitchenModel.getIngredient1();
         String ingredient2= kitchenModel.getIngredient2();
         String ingredient3= kitchenModel.getIngredient3();
@@ -26,17 +25,18 @@ public class KitchenDAO {
         String ingredient5= kitchenModel.getIngredient5();
 
         stmt= ConnectionDB.getConnection();
-        if(ingredient2== null){
-            resultSet=BasicQueries.retriveRecipeId1(stmt, ingredient1);
-        }else if (ingredient3==null) {
-            resultSet=BasicQueries.retriveRecipeId2(stmt, ingredient1, ingredient2);
-        }else if (ingredient4== null){
-            resultSet=BasicQueries.retriveRecipeId3(stmt, ingredient1, ingredient2, ingredient3);
-        }else if (ingredient5== null){
-            resultSet=BasicQueries.retriveRecipeId4(stmt, ingredient1, ingredient2, ingredient3, ingredient4);
-        }else{
-            resultSet=BasicQueries.retriveRecipeId5(stmt, ingredient1, ingredient2, ingredient3, ingredient4, ingredient5);
-        }
+//        if(ingredient2== null){
+//            ResultSet resultSet=BasicQueries.retriveRecipeId1(stmt, ingredient1);
+//        }else if (ingredient3==null) {
+//            ResultSet resultSet=BasicQueries.retriveRecipeId2(stmt, ingredient1, ingredient2);
+//        }else if (ingredient4== null){
+//            ResultSet resultSet=BasicQueries.retriveRecipeId3(stmt, ingredient1, ingredient2, ingredient3);
+//        }else if (ingredient5== null){
+//            ResultSet resultSet=BasicQueries.retriveRecipeId4(stmt, ingredient1, ingredient2, ingredient3, ingredient4);
+//        }else{
+//            ResultSet resultSet=BasicQueries.retriveRecipeId5(stmt, ingredient1, ingredient2, ingredient3, ingredient4, ingredient5);
+//        }
+        ResultSet resultSet=BasicQueries.retriveRecipeId(stmt, kitchenModel.getIngredient1(), kitchenModel.getIngredient2(), kitchenModel.getIngredient3(), kitchenModel.getIngredient4(), kitchenModel.getIngredient5());
 
         List<Integer> idList= new ArrayList<>();
         int i=0;

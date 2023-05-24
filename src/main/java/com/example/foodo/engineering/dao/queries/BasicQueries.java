@@ -67,32 +67,56 @@ public class BasicQueries {
         return stmt.executeQuery(sql);
     }
 
+    public static ResultSet retriveRecipeId(Statement stmt, String ingredient1, String ingredient2, String ingredient3, String ingredient4, String ingredient5) throws SQLException {
+
+        if(ingredient2.isEmpty()){
+            String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' ;";
+            return stmt.executeQuery(sql);
+        }else if (ingredient3.isEmpty()) {
+            String sql = "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "');";
+            return stmt.executeQuery(sql);
+        }else if (ingredient4.isEmpty()){
+            String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "');";
+            return stmt.executeQuery(sql);
+        }else if (ingredient4.isEmpty()){
+            String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "');";
+            return stmt.executeQuery(sql);
+        } else if (ingredient5.isEmpty()){
+            String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "');";
+            return stmt.executeQuery(sql);
+        }else{
+            String sql="SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "');";
+            return stmt.executeQuery(sql);
+        }
+
+    }
+
     public static ResultSet findRecipe(Statement stmt, Integer recipeId) throws SQLException {
         String sql= "SELECT * FROM recipes WHERE recipeId='" + recipeId + "' ;";
         return stmt.executeQuery(sql);
 
     }
 
-    public static ResultSet retriveRecipeId1(Statement stmt, String ingredient1) throws SQLException {
-        String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' ;";
-        return stmt.executeQuery(sql);
-    }
-
-    public static ResultSet retriveRecipeId2(Statement stmt, String ingredient1, String ingredient2) throws SQLException {
-        String sql = "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "');";
-        return stmt.executeQuery(sql);
-    }
-
-    public static ResultSet retriveRecipeId3(Statement stmt, String ingredient1, String ingredient2, String ingredient3) throws SQLException {
-        String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "');";
-        return stmt.executeQuery(sql);
-    }
-    public static ResultSet retriveRecipeId4(Statement stmt, String ingredient1, String ingredient2, String ingredient3, String ingredient4) throws SQLException {
-        String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "');";
-        return stmt.executeQuery(sql);
-    }
-    public static ResultSet retriveRecipeId5(Statement stmt, String ingredient1, String ingredient2, String ingredient3, String ingredient4, String ingredient5) throws SQLException {
-        String sql="SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "');";
-        return stmt.executeQuery(sql);
-    }
+//    public static ResultSet retriveRecipeId1(Statement stmt, String ingredient1) throws SQLException {
+//        String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' ;";
+//        return stmt.executeQuery(sql);
+//    }
+//
+//    public static ResultSet retriveRecipeId2(Statement stmt, String ingredient1, String ingredient2) throws SQLException {
+//        String sql = "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "');";
+//        return stmt.executeQuery(sql);
+//    }
+//
+//    public static ResultSet retriveRecipeId3(Statement stmt, String ingredient1, String ingredient2, String ingredient3) throws SQLException {
+//        String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "');";
+//        return stmt.executeQuery(sql);
+//    }
+//    public static ResultSet retriveRecipeId4(Statement stmt, String ingredient1, String ingredient2, String ingredient3, String ingredient4) throws SQLException {
+//        String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "');";
+//        return stmt.executeQuery(sql);
+//    }
+//    public static ResultSet retriveRecipeId5(Statement stmt, String ingredient1, String ingredient2, String ingredient3, String ingredient4, String ingredient5) throws SQLException {
+//        String sql="SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "');";
+//        return stmt.executeQuery(sql);
+//    }
 }

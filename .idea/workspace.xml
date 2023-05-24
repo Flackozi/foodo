@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: myChef&#10;fine caso d'uso">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_05_2023_19_20_[Changes]/mainLogScene.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_05_2023_19_20_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_05_2023_19_20__Changes_.xml" beforeDir="false" />
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: myKitchen&#10;inizio caso d'uso">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2023_17_55__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2023_17_55__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/KitchenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/KitchenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/KitchenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/KitchenDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/HomeUserControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/HomeUserControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/MyKitchenControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/MyKitchenControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/myKitchen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/myKitchen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +123,7 @@
       <workItem from="1684923517680" duration="5514000" />
       <workItem from="1684941564650" duration="3471000" />
       <workItem from="1684953203527" duration="1775000" />
-      <workItem from="1684959977787" duration="3839000" />
+      <workItem from="1684959977787" duration="4372000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1681726734682</created>
@@ -277,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684932812502</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="caso d'uso: myKitchen&#10;inizio caso d'uso">
+      <created>1684963856727</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1684963856727</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +313,8 @@
     <MESSAGE value="caso d'uso: AddNewRecipe&#10;descrizione: finito addNewRecipe" />
     <MESSAGE value="caso d'uso: &#10;fine prima parte myChef&#10;sistemazione bug profilo chef&#10;add css" />
     <MESSAGE value="caso d'uso: myChef&#10;fine caso d'uso" />
-    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: myChef&#10;fine caso d'uso" />
+    <MESSAGE value="caso d'uso: myKitchen&#10;inizio caso d'uso" />
+    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: myKitchen&#10;inizio caso d'uso" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
