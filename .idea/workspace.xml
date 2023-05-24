@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: &#10;fine prima parte myChef&#10;sistemazione bug profilo chef&#10;add css">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_05_2023_11_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_05_2023_11_18__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_05_2023_11_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_05_2023_11_30__Changes_.xml" afterDir="false" />
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: myChef&#10;fine caso d'uso">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_05_2023_19_20_[Changes]/mainLogScene.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_05_2023_19_20_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_05_2023_19_20__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/MyChefController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/MyChefController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/MyRecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/MyRecipeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ItemDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/ChefMainPageControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/ChefMainPageControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/KitchenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/KitchenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/HomeUserControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/HomeUserControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/ItemControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/MyChefControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/MyChefControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/MyRecipeControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/MyRecipeControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/myRecipes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/myRecipes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeItem.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/Screenshot 2023-05-20 112313.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/MyKitchenControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/guiclass/MyKitchenControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/myKitchen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/myKitchen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +31,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,6 +72,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.foodo.engineering.dao" />
+      <recent name="com.example.foodo.model" />
       <recent name="com.example.foodo.engineering.Utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -129,7 +125,10 @@
       <workItem from="1684833232730" duration="954000" />
       <workItem from="1684843604441" duration="1794000" />
       <workItem from="1684921335410" duration="2022000" />
-      <workItem from="1684923517680" duration="5064000" />
+      <workItem from="1684923517680" duration="5514000" />
+      <workItem from="1684941564650" duration="3471000" />
+      <workItem from="1684953203527" duration="1775000" />
+      <workItem from="1684959977787" duration="3839000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1681726734682</created>
@@ -271,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684838501293</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="caso d'uso: myChef&#10;fine caso d'uso">
+      <created>1684932812502</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1684932812502</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +310,8 @@
     <MESSAGE value="caso d'uso: MyRecipe&#10;descrizione: Fatto inserimento ricette nel database, da fare inserimento anche degli ingredienti" />
     <MESSAGE value="caso d'uso: AddNewRecipe&#10;descrizione: finito addNewRecipe" />
     <MESSAGE value="caso d'uso: &#10;fine prima parte myChef&#10;sistemazione bug profilo chef&#10;add css" />
-    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: &#10;fine prima parte myChef&#10;sistemazione bug profilo chef&#10;add css" />
+    <MESSAGE value="caso d'uso: myChef&#10;fine caso d'uso" />
+    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: myChef&#10;fine caso d'uso" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

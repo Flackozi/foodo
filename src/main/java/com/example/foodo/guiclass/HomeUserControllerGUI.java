@@ -44,7 +44,12 @@ public class HomeUserControllerGUI {
         stage.show();
     }
 
-    public void showKitchenUser(ActionEvent actionEvent) {
+    public void showKitchenUser(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("/guiclass/myKitchen.fxml"));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void showMyChefUser(ActionEvent event) throws IOException {
