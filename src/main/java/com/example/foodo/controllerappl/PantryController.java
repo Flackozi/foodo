@@ -32,12 +32,21 @@ public class PantryController {
         productModelList = productDAO.getAllProduct();
         int i = 0;
         int lenght = productModelList.size();
-        do{
-            ProductModel productModel = productModelList.get(i);
-            i++;
-            ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpirationDay(), productModel.getExpirationMonth(), productModel.getExpirationYear());
+//        do{
+//            ProductModel productModel = productModelList.get(i);
+//            i++;
+//            ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpirationDay(), productModel.getExpirationMonth(), productModel.getExpirationYear());
+//            productBeans.add(productBean);
+//        }while(i != lenght);
+
+        for(i=0; i<lenght; i++){
+            String name= productModelList.get(i).getName();
+            int quantity= productModelList.get(i).getQuantity();
+            String type= productModelList.get(i).getTypeOfFood();
+            String expiration= productModelList.get(i).getExpiration();
+            ProductBean productBean= new ProductBean(name, quantity, type, expiration);
             productBeans.add(productBean);
-        }while(i != lenght);
+        }
 
         return productBeans;
 

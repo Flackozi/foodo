@@ -1,8 +1,6 @@
 package com.example.foodo.guiclass;
 import com.example.foodo.controllerappl.PantryController;
-import com.example.foodo.engineering.Utils.TableColumns;
 import com.example.foodo.engineering.bean.ProductBean;
-import com.example.foodo.engineering.connection.ConnectionDB;
 import com.example.foodo.engineering.dao.ProductDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.model.ProductModel;
@@ -24,6 +22,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -44,9 +43,6 @@ public class PantryControllerGUI  implements Initializable{
     private TableColumn<ProductModel, String> TypeOfFood;
 
     @FXML
-    private ImageView addNewProduct;
-
-    @FXML
     private DatePicker expirationDate;
 
     @FXML
@@ -60,7 +56,6 @@ public class PantryControllerGUI  implements Initializable{
 
     @FXML
     private TableView tablePantry;
-
 
 
     public void backHome(ActionEvent event) throws IOException {
@@ -94,21 +89,29 @@ public class PantryControllerGUI  implements Initializable{
     private String[] typeOfFood = {"spices", "fruit", "meat", "vegetable", "sweet", "liquid", "fish", "other"};
 private ProductDAO productDAO = new ProductDAO();
     public void initialize(URL url, ResourceBundle resourceBundle){
+        Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
+        Expiration.setCellValueFactory(new PropertyValueFactory<>("Expiration"));
+        TypeOfFood.setCellValueFactory(new PropertyValueFactory<>("TypeOfFood"));
 
         typeOfFoodPicker.getItems().addAll(typeOfFood);
         typeOfFoodPicker.setOnAction(this::getType);
         try{
             PantryController pantryController = new PantryController();
             List<ProductBean> productBeans = new ArrayList<>();
-
             productBeans = pantryController.retriveAllProduct();
-//            tablePantry.getColumns().setAll(TableColumns.setcols());
-            Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
-            Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
-            Expiration.setCellValueFactory(new PropertyValueFactory<>("Expiration"));
-            TypeOfFood.setCellValueFactory(new PropertyValueFactory<>("TypeOfFood"));
+            tablePantry.getItems().clear();
+            Iterator<ProductBean> iteratorProduct= productBeans.iterator();
+            ObservableList<ProductModel> obl = tablePantry.getItems();
+            while(iteratorProduct.hasNext()) {
+                ProductBean productBean = iteratorProduct.next();
+                ProductModel productModel=new ProductModel(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getExpiration());
 
-            tablePantry.setItems(productDAO.getAllProduct());
+                obl.add(productModel);
+            }
+
+            tablePantry.setItems(obl);
+//            tablePantry.setItems(productDAO.getAllProduct());
 
         }catch(Exception e){
             e.printStackTrace();
