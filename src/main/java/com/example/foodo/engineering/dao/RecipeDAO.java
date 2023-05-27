@@ -4,6 +4,7 @@ package com.example.foodo.engineering.dao;
 import com.example.foodo.engineering.connection.ConnectionDB;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.model.ProductModel;
+import com.example.foodo.model.RecipeItemModel;
 import com.example.foodo.model.RecipeModel;
 import com.example.foodo.engineering.dao.queries.BasicQueries;
 
@@ -12,6 +13,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RecipeDAO {
     public static void AddRecipe(RecipeModel recipe) throws SQLException, FileNotFoundException {
@@ -47,5 +50,26 @@ public class RecipeDAO {
             e.printStackTrace();;
         }
         return recipeId;
+    }
+
+
+    public List<RecipeModel> findRecipe(String recipeName) {
+        List<RecipeModel> recipeModels= new ArrayList<>();
+        RecipeModel recipeModel=new RecipeModel();
+        Statement stmt;
+        try{
+            stmt=ConnectionDB.getConnection();
+            ResultSet resultSet= BasicQueries.searchRecipe(stmt, recipeName);
+            while(resultSet.next()){
+                recipeModel.setRecipeName(recipeName);
+                recipeModel.setChefName(resultSet.getString("chefName"));
+                recipeModel.setDescription(resultSet.getString("description"));
+                recipeModel.setPath(resultSet.getString("image"));
+                recipeModels.add(recipeModel);
+            }
+        }catch(SQLException | ConnectionDbException e){
+            e.printStackTrace();
+        }
+        return recipeModels;
     }
 }
