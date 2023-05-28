@@ -103,11 +103,11 @@
     -fx-background-radius: 30;
     -fx-effect: dropshadow(three-pass-box, grey, 31, 0,11, 10);
 }
-
+/*
 .pet-box:hover{
     -fx-background-color: #DADADA;
 }
-
+*/
 
 .radio-button1 {
 	-fx-border-color: #34665A;

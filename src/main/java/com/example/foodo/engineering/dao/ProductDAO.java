@@ -1,5 +1,6 @@
 package com.example.foodo.engineering.dao;
 
+import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.connection.ConnectionDB;
 import com.example.foodo.engineering.dao.queries.BasicQueries;
 import com.example.foodo.engineering.exception.ConnectionDbException;
@@ -7,6 +8,7 @@ import com.example.foodo.model.ProductModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import javax.swing.plaf.nimbus.State;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,7 +18,7 @@ import java.util.List;
 
 public class   ProductDAO {
 
-
+    private ProductBean productBean;
     public static void InsProduct(ProductModel product) throws SQLException{
 
         Statement stmt;
@@ -66,5 +68,36 @@ public class   ProductDAO {
         Statement stmt;
         stmt=ConnectionDB.getConnection();
         BasicQueries.deleteProduct(stmt, productModel.getName());
+    }
+
+    public List<ProductModel> getRecipeIng(String rname) throws ConnectionDbException, SQLException {
+        Statement stmt;
+        List<ProductModel> productModelList = new ArrayList<>();
+        stmt = ConnectionDB.getConnection();
+        ProductDAO productDAO = new ProductDAO();
+        Integer id = productDAO.getRecipeId(rname);
+        ResultSet resultSet = BasicQueries.retriveRecipeIng(stmt, id);
+        resultSet.next();
+        resultSet.first();
+
+        while(resultSet.next()){
+            String name = resultSet.getString("name");
+            String quantity = resultSet.getString("quantity");
+            ProductModel productModel = new ProductModel(name, quantity);
+            productModelList.add(productModel);
+        }
+        return productModelList;
+    }
+
+    public Integer getRecipeId(String rname) throws ConnectionDbException, SQLException {
+        Statement stmt;
+        List<ProductModel> productModelList = new ArrayList<>();
+        stmt = ConnectionDB.getConnection();
+
+        ResultSet resultSet = BasicQueries.retriverRecipeId(stmt, rname);
+        resultSet.next();
+        resultSet.first();
+        Integer id = Integer.valueOf(resultSet.getString("recipeId"));
+        return id;
     }
 }

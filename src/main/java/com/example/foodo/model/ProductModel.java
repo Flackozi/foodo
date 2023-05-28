@@ -8,6 +8,7 @@ public class ProductModel {
     private int expirationMonth;
     private  int expirationYear;
     private String Expiration;
+    private String quantity;
 
     public void setName(String name) {
         Name = name;
@@ -45,6 +46,11 @@ public class ProductModel {
         this.Quantity = quantity;
         this.TypeOfFood = typeOfFood;
         this.Expiration=expiration;
+    }
+
+    public ProductModel(String name, String quantity) {
+        this.Name = name;
+        this.quantity = quantity;
     }
 
     public ProductModel(String Name){

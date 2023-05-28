@@ -89,7 +89,7 @@ public class MyKitchenControllerGUI {
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 ItemControllerGUI itemControllerGUI = fxmlLoader.getController();
-                itemControllerGUI.setData(recipeItemBeans.get(i),myListener);
+                itemControllerGUI.setData(recipeItemBeans.get(i),myListener, i, recipeItemBeans.get(i).getRecipeName());
 
                 if (column == 2) {
                     column = 0;

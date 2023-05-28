@@ -20,6 +20,10 @@ public class ProductBean {
         this.setTypeOfFood(TypeOfFood);
         this.setExpiration(expiration);
     }
+    public ProductBean(String name, int quantity) {
+        this.setName(name);
+        this.setQuantity(quantity);
+    }
     public ProductBean (String name){
         this.Name=name;
     }

@@ -1,7 +1,11 @@
 package com.example.foodo.guiclass;
 
+import com.example.foodo.Main;
+import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.MyListener;
+import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.RecipeItemBean;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,7 +15,10 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 
 import java.io.IOException;
 import java.util.Objects;
@@ -23,17 +30,21 @@ public class ItemControllerGUI {
     public Label chefLabel;
     @FXML
     public ImageView img;
+    public Label numberLabel;
     private Parent root;
     private Stage stage;
     private Scene scene;
 
     private RecipeItemBean recipeItemBean;
     private MyListener myListener;
+    private String Rname;
 
-    public void setData(RecipeItemBean recipeItemBean, MyListener myListener) {
+    public void setData(RecipeItemBean recipeItemBean, MyListener myListener, Integer j, String recipeName) {
         this.recipeItemBean = recipeItemBean;
         this.myListener = myListener;
+        this.Rname = recipeName;
         recipeNameLabel.setText(recipeItemBean.getRecipeName());
+        numberLabel.setText(String.valueOf(j));
         String path = recipeItemBean.getImgSrc();
         chefLabel.setText(recipeItemBean.getChefName());
         Image image = new Image(path);
@@ -41,9 +52,14 @@ public class ItemControllerGUI {
 
     }
 
-    public void showRecipeDet(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/recipeDet1.fxml")));
+
+
+    public void openRecipeInfo(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet1.fxml"));
+        Parent root = fxmlLoader.load();
         scene = new Scene(root);
+        RecipeDet1ControllerGUI recipeDet1ControllerGUI = fxmlLoader.getController();
+        recipeDet1ControllerGUI.initialize(Rname);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();

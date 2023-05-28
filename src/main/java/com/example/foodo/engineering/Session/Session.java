@@ -1,6 +1,7 @@
 package com.example.foodo.engineering.Session;
 
 import com.example.foodo.engineering.bean.ChefBean;
+import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.UserBean;
 
 public class Session {
@@ -8,6 +9,7 @@ public class Session {
     private static Session sessionInstance=null;
     private UserBean userBean;
     private ChefBean chefBean;
+    private ProductBean productBean;
 
     private Session (Object ob){
         if(ob instanceof UserBean){
@@ -38,5 +40,6 @@ public class Session {
     public ChefBean getChefBean() {
         return chefBean;
     }
+    public ProductBean getProductBean(){return productBean;}
 
 }

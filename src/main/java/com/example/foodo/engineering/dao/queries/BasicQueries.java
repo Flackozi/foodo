@@ -103,4 +103,14 @@ public class BasicQueries {
 
     }
 
+
+    public static ResultSet retriveRecipeIng(Statement stmt, Integer id) throws SQLException {
+        String sql= "SELECT * FROM ingredients WHERE recipeId='" + id + "' ;";
+        return stmt.executeQuery(sql);
+    }
+
+    public static ResultSet retriverRecipeId(Statement stmt, String rname) throws SQLException {
+        String sql= "SELECT recipeId FROM recipes WHERE recipeName='" + rname + "' ;";
+        return stmt.executeQuery(sql);
+    }
 }
