@@ -71,14 +71,13 @@ public class   ProductDAO {
     }
 
     public List<ProductModel> getRecipeIng(String rname) throws ConnectionDbException, SQLException {
+
         Statement stmt;
         List<ProductModel> productModelList = new ArrayList<>();
         stmt = ConnectionDB.getConnection();
         ProductDAO productDAO = new ProductDAO();
         Integer id = productDAO.getRecipeId(rname);
         ResultSet resultSet = BasicQueries.retriveRecipeIng(stmt, id);
-        resultSet.next();
-        resultSet.first();
 
         while(resultSet.next()){
             String name = resultSet.getString("name");
@@ -90,6 +89,7 @@ public class   ProductDAO {
     }
 
     public Integer getRecipeId(String rname) throws ConnectionDbException, SQLException {
+
         Statement stmt;
         List<ProductModel> productModelList = new ArrayList<>();
         stmt = ConnectionDB.getConnection();
@@ -97,7 +97,8 @@ public class   ProductDAO {
         ResultSet resultSet = BasicQueries.retriverRecipeId(stmt, rname);
         resultSet.next();
         resultSet.first();
-        Integer id = Integer.valueOf(resultSet.getString("recipeId"));
+        Integer id = resultSet.getInt("recipeId");
+
         return id;
     }
 }

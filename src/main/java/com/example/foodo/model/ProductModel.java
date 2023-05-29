@@ -8,7 +8,11 @@ public class ProductModel {
     private int expirationMonth;
     private  int expirationYear;
     private String Expiration;
-    private String quantity;
+    private String Squantity;
+
+    public void setSquantity(String quantity) {
+        this.Squantity = quantity;
+    }
 
     public void setName(String name) {
         Name = name;
@@ -50,7 +54,7 @@ public class ProductModel {
 
     public ProductModel(String name, String quantity) {
         this.Name = name;
-        this.quantity = quantity;
+        this.Squantity = quantity;
     }
 
     public ProductModel(String Name){
@@ -63,6 +67,10 @@ public class ProductModel {
     public int getQuantity() {
         return Quantity;
     }
+    public String getSquantity() {
+        return Squantity;
+    }
+
 
     public String getTypeOfFood() {
         return TypeOfFood;

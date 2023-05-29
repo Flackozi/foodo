@@ -5,6 +5,7 @@ import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.MyListener;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.RecipeItemBean;
+import com.example.foodo.engineering.exception.ConnectionDbException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +22,7 @@ import javafx.stage.StageStyle;
 
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class ItemControllerGUI {
@@ -54,14 +56,15 @@ public class ItemControllerGUI {
 
 
 
-    public void openRecipeInfo(ActionEvent event) throws IOException {
+    public void openRecipeInfo(ActionEvent event) throws IOException, SQLException, ConnectionDbException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet1.fxml"));
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
         RecipeDet1ControllerGUI recipeDet1ControllerGUI = fxmlLoader.getController();
-        recipeDet1ControllerGUI.initialize(Rname);
+        recipeDet1ControllerGUI.setRecipe(Rname);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+
     }
 }

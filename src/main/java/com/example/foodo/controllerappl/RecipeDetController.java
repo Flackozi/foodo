@@ -14,12 +14,17 @@ public class RecipeDetController {
         List<ProductModel> productModelList = new ArrayList<>();
         List<ProductBean> productBeans = new ArrayList<>();
         ProductDAO productDAO = new ProductDAO();
-        //System.out.print(name);
         productModelList = productDAO.getRecipeIng(name);
-        int i =0;
-        while(productModelList.isEmpty()){
-            ProductModel productModel = productModelList.get(i);
-            ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity());
+        int i ;
+//        while(productModelList.isEmpty()){
+//            ProductModel productModel = productModelList.get(i);
+//            ProductBean productBean = new ProductBean(productModel.getName(), productModel.getquantity());
+//            productBeans.add(productBean);
+//        }
+        for(i=0; i< productModelList.size(); i++){
+            String IngName=productModelList.get(i).getName();
+            String Quantity= productModelList.get(i).getSquantity();
+            ProductBean productBean= new ProductBean(IngName, Quantity);
             productBeans.add(productBean);
         }
         return productBeans;

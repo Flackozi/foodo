@@ -110,6 +110,7 @@ public class BasicQueries {
     }
 
     public static ResultSet retriverRecipeId(Statement stmt, String rname) throws SQLException {
+
         String sql= "SELECT recipeId FROM recipes WHERE recipeName='" + rname + "' ;";
         return stmt.executeQuery(sql);
     }

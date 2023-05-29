@@ -2,12 +2,12 @@ package com.example.foodo.engineering.bean;
 
 public class ProductBean {
     private String Name;
+    private String Squantity;
     private int Quantity;
     private String TypeOfFood;
     private int day;
     private int month;
     private int year;
-
 
 
     private String Expiration;
@@ -23,6 +23,11 @@ public class ProductBean {
     public ProductBean(String name, int quantity) {
         this.setName(name);
         this.setQuantity(quantity);
+    }
+
+    public ProductBean(String name, String Squantity){
+        this.setName(name);
+        this.setSquantity(Squantity);
     }
     public ProductBean (String name){
         this.Name=name;
@@ -65,8 +70,8 @@ public class ProductBean {
         return Quantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.Quantity = quantity;
+    public void setQuantity(int squantity) {
+        this.Quantity = squantity;
     }
 
     public String getTypeOfFood() {
@@ -84,5 +89,10 @@ public class ProductBean {
         this.Expiration = expiration;
     }
 
-
+    public void setSquantity(String quantity) {
+        this.Squantity = quantity;
+    }
+    public String getSquantity() {
+        return Squantity;
+    }
 }

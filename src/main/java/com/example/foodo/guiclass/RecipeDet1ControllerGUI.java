@@ -1,10 +1,13 @@
 package com.example.foodo.guiclass;
 
+import com.example.foodo.Main;
 import com.example.foodo.controllerappl.RecipeDetController;
 import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.bean.IngredientBean;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
+import com.example.foodo.model.IngredientModel;
 import com.example.foodo.model.ProductModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,44 +26,46 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class RecipeDet1ControllerGUI {
 
     @FXML
-    public TableView tableIngredients;
+    private TableView<ProductBean> tableIngredients;
 
 
     @FXML
-    private TableColumn<ProductModel, String> Quantity;
+    private TableColumn<ProductBean, String> Quantity;
 
     @FXML
-    private TableColumn<ProductModel, String> Name;
+    private TableColumn<ProductBean, String> Name;
     private Parent root;
     private Stage stage;
     private Scene scene;
 
     private String rname;
     private UserBean userBean;
+    private List<ProductBean> productBeans = new ArrayList<>();
 
 
-    public RecipeDet1ControllerGUI(String name){
-        this.rname = name;
-    }
+
     public void showDescription(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/recipeDet2.fxml")));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet2.fxml"));
+        Parent root = fxmlLoader.load();
         scene = new Scene(root);
+        RecipeDet2ControllerGUI recipeDet2ControllerGUI = fxmlLoader.getController();
+        recipeDet2ControllerGUI.setDescription(rname);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
 
     public void showReview(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/recipeDet3.fxml")));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet3.fxml"));
+        Parent root = fxmlLoader.load();
         scene = new Scene(root);
+        RecipeDet3ControllerGUI recipeDet3ControllerGUI = fxmlLoader.getController();
+        recipeDet3ControllerGUI.setDescription(rname);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
@@ -82,25 +87,21 @@ public class RecipeDet1ControllerGUI {
         }
     }
 
-    public void initialize(String rname){
+    public void setRecipe(String rname) throws SQLException, ConnectionDbException {
+        Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        Quantity.setCellValueFactory(new PropertyValueFactory<>("Squantity"));
+        this.rname=rname;
         RecipeDetController recipeDetController = new RecipeDetController();
-        List<ProductBean> productBeans = new ArrayList<>();
-
-        try {
-
-            //String name = setRname(rname);
-            System.out.print(rname);
-            productBeans = recipeDetController.getRecipeIngredients(rname);
-
-
-            Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
-            Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
-            ObservableList obl = FXCollections.observableArrayList(productBeans);
-            tableIngredients.setItems(obl);
-
-        } catch (Exception e) {
-            e.printStackTrace();
+        productBeans = recipeDetController.getRecipeIngredients(rname);
+        Iterator<ProductBean> iteratorProduct=productBeans.iterator();
+        ObservableList<ProductBean> obl= tableIngredients.getItems();
+        while(iteratorProduct.hasNext()){
+            ProductBean productBean= iteratorProduct.next();
+            obl.add(productBean);
         }
+
+        tableIngredients.setItems(obl);
+
     }
 
 

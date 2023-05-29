@@ -15,5 +15,7 @@ module com.example.foodo_fx {
     opens com.example.foodo.guiclass to javafx.fxml;
     exports com.example.foodo.model;
     opens com.example.foodo.model to javafx.fxml;
+    opens com.example.foodo.engineering.bean to javafx.fxml;
+    exports com.example.foodo.engineering.bean;
 
 }
