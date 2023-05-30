@@ -2,6 +2,7 @@ package com.example.foodo.controllerappl;
 
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.dao.ProductDAO;
+import com.example.foodo.engineering.dao.RecipeDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.model.ProductModel;
 
@@ -28,5 +29,17 @@ public class RecipeDetController {
             productBeans.add(productBean);
         }
         return productBeans;
+    }
+
+    public String getDescription(String rname) {
+        RecipeDAO recipeDAO = new RecipeDAO();
+        String description = recipeDAO.retriveDescription(rname);
+
+        return description;
+    }
+
+    public void setRate(int value, String name) {
+        RecipeDAO recipeDAO = new RecipeDAO();
+        recipeDAO.setReview(value, name);
     }
 }

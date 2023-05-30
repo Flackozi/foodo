@@ -9,6 +9,8 @@ import com.example.foodo.model.RecipeModel;
 import com.example.foodo.engineering.dao.queries.BasicQueries;
 
 
+import javax.swing.plaf.nimbus.State;
+import javax.xml.transform.Result;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -71,5 +73,41 @@ public class RecipeDAO {
             e.printStackTrace();
         }
         return recipeModels;
+    }
+
+    public String retriveDescription(String rname) {
+        Statement stmt;
+        String description = null;
+
+        try{
+            stmt = ConnectionDB.getConnection();
+            ResultSet resultSet = BasicQueries.retriverRecipeId(stmt, rname);
+            resultSet.first();
+            int id = resultSet.getInt("recipeId");
+            ResultSet resultSet1 = BasicQueries.searchDescription(stmt, id);
+            resultSet1.first();
+            description = resultSet1.getString("description");
+        }catch(SQLException | ConnectionDbException e){
+            e.printStackTrace();
+        }
+        return description;
+    }
+
+    public void setReview(int value, String name) {
+        Statement stmt;
+
+        PreparedStatement preparedStatement;
+        try{
+            stmt = ConnectionDB.getConnection();
+            ResultSet resultSet = BasicQueries.retriverRecipeId(stmt, name);
+            resultSet.first();
+            int id = resultSet.getInt("recipeId");
+            preparedStatement = ConnectionDB.setReview();
+            preparedStatement.setInt(1, id);
+            preparedStatement.setInt(2, value);
+            preparedStatement.executeUpdate();
+        }catch(SQLException | ConnectionDbException e){
+            e.printStackTrace();
+        }
     }
 }

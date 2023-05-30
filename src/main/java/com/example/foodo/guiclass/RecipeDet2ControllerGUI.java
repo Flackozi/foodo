@@ -1,6 +1,7 @@
 package com.example.foodo.guiclass;
 
 import com.example.foodo.Main;
+import com.example.foodo.controllerappl.RecipeDetController;
 import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
@@ -64,6 +65,9 @@ public class RecipeDet2ControllerGUI{
 
     public void setDescription(String rname){
         this.name=rname;
+        RecipeDetController recipeDetController = new RecipeDetController();
+        String description = recipeDetController.getDescription(rname);
+        descriptionLabel.setText(description);
 
     }
 }

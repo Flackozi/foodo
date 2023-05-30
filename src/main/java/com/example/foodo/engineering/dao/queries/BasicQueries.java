@@ -114,4 +114,9 @@ public class BasicQueries {
         String sql= "SELECT recipeId FROM recipes WHERE recipeName='" + rname + "' ;";
         return stmt.executeQuery(sql);
     }
+
+    public static ResultSet searchDescription(Statement stmt, int id) throws SQLException {
+        String sql= "SELECT description FROM recipes WHERE recipeId='" + id + "' ;";
+        return stmt.executeQuery(sql);
+    }
 }

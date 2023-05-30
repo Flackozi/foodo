@@ -1,6 +1,7 @@
 package com.example.foodo.guiclass;
 
 import com.example.foodo.Main;
+import com.example.foodo.controllerappl.RecipeDetController;
 import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
@@ -18,6 +19,7 @@ import java.util.Objects;
 public class RecipeDet3ControllerGUI {
 
     private Parent root;
+
     private Stage stage;
     private Scene scene;
     private UserBean userBean;
@@ -38,19 +40,35 @@ public class RecipeDet3ControllerGUI {
         }
     }
 
-    public void OneButtonAction(ActionEvent actionEvent) {
+    public void OneButtonAction(ActionEvent event) {
+        int value = 1;
+        RecipeDetController recipeDetController = new RecipeDetController();
+        recipeDetController.setRate(value, name);
+
     }
 
-    public void TwoButtonAction(ActionEvent actionEvent) {
+    public void TwoButtonAction(ActionEvent event) {
+        int value = 2;
+        RecipeDetController recipeDetController = new RecipeDetController();
+        recipeDetController.setRate(value, name);
     }
 
-    public void ThreeButtonAction(ActionEvent actionEvent) {
+    public void ThreeButtonAction(ActionEvent event) {
+        int value = 3;
+        RecipeDetController recipeDetController = new RecipeDetController();
+        recipeDetController.setRate(value, name);
     }
 
-    public void FourButtonAction(ActionEvent actionEvent) {
+    public void FourButtonAction(ActionEvent event) {
+        int value = 4;
+        RecipeDetController recipeDetController = new RecipeDetController();
+        recipeDetController.setRate(value, name);
     }
 
-    public void FiveButtonAction(ActionEvent actionEvent) {
+    public void FiveButtonAction(ActionEvent event) {
+        int value = 5;
+        RecipeDetController recipeDetController = new RecipeDetController();
+        recipeDetController.setRate(value, name);
     }
 
     public void showDescription(ActionEvent event) throws IOException {
