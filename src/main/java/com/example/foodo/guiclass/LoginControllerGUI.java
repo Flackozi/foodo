@@ -2,7 +2,10 @@ package com.example.foodo.guiclass;
 
 import com.example.foodo.controllerappl.LoginController;
 import com.example.foodo.Main;
+import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
 import com.example.foodo.engineering.bean.LoginBean;
+import com.example.foodo.engineering.exception.NotFoundException;
+import com.example.foodo.engineering.exception.UserNotFoundException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -90,8 +93,12 @@ public class LoginControllerGUI {
 //                Main.getStage().setScene(scene);
                 showUserHomePage(event);
 
-            }
-        }catch(Exception e){
+            }else
+                throw new UserNotFoundException();
+
+        }catch( NotFoundException | UserNotFoundException  e){
+            ExceptionControllerGUI.showExceptionGUI(e.getMessage());
+        }catch(IOException e){
             e.printStackTrace();
         }
     }

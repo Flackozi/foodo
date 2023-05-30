@@ -1,8 +1,12 @@
 package com.example.foodo.guiclass;
 import com.example.foodo.controllerappl.PantryController;
+import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.dao.ProductDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
+import com.example.foodo.engineering.exception.DateFormatException;
+import com.example.foodo.engineering.exception.UserNotFoundException;
+import com.example.foodo.engineering.exception.CommandErrorException;
 import com.example.foodo.model.ProductModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,10 +25,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
+import com.example.foodo.engineering.exception.*;
 
 public class PantryControllerGUI  implements Initializable{
     @FXML
@@ -122,36 +124,42 @@ private ProductDAO productDAO = new ProductDAO();
     public void getType(ActionEvent event){
         String myType = typeOfFoodPicker.getValue();
     }
-    public void addNewProduct(ActionEvent actionEvent) throws SQLException {
-        ProductBean productBean = new ProductBean();
-        PantryController pantryController= new PantryController();
+    public void addNewProduct(ActionEvent actionEvent) throws  IOException{
+
 
         //prendiamo i dati e li mettiamo nella bean
+        try {
+            ProductBean productBean = new ProductBean();
+            PantryController pantryController = new PantryController();
+            productBean.setName(nameText.getText());
+            productBean.setQuantity(Integer.parseInt(quantityField.getText()));
+            productBean.setTypeOfFood(typeOfFoodPicker.getValue());
 
-        productBean.setName(nameText.getText());
-        productBean.setQuantity(Integer.parseInt(quantityField.getText()));
-        productBean.setTypeOfFood(typeOfFoodPicker.getValue());
+            int year;
+            int month;
+            int day;
 
-        int year;
-        int month;
-        int day;
+            year = expirationDate.getValue().getYear();
+            month = expirationDate.getValue().getMonthValue();
+            day = expirationDate.getValue().getDayOfMonth();
 
-        year = expirationDate.getValue().getYear();
-        month = expirationDate.getValue().getMonthValue();
-        day = expirationDate.getValue().getDayOfMonth();
+            productBean.setDay(day);
+            productBean.setMonth(month);
+            productBean.setYear(year);
 
-        productBean.setDay(day);
-        productBean.setMonth(month);
-        productBean.setYear(year);
+            pantryController.addNewProduct(productBean);
 
-        pantryController.addNewProduct(productBean);
+            String exp = day + "/" + month + "/" + year;
 
-        String exp = day + "/" + month + "/" + year;
+            ProductModel product = new ProductModel(nameText.getText(), Integer.parseInt(quantityField.getText()), typeOfFoodPicker.getValue(), exp);
+            tablePantry.getItems().add(product);
+        } catch (CommandErrorException e){
+            ExceptionControllerGUI.showExceptionGUI(e.getMessage());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
-        ProductModel product= new ProductModel(nameText.getText(), Integer.parseInt(quantityField.getText()), typeOfFoodPicker.getValue(), exp);
-        tablePantry.getItems().add(product);
 
-        //continuare da qua: observer/ controller app
     }
 
 
