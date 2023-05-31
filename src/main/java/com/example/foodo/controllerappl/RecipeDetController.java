@@ -1,6 +1,7 @@
 package com.example.foodo.controllerappl;
 
 import com.example.foodo.engineering.bean.ProductBean;
+import com.example.foodo.engineering.dao.FollowerDAO;
 import com.example.foodo.engineering.dao.ProductDAO;
 import com.example.foodo.engineering.dao.RecipeDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
@@ -17,11 +18,6 @@ public class RecipeDetController {
         ProductDAO productDAO = new ProductDAO();
         productModelList = productDAO.getRecipeIng(name);
         int i ;
-//        while(productModelList.isEmpty()){
-//            ProductModel productModel = productModelList.get(i);
-//            ProductBean productBean = new ProductBean(productModel.getName(), productModel.getquantity());
-//            productBeans.add(productBean);
-//        }
         for(i=0; i< productModelList.size(); i++){
             String IngName=productModelList.get(i).getName();
             String Quantity= productModelList.get(i).getSquantity();
@@ -41,5 +37,28 @@ public class RecipeDetController {
     public void setRate(int value, String name) {
         RecipeDAO recipeDAO = new RecipeDAO();
         recipeDAO.setReview(value, name);
+    }
+
+    public String getPath(String rname) {
+        RecipeDAO recipeDAO= new RecipeDAO();
+        String path=recipeDAO.retrivePath(rname);
+        return path;
+    }
+
+    public int verifyFollow(String userName, String chefName) {
+        FollowerDAO followerDAO= new FollowerDAO();
+        int followed= followerDAO.checkFollow(userName, chefName);
+        if(followed==0){
+            followerDAO.unfollowChef(userName, chefName);
+        }else{
+            followerDAO.followChef(userName, chefName);
+        }
+        return followed;
+    }
+
+    public String setAverage(String rname, String chefName) {
+        RecipeDAO recipeDAO= new RecipeDAO();
+        return String.valueOf(recipeDAO.setAverage(rname, chefName));
+
     }
 }

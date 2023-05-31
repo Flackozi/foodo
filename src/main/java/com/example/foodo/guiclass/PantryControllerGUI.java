@@ -153,8 +153,6 @@ private ProductDAO productDAO = new ProductDAO();
 
             ProductModel product = new ProductModel(nameText.getText(), Integer.parseInt(quantityField.getText()), typeOfFoodPicker.getValue(), exp);
             tablePantry.getItems().add(product);
-        } catch (CommandErrorException e){
-            ExceptionControllerGUI.showExceptionGUI(e.getMessage());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

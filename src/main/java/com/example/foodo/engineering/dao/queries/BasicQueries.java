@@ -119,4 +119,24 @@ public class BasicQueries {
         String sql= "SELECT description FROM recipes WHERE recipeId='" + id + "' ;";
         return stmt.executeQuery(sql);
     }
+
+    public static ResultSet retrieveImg(Statement stmt, int id) throws SQLException {
+        String sql= "SELECT image FROM recipes WHERE recipeId='" + id + "' ;";
+        return stmt.executeQuery(sql);
+    }
+
+    public static ResultSet checkFollow(Statement stmt, String userName, String chefName) throws SQLException {
+        String sql = "SELECT CASE WHEN EXISTS (SELECT userName, chefName FROM favorite WHERE userName = '" + userName + "' AND chefName = '" + chefName + "') THEN 0 ELSE 1 END;";
+        return stmt.executeQuery(sql);
+    }
+
+    public static void deleteFollow(Statement stmt, String userName, String chefName) throws SQLException {
+        String updateStatement= String.format("DELETE FROM favorite WHERE userName = '%s' AND chefName = '%s' ", userName, chefName);
+        stmt.executeUpdate(updateStatement);
+    }
+
+    public static ResultSet getReview(Statement stmt, int id) throws SQLException {
+        String sql= "SELECT rate FROM review WHERE recipeId1='" + id + "' ;";
+        return stmt.executeQuery(sql);
+    }
 }

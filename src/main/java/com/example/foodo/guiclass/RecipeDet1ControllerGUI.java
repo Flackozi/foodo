@@ -18,9 +18,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -30,6 +33,8 @@ import java.util.*;
 
 public class RecipeDet1ControllerGUI {
 
+    public ImageView recipeImage;
+    public Label followLabel;
     @FXML
     private TableView<ProductBean> tableIngredients;
 
@@ -44,6 +49,8 @@ public class RecipeDet1ControllerGUI {
     private Scene scene;
 
     private String rname;
+    private String chefName;
+    private String userName;
     private UserBean userBean;
     private List<ProductBean> productBeans = new ArrayList<>();
 
@@ -54,7 +61,7 @@ public class RecipeDet1ControllerGUI {
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
         RecipeDet2ControllerGUI recipeDet2ControllerGUI = fxmlLoader.getController();
-        recipeDet2ControllerGUI.setDescription(rname);
+        recipeDet2ControllerGUI.setDescription(rname, chefName);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
@@ -65,7 +72,7 @@ public class RecipeDet1ControllerGUI {
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
         RecipeDet3ControllerGUI recipeDet3ControllerGUI = fxmlLoader.getController();
-        recipeDet3ControllerGUI.setDescription(rname);
+        recipeDet3ControllerGUI.setReview(rname,chefName);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
@@ -87,12 +94,18 @@ public class RecipeDet1ControllerGUI {
         }
     }
 
-    public void setRecipe(String rname) throws SQLException, ConnectionDbException {
+    public void setRecipe(String rname, String chefName) throws SQLException, ConnectionDbException {
         Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
         Quantity.setCellValueFactory(new PropertyValueFactory<>("Squantity"));
         this.rname=rname;
+        this.chefName=chefName;
         RecipeDetController recipeDetController = new RecipeDetController();
         productBeans = recipeDetController.getRecipeIngredients(rname);
+        String path=recipeDetController.getPath(rname);
+        Image image= new Image(path);
+        recipeImage.setImage(image);
+        recipeImage.setFitHeight(150);
+        recipeImage.setFitWidth(150);
         Iterator<ProductBean> iteratorProduct=productBeans.iterator();
         ObservableList<ProductBean> obl= tableIngredients.getItems();
         while(iteratorProduct.hasNext()){
@@ -105,4 +118,15 @@ public class RecipeDet1ControllerGUI {
     }
 
 
+    public void followChef(ActionEvent actionEvent) {
+        RecipeDetController recipeDetController= new RecipeDetController();
+        this.userName=Session.getCurrentSession().getUserBean().getUserUsernameBean();
+        if(recipeDetController.verifyFollow(userName, chefName)==0){
+            //l'utente già seguiva lo chef, quindi lo unfollow
+            followLabel.setText("Chef unfollowed");
+        }else{
+            //l'utente non seguiva ancora lo chef, quindi lo follow
+            followLabel.setText("Chef followed");
+        }
+    }
 }

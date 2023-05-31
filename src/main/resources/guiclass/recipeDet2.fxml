@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.guiclass.RecipeDet2ControllerGUI">
    <children>
-      <ImageView fitHeight="850.0" fitWidth="390.0" layoutY="-6.0">
+      <ImageView fitHeight="844.0" fitWidth="390.0">
          <image>
             <Image url="@../image/recipeDet2.png" />
          </image>
@@ -21,5 +21,12 @@
       <Button layoutX="139.0" layoutY="757.0" mnemonicParsing="false" onAction="#back" opacity="0.0" prefHeight="86.0" prefWidth="108.0" />
       <Button layoutX="20.0" layoutY="375.0" mnemonicParsing="false" onAction="#showIngredients" opacity="0.0" prefHeight="9.0" prefWidth="75.0" />
       <Button layoutX="284.0" layoutY="375.0" mnemonicParsing="false" onAction="#showReview" opacity="0.0" prefHeight="25.0" prefWidth="58.0" />
+      <Button layoutX="219.0" layoutY="189.0" mnemonicParsing="false" onAction="#followChef" opacity="0.0" prefHeight="86.0" prefWidth="144.0" />
+      <ImageView fx:id="recipeImage" fitHeight="148.0" fitWidth="152.0" layoutX="14.0" layoutY="159.0" pickOnBounds="true" />
+      <Label fx:id="followLabel" layoutX="235.0" layoutY="283.0" prefHeight="25.0" prefWidth="112.0" textFill="#19e1e1">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
