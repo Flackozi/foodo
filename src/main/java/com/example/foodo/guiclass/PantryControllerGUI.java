@@ -4,7 +4,6 @@ import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.dao.ProductDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.engineering.exception.DateFormatException;
 import com.example.foodo.engineering.exception.UserNotFoundException;
 import com.example.foodo.model.ProductModel;
 import javafx.collections.FXCollections;
@@ -139,6 +138,10 @@ private ProductDAO productDAO = new ProductDAO();
             if(typeOfFoodPicker.getValue() == null){
                 throw new FieldEmptyException("Type of food");
             }
+            if(expirationDate.getValue() == null){
+                throw new FieldEmptyException("Date");
+            }
+
             ProductBean productBean = new ProductBean();
             PantryController pantryController = new PantryController();
             productBean.setName(nameText.getText());

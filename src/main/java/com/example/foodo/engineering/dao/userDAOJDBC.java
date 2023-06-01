@@ -1,5 +1,6 @@
 package com.example.foodo.engineering.dao;
 
+import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
 import com.example.foodo.engineering.connection.ConnectionDB;
 import com.example.foodo.engineering.dao.queries.BasicQueries;
 import com.example.foodo.engineering.exception.ConnectionDbException;
@@ -38,8 +39,9 @@ public class userDAOJDBC {
             //chiudo connessione
             resultSet.close();
         //manca l'exception connectionDb
-        }catch (SQLException | ConnectionDbException e) {
-            e.printStackTrace();
+        }catch (SQLException | ConnectionDbException | NotFoundException e) {
+            ExceptionControllerGUI.showExceptionGUI(e.getMessage());
+
         }
         return userModel;
     }
