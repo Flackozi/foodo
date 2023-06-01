@@ -40,11 +40,13 @@ public class ItemControllerGUI {
     private RecipeItemBean recipeItemBean;
     private MyListener myListener;
     private String Rname;
+    private String chefName;
 
-    public void setData(RecipeItemBean recipeItemBean, MyListener myListener, Integer j, String recipeName) {
+    public void setData(RecipeItemBean recipeItemBean, MyListener myListener, Integer j, String recipeName, String chefName) {
         this.recipeItemBean = recipeItemBean;
         this.myListener = myListener;
         this.Rname = recipeName;
+        this.chefName=chefName;
         recipeNameLabel.setText(recipeItemBean.getRecipeName());
         numberLabel.setText(String.valueOf(j));
         String path = recipeItemBean.getImgSrc();
@@ -61,7 +63,7 @@ public class ItemControllerGUI {
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
         RecipeDet1ControllerGUI recipeDet1ControllerGUI = fxmlLoader.getController();
-        recipeDet1ControllerGUI.setRecipe(Rname);
+        recipeDet1ControllerGUI.setRecipe(Rname, chefName);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();

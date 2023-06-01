@@ -79,5 +79,10 @@ public class ConnectionDB {
     public static PreparedStatement setReview() throws SQLException{
         return connection.prepareStatement("INSERT INTO review (recipeId1, rate) VALUES (?,?)");
     }
+
+    public static PreparedStatement setFollow() throws SQLException{
+        return connection.prepareStatement("INSERT INTO favorite (userName, chefName) VALUES (?,?)");
+    }
+
 }
 

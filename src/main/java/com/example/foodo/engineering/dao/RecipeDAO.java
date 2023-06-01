@@ -110,4 +110,48 @@ public class RecipeDAO {
             e.printStackTrace();
         }
     }
+
+    public String retrivePath(String rname) {
+        Statement stmt;
+        String path = null;
+
+        try{
+            stmt = ConnectionDB.getConnection();
+            ResultSet resultSet = BasicQueries.retriverRecipeId(stmt, rname);
+            resultSet.first();
+            int id = resultSet.getInt("recipeId");
+            ResultSet resultSet1 = BasicQueries.retrieveImg(stmt, id);
+            resultSet1.first();
+            path = resultSet1.getString("image");
+        }catch(SQLException | ConnectionDbException e){
+            e.printStackTrace();
+        }
+        return path;
+    }
+
+    public float setAverage(String rname, String chefName) {
+        Statement stmt;
+        float average=0;
+        int i=0;
+        int sum=0;
+        int rate=0;
+        try{
+            stmt = ConnectionDB.getConnection();
+            ResultSet resultSet = BasicQueries.retriverRecipeId(stmt, rname);
+            resultSet.first();
+            int id= resultSet.getInt("recipeId");
+            ResultSet resultSet1= BasicQueries.getReview(stmt, id);
+
+            while(resultSet1.next()){
+                rate=resultSet1.getInt("rate");
+                sum=sum+rate;
+
+                i++;
+            }
+            average= (float) sum /i;
+        }catch(SQLException | ConnectionDbException e){
+            e.printStackTrace();
+        }
+        return average;
+    }
 }
