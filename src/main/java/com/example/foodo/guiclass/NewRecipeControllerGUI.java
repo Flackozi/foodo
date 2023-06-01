@@ -2,11 +2,13 @@ package com.example.foodo.guiclass;
 
 import com.example.foodo.controllerappl.RecipeController;
 import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
 import com.example.foodo.engineering.Utils.ImageConverterSupport;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.IngredientBean;
 import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
+import com.example.foodo.engineering.exception.FieldEmptyException;
 import com.example.foodo.model.IngredientModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,6 +27,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class NewRecipeControllerGUI{
 
@@ -64,6 +67,13 @@ public class NewRecipeControllerGUI{
 
     public void addIngredient(javafx.event.ActionEvent event){
         try{
+
+            if(Objects.equals(NameTextField.getText(), "")){
+                throw new FieldEmptyException("Name");
+            }
+            if(Objects.equals(QuantiyTextField.getText(), "")){
+                throw new FieldEmptyException("Quantity");
+            }
             Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
             Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
             IngredientBean ingredientBean=new IngredientBean(NameTextField.getText(), QuantiyTextField.getText());
@@ -71,26 +81,42 @@ public class NewRecipeControllerGUI{
             IngredientsTable.getItems().add(ingredientModel);
             ingredients.add(ingredientBean);
 
-        }catch(Exception e){
-            e.printStackTrace();
+        }catch(FieldEmptyException e){
+            ExceptionControllerGUI.showExceptionGUI(e.getMessage());
         }
 
 
     }
 
     public void confirmRecipe (ActionEvent event) throws SQLException, IOException, ConnectionDbException {
-        RecipeBean recipeBean=new RecipeBean();
-        recipeBean.setRecipeName(RecipeName.getText());
-        recipeBean.setDescription(DescriptionTextArea.getText());
-        ChefBean chefBean=new ChefBean();
-        chefBean= Session.getCurrentSession().getChefBean();
-        recipeBean.setChefName(chefBean.getUsername());
-        recipeBean.setPath(path);
 
-        //verificato che tutti i dati in RecipeModel siano stati inseriti correttamente
-        RecipeController recipeController=new RecipeController();
-        recipeController.saveRecipe(recipeBean);
-        recipeController.saveIngredients(ingredients);
+        try{
+
+            if(Objects.equals(RecipeName.getText(), "")){
+                throw new FieldEmptyException("Recipe Name");
+            }
+            if(Objects.equals(DescriptionTextArea.getText(), "")){
+                throw new FieldEmptyException("Description");
+            }
+
+
+            RecipeBean recipeBean=new RecipeBean();
+            recipeBean.setRecipeName(RecipeName.getText());
+            recipeBean.setDescription(DescriptionTextArea.getText());
+            ChefBean chefBean=new ChefBean();
+            chefBean= Session.getCurrentSession().getChefBean();
+            recipeBean.setChefName(chefBean.getUsername());
+            recipeBean.setPath(path);
+
+            //verificato che tutti i dati in RecipeModel siano stati inseriti correttamente
+            RecipeController recipeController=new RecipeController();
+            recipeController.saveRecipe(recipeBean);
+            recipeController.saveIngredients(ingredients);
+        }catch (FieldEmptyException e){
+            ExceptionControllerGUI.showExceptionGUI(e.getMessage());
+
+        }
+
 
     }
 

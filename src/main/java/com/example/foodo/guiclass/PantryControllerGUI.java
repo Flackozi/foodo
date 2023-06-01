@@ -6,7 +6,6 @@ import com.example.foodo.engineering.dao.ProductDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.engineering.exception.DateFormatException;
 import com.example.foodo.engineering.exception.UserNotFoundException;
-import com.example.foodo.engineering.exception.CommandErrorException;
 import com.example.foodo.model.ProductModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,6 +23,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.FileAlreadyExistsException;
 import java.sql.SQLException;
 import java.util.*;
 import com.example.foodo.engineering.exception.*;
@@ -129,6 +129,16 @@ private ProductDAO productDAO = new ProductDAO();
 
         //prendiamo i dati e li mettiamo nella bean
         try {
+
+            if(Objects.equals(nameText.getText(), "")){
+                throw new FieldEmptyException("Name");
+            }
+            if(Objects.equals(quantityField.getText(), "")){
+                throw new FieldEmptyException("Quantity");
+            }
+            if(typeOfFoodPicker.getValue() == null){
+                throw new FieldEmptyException("Type of food");
+            }
             ProductBean productBean = new ProductBean();
             PantryController pantryController = new PantryController();
             productBean.setName(nameText.getText());
@@ -151,9 +161,10 @@ private ProductDAO productDAO = new ProductDAO();
 
             String exp = day + "/" + month + "/" + year;
 
+
             ProductModel product = new ProductModel(nameText.getText(), Integer.parseInt(quantityField.getText()), typeOfFoodPicker.getValue(), exp);
             tablePantry.getItems().add(product);
-        } catch (CommandErrorException e){
+        } catch (FieldEmptyException e){
             ExceptionControllerGUI.showExceptionGUI(e.getMessage());
         } catch (SQLException e) {
             throw new RuntimeException(e);
