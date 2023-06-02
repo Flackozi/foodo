@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -30,6 +31,8 @@ public class ProfileControllerGUI {
     @FXML
     private ImageView userImg;
     @FXML
+    private ImageView chefImg;
+    @FXML
     private Label labelUsername;
     @FXML
     private Label labelFavoriteFood;
@@ -38,6 +41,7 @@ public class ProfileControllerGUI {
     @FXML
     private Label labelAccountType;
     private ChefBean chefBean;
+    private int account;
 
 
     @FXML
@@ -58,36 +62,63 @@ public class ProfileControllerGUI {
         FileChooser fileChooser=new FileChooser();
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Imagine Files","*.png","*.jpg"));
         file = fileChooser.showOpenDialog(stage).getAbsoluteFile();
+        userImg.setFitHeight(154);
+        userImg.setFitWidth(154);
         userImg.setImage(ImageConverterSupport.fromFileToImage(file));
-//        UserBean userBean= Session.getCurrentSession().getUserBean();
-//        userBean.setProfileImg(file);
+        ProfileController profileController=new ProfileController();
+        UserBean userBean= Session.getCurrentSession().getUserBean();
+        userBean.setPath(file.getAbsolutePath());
+        profileController.setImage(userBean);
+
+    }
+    public void LoadChefImage(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        FileChooser fileChooser=new FileChooser();
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Imagine Files","*.png","*.jpg"));
+        file = fileChooser.showOpenDialog(stage).getAbsoluteFile();
+        chefImg.setImage(ImageConverterSupport.fromFileToImage(file));
+        chefImg.setFitHeight(154);
+        chefImg.setFitWidth(154);
+        ProfileController profileController=new ProfileController();
+        ChefBean chefBean= Session.getCurrentSession().getChefBean();
+        chefBean.setPath(file.getAbsolutePath());
+        profileController.setChefImage(chefBean);
     }
 
 
     public void setUserInfoProfile(UserBean userBean) throws IOException {
         ProfileController profileController = new ProfileController();
-        userBean= Session.getCurrentSession().getUserBean();
+        profileController.getUserInfo(userBean);
         labelUsername.setText(userBean.getUserUsernameBean());
         labelFavoriteFood.setText(userBean.getUserFavoriteFoodBean());
         labelTypeOfDiet.setText(userBean.getUserTypeOfDietBean());
         labelAccountType.setText("utente base");
-//        userImg.setImage(ImageConverterSupport.fromFileToImage(userBean.getProfileImg()));
+        Image image= new Image(userBean.getPath());
+        userImg.setImage(image);
     }
 
     public void setChefInfoProfile(ChefBean chefBean) throws IOException {
         ProfileController profileController = new ProfileController();
-        chefBean= Session.getCurrentSession().getChefBean();
-        //System.out.print(chefBean.getEmail());
+        profileController.getChefInfo(chefBean);
         labelUsername.setText(chefBean.getUsername());
         labelTypeOfCuisine.setText(chefBean.getTypeOfCuisine());
         labelWorkplace.setText(chefBean.getWorkplace());
         labelAccountType.setText("chef");
+        Image image= new Image(chefBean.getPath());
+        this.chefImg.setImage(image);
+    }
+    private void setChefInfoProfile2(ChefBean chefBean) {
+        ProfileController profileController = new ProfileController();
+        profileController.getChefInfo(chefBean);
+        labelEmail.setText(chefBean.getEmail());
+        labelPhone.setText(chefBean.getNumber());
+        labelLocation.setText(chefBean.getLocation());
+        System.out.print(chefBean.getPath());
+        Image image= new Image(chefBean.getPath());
+        chefImg.setImage(image);
     }
 
-
-
     public void BackHome(ActionEvent event) throws IOException {
-        //ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
         if((userBean= Session.getCurrentSession().getUserBean()) != null){
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneHomeUser.fxml")));
             scene = new Scene(root);
@@ -108,6 +139,7 @@ public class ProfileControllerGUI {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/sceneChefProfile.fxml"));
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
+        ChefBean chefBean = Session.getCurrentSession().getChefBean();
         ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
         profileControllerGUI.setChefInfoProfile(chefBean);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -119,6 +151,7 @@ public class ProfileControllerGUI {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/sceneProfile2.fxml"));
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
+        ChefBean chefBean = Session.getCurrentSession().getChefBean();
         ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
         profileControllerGUI.setChefInfoProfile2(chefBean);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -126,11 +159,7 @@ public class ProfileControllerGUI {
         stage.show();
     }
 
-    private void setChefInfoProfile2(ChefBean chefBean) {
-        ProfileController profileController = new ProfileController();
-        chefBean= Session.getCurrentSession().getChefBean();
-        labelEmail.setText(chefBean.getEmail());
-        labelPhone.setText(chefBean.getNumber());
-        labelLocation.setText(chefBean.getLocation());
-    }
+
+
+
 }

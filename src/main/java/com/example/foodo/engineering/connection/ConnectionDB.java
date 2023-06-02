@@ -83,6 +83,9 @@ public class ConnectionDB {
     public static PreparedStatement setFollow() throws SQLException{
         return connection.prepareStatement("INSERT INTO favorite (userName, chefName) VALUES (?,?)");
     }
+    public static PreparedStatement setImg(String path, String name) throws SQLException{
+        return connection.prepareStatement("UPDATE user_table SET path='" + path + "' WHERE username='" + name + "';");
+    }
 
 }
 

@@ -3,10 +3,13 @@ package com.example.foodo.model;
 public class UserModel extends GenericUserModel {
     String favoriteFood;
     String typeOfDiet;
-    public UserModel(String username,String favoriteFood, String typeOfDiet, int profileType){
+    String path;
+
+    public UserModel(String username, String favoriteFood, String typeOfDiet, String path, int profileType){
         super(username, profileType);
         this.favoriteFood=favoriteFood;
         this.typeOfDiet=typeOfDiet;
+        this.path=path;
     }
 
     public String getFavoriteFood() {
@@ -24,5 +27,11 @@ public class UserModel extends GenericUserModel {
         this.typeOfDiet = typeOfDiet;
     }
 
+    public String getPath() {
+        return path;
+    }
 
+    public void setPath(String path) {
+        this.path = path;
+    }
 }

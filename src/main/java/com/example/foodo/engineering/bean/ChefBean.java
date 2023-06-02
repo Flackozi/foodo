@@ -7,6 +7,15 @@ public class ChefBean {
     private String email;
     private String number;
     private  String location;
+    private String path;
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
 
     public String getEmail() {
         return email;
@@ -37,7 +46,7 @@ public class ChefBean {
     public ChefBean() {}
 
 
-    public ChefBean(String username,String typeOfCuisine, String workplace, int profileType, String email, String number, String location){
+    public ChefBean(String username,String typeOfCuisine, String workplace, int profileType, String email, String number, String location, String path){
         this.username = username;
         this.typeOfCuisine = typeOfCuisine;
         this.workplace = workplace;
@@ -45,6 +54,7 @@ public class ChefBean {
         this.email = email;
         this.number = number;
         this.location = location;
+        this.path=path;
     }
 
     public String getUsername() {

@@ -17,6 +17,8 @@ public class ChefDAO {
     private static final String EMAIL="email";
     private static final String NUMBER="number";
     private static final String LOCATION="location";
+    private static final String PATH="path";
+
     //private static final Integer CHEFTYPE="";
 
 
@@ -58,12 +60,26 @@ public class ChefDAO {
             String email = resultSet.getString(EMAIL);
             String number = resultSet.getString(NUMBER);
             String location = resultSet.getString(LOCATION);
-            chefModel=new ChefModel(username, typeOfCuisine, workplace, 1, email, number, location);
+            String path= resultSet.getString(PATH);
+            chefModel=new ChefModel(username, typeOfCuisine, workplace, 1, email, number, location, path);
 
         }
         catch(Exception e){
             e.printStackTrace();
-        }        return chefModel;
+        }
+        return chefModel;
     }
 
+    public static void updateImage(String path, String username) {
+        Statement statement;
+
+        try{
+            statement = ConnectionDB.getConnection();
+            //result set query
+            BasicQueries.updateChefImage(statement, path, username);
+
+        }catch (SQLException | ConnectionDbException e) {
+            e.printStackTrace();
+        }
+    }
 }

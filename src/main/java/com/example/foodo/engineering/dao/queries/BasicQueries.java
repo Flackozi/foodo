@@ -139,4 +139,15 @@ public class BasicQueries {
         String sql= "SELECT rate FROM review WHERE recipeId1='" + id + "' ;";
         return stmt.executeQuery(sql);
     }
+
+    public static void updateImage(Statement stmt, String path, String name) throws SQLException {
+        String sql="UPDATE user_table SET path='" + path + "' WHERE username='" + name + "';";
+        stmt.executeUpdate(sql);
+
+    }
+    public static void updateChefImage(Statement stmt, String path, String name) throws SQLException {
+        String sql="UPDATE chef_table SET path='" + path + "' WHERE username='" + name + "';";
+        stmt.executeUpdate(sql);
+
+    }
 }
