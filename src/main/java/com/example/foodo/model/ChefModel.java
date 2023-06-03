@@ -6,7 +6,11 @@ public class ChefModel extends GenericUserModel{
     String email;
     String number;
     String location;
+    String path;
 
+    public String getPath() {
+        return path;
+    }
     public String getEmail() {
         return email;
     }
@@ -35,13 +39,14 @@ public class ChefModel extends GenericUserModel{
         super(username);
 
     }
-    public ChefModel(String username, String typeOfCuisine, String workplace, int profileType, String email, String number, String location){
+    public ChefModel(String username, String typeOfCuisine, String workplace, int profileType, String email, String number, String location, String path){
         super(username,profileType);
         this.typeOfCuisine=typeOfCuisine;
         this.workplace=workplace;
         this.email = email;
         this.number = number;
         this.location = location;
+        this.path=path;
     }
 
     public String getTypeOfCuisine() {
@@ -60,4 +65,9 @@ public class ChefModel extends GenericUserModel{
         this.workplace = workplace;
     }
 
+
+
+    public void setPath(String path) {
+        this.path = path;
+    }
 }

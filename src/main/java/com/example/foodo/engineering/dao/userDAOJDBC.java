@@ -51,8 +51,22 @@ public class userDAOJDBC {
     private static UserModel getUserInfo(String username, ResultSet resultSet) throws SQLException {
         String typeOfDiet = resultSet.getString("typeOfdiet");
         String favoriteFood = resultSet.getString("favoritefood");
+        String path=resultSet.getString("path");
 //        int profileType= resultSet.getInt("userType");
 
-        return new UserModel(username, favoriteFood, typeOfDiet, 2);
+        return new UserModel(username, favoriteFood, typeOfDiet, path, 2);
+    }
+
+    public static void updateImage(String path, String name) {
+        Statement statement;
+
+        try{
+            statement = ConnectionDB.getConnection();
+            //result set query
+            BasicQueries.updateImage(statement, path, name);
+
+        }catch (SQLException | ConnectionDbException e) {
+            e.printStackTrace();
+        }
     }
 }

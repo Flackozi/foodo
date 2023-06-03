@@ -37,8 +37,6 @@ public class HomeUserControllerGUI {
         if((userBean= Session.getCurrentSession().getUserBean()) != null){
             profileControllerGUI.setUserInfoProfile(userBean);
         }
-
-
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();

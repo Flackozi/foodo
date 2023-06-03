@@ -8,7 +8,7 @@ public class UserBean {
     private String typeOfDiet;
     private int profileType;
     protected File profileImg;
-
+    private String path;
 
     public UserBean(String username, String favoriteFood, String typeOfDiet, int profileType, File profileImg){
         this.username = username;
@@ -18,13 +18,21 @@ public class UserBean {
         this.profileImg=profileImg;
     }
 
-    public UserBean(String username, String favoriteFood, String typeOfDiet, int profileType){
+    public UserBean(String username, String favoriteFood, String typeOfDiet, int profileType, String path){
         this.username = username;
         this.favoriteFood = favoriteFood;
         this.typeOfDiet = typeOfDiet;
         this.profileType = profileType;
+        this.path=path;
     }
 
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
 
     public void setUserProfileTypeBean(int profileType) {
         this.profileType = profileType;
