@@ -5,9 +5,10 @@ import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.LoginBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.dao.LoginDAO;
-import com.example.foodo.engineering.dao.userDAOJDBC;
+import com.example.foodo.engineering.dao.UserDAO;
 import com.example.foodo.engineering.dao.ChefDAO;
 import com.example.foodo.engineering.exception.NotFoundException;
+import com.example.foodo.engineering.pattern.factory.UserDAOFactory;
 import com.example.foodo.model.UserModel;
 import com.example.foodo.model.ChefModel;
 
@@ -28,7 +29,7 @@ public class LoginController {
     }
 
     public void completeUserLogin(LoginBean loginBean) throws NotFoundException{
-        userDAOJDBC userDAO=new userDAOJDBC();
+        UserDAO userDAO= UserDAOFactory.getInstance().getUserDAO();
         UserModel userModel = userDAO.retrieveUserByUsername(loginBean.getUsername());
         UserBean userBean = new UserBean(userModel.getUsername(), userModel.getFavoriteFood(), userModel.getTypeOfDiet(), userModel.getProfileType(), userModel.getPath());
         Session.setSessionInstance(userBean);

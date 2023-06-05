@@ -3,11 +3,11 @@ package com.example.foodo.controllerappl;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.dao.ChefDAO;
-import com.example.foodo.engineering.dao.userDAOJDBC;
+import com.example.foodo.engineering.dao.UserDAO;
+import com.example.foodo.engineering.pattern.factory.UserDAOFactory;
 import com.example.foodo.model.ChefModel;
 import com.example.foodo.model.UserModel;
 
-import java.io.File;
 import java.io.IOException;
 
 public class ProfileController {
@@ -16,7 +16,8 @@ public class ProfileController {
 
     public UserBean getUserInfo(UserBean userBean){
         try{
-            UserModel userModel = userDAOJDBC.retrieveUserByUsername(userBean.getUserUsernameBean());
+            UserDAO userDAO = UserDAOFactory.getInstance().getUserDAO();
+            UserModel userModel = userDAO.retrieveUserByUsername(userBean.getUserUsernameBean());
             setUserInfo(userBean, userModel.getFavoriteFood(), userModel.getTypeOfDiet(), userModel.getPath(), 2);
         } catch(Exception e){
             e.printStackTrace();
@@ -43,7 +44,7 @@ public class ProfileController {
    }
 
     public void setImage(UserBean userBean) {
-        userDAOJDBC.updateImage(userBean.getPath(), userBean.getUserUsernameBean());
+        UserDAO.updateImage(userBean.getPath(), userBean.getUserUsernameBean());
 
     }
 

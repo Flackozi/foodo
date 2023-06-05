@@ -1,6 +1,8 @@
 package com.example.foodo.guiclass;
 
 
+import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
+import com.example.foodo.engineering.exception.NonUsableFunctionException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,11 +26,11 @@ public class AccessControllerGUI {
 
     @FXML
     public void showCreateAccount(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneCreateAccount.fxml"));
-        Scene scenePantryView = new Scene(scenePantryParent);
+       try{
+            throw new NonUsableFunctionException();
+       }catch(NonUsableFunctionException e){
+           ExceptionControllerGUI.showExceptionGUI(e.getMessage());
 
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scenePantryView);
-        window.show();
+       }
     }
 }
