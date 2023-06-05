@@ -1,4 +1,4 @@
-package com.example.foodo.engineering.pattern;
+package com.example.foodo.engineering.pattern.observer;
 
 import java.util.List;
 import java.util.Vector;

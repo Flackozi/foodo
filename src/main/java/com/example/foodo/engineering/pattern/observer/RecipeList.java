@@ -1,4 +1,4 @@
-package com.example.foodo.engineering.pattern;
+package com.example.foodo.engineering.pattern.observer;
 
 import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.model.ChefModel;
