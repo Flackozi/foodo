@@ -41,7 +41,6 @@
       <TextField fx:id="nameText" layoutX="15.0" layoutY="296.0" prefHeight="37.0" prefWidth="112.0" />
       <TextField fx:id="quantityField" layoutX="15.0" layoutY="355.0" prefHeight="37.0" prefWidth="112.0" />
       <Button fx:id="searchProductButton" layoutY="775.0" mnemonicParsing="false" onAction="#showSearch" opacity="0.0" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60;" />
-      <Button fx:id="showPantryButton" layoutX="248.0" layoutY="775.0" mnemonicParsing="false" onAction="#showPantry" opacity="0.0" prefHeight="69.0" prefWidth="139.0" style="-fx-background-radius: 60;" />
       <DatePicker fx:id="expirationDate" layoutX="132.0" layoutY="295.0" prefHeight="37.0" prefWidth="112.0" />
    </children>
 </Pane>

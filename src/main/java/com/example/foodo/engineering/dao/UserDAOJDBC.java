@@ -11,9 +11,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public class UserDAOJDBC {
+public class UserDAOJDBC extends UserDAO{
 
-    public static UserModel retrieveUserByUsername(String username) throws NotFoundException {
+
+    @Override
+    public UserModel retrieveUserByUsername(String username) {
         Statement statement;
         UserModel userModel = null;
 
@@ -38,7 +40,7 @@ public class UserDAOJDBC {
             //chiudo connessione
             resultSet.close();
             //manca l'exception connectionDb
-        }catch (SQLException | ConnectionDbException e) {
+        }catch (SQLException | ConnectionDbException | NotFoundException e) {
             e.printStackTrace();
         }
         return userModel;

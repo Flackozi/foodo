@@ -4,9 +4,8 @@ import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.dao.ProductDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.engineering.exception.UserNotFoundException;
+import com.example.foodo.engineering.pattern.observer.Observer;
 import com.example.foodo.model.ProductModel;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,17 +16,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.FileAlreadyExistsException;
 import java.sql.SQLException;
 import java.util.*;
 import com.example.foodo.engineering.exception.*;
 
-public class PantryControllerGUI  implements Initializable{
+public class PantryControllerGUI  implements Initializable, Observer {
     @FXML
     private TableColumn<ProductModel, DatePicker> Expiration;
 
@@ -35,13 +31,13 @@ public class PantryControllerGUI  implements Initializable{
     private Button HomeButton;
 
     @FXML
-    private TableColumn<ProductModel, String> Name;
+    private TableColumn<ProductBean, String> Name;
 
     @FXML
-    private TableColumn<ProductModel, Integer> Quantity;
+    private TableColumn<ProductBean, Integer> Quantity;
 
     @FXML
-    private TableColumn<ProductModel, String> TypeOfFood;
+    private TableColumn<ProductBean, String> TypeOfFood;
 
     @FXML
     private DatePicker expirationDate;
@@ -112,7 +108,6 @@ private ProductDAO productDAO = new ProductDAO();
             }
 
             tablePantry.setItems(obl);
-//            tablePantry.setItems(productDAO.getAllProduct());
 
         }catch(Exception e){
             e.printStackTrace();
@@ -165,7 +160,7 @@ private ProductDAO productDAO = new ProductDAO();
             String exp = day + "/" + month + "/" + year;
 
 
-            ProductModel product = new ProductModel(nameText.getText(), Integer.parseInt(quantityField.getText()), typeOfFoodPicker.getValue(), exp);
+            ProductBean product = new ProductBean(nameText.getText(), Integer.parseInt(quantityField.getText()), typeOfFoodPicker.getValue(), exp);
             tablePantry.getItems().add(product);
         } catch (FieldEmptyException e){
             ExceptionControllerGUI.showExceptionGUI(e.getMessage());
@@ -175,8 +170,6 @@ private ProductDAO productDAO = new ProductDAO();
 
 
     }
-
-
 
     public void deleteProduct(ActionEvent actionEvent) throws SQLException, ConnectionDbException {
         int year;
@@ -191,17 +184,6 @@ private ProductDAO productDAO = new ProductDAO();
         SingleProduct=tablePantry.getSelectionModel().getSelectedItems();
         String Name= SingleProduct.get(0).getName();
         SingleProduct.forEach(allProduct::remove);
-
-//        String date= SingleProduct.get(0).getExpiration();
-
-//        int Quantity=SingleProduct.get(0).getQuantity();
-//        String TypeOfFood=SingleProduct.get(0).getTypeOfFood();
-//
-//        day=Integer.parseInt(String.valueOf(date.charAt(0)+date.charAt(1)));
-//        month=Integer.parseInt(String.valueOf(date.charAt(3)+date.charAt(4)));
-//        year=Integer.parseInt(String.valueOf(date.charAt(6)+date.charAt(7)+date.charAt(8)+date.charAt(9)));
-
-
         ProductBean productBean = new ProductBean(Name);
 
         pantryController.deleteProduct(productBean);
@@ -211,7 +193,9 @@ private ProductDAO productDAO = new ProductDAO();
 
 
 
-    public void showPantry(ActionEvent actionEvent) {
+    @Override
+    public void updateProductList(ProductBean productBean){
+
     }
 
 }

@@ -1,11 +1,16 @@
 package com.example.foodo.engineering.pattern.observer;
 
+import com.example.foodo.engineering.bean.ProductBean;
+
 import java.util.List;
 import java.util.Vector;
 
 public abstract class Subject {
     private final List<Observer> observerList;
 
+    protected Subject(){
+        this((Observer) null);
+    }
     protected Subject(List<Observer> observerList) {
         this.observerList = observerList;
     }
@@ -24,9 +29,9 @@ public abstract class Subject {
         observerList.remove(observer);
     }
 
-    public void notifyObservers(Object object){
+    public void notifyObservers(ProductBean productBean){
         for(Observer observer: observerList){
-            observer.updateRecipeList(object);
+            observer.updateProductList(productBean);
         }
     }
 }

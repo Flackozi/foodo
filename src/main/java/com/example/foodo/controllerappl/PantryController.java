@@ -11,15 +11,11 @@ import java.util.List;
 
 public class PantryController {
 
-//    private final ProductBean productBean;
-
-//    public PantryController(ProductBean productBean){
-//        this.productBean=productBean;
-//    }
 
     public void addNewProduct (ProductBean productBean) throws SQLException {
+
+        productBean.notifyObservers(productBean);
         ProductModel productModel= new ProductModel(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getDay(), productBean.getMonth(), productBean.getYear());
-//        Session.setSessionInstance(productBean);
         ProductDAO productDAO=new ProductDAO();
         productDAO.InsProduct(productModel);
 

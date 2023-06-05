@@ -1,6 +1,8 @@
 package com.example.foodo.engineering.bean;
 
-public class ProductBean {
+import com.example.foodo.engineering.pattern.observer.Subject;
+
+public class ProductBean extends Subject {
     private String Name;
     private String Squantity;
     private int Quantity;

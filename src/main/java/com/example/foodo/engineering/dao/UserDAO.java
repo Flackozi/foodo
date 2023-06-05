@@ -18,8 +18,6 @@ public abstract class UserDAO {
 
     public abstract UserModel retrieveUserByUsername(String username);
 
-    //public UserModel retriveUserByUsername(String username) throws ClassNotFoundException
-
 
 
     public static void updateImage(String path, String name) {

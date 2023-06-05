@@ -1,0 +1,48 @@
+Index: src/main/java/com/example/foodo/engineering/pattern/RecipeList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/foodo/engineering/pattern/RecipeList.java b/src/main/java/com/example/foodo/engineering/pattern/observer/RecipeList.java
+rename from src/main/java/com/example/foodo/engineering/pattern/RecipeList.java
+rename to src/main/java/com/example/foodo/engineering/pattern/observer/RecipeList.java
+--- a/src/main/java/com/example/foodo/engineering/pattern/RecipeList.java	
++++ b/src/main/java/com/example/foodo/engineering/pattern/observer/RecipeList.java	
+@@ -1,4 +1,4 @@
+-package com.example.foodo.engineering.pattern;
++package com.example.foodo.engineering.pattern.observer;
+ 
+ import com.example.foodo.engineering.bean.RecipeBean;
+ import com.example.foodo.model.ChefModel;
+Index: src/main/java/com/example/foodo/engineering/pattern/Observer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/foodo/engineering/pattern/Observer.java b/src/main/java/com/example/foodo/engineering/pattern/observer/Observer.java
+rename from src/main/java/com/example/foodo/engineering/pattern/Observer.java
+rename to src/main/java/com/example/foodo/engineering/pattern/observer/Observer.java
+--- a/src/main/java/com/example/foodo/engineering/pattern/Observer.java	
++++ b/src/main/java/com/example/foodo/engineering/pattern/observer/Observer.java	
+@@ -1,4 +1,4 @@
+-package com.example.foodo.engineering.pattern;
++package com.example.foodo.engineering.pattern.observer;
+ 
+ public interface Observer  {
+     void updateRecipeList(Object object);
+Index: src/main/java/com/example/foodo/engineering/pattern/Subject.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/foodo/engineering/pattern/Subject.java b/src/main/java/com/example/foodo/engineering/pattern/observer/Subject.java
+rename from src/main/java/com/example/foodo/engineering/pattern/Subject.java
+rename to src/main/java/com/example/foodo/engineering/pattern/observer/Subject.java
+--- a/src/main/java/com/example/foodo/engineering/pattern/Subject.java	
++++ b/src/main/java/com/example/foodo/engineering/pattern/observer/Subject.java	
+@@ -1,4 +1,4 @@
+-package com.example.foodo.engineering.pattern;
++package com.example.foodo.engineering.pattern.observer;
+ 
+ import java.util.List;
+ import java.util.Vector;
