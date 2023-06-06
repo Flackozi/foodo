@@ -1,6 +1,7 @@
 package com.example.foodo.guiclass;
 
 import com.example.foodo.controllerappl.KitchenController;
+import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.MyListener;
 import com.example.foodo.engineering.bean.KitchenBean;
 import com.example.foodo.engineering.bean.RecipeBean;
@@ -115,7 +116,12 @@ public class MyKitchenControllerGUI {
     }
 
     public void backHome(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneHomeUser.fxml")));
+        Parent scenePantryParent;
+        if(Session.getCurrentSession().getChefBean() == null){
+            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        }else{
+            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
+        }
         Scene sceneMainView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

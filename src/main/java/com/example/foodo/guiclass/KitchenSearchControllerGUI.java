@@ -1,6 +1,7 @@
 package com.example.foodo.guiclass;
 
 import com.example.foodo.controllerappl.SearchRecipeController;
+import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.MyListener;
 import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.engineering.bean.RecipeItemBean;
@@ -38,7 +39,12 @@ public class KitchenSearchControllerGUI {
 
     @FXML
     void backHome(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        Parent scenePantryParent;
+        if(Session.getCurrentSession().getChefBean() == null){
+            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        }else{
+            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
+        }
         Scene sceneMainView = new Scene(scenePantryParent);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(sceneMainView);

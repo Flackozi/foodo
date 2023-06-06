@@ -14,15 +14,13 @@
             <Image url="@../image/userprofile2.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="chefImg" fitHeight="154.0" fitWidth="154.0" layoutX="7.0" layoutY="133.0">
+         <image>
+            <Image url="@../image/user(1).png" />
+         </image>
+      </ImageView>
       <Button fx:id="buttonInfo" layoutX="78.0" layoutY="289.0" mnemonicParsing="false" onAction="#showInfo" opacity="0.0" prefHeight="55.0" prefWidth="55.0" />
-      <Button fx:id="btnLoadImage" layoutX="7.0" layoutY="133.0" minWidth="50.0" mnemonicParsing="false" onAction="#LoadChefImage" opacity="0.0" prefHeight="154.0" prefWidth="154.0" styleClass="transparent" stylesheets="@../style.css">
-         <graphic>
-            <ImageView fx:id="chefImg" fitHeight="154.0" fitWidth="154.0">
-               <image>
-                  <Image url="@../image/user(1).png" />
-               </image>
-            </ImageView>
-         </graphic></Button>
+      <Button fx:id="btnLoadImage" layoutX="7.0" layoutY="133.0" minWidth="50.0" mnemonicParsing="false" onAction="#LoadChefImage" opacity="0.0" prefHeight="154.0" prefWidth="154.0" styleClass="transparent" stylesheets="@../style.css" />
       <Label fx:id="labelEmail" layoutX="78.0" layoutY="456.0" prefHeight="25.0" prefWidth="296.0">
          <font>
             <Font name="Arial Bold" size="20.0" />

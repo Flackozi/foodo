@@ -2,12 +2,10 @@ package com.example.foodo.engineering.dao;
 
 import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.ChefBean;
-import com.example.foodo.engineering.bean.RecipeItemBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.connection.ConnectionDB;
 import com.example.foodo.engineering.dao.queries.BasicQueries;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.model.ChefModel;
 import com.example.foodo.model.RecipeItemModel;
 
 import java.sql.ResultSet;
@@ -25,7 +23,7 @@ public class ItemDAO {
         stmt = ConnectionDB.getConnection();
         UserBean userBean = Session.getCurrentSession().getUserBean();
 
-        String userName = userBean.getUserUsernameBean();
+        String userName = userBean.getUsername();
         ResultSet resultSet = BasicQueries.retriveFavoriteChef(stmt, userName);
         resultSet.next();
         resultSet.first();

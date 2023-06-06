@@ -1,5 +1,6 @@
 package com.example.foodo.guiclass;
 import com.example.foodo.controllerappl.PantryController;
+import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.dao.ProductDAO;
@@ -56,7 +57,12 @@ public class PantryControllerGUI  implements Initializable, Observer {
 
 
     public void backHome(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        Parent scenePantryParent;
+        if(Session.getCurrentSession().getChefBean() == null){
+            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        }else{
+            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
+        }
         Scene sceneMainView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -84,7 +90,7 @@ public class PantryControllerGUI  implements Initializable, Observer {
     }
 
     private String[] typeOfFood = {"spices", "fruit", "meat", "vegetable", "sweet", "liquid", "fish", "other"};
-private ProductDAO productDAO = new ProductDAO();
+    private ProductDAO productDAO = new ProductDAO();
     public void initialize(URL url, ResourceBundle resourceBundle){
         Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
         Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));

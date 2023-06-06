@@ -4,6 +4,7 @@ import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.dao.ChefDAO;
 import com.example.foodo.engineering.dao.UserDAO;
+import com.example.foodo.engineering.pattern.factory.ChefDAOFactory;
 import com.example.foodo.engineering.pattern.factory.UserDAOFactory;
 import com.example.foodo.model.ChefModel;
 import com.example.foodo.model.UserModel;
@@ -17,7 +18,7 @@ public class ProfileController {
     public UserBean getUserInfo(UserBean userBean){
         try{
             UserDAO userDAO = UserDAOFactory.getInstance().getUserDAO();
-            UserModel userModel = userDAO.retrieveUserByUsername(userBean.getUserUsernameBean());
+            UserModel userModel = userDAO.retrieveUserByUsername(userBean.getUsername());
             setUserInfo(userBean, userModel.getFavoriteFood(), userModel.getTypeOfDiet(), userModel.getPath(), 2);
         } catch(Exception e){
             e.printStackTrace();
@@ -27,7 +28,8 @@ public class ProfileController {
 
     public ChefBean getChefInfo(ChefBean chefBean){
         try{
-            ChefModel chefModel = ChefDAO.retrieveChefByUsername(chefBean.getUsername());
+            ChefDAO chefDAO= ChefDAOFactory.getInstance().getChefDAO();
+            ChefModel chefModel = chefDAO.retrieveChefByUsername(chefBean.getUsername());
             setChefInfo(chefBean, chefModel.getTypeOfCuisine(), chefModel.getWorkplace(), chefModel.getEmail(), chefModel.getNumber(), chefModel.getLocation(), chefModel.getPath(),1);
 
         } catch(Exception e){
@@ -44,7 +46,7 @@ public class ProfileController {
    }
 
     public void setImage(UserBean userBean) {
-        UserDAO.updateImage(userBean.getPath(), userBean.getUserUsernameBean());
+        UserDAO.updateImage(userBean.getPath(), userBean.getUsername());
 
     }
 

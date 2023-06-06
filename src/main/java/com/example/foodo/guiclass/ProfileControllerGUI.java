@@ -76,9 +76,9 @@ public class ProfileControllerGUI {
         FileChooser fileChooser=new FileChooser();
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Imagine Files","*.png","*.jpg"));
         file = fileChooser.showOpenDialog(stage).getAbsoluteFile();
-        chefImg.setImage(ImageConverterSupport.fromFileToImage(file));
         chefImg.setFitHeight(154);
         chefImg.setFitWidth(154);
+        chefImg.setImage(ImageConverterSupport.fromFileToImage(file));
         ProfileController profileController=new ProfileController();
         ChefBean chefBean= Session.getCurrentSession().getChefBean();
         chefBean.setPath(file.getAbsolutePath());
@@ -89,7 +89,7 @@ public class ProfileControllerGUI {
     public void setUserInfoProfile(UserBean userBean) throws IOException {
         ProfileController profileController = new ProfileController();
         profileController.getUserInfo(userBean);
-        labelUsername.setText(userBean.getUserUsernameBean());
+        labelUsername.setText(userBean.getUsername());
         labelFavoriteFood.setText(userBean.getUserFavoriteFoodBean());
         labelTypeOfDiet.setText(userBean.getUserTypeOfDietBean());
         labelAccountType.setText("utente base");
@@ -105,7 +105,7 @@ public class ProfileControllerGUI {
         labelWorkplace.setText(chefBean.getWorkplace());
         labelAccountType.setText("chef");
         Image image= new Image(chefBean.getPath());
-        this.chefImg.setImage(image);
+        chefImg.setImage(image);
     }
     private void setChefInfoProfile2(ChefBean chefBean) {
         ProfileController profileController = new ProfileController();

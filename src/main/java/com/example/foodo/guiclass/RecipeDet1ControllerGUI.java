@@ -3,18 +3,13 @@ package com.example.foodo.guiclass;
 import com.example.foodo.Main;
 import com.example.foodo.controllerappl.RecipeDetController;
 import com.example.foodo.engineering.Session.Session;
-import com.example.foodo.engineering.bean.IngredientBean;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.model.IngredientModel;
-import com.example.foodo.model.ProductModel;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -27,7 +22,6 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -120,7 +114,7 @@ public class RecipeDet1ControllerGUI {
 
     public void followChef(ActionEvent actionEvent) {
         RecipeDetController recipeDetController= new RecipeDetController();
-        this.userName=Session.getCurrentSession().getUserBean().getUserUsernameBean();
+        this.userName=Session.getCurrentSession().getUserBean().getUsername();
         if(recipeDetController.verifyFollow(userName, chefName)==0){
             //l'utente già seguiva lo chef, quindi lo unfollow
             followLabel.setText("Chef unfollowed");

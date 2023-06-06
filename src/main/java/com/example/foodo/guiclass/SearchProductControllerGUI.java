@@ -2,6 +2,7 @@ package com.example.foodo.guiclass;
 
 import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.controllerappl.SearchProductController;
+import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.SearchBean;
 import com.example.foodo.engineering.dao.SearchDAO;
@@ -44,10 +45,11 @@ public class SearchProductControllerGUI {
     private  TableColumn<ProductModel, String> TypeOfFood;
     @FXML
     private  TableColumn<ProductModel, String> Expiration;
+    private Parent scenePantryParent;
 
 
     public void showPantry(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneMyPantry.fxml"));
+        scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneMyPantry.fxml"));
         Scene sceneMainView = new Scene(scenePantryParent);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -55,7 +57,11 @@ public class SearchProductControllerGUI {
         window.show();
     }
     public void backHome(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        if(Session.getCurrentSession().getChefBean() == null){
+            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        }else{
+            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
+        }
         Scene sceneMainView = new Scene(scenePantryParent);
 
 

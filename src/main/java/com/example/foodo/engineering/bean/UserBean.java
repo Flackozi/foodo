@@ -46,7 +46,7 @@ public class UserBean {
         this.favoriteFood = favoriteFood;
     }
 
-    public void setUserUsernameBean(String username) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
@@ -59,7 +59,7 @@ public class UserBean {
     public int getUserProfileTypeBean(){
         return profileType;
     }
-    public String getUserUsernameBean(){
+    public String getUsername(){
         return username;
     }
     public File getProfileImg() {

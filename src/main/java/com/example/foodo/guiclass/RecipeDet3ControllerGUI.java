@@ -124,7 +124,7 @@ public class RecipeDet3ControllerGUI {
 
     public void followChef(ActionEvent actionEvent) {
         RecipeDetController recipeDetController= new RecipeDetController();
-        this.userName=Session.getCurrentSession().getUserBean().getUserUsernameBean();
+        this.userName=Session.getCurrentSession().getUserBean().getUsername();
         if(recipeDetController.verifyFollow(userName, chefName)==0){
             //l'utente già seguiva lo chef, quindi lo unfollow
             followLabel.setText("Chef unfollowed");

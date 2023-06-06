@@ -1,13 +1,10 @@
 package com.example.foodo.engineering.dao;
 
-import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
 import com.example.foodo.engineering.connection.ConnectionDB;
 import com.example.foodo.engineering.dao.queries.BasicQueries;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.model.UserModel;
-import com.example.foodo.engineering.exception.NotFoundException;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
