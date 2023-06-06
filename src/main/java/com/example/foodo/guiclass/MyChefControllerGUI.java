@@ -2,7 +2,7 @@ package com.example.foodo.guiclass;
 
 import com.example.foodo.controllerappl.MyChefController;
 import com.example.foodo.engineering.Utils.MyListener;
-import com.example.foodo.engineering.bean.RecipeItemBean;
+import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -33,20 +33,20 @@ public class MyChefControllerGUI implements Initializable{
     public ScrollPane scroll;
 
     private MyListener myListener;
-    private List<RecipeItemBean> recipeItembeanList = new ArrayList<>();
+    private List<RecipeBean> recipeBeans1 = new ArrayList<>();
 
 
 
-    private List<RecipeItemBean> getData() throws SQLException, ConnectionDbException {
-        List<RecipeItemBean> recipeItemBeanList = new ArrayList<>();
+    private List<RecipeBean> getData() throws SQLException, ConnectionDbException {
+        List<RecipeBean> recipeBeans = new ArrayList<>();
         //RecipeItemModel recipeItemModel = new RecipeItemModel();
         //bisogna ottenere il numero di ricette che saranno presenti nella schermata
         //attraverso controller appl. ottengo le info delle sole ricette di chef seguiti dal utente
         //correntemente loggato
         MyChefController myChefController = new MyChefController();
-        recipeItemBeanList = myChefController.retriveItem();
+        recipeBeans = myChefController.retriveItem();
 
-        return recipeItemBeanList;
+        return recipeBeans;
     }
     public void backHome(ActionEvent event) throws IOException {
         Parent scenePantryParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneHomeUser.fxml")));
@@ -59,7 +59,7 @@ public class MyChefControllerGUI implements Initializable{
 
     public void initialize(URL location, ResourceBundle resources){
         try {
-            recipeItembeanList.addAll(getData());
+            recipeBeans1.addAll(getData());
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -70,13 +70,13 @@ public class MyChefControllerGUI implements Initializable{
         int column = 0;
         int row = 1;
         try {
-            for (int i = 0; i < recipeItembeanList.size(); i++) {
+            for (int i = 0; i < recipeBeans1.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/guiclass/recipeItem.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 ItemControllerGUI itemControllerGUI = fxmlLoader.getController();
-                itemControllerGUI.setData(recipeItembeanList.get(i),myListener, i, recipeItembeanList.get(i).getRecipeName(), recipeItembeanList.get(i).getChefName());
+                itemControllerGUI.setData(recipeBeans1.get(i),myListener, i, recipeBeans1.get(i).getRecipeName(), recipeBeans1.get(i).getChefName());
 
                 if (column == 2) {
                     column = 0;

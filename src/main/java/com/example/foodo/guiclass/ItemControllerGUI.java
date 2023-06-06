@@ -1,10 +1,8 @@
 package com.example.foodo.guiclass;
 
 import com.example.foodo.Main;
-import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.MyListener;
-import com.example.foodo.engineering.bean.ProductBean;
-import com.example.foodo.engineering.bean.RecipeItemBean;
+import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,20 +35,20 @@ public class ItemControllerGUI {
     private Stage stage;
     private Scene scene;
 
-    private RecipeItemBean recipeItemBean;
+    private RecipeBean recipeBean;
     private MyListener myListener;
     private String Rname;
     private String chefName;
 
-    public void setData(RecipeItemBean recipeItemBean, MyListener myListener, Integer j, String recipeName, String chefName) {
-        this.recipeItemBean = recipeItemBean;
+    public void setData(RecipeBean recipeBean, MyListener myListener, Integer j, String recipeName, String chefName) {
+        this.recipeBean = recipeBean;
         this.myListener = myListener;
         this.Rname = recipeName;
         this.chefName=chefName;
-        recipeNameLabel.setText(recipeItemBean.getRecipeName());
+        recipeNameLabel.setText(recipeBean.getRecipeName());
         numberLabel.setText(String.valueOf(j));
-        String path = recipeItemBean.getImgSrc();
-        chefLabel.setText(recipeItemBean.getChefName());
+        String path = recipeBean.getPath();
+        chefLabel.setText(recipeBean.getChefName());
         Image image = new Image(path);
         img.setImage(image);
 

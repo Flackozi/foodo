@@ -17,6 +17,12 @@ public class RecipeBean {
         this.Path=path;
     }
 
+    public RecipeBean(String recipeName, String chefName, String path) {
+        this.RecipeName = recipeName;
+        this.ChefName = chefName;
+        this.Path=path;
+    }
+
     public String getRecipeName() {
         return RecipeName;
     }
