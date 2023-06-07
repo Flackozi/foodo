@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="209.0" prefWidth="279.0" style="-fx-background-color: F5EC00; -fx-background-radius: 30; -fx-border-color: #21130d; -fx-border-radius: 30;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.guiclass.AlertControllerGUI">
+<AnchorPane prefHeight="209.0" prefWidth="279.0" style="-fx-background-color: F5EC00; -fx-background-radius: 30; -fx-border-color: #21130d; -fx-border-radius: 30;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.graphic.guiclass.AlertControllerGUI">
    <children>
       <ImageView fitHeight="125.0" fitWidth="275.0" layoutX="9.0" layoutY="42.0">
          <image>

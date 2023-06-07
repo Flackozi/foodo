@@ -4,6 +4,4 @@ import com.example.foodo.engineering.bean.ProductBean;
 
 public interface Observer  {
     void updateProductList(ProductBean productBean);
-
-
 }

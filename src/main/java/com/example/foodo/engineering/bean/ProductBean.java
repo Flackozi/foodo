@@ -10,8 +10,6 @@ public class ProductBean extends Subject {
     private int day;
     private int month;
     private int year;
-
-
     private String Expiration;
 
     public ProductBean(String name, int quantity, String TypeOfFood, int expirationDay, int expirationMonth, int expirationYear) {

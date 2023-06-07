@@ -1,4 +1,4 @@
-package com.example.foodo.guiclass;
+package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.Main;
 import com.example.foodo.engineering.Session.Session;
@@ -12,7 +12,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 
 

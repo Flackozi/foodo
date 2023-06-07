@@ -22,10 +22,10 @@ public abstract class Subject {
         }
     }
 
-    private void register(Observer observer) {
+    public void register(Observer observer) {
         observerList.add(observer);
     }
-    private void unregister (Observer observer){
+    public void unregister (Observer observer){
         observerList.remove(observer);
     }
 

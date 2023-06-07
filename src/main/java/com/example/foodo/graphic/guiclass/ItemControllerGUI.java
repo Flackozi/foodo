@@ -1,4 +1,4 @@
-package com.example.foodo.guiclass;
+package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.Main;
 import com.example.foodo.engineering.Utils.MyListener;
@@ -13,15 +13,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Objects;
 
 public class ItemControllerGUI {
     @FXML

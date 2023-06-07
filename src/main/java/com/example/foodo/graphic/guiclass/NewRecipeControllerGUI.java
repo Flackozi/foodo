@@ -1,8 +1,8 @@
-package com.example.foodo.guiclass;
+package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.controllerappl.RecipeController;
 import com.example.foodo.engineering.Session.Session;
-import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
+import com.example.foodo.engineering.Utils.ExceptionController;
 import com.example.foodo.engineering.Utils.ImageConverterSupport;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.IngredientBean;
@@ -82,7 +82,7 @@ public class NewRecipeControllerGUI{
             ingredients.add(ingredientBean);
 
         }catch(FieldEmptyException e){
-            ExceptionControllerGUI.showExceptionGUI(e.getMessage());
+            ExceptionController.showExceptionGUI(e.getMessage());
         }
 
 
@@ -113,7 +113,7 @@ public class NewRecipeControllerGUI{
             recipeController.saveRecipe(recipeBean);
             recipeController.saveIngredients(ingredients);
         }catch (FieldEmptyException e){
-            ExceptionControllerGUI.showExceptionGUI(e.getMessage());
+            ExceptionController.showExceptionGUI(e.getMessage());
 
         }
 

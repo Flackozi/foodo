@@ -1,7 +1,7 @@
-package com.example.foodo.guiclass;
+package com.example.foodo.graphic.guiclass;
 
 
-import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
+import com.example.foodo.engineering.Utils.ExceptionController;
 import com.example.foodo.engineering.exception.NonUsableFunctionException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,7 +29,7 @@ public class AccessControllerGUI {
        try{
             throw new NonUsableFunctionException();
        }catch(NonUsableFunctionException e){
-           ExceptionControllerGUI.showExceptionGUI(e.getMessage());
+           ExceptionController.showExceptionGUI(e.getMessage());
 
        }
     }

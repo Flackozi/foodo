@@ -1,18 +1,14 @@
-package com.example.foodo.guiclass;
+package com.example.foodo.graphic.guiclass;
 
-import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.controllerappl.SearchProductController;
 import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.SearchBean;
-import com.example.foodo.engineering.dao.SearchDAO;
 import com.example.foodo.model.ProductModel;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,7 +17,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.*;
 
 public class SearchProductControllerGUI {

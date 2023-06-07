@@ -15,9 +15,11 @@ public class PantryController {
     public void addNewProduct (ProductBean productBean) throws SQLException {
 
         productBean.notifyObservers(productBean);
+        System.out.println(productBean.getName());
         ProductModel productModel= new ProductModel(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getDay(), productBean.getMonth(), productBean.getYear());
         ProductDAO productDAO=new ProductDAO();
         productDAO.InsProduct(productModel);
+
 
     }
 
@@ -28,12 +30,6 @@ public class PantryController {
         productModelList = productDAO.getAllProduct();
         int i = 0;
         int lenght = productModelList.size();
-//        do{
-//            ProductModel productModel = productModelList.get(i);
-//            i++;
-//            ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpirationDay(), productModel.getExpirationMonth(), productModel.getExpirationYear());
-//            productBeans.add(productBean);
-//        }while(i != lenght);
 
         for(i=0; i<lenght; i++){
             String name= productModelList.get(i).getName();

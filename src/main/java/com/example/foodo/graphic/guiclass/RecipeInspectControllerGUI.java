@@ -1,4 +1,4 @@
-package com.example.foodo.guiclass;
+package com.example.foodo.graphic.guiclass;
 
 import javafx.event.ActionEvent;
 

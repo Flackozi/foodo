@@ -1,83 +1,83 @@
-package com.example.foodo.guiclass;
+package com.example.foodo.graphic.guiclass;
 
-import com.example.foodo.controllerappl.MyRecipeController;
+import com.example.foodo.controllerappl.SearchRecipeController;
+import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.Utils.MyListener;
 import com.example.foodo.engineering.bean.RecipeBean;
-import com.example.foodo.engineering.exception.ConnectionDbException;
+import com.example.foodo.engineering.bean.SearchRecipeBean;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
-import javafx.geometry.Insets;
 
-public class MyRecipeControllerGUI implements Initializable{
-
+public class KitchenSearchControllerGUI {
+    @FXML
+    private Button searchButton;
     public GridPane grid;
     public ScrollPane scroll;
     private MyListener myListener;
-    private List<RecipeBean> recipeBeans1 = new ArrayList<>();
+
+    @FXML
+    private TextField searchTextField;
 
 
-    private List<RecipeBean> getData() throws SQLException, ConnectionDbException {
-        List<RecipeBean> recipeBeans = new ArrayList<>();
 
-        MyRecipeController myRecipeController = new MyRecipeController();
-        recipeBeans = myRecipeController.retriveRecipeItem();
-        return recipeBeans;
-    }
-
-    public void backHome(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
-        Scene sceneMainView = new Scene(scenePantryParent);
-
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(sceneMainView);
-        window.show();
-    }
-
-    public void showAddNewRecipes(ActionEvent event) throws IOException{
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/addNewRecipes.fxml"));
-        Scene sceneMainView = new Scene(scenePantryParent);
-
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(sceneMainView);
-        window.show();
-    }
-
-    public void initialize(URL location, ResourceBundle resources){
-        try {
-            recipeBeans1.addAll(getData());
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ConnectionDbException e) {
-            throw new RuntimeException(e);
+    @FXML
+    void backHome(ActionEvent event) throws IOException {
+        Parent scenePantryParent;
+        if(Session.getCurrentSession().getChefBean() == null){
+            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        }else{
+            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
         }
+        Scene sceneMainView = new Scene(scenePantryParent);
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(sceneMainView);
+        window.show();
+    }
+
+    @FXML
+    void showGenerateRecipe(ActionEvent event) throws IOException {
+        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/myKitchen.fxml"));
+        Scene sceneMainView = new Scene(scenePantryParent);
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(sceneMainView);
+        window.show();
+    }
+
+    public void searchRecipe(ActionEvent actionEvent) {
+        SearchRecipeBean searchRecipeBean= new SearchRecipeBean();
+        searchRecipeBean.setRecipeName(searchTextField.getText());
+        List<RecipeBean> recipeBeans= new ArrayList<>();
+
+
+        SearchRecipeController searchRecipeController= new SearchRecipeController();
+        recipeBeans=searchRecipeController.searchRecipe(searchRecipeBean);
 
         int column = 0;
         int row = 1;
         try {
-            for (int i = 0; i < recipeBeans1.size(); i++) {
+            for (int i = 0; i < recipeBeans.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/guiclass/recipeItem.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 ItemControllerGUI itemControllerGUI = fxmlLoader.getController();
-                itemControllerGUI.setData(recipeBeans1.get(i),myListener,i, recipeBeans1.get(i).getRecipeName(), recipeBeans1.get(i).getChefName());
+                itemControllerGUI.setData(recipeBeans.get(i),myListener, i, recipeBeans.get(i).getRecipeName(), recipeBeans.get(i).getChefName());
 
                 if (column == 2) {
                     column = 0;
@@ -100,6 +100,5 @@ public class MyRecipeControllerGUI implements Initializable{
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

@@ -1,7 +1,7 @@
-package com.example.foodo.guiclass;
+package com.example.foodo.graphic.guiclass;
 import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.engineering.Session.Session;
-import com.example.foodo.engineering.Utils.ExceptionControllerGUI;
+import com.example.foodo.engineering.Utils.ExceptionController;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.dao.ProductDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
@@ -26,7 +26,7 @@ import com.example.foodo.engineering.exception.*;
 
 public class PantryControllerGUI  implements Initializable, Observer {
     @FXML
-    private TableColumn<ProductModel, DatePicker> Expiration;
+    private TableColumn<ProductBean, DatePicker> Expiration;
 
     @FXML
     private Button HomeButton;
@@ -54,6 +54,7 @@ public class PantryControllerGUI  implements Initializable, Observer {
 
     @FXML
     private TableView tablePantry;
+    private ObservableList<ProductBean> obl;
 
 
     public void backHome(ActionEvent event) throws IOException {
@@ -105,12 +106,12 @@ public class PantryControllerGUI  implements Initializable, Observer {
             productBeans = pantryController.retriveAllProduct();
             tablePantry.getItems().clear();
             Iterator<ProductBean> iteratorProduct= productBeans.iterator();
-            ObservableList<ProductModel> obl = tablePantry.getItems();
+            obl = tablePantry.getItems();
             while(iteratorProduct.hasNext()) {
                 ProductBean productBean = iteratorProduct.next();
-                ProductModel productModel=new ProductModel(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getExpiration());
-
-                obl.add(productModel);
+                //ProductModel productModel=new ProductModel(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getExpiration());
+                productBean.register(this);
+                obl.add(productBean);
             }
 
             tablePantry.setItems(obl);
@@ -153,7 +154,7 @@ public class PantryControllerGUI  implements Initializable, Observer {
             int month;
             int day;
 
-            year = expirationDate.getValue().getYear();
+           year = expirationDate.getValue().getYear();
             month = expirationDate.getValue().getMonthValue();
             day = expirationDate.getValue().getDayOfMonth();
 
@@ -161,15 +162,16 @@ public class PantryControllerGUI  implements Initializable, Observer {
             productBean.setMonth(month);
             productBean.setYear(year);
 
-            pantryController.addNewProduct(productBean);
+
 
             String exp = day + "/" + month + "/" + year;
+            productBean.setExpiration(exp);
+            pantryController.addNewProduct(productBean);
 
 
-            ProductBean product = new ProductBean(nameText.getText(), Integer.parseInt(quantityField.getText()), typeOfFoodPicker.getValue(), exp);
-            tablePantry.getItems().add(product);
+
         } catch (FieldEmptyException e){
-            ExceptionControllerGUI.showExceptionGUI(e.getMessage());
+            ExceptionController.showExceptionGUI(e.getMessage());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -201,6 +203,9 @@ public class PantryControllerGUI  implements Initializable, Observer {
 
     @Override
     public void updateProductList(ProductBean productBean){
+        ProductBean product= new ProductBean(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getExpiration());
+        obl.add(product);
+        tablePantry.setItems(obl);
 
     }
 

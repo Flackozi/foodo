@@ -1,8 +1,7 @@
-package com.example.foodo.guiclass;
+package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.Main;
 import com.example.foodo.engineering.Session.Session;
-import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.UserBean;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

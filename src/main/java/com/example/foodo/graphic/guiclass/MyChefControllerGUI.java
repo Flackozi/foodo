@@ -1,4 +1,4 @@
-package com.example.foodo.guiclass;
+package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.controllerappl.MyChefController;
 import com.example.foodo.engineering.Utils.MyListener;
