@@ -31,7 +31,7 @@ public abstract class Subject {
 
     public void notifyObservers(ProductBean productBean){
         for(Observer observer: observerList){
-            observer.updateProductList(productBean);
+            observer.updateProductList();
         }
     }
 }

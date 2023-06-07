@@ -55,6 +55,7 @@ public class PantryControllerGUI  implements Initializable, Observer {
     @FXML
     private TableView tablePantry;
     private ObservableList<ProductBean> obl;
+    private ProductBean productBean;
 
 
     public void backHome(ActionEvent event) throws IOException {
@@ -110,7 +111,7 @@ public class PantryControllerGUI  implements Initializable, Observer {
             while(iteratorProduct.hasNext()) {
                 ProductBean productBean = iteratorProduct.next();
                 //ProductModel productModel=new ProductModel(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getExpiration());
-                productBean.register(this);
+                //productBean.register(this);
                 obl.add(productBean);
             }
 
@@ -166,6 +167,8 @@ public class PantryControllerGUI  implements Initializable, Observer {
 
             String exp = day + "/" + month + "/" + year;
             productBean.setExpiration(exp);
+            this.productBean=productBean;
+            this.productBean.register(this);
             pantryController.addNewProduct(productBean);
 
 
@@ -202,8 +205,8 @@ public class PantryControllerGUI  implements Initializable, Observer {
 
 
     @Override
-    public void updateProductList(ProductBean productBean){
-        ProductBean product= new ProductBean(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getExpiration());
+    public void updateProductList(){
+        ProductBean product= new ProductBean(this.productBean.getName(), this.productBean.getQuantity(), this.productBean.getTypeOfFood(), this.productBean.getExpiration());
         obl.add(product);
         tablePantry.setItems(obl);
 
