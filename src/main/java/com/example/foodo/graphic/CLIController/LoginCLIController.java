@@ -1,4 +1,4 @@
-package com.example.foodo.CLIController;
+package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.controllerappl.LoginController;
 import com.example.foodo.engineering.Utils.ExceptionController;

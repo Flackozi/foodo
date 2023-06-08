@@ -1,4 +1,4 @@
-package com.example.foodo.CLIController;
+package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.graphic.viewcli.UserViewCLI;
@@ -13,7 +13,7 @@ public class UserCLIController implements GrapghiCLIController{
     @Override
     public void start() {
         this.userViewCLI= new UserViewCLI(this);
-
+        this.userViewCLI.run();
     }
 
     public void executeCommand(String inputLine) throws CommandNotValidException {
@@ -21,13 +21,16 @@ public class UserCLIController implements GrapghiCLIController{
             case PANTRY -> {
                 PantryCLIController pantryCLIController=new PantryCLIController();
                 pantryCLIController.start();
-                this.start();
             }case PROFILE -> {
-
+                ProfileCLIController profileCLIController=new ProfileCLIController();
+                profileCLIController.start();
+                //this.start();
             }case KITCHEN -> {
-
+                KitchenCLIController kitchenCLICOntroller= new KitchenCLIController();
+                kitchenCLICOntroller.start();
             }case CHEF -> {
-
+                MyChefCLIController myChefCLIController = new MyChefCLIController();
+                myChefCLIController.start();
             }
             default -> throw new CommandNotValidException();
         }

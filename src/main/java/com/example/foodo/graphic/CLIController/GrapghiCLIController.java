@@ -1,4 +1,4 @@
-package com.example.foodo.CLIController;
+package com.example.foodo.graphic.CLIController;
 
 public interface GrapghiCLIController {
     void start();

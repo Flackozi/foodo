@@ -1,6 +1,6 @@
 package com.example.foodo;
 
-import com.example.foodo.CLIController.LoginCLIController;
+import com.example.foodo.graphic.CLIController.LoginCLIController;
 import com.example.foodo.engineering.Utils.Printer;
 import com.example.foodo.engineering.connection.ConnectionDB;
 import com.example.foodo.engineering.exception.ConnectionDbException;
