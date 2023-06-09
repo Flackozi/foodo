@@ -78,6 +78,8 @@ public class MyRecipeControllerGUI implements Initializable{
 
                 ItemControllerGUI itemControllerGUI = fxmlLoader.getController();
                 itemControllerGUI.setData(recipeBeans1.get(i),myListener,i, recipeBeans1.get(i).getRecipeName(), recipeBeans1.get(i).getChefName());
+                itemControllerGUI.setInterfaceName("myRecipe");
+
 
                 if (column == 2) {
                     column = 0;

@@ -47,7 +47,7 @@ public class RecipeDet1ControllerGUI {
     private String userName;
     private UserBean userBean;
     private List<ProductBean> productBeans = new ArrayList<>();
-
+    private String interfaceName;
 
 
     public void showDescription(ActionEvent event) throws IOException {
@@ -73,14 +73,27 @@ public class RecipeDet1ControllerGUI {
     }
 
     public void back(ActionEvent event) throws IOException {
-        if((userBean= Session.getCurrentSession().getUserBean()) != null){
+
+        if(Objects.equals(interfaceName, "myChef")){
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myChef.fxml")));
             scene = new Scene(root);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
-        }else{
+        }else if(Objects.equals(interfaceName, "myRecipe")){
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
+            scene = new Scene(root);
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }else if(Objects.equals(interfaceName, "myKitchen")){
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myKitchen.fxml")));
+            scene = new Scene(root);
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }else if(Objects.equals(interfaceName, "kitchenSearch")){
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/KitchenSearch.fxml")));
             scene = new Scene(root);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
@@ -122,5 +135,9 @@ public class RecipeDet1ControllerGUI {
             //l'utente non seguiva ancora lo chef, quindi lo follow
             followLabel.setText("Chef followed");
         }
+    }
+
+    public void setInterfaceName(String interfaceName) {
+        this.interfaceName=interfaceName;
     }
 }

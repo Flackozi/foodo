@@ -35,6 +35,7 @@ public class ItemControllerGUI {
     private MyListener myListener;
     private String Rname;
     private String chefName;
+    private String InterfaceName;
 
     public void setData(RecipeBean recipeBean, MyListener myListener, Integer j, String recipeName, String chefName) {
         this.recipeBean = recipeBean;
@@ -58,9 +59,14 @@ public class ItemControllerGUI {
         scene = new Scene(root);
         RecipeDet1ControllerGUI recipeDet1ControllerGUI = fxmlLoader.getController();
         recipeDet1ControllerGUI.setRecipe(Rname, chefName);
+        recipeDet1ControllerGUI.setInterfaceName(InterfaceName);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
 
+    }
+
+    public void setInterfaceName(String interfaceName) {
+        this.InterfaceName=interfaceName;
     }
 }

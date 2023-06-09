@@ -90,6 +90,7 @@ public class MyKitchenControllerGUI {
 
                 ItemControllerGUI itemControllerGUI = fxmlLoader.getController();
                 itemControllerGUI.setData(recipeBeans.get(i),myListener, i, recipeBeans.get(i).getRecipeName(), recipeBeans.get(i).getChefName());
+                itemControllerGUI.setInterfaceName("myKitchen");
 
                 if (column == 2) {
                     column = 0;

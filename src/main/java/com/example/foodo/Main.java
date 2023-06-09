@@ -56,8 +56,6 @@ public class Main extends Application {
                 Printer.printError("Number not valid, please insert 1 o 2");
             }
         }
-
-        launch();
     }
 }
 
