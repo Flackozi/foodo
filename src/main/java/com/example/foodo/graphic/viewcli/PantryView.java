@@ -36,7 +36,7 @@ public class PantryView {
             run();
         }
 
-        Printer.printMessage("\n 1) Insert new product\n 2) Return to home page\n 3) Search product\n");
+        Printer.printMessage("\n 1) Insert new product\n 2) Return to home page\n 3) Search product \n 4) Delete Product \n");
         Scanner scanner= new Scanner(System.in);
         String inputLine= scanner.nextLine();
         try{

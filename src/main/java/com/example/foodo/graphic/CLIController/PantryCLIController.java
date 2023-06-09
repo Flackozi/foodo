@@ -15,6 +15,7 @@ public class PantryCLIController implements GrapghiCLIController {
     private static final String NEWPRODUCT="1";
     private static final String HOMEPAGE="2";
     private static final String SEARCH="3";
+    private static final String DELETE="4";
     @Override
     public void start() {
         this.pantryView= new PantryView(this);
@@ -40,6 +41,10 @@ public class PantryCLIController implements GrapghiCLIController {
             }case SEARCH -> {
                 SearchProductCLIController searchProductCLIController= new SearchProductCLIController();
                 searchProductCLIController.start();
+            }case DELETE -> {
+                DeleteProductCLIController deleteProductCLIController= new DeleteProductCLIController();
+                deleteProductCLIController.start();
+
             }
 
 
