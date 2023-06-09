@@ -19,7 +19,7 @@
       <Button layoutX="159.0" layoutY="381.0" mnemonicParsing="false" onAction="#showDescription" opacity="0.0" prefHeight="25.0" prefWidth="80.0" />
       <Button layoutX="282.0" layoutY="381.0" mnemonicParsing="false" onAction="#showReview" opacity="0.0" prefHeight="25.0" prefWidth="64.0" />
       <Button layoutX="137.0" layoutY="756.0" mnemonicParsing="false" onAction="#back" opacity="0.0" prefHeight="88.0" prefWidth="112.0" />
-      <TableView fx:id="tableIngredients" layoutX="21.0" layoutY="456.0" prefHeight="200.0" prefWidth="351.0">
+      <TableView fx:id="tableIngredients" layoutX="21.0" layoutY="456.0" prefHeight="200.0" prefWidth="351.0" stylesheets="@../JavaFX%20TC%20.css">
         <columns>
           <TableColumn fx:id="Name" prefWidth="176.0" text="Name" />
           <TableColumn fx:id="Quantity" prefWidth="174.0" text="Quantity" />

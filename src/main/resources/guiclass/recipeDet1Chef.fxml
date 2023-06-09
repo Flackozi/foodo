@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiclass.RecipeDet1Chef">
+   <children>
+      <ImageView fitHeight="844.0" fitWidth="390.0">
+         <image>
+            <Image url="@../image/recipeDet1Chef.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="averageLabel" layoutX="236.0" layoutY="188.0" prefHeight="103.0" prefWidth="112.0" />
+      <TableView fx:id="tableIngredients" layoutX="17.0" layoutY="467.0" prefHeight="249.0" prefWidth="356.0" stylesheets="@../JavaFX%20TC%20.css">
+        <columns>
+          <TableColumn prefWidth="179.0" text="Name" />
+          <TableColumn prefWidth="186.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <Button fx:id="back" layoutX="138.0" layoutY="756.0" mnemonicParsing="false" opacity="0.0" prefHeight="87.0" prefWidth="112.0" />
+      <ImageView fx:id="recipeImage" fitHeight="143.0" fitWidth="153.0" layoutX="14.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

@@ -6,6 +6,7 @@ import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -14,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import org.controlsfx.control.Rating;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -23,7 +25,9 @@ public class RecipeDet3ControllerGUI {
 
     public ImageView recipeImage;
     public Label followLabel;
+    @FXML
     public Label averageLabel;
+    public Rating ratingBar;
     private Parent root;
 
     private Stage stage;
@@ -49,35 +53,12 @@ public class RecipeDet3ControllerGUI {
         }
     }
 
-    public void OneButtonAction(ActionEvent event) {
-        int value = 1;
+    public void AddRating(ActionEvent event) {
+        int value = (int) ratingBar.getRating();
         RecipeDetController recipeDetController = new RecipeDetController();
         recipeDetController.setRate(value, name);
+        setAverage(name, chefName);
 
-    }
-
-    public void TwoButtonAction(ActionEvent event) {
-        int value = 2;
-        RecipeDetController recipeDetController = new RecipeDetController();
-        recipeDetController.setRate(value, name);
-    }
-
-    public void ThreeButtonAction(ActionEvent event) {
-        int value = 3;
-        RecipeDetController recipeDetController = new RecipeDetController();
-        recipeDetController.setRate(value, name);
-    }
-
-    public void FourButtonAction(ActionEvent event) {
-        int value = 4;
-        RecipeDetController recipeDetController = new RecipeDetController();
-        recipeDetController.setRate(value, name);
-    }
-
-    public void FiveButtonAction(ActionEvent event) {
-        int value = 5;
-        RecipeDetController recipeDetController = new RecipeDetController();
-        recipeDetController.setRate(value, name);
     }
 
     public void showDescription(ActionEvent event) throws IOException {
@@ -116,10 +97,12 @@ public class RecipeDet3ControllerGUI {
     }
 
     private void setAverage(String rname, String chefName) {
-        String average= null;
+        String average = null;
         RecipeDetController recipeDetController=new RecipeDetController();
         average=recipeDetController.setAverage(rname, chefName);
         averageLabel.setText(average);
+
+
     }
 
     public void followChef(ActionEvent actionEvent) {

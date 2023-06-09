@@ -21,12 +21,12 @@
       </ImageView>
       <Button fx:id="HomeButton" layoutX="139.0" layoutY="760.0" mnemonicParsing="false" onAction="#backHome" opacity="0.0" prefHeight="86.0" prefWidth="112.0" style="-fx-background-radius: 60;" />
       <Button fx:id="addProduct" layoutX="263.0" layoutY="317.0" mnemonicParsing="false" onAction="#addNewProduct" opacity="0.0" prefHeight="43.0" prefWidth="41.0" style="-fx-background-radius: 60;" />
-      <TableView fx:id="tablePantry" layoutX="17.0" layoutY="422.0" prefHeight="213.0" prefWidth="357.0">
+      <TableView fx:id="tablePantry" layoutX="17.0" layoutY="422.0" prefHeight="213.0" prefWidth="357.0" stylesheets="@../JavaFX%20TC%20.css">
         <columns>
           <TableColumn fx:id="Name" minWidth="69.0" prefWidth="33.0" text="Name" />
-            <TableColumn fx:id="Quantity" minWidth="69.0" prefWidth="33.0" text="Quantity" />
-            <TableColumn fx:id="Expiration" minWidth="69.0" prefWidth="33.0" text="Expiration" />
-            <TableColumn fx:id="TypeOfFood" minWidth="135.0" prefWidth="149.0" text="TypeOfFood" />
+            <TableColumn fx:id="Quantity" minWidth="69.0" prefWidth="74.0" text="Quantity" />
+            <TableColumn fx:id="Expiration" minWidth="69.0" prefWidth="93.0" text="Expiration" />
+            <TableColumn fx:id="TypeOfFood" minWidth="97.0" prefWidth="120.0" text="TypeOfFood" />
         </columns>
          <effect>
             <Blend />
@@ -35,7 +35,7 @@
       <ChoiceBox fx:id="typeOfFoodPicker" layoutX="136.0" layoutY="355.0" prefHeight="37.0" prefWidth="119.0" />
       <Button fx:id="deleteButton" layoutX="14.0" layoutY="658.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="28.0" prefWidth="84.0" style="-fx-background-color: #19E1E1; -fx-background-radius: 60;" text="DELETE">
          <font>
-            <Font name="Arial" size="12.0" />
+            <Font name="Arial Bold" size="12.0" />
          </font>
       </Button>
       <TextField fx:id="nameText" layoutX="15.0" layoutY="296.0" prefHeight="37.0" prefWidth="112.0" />

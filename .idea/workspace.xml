@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: continuto CLI&#10;Fatto add product e Pantry, da finire searchProduct">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_6_2023_10_17_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_6_2023_10_17_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/PantryCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/PantryCLIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/SearchProductCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/SearchProductCLIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/PantryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/PantryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/SearchProductCLIView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/SearchProductCLIView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/HomeUserControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/HomeUserControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ProfileControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ProfileControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet3ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet3ControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet3.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/sceneMyPantry.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/sceneMyPantry.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/sceneProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/sceneProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/sceneSearchProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/sceneSearchProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/recipeDet3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/recipeDet3.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

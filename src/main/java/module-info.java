@@ -4,7 +4,7 @@ module com.example.foodo_fx {
     requires java.sql;
     requires java.desktop;
     requires javafx.graphics;
-
+    requires org.controlsfx.controls;
 
 
     opens com.example.foodo to javafx.fxml;

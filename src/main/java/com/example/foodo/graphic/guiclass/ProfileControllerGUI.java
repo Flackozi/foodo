@@ -18,6 +18,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
@@ -57,20 +58,7 @@ public class ProfileControllerGUI {
     private Scene scene;
 
 
-    public void LoadImage(ActionEvent event) throws IOException {
-        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        FileChooser fileChooser=new FileChooser();
-        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Imagine Files","*.png","*.jpg"));
-        file = fileChooser.showOpenDialog(stage).getAbsoluteFile();
-        userImg.setFitHeight(154);
-        userImg.setFitWidth(154);
-        userImg.setImage(ImageConverterSupport.fromFileToImage(file));
-        ProfileController profileController=new ProfileController();
-        UserBean userBean= Session.getCurrentSession().getUserBean();
-        userBean.setPath(file.getAbsolutePath());
-        profileController.setImage(userBean);
 
-    }
     public void LoadChefImage(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         FileChooser fileChooser=new FileChooser();
@@ -87,6 +75,7 @@ public class ProfileControllerGUI {
 
 
     public void setUserInfoProfile(UserBean userBean) throws IOException {
+
         ProfileController profileController = new ProfileController();
         profileController.getUserInfo(userBean);
         labelUsername.setText(userBean.getUsername());
@@ -94,6 +83,7 @@ public class ProfileControllerGUI {
         labelTypeOfDiet.setText(userBean.getUserTypeOfDietBean());
         labelAccountType.setText("utente base");
         Image image= new Image(userBean.getPath());
+
         userImg.setImage(image);
     }
 
