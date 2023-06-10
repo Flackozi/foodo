@@ -20,7 +20,6 @@ public class ChefDAOFactory {
 
         Random random = new Random();
         int randomNumber = random.nextInt(10);
-        System.out.print(randomNumber);
         if(randomNumber %2 == 0){
             return new ChefDAOJDBC();
         }else{
