@@ -50,10 +50,10 @@ public class ProfileController {
 
     }
 
-    public void setChefImage(ChefBean chefBean) {
-        ChefDAO.updateImage(chefBean.getPath(), chefBean.getUsername());
-
-    }
+//    public void setChefImage(ChefBean chefBean) {
+//        ChefDAO.updateImage(chefBean.getPath(), chefBean.getUsername());
+//
+//    }
 
     private void setChefInfo(ChefBean chefBean , String typeOfCuisine, String workplace, String email, String number, String location, String path, int userType) throws IOException {
         chefBean.setTypeOfCuisine(typeOfCuisine);

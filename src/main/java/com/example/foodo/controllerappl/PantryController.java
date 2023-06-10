@@ -15,7 +15,6 @@ public class PantryController {
     public void addNewProduct (ProductBean productBean) throws SQLException {
 
         productBean.notifyObservers(productBean);
-        System.out.println(productBean.getName());
         ProductModel productModel= new ProductModel(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getDay(), productBean.getMonth(), productBean.getYear());
         ProductDAO productDAO=new ProductDAO();
         productDAO.InsProduct(productModel);

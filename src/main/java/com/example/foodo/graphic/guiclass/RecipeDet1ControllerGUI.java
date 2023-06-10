@@ -55,6 +55,7 @@ public class RecipeDet1ControllerGUI {
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
         RecipeDet2ControllerGUI recipeDet2ControllerGUI = fxmlLoader.getController();
+        recipeDet2ControllerGUI.setInterfaceName(interfaceName);
         recipeDet2ControllerGUI.setDescription(rname, chefName);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -66,6 +67,7 @@ public class RecipeDet1ControllerGUI {
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
         RecipeDet3ControllerGUI recipeDet3ControllerGUI = fxmlLoader.getController();
+        recipeDet3ControllerGUI.setInterfaceName(interfaceName);
         recipeDet3ControllerGUI.setReview(rname,chefName);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);

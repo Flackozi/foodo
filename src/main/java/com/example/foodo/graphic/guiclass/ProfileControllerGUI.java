@@ -59,19 +59,19 @@ public class ProfileControllerGUI {
 
 
 
-    public void LoadChefImage(ActionEvent event) throws IOException {
-        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        FileChooser fileChooser=new FileChooser();
-        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Imagine Files","*.png","*.jpg"));
-        file = fileChooser.showOpenDialog(stage).getAbsoluteFile();
-        chefImg.setFitHeight(154);
-        chefImg.setFitWidth(154);
-        chefImg.setImage(ImageConverterSupport.fromFileToImage(file));
-        ProfileController profileController=new ProfileController();
-        ChefBean chefBean= Session.getCurrentSession().getChefBean();
-        chefBean.setPath(file.getAbsolutePath());
-        profileController.setChefImage(chefBean);
-    }
+//    public void LoadChefImage(ActionEvent event) throws IOException {
+//        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+//        FileChooser fileChooser=new FileChooser();
+//        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Imagine Files","*.png","*.jpg"));
+//        file = fileChooser.showOpenDialog(stage).getAbsoluteFile();
+//        chefImg.setFitHeight(154);
+//        chefImg.setFitWidth(154);
+//        chefImg.setImage(ImageConverterSupport.fromFileToImage(file));
+//        ProfileController profileController=new ProfileController();
+//        ChefBean chefBean= Session.getCurrentSession().getChefBean();
+//        chefBean.setPath(file.getAbsolutePath());
+//        profileController.setChefImage(chefBean);
+//    }
 
 
     public void setUserInfoProfile(UserBean userBean) throws IOException {
