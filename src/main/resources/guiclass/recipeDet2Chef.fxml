@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiclass.RecipeDet2Chef">
+<AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.graphic.guiclass.RecipeDet2ChefControllerGUI">
    <children>
       <ImageView fitHeight="844.0" fitWidth="390.0">
          <image>
@@ -23,5 +22,6 @@
       <Label fx:id="averageLabel" layoutX="237.0" layoutY="189.0" prefHeight="100.0" prefWidth="111.0" />
       <Button layoutX="138.0" layoutY="756.0" mnemonicParsing="false" onAction="#back" opacity="0.0" prefHeight="88.0" prefWidth="111.0" />
       <ImageView fx:id="recipeImage" fitHeight="135.0" fitWidth="145.0" layoutX="20.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="55.0" layoutY="377.0" mnemonicParsing="false" onAction="#showIngredients" opacity="0.0" prefHeight="25.0" prefWidth="78.0" />
    </children>
 </AnchorPane>

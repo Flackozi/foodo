@@ -7,22 +7,27 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiclass.RecipeDet1Chef">
+<AnchorPane prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodo.graphic.guiclass.RecipeDet1ChefControllerGUI">
    <children>
       <ImageView fitHeight="844.0" fitWidth="390.0">
          <image>
             <Image url="@../image/recipeDet1Chef.png" />
          </image>
       </ImageView>
-      <Label fx:id="averageLabel" layoutX="236.0" layoutY="188.0" prefHeight="103.0" prefWidth="112.0" />
-      <TableView fx:id="tableIngredients" layoutX="17.0" layoutY="467.0" prefHeight="249.0" prefWidth="356.0" stylesheets="@../JavaFX%20TC%20.css">
+      <Label fx:id="averageLabel" alignment="CENTER" layoutX="236.0" layoutY="188.0" prefHeight="103.0" prefWidth="112.0" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="48.0" />
+         </font></Label>
+      <TableView fx:id="tableIngredients" layoutX="17.0" layoutY="467.0" prefHeight="249.0" prefWidth="356.0" stylesheets="@../JavaFXTC.css">
         <columns>
-          <TableColumn prefWidth="179.0" text="Name" />
-          <TableColumn prefWidth="186.0" text="Quantity" />
+          <TableColumn fx:id="Name" prefWidth="170.0" text="Name" />
+          <TableColumn fx:id="Quantity" prefWidth="195.0" text="Quantity" />
         </columns>
       </TableView>
       <Button fx:id="back" layoutX="138.0" layoutY="756.0" mnemonicParsing="false" opacity="0.0" prefHeight="87.0" prefWidth="112.0" />
       <ImageView fx:id="recipeImage" fitHeight="143.0" fitWidth="153.0" layoutX="14.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="223.0" layoutY="378.0" mnemonicParsing="false" onAction="#showDescription" opacity="0.0" prefHeight="25.0" prefWidth="72.0" />
    </children>
 </AnchorPane>

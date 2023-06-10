@@ -21,7 +21,7 @@
       </ImageView>
       <Button fx:id="HomeButton" layoutX="139.0" layoutY="760.0" mnemonicParsing="false" onAction="#backHome" opacity="0.0" prefHeight="86.0" prefWidth="112.0" style="-fx-background-radius: 60;" />
       <Button fx:id="addProduct" layoutX="263.0" layoutY="317.0" mnemonicParsing="false" onAction="#addNewProduct" opacity="0.0" prefHeight="43.0" prefWidth="41.0" style="-fx-background-radius: 60;" />
-      <TableView fx:id="tablePantry" layoutX="17.0" layoutY="422.0" prefHeight="213.0" prefWidth="357.0" stylesheets="@../JavaFX%20TC%20.css">
+      <TableView fx:id="tablePantry" layoutX="17.0" layoutY="422.0" prefHeight="213.0" prefWidth="357.0" stylesheets="@../JavaFXTC.css">
         <columns>
           <TableColumn fx:id="Name" minWidth="69.0" prefWidth="33.0" text="Name" />
             <TableColumn fx:id="Quantity" minWidth="69.0" prefWidth="74.0" text="Quantity" />

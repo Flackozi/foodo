@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso:-sistemazione bottone delete product&#10;-rimozione update immagine profilo&#10;-sistemazione metodo back recipeDet 1,2,3">
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: continuto CLI&#10;Finito Search Product, da fare DeleteProdct">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_9_2023_5_48_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_9_2023_5_48_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/NewRecipeControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/NewRecipeControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/pattern/factory/ChefDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/pattern/factory/ChefDAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/pattern/factory/UserDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/pattern/factory/UserDAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ItemControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ItemControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ProfileControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ProfileControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/JavaFX TC .css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/JavaFXTC.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/addNewRecipes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/addNewRecipes.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet1.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeItem.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/carbonara.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/carbonara.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/recipeDet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/recipeDet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/recipeDet2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/recipeDet2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet1Chef.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet1Chef.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet2Chef.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet2Chef.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/sceneMyPantry.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/sceneMyPantry.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/sceneProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/sceneProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/sceneSearchProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/sceneSearchProduct.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +65,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/carlo/Desktop/mysql-connector-j-8.0.31/mysql-connector-j-8.0.31.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/carlo/Desktop/librerie aggiuntive java/mysql-connector-j-8.0.31/mysql-connector-j-8.0.31.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -154,8 +159,7 @@
       <workItem from="1686219442794" duration="11433000" />
       <workItem from="1686312870869" duration="1822000" />
       <workItem from="1686320291866" duration="4432000" />
-      <workItem from="1686382790791" duration="7611000" />
-      <workItem from="1686391093013" duration="638000" />
+      <workItem from="1686382790791" duration="2388000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1681726734682</created>
@@ -395,14 +399,7 @@
       <option name="project" value="LOCAL" />
       <updated>1686326872982</updated>
     </task>
-    <task id="LOCAL-00035" summary="caso d'uso:-sistemazione bottone delete product&#10;-rimozione update immagine profilo&#10;-sistemazione metodo back recipeDet 1,2,3">
-      <created>1686385469516</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1686385469516</updated>
-    </task>
-    <option name="localTasksCounter" value="36" />
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,6 +417,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="2-inserimento classe product" />
     <MESSAGE value="risoluzione  alcuni code smells" />
     <MESSAGE value="commit" />
     <MESSAGE value="use case: profile &#10;first try" />
@@ -444,8 +442,7 @@
     <MESSAGE value="caso d'uso: sistemazione Observer" />
     <MESSAGE value="caso d'uso: continuto CLI&#10;Fatto add product e Pantry, da finire searchProduct" />
     <MESSAGE value="caso d'uso: continuto CLI&#10;Finito Search Product, da fare DeleteProdct" />
-    <MESSAGE value="caso d'uso:-sistemazione bottone delete product&#10;-rimozione update immagine profilo&#10;-sistemazione metodo back recipeDet 1,2,3" />
-    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso:-sistemazione bottone delete product&#10;-rimozione update immagine profilo&#10;-sistemazione metodo back recipeDet 1,2,3" />
+    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: continuto CLI&#10;Finito Search Product, da fare DeleteProdct" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
