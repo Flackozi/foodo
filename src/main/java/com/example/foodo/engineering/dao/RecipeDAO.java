@@ -3,17 +3,11 @@ package com.example.foodo.engineering.dao;
 
 import com.example.foodo.engineering.connection.ConnectionDB;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.model.ProductModel;
-import com.example.foodo.model.RecipeItemModel;
 import com.example.foodo.model.RecipeModel;
 import com.example.foodo.engineering.dao.queries.BasicQueries;
 
 
-import javax.swing.plaf.nimbus.State;
-import javax.xml.transform.Result;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -81,7 +75,7 @@ public class RecipeDAO {
 
         try{
             stmt = ConnectionDB.getConnection();
-            ResultSet resultSet = BasicQueries.retriverRecipeId(stmt, rname);
+            ResultSet resultSet = BasicQueries.retriveRecipeId2(stmt, rname);
             resultSet.first();
             int id = resultSet.getInt("recipeId");
             ResultSet resultSet1 = BasicQueries.searchDescription(stmt, id);
@@ -99,7 +93,7 @@ public class RecipeDAO {
         PreparedStatement preparedStatement;
         try{
             stmt = ConnectionDB.getConnection();
-            ResultSet resultSet = BasicQueries.retriverRecipeId(stmt, name);
+            ResultSet resultSet = BasicQueries.retriveRecipeId2(stmt, name);
             resultSet.first();
             int id = resultSet.getInt("recipeId");
             preparedStatement = ConnectionDB.setReview();
@@ -117,7 +111,7 @@ public class RecipeDAO {
 
         try{
             stmt = ConnectionDB.getConnection();
-            ResultSet resultSet = BasicQueries.retriverRecipeId(stmt, rname);
+            ResultSet resultSet = BasicQueries.retriveRecipeId2(stmt, rname);
             resultSet.first();
             int id = resultSet.getInt("recipeId");
             ResultSet resultSet1 = BasicQueries.retrieveImg(stmt, id);
@@ -137,7 +131,7 @@ public class RecipeDAO {
         int rate=0;
         try{
             stmt = ConnectionDB.getConnection();
-            ResultSet resultSet = BasicQueries.retriverRecipeId(stmt, rname);
+            ResultSet resultSet = BasicQueries.retriveRecipeId2(stmt, rname);
             resultSet.first();
             int id= resultSet.getInt("recipeId");
             ResultSet resultSet1= BasicQueries.getReview(stmt, id);
@@ -153,5 +147,22 @@ public class RecipeDAO {
             e.printStackTrace();
         }
         return average;
+    }
+
+    public void deleteRecipe(String recipeName, String chefName) {
+        Statement stmt;
+        int id;
+
+        try {
+            stmt = ConnectionDB.getConnection();
+            ResultSet resultSet= BasicQueries.retriveRecipeId2(stmt, recipeName);
+            resultSet.first();
+            id=resultSet.getInt(1);
+            BasicQueries.deleteIngredients(stmt, id);
+            BasicQueries.deleteReview(stmt, id);
+            BasicQueries.deleteRecipe(stmt, id);
+        }catch( SQLException | ConnectionDbException e){
+                e.printStackTrace();
+        }
     }
 }

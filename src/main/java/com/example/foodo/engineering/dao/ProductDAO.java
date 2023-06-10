@@ -8,7 +8,6 @@ import com.example.foodo.model.ProductModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import javax.swing.plaf.nimbus.State;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -94,7 +93,7 @@ public class   ProductDAO {
         List<ProductModel> productModelList = new ArrayList<>();
         stmt = ConnectionDB.getConnection();
 
-        ResultSet resultSet = BasicQueries.retriverRecipeId(stmt, rname);
+        ResultSet resultSet = BasicQueries.retriveRecipeId2(stmt, rname);
         resultSet.next();
         resultSet.first();
         Integer id = resultSet.getInt("recipeId");

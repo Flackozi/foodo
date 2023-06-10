@@ -61,4 +61,9 @@ public class RecipeDetController {
         return String.valueOf(recipeDAO.setAverage(rname, chefName));
 
     }
+
+    public void deleteRecipe(String recipeName, String chefName) {
+        RecipeDAO recipeDAO= new RecipeDAO();
+        recipeDAO.deleteRecipe(recipeName, chefName);
+    }
 }

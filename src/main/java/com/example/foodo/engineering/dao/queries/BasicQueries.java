@@ -109,7 +109,7 @@ public class BasicQueries {
         return stmt.executeQuery(sql);
     }
 
-    public static ResultSet retriverRecipeId(Statement stmt, String rname) throws SQLException {
+    public static ResultSet retriveRecipeId2(Statement stmt, String rname) throws SQLException {
 
         String sql= "SELECT recipeId FROM recipes WHERE recipeName='" + rname + "' ;";
         return stmt.executeQuery(sql);
@@ -147,6 +147,23 @@ public class BasicQueries {
     }
     public static void updateChefImage(Statement stmt, String path, String name) throws SQLException {
         String sql="UPDATE chef_table SET path='" + path + "' WHERE username='" + name + "';";
+        stmt.executeUpdate(sql);
+
+    }
+
+    public static void deleteIngredients(Statement stmt, int id) throws SQLException{
+        String sql="DELETE FROM ingredients WHERE recipeId ='" + id+"';";
+        stmt.executeUpdate(sql);
+    }
+
+    public static void deleteRecipe(Statement stmt, int id) throws SQLException {
+        String sql="DELETE FROM recipes WHERE recipeId ='" + id+"';";
+        stmt.executeUpdate(sql);
+
+    }
+
+    public static void deleteReview(Statement stmt, int id) throws SQLException {
+        String sql="DELETE FROM review WHERE recipeId1 ='" + id+"';";
         stmt.executeUpdate(sql);
 
     }

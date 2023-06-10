@@ -98,4 +98,16 @@ public class RecipeDet1ChefControllerGUI {
         setAverage(rname, chefName);
 
     }
+
+    public void DeleteRecipe(ActionEvent event) throws IOException {
+        RecipeDetController recipeDetController=new RecipeDetController();
+        recipeDetController.deleteRecipe(name, chefName);
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/myRecipes.fxml"));
+        Parent root = fxmlLoader.load();
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
 }
