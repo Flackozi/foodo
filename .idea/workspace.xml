@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso: continuto CLI&#10;Finito Search Product, da fare DeleteProdct">
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso:-sistemazione bottone delete product&#10;-rimozione update immagine profilo&#10;-sistemazione metodo back recipeDet 1,2,3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/PantryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/PantryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/PantryControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/PantryControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ProfileControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ProfileControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet1ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet1ControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet2ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet2ControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet3ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet3ControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/NewRecipeControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/NewRecipeControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/addNewRecipes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/addNewRecipes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeItem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/carbonara.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/carbonara.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/image/recipeDet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/recipeDet.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/image/recipeDet2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/recipeDet2.png" afterDir="false" />
     </list>
@@ -52,27 +51,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindowRun.ShowToolbar": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/carlo/Desktop/librerie aggiuntive java/mysql-connector-j-8.0.31/mysql-connector-j-8.0.31.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/carlo/Desktop/mysql-connector-j-8.0.31/mysql-connector-j-8.0.31.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.foodo.graphic.viewcli" />
@@ -155,7 +154,8 @@
       <workItem from="1686219442794" duration="11433000" />
       <workItem from="1686312870869" duration="1822000" />
       <workItem from="1686320291866" duration="4432000" />
-      <workItem from="1686382790791" duration="2388000" />
+      <workItem from="1686382790791" duration="7611000" />
+      <workItem from="1686391093013" duration="638000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1681726734682</created>
@@ -395,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686326872982</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="caso d'uso:-sistemazione bottone delete product&#10;-rimozione update immagine profilo&#10;-sistemazione metodo back recipeDet 1,2,3">
+      <created>1686385469516</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1686385469516</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +420,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2-inserimento classe product" />
     <MESSAGE value="risoluzione  alcuni code smells" />
     <MESSAGE value="commit" />
     <MESSAGE value="use case: profile &#10;first try" />
@@ -438,7 +444,8 @@
     <MESSAGE value="caso d'uso: sistemazione Observer" />
     <MESSAGE value="caso d'uso: continuto CLI&#10;Fatto add product e Pantry, da finire searchProduct" />
     <MESSAGE value="caso d'uso: continuto CLI&#10;Finito Search Product, da fare DeleteProdct" />
-    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso: continuto CLI&#10;Finito Search Product, da fare DeleteProdct" />
+    <MESSAGE value="caso d'uso:-sistemazione bottone delete product&#10;-rimozione update immagine profilo&#10;-sistemazione metodo back recipeDet 1,2,3" />
+    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso:-sistemazione bottone delete product&#10;-rimozione update immagine profilo&#10;-sistemazione metodo back recipeDet 1,2,3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

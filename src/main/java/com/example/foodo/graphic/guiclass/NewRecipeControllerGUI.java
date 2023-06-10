@@ -136,8 +136,8 @@ public class NewRecipeControllerGUI{
         FileChooser fileChooser=new FileChooser();
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Imagine Files","*.png","*.jpg"));
         file = fileChooser.showOpenDialog(stage).getAbsoluteFile();
-        RecipeImage.setFitHeight(150);
-        RecipeImage.setFitWidth(150);
+        RecipeImage.setFitHeight(148);
+        RecipeImage.setFitWidth(158);
         RecipeImage.setImage(ImageConverterSupport.fromFileToImage(file));
         path= file.getAbsolutePath();
     }
