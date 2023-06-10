@@ -24,6 +24,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 public class RecipeDet1ChefControllerGUI {
     public Label averageLabel;
@@ -42,6 +43,10 @@ public class RecipeDet1ChefControllerGUI {
     private Stage stage;
     private Scene scene;
     private String name;
+    private String Rname;
+
+
+    private String InterfaceName;
 
     public void setRecipe(String rname, String chefName) throws SQLException, ConnectionDbException {
         Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
@@ -69,6 +74,9 @@ public class RecipeDet1ChefControllerGUI {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet2Chef.fxml"));
         Parent root = fxmlLoader.load();
         scene = new Scene(root);
+        RecipeDet2ChefControllerGUI recipeDet2ChefControllerGUI = fxmlLoader.getController();
+        recipeDet2ChefControllerGUI.setInterfaceName(interfaceName);
+        recipeDet2ChefControllerGUI.setInfo(name, chefName);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
@@ -97,6 +105,34 @@ public class RecipeDet1ChefControllerGUI {
         recipeImage.setFitWidth(150);
         setAverage(rname, chefName);
 
+    }
+
+    public void back(ActionEvent event) throws IOException {
+        if(Objects.equals(interfaceName, "myChef")){
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myChef.fxml")));
+            scene = new Scene(root);
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }else if(Objects.equals(interfaceName, "myRecipe")){
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
+            scene = new Scene(root);
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }else if(Objects.equals(interfaceName, "myKitchen")){
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myKitchen.fxml")));
+            scene = new Scene(root);
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }else if(Objects.equals(interfaceName, "kitchenSearch")){
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/KitchenSearch.fxml")));
+            scene = new Scene(root);
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     public void DeleteRecipe(ActionEvent event) throws IOException {
