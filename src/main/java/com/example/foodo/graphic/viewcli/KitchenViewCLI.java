@@ -1,0 +1,99 @@
+package com.example.foodo.graphic.viewcli;
+
+import com.example.foodo.engineering.Utils.ExceptionController;
+import com.example.foodo.engineering.Utils.Printer;
+import com.example.foodo.engineering.exception.CommandNotValidException;
+import com.example.foodo.engineering.exception.ConnectionDbException;
+import com.example.foodo.graphic.CLIController.KitchenCLIController;
+
+import java.sql.SQLException;
+import java.util.Objects;
+import java.util.Scanner;
+
+public class KitchenViewCLI {
+
+    KitchenCLIController kitchenCLIController;
+
+    public KitchenViewCLI(KitchenCLIController kitchenCLIController) {
+        this.kitchenCLIController=kitchenCLIController;
+    }
+
+    public void run() {
+        Printer.printMessage("\n-------------------------------------------- KITCHEN PAGE --------------------------------------------");
+        Printer.printMessage("\n1) Insert ingredients \n2) Search recipe");
+        Scanner scanner= new Scanner(System.in);
+        String inputLine= scanner.nextLine();
+        try {
+            this.kitchenCLIController.executeCommand(inputLine);
+            //moreInfo();
+        } catch (CommandNotValidException | SQLException | ConnectionDbException e) {
+            ExceptionController.showExceptionCLI(e.getMessage());
+            run();
+        }
+    }
+
+    private void moreInfo() throws SQLException, ConnectionDbException {
+        Printer.printMessage("\nEnter the name of the recipe you want to see:");
+        Scanner scanner= new Scanner(System.in);
+        String recipeName= scanner.nextLine();
+        Printer.printMessage("Enter the chef name of the recipe you want to see:");
+        String chefName= scanner.nextLine();
+        kitchenCLIController.viewRecipeInfo(recipeName, chefName);
+    }
+
+    public void searchRecipe() throws SQLException, ConnectionDbException {
+        Printer.printMessage("\n Enter name of recipe");
+        Scanner scanner= new Scanner(System.in);
+        String name= scanner.nextLine();
+        this.kitchenCLIController.searchRecipeByName(name);
+        moreInfo();
+    }
+
+    public void insertIngredient() throws SQLException, ConnectionDbException {
+        Printer.printMessage("Enter first ingredient:");
+        Scanner scanner= new Scanner(System.in);
+        String ingredient1= scanner.nextLine();
+        String ingredient2 = "";
+        String ingredient3="";
+        String ingredient4="";
+        String ingredient5="";
+        Printer.printMessage("Want to add another ingredient? y/n");
+        if(Objects.equals(scanner.nextLine(), "y")) {
+            Printer.printMessage("Enter second ingredient:");
+            ingredient2= scanner.nextLine();
+            Printer.printMessage("Want to add another ingredient? y/n");
+            if(Objects.equals(scanner.nextLine(), "y")) {
+                Printer.printMessage("Enter second ingredient:");
+                ingredient3= scanner.nextLine();
+                Printer.printMessage("Want to add another ingredient? y/n");
+                if(Objects.equals(scanner.nextLine(), "y")) {
+                    Printer.printMessage("Enter second ingredient:");
+                    ingredient4= scanner.nextLine();
+                    Printer.printMessage("Want to add another ingredient? y/n");
+                    if(Objects.equals(scanner.nextLine(), "y")) {
+                        Printer.printMessage("Enter second ingredient:");
+                        ingredient5= scanner.nextLine();
+                    }
+                }
+            }
+        }
+        this.kitchenCLIController.searchRecipeByIngredients(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5);
+        moreInfo();
+    }
+
+    public void print(int i, String string1, String string2) {
+        System.out.print(i);
+        System.out.print(") ");
+        System.out.print(string1);
+        System.out.print(" ");
+        System.out.println(string2);
+
+    }
+
+    public void printInfo(String description, String average) {
+        Printer.printMessage("Description:");
+        Printer.printMessage(description);
+        Printer.printMessage("Review:");
+        Printer.printMessage(average);
+    }
+}

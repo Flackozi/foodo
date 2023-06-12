@@ -30,19 +30,19 @@ public class BasicQueries {
         stmt.executeQuery(updateStatement);
     }
 
-    public static ResultSet retriveProduct(Statement stmt) throws SQLException{
-        String sql = "SELECT * FROM pantry;";
+    public static ResultSet retriveProduct(Statement stmt, String name) throws SQLException{
+        String sql = "SELECT * FROM pantry WHERE accountName= '"+ name +"';";
         return stmt.executeQuery(sql);
     }
 
-    public static void deleteProduct(Statement stmt, String name) throws SQLException {
-        String updateStatement= String.format("DELETE FROM pantry WHERE name = '%s'", name);
+    public static void deleteProduct(Statement stmt, String name, String userName) throws SQLException {
+        String updateStatement= String.format("DELETE FROM pantry WHERE name = '%s' AND accountName= '%s'", name, userName);
         stmt.executeUpdate(updateStatement);
     }
 
-    public static ResultSet retriveByType(Statement stmt, String type) throws  SQLException{
+    public static ResultSet retriveByType(Statement stmt, String type, String userName) throws  SQLException{
 
-        String sql = "SELECT * FROM pantry WHERE type = '" + type + "';";
+        String sql = "SELECT * FROM pantry WHERE type = '" + type + "' AND accountName= '" + userName+"';";
         return stmt.executeQuery(sql);
     }
 

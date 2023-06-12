@@ -18,7 +18,7 @@ import java.util.List;
 public class   ProductDAO {
 
     private ProductBean productBean;
-    public static void InsProduct(ProductModel product) throws SQLException{
+    public static void InsProduct(ProductModel product, String userName) throws SQLException{
 
         Statement stmt;
         PreparedStatement preparedStatement;
@@ -32,6 +32,7 @@ public class   ProductDAO {
             preparedStatement.setInt(4, product.getExpirationDay());
             preparedStatement.setInt(5, product.getExpirationMonth());
             preparedStatement.setInt(6, product.getExpirationYear());
+            preparedStatement.setString(7, userName);
             preparedStatement.executeUpdate();
 
         } catch(SQLException | ConnectionDbException e){
@@ -40,11 +41,11 @@ public class   ProductDAO {
 
     }
 
-    public ObservableList getAllProduct() throws ConnectionDbException, SQLException {
+    public ObservableList getAllProduct( String userName) throws ConnectionDbException, SQLException {
         Statement stmt;
         List<ProductModel> productModelList = new ArrayList<>();
         stmt = ConnectionDB.getConnection();
-        ResultSet resultSet = BasicQueries.retriveProduct(stmt);
+        ResultSet resultSet = BasicQueries.retriveProduct(stmt, userName);
         resultSet.next();
         resultSet.first();
 
@@ -63,10 +64,10 @@ public class   ProductDAO {
         return obl;
     }
 
-    public void DelProduct(ProductModel productModel) throws ConnectionDbException, SQLException {
+    public void DelProduct(ProductModel productModel, String userName) throws ConnectionDbException, SQLException {
         Statement stmt;
         stmt=ConnectionDB.getConnection();
-        BasicQueries.deleteProduct(stmt, productModel.getName());
+        BasicQueries.deleteProduct(stmt, productModel.getName(), userName);
     }
 
     public List<ProductModel> getRecipeIng(String rname) throws ConnectionDbException, SQLException {

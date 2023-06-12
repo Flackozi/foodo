@@ -31,10 +31,10 @@ public class AddProductCLIView {
         Printer.printMessage("\n Insert expiration day");
         inputLine= scanner.nextLine();
         String day= inputLine;
-        Printer.printMessage("\n Insert expiration month");
+        Printer.printMessage("\n Insert expiration month:");
         inputLine= scanner.nextLine();
         String month= inputLine;
-        Printer.printMessage("\n Insert expiration year");
+        Printer.printMessage("\n Insert expiration year:");
         inputLine= scanner.nextLine();
         String year= inputLine;
         String expiration= day + "/" + month + "/" + year;

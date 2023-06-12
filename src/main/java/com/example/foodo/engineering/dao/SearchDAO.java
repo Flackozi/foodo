@@ -42,13 +42,13 @@ public class SearchDAO {
         return productModel;
     }
 
-    public static ObservableList retriveByTypeOfFood(String type) {
+    public static ObservableList retriveByTypeOfFood(String type, String userName) {
         Statement stmt;
         List<ProductModel> productModelList = new ArrayList<>();
 
         try{
             stmt = ConnectionDB.getConnection();
-            ResultSet resultSet = BasicQueries.retriveByType(stmt, type);
+            ResultSet resultSet = BasicQueries.retriveByType(stmt, type, userName);
             resultSet.next();
             //resultSet.first();
 

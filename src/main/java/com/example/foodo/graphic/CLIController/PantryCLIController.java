@@ -41,10 +41,11 @@ public class PantryCLIController implements GrapghiCLIController {
             }case SEARCH -> {
                 SearchProductCLIController searchProductCLIController= new SearchProductCLIController();
                 searchProductCLIController.start();
+                this.start();
             }case DELETE -> {
                 DeleteProductCLIController deleteProductCLIController= new DeleteProductCLIController();
                 deleteProductCLIController.start();
-
+                this.start();
             }
 
 
