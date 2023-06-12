@@ -1,9 +1,9 @@
 package com.example.foodo.graphic.CLIController;
 
-import com.example.foodo.graphic.viewcli.MyChefView;
+import com.example.foodo.graphic.viewcli.MyChefViewCLI;
 
 public class MyChefCLIController implements  GrapghiCLIController{
-    MyChefView myChefView;
+    MyChefViewCLI myChefViewCLI;
     @Override
     public void start() {
     }

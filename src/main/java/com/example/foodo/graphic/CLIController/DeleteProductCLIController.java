@@ -1,13 +1,13 @@
 package com.example.foodo.graphic.CLIController;
 
-import com.example.foodo.graphic.viewcli.DeleteProductCLIView;
+import com.example.foodo.graphic.viewcli.DeleteProductViewCLI;
 
 public class DeleteProductCLIController implements GrapghiCLIController{
-    private DeleteProductCLIView deleteProductCLIView;
+    private DeleteProductViewCLI deleteProductViewCLI;
 
     @Override
     public void start() {
-        this.deleteProductCLIView= new DeleteProductCLIView(this);
-        this.deleteProductCLIView.run();
+        this.deleteProductViewCLI = new DeleteProductViewCLI(this);
+        this.deleteProductViewCLI.run();
     }
 }

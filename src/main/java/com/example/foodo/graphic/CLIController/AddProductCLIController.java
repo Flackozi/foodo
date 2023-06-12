@@ -2,17 +2,17 @@ package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.engineering.bean.ProductBean;
-import com.example.foodo.graphic.viewcli.AddProductCLIView;
+import com.example.foodo.graphic.viewcli.AddProductViewCLI;
 
 import java.sql.SQLException;
 
 public class AddProductCLIController implements GrapghiCLIController{
-    private AddProductCLIView addProductCLIView;
+    private AddProductViewCLI addProductViewCLI;
 
     @Override
     public void start() {
-        this.addProductCLIView= new AddProductCLIView(this);
-        this.addProductCLIView.run();
+        this.addProductViewCLI = new AddProductViewCLI(this);
+        this.addProductViewCLI.run();
     }
 
     public void addProduct(String name, int quantity, String typeOfFood, String expiration, String expDay, String expMonth, String expYear) throws SQLException {

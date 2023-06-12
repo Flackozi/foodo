@@ -3,9 +3,9 @@ package com.example.foodo.graphic.viewcli;
 import com.example.foodo.engineering.Utils.Printer;
 import com.example.foodo.graphic.CLIController.DeleteProductCLIController;
 
-public class DeleteProductCLIView {
+public class DeleteProductViewCLI {
     DeleteProductCLIController deleteProductCLIController= new DeleteProductCLIController();
-    public DeleteProductCLIView(DeleteProductCLIController deleteProductCLIController) {
+    public DeleteProductViewCLI(DeleteProductCLIController deleteProductCLIController) {
         this.deleteProductCLIController=deleteProductCLIController;
     }
 

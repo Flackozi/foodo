@@ -1,20 +1,15 @@
 package com.example.foodo.graphic.viewcli;
 
 import com.example.foodo.engineering.Utils.Printer;
-import com.example.foodo.engineering.exception.CommandNotValidException;
-import com.example.foodo.engineering.exception.NonUsableFunctionException;
 import com.example.foodo.graphic.CLIController.AddProductCLIController;
 
-import java.sql.Array;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class AddProductCLIView {
+public class AddProductViewCLI {
     private final AddProductCLIController addProductCLIController;
 
-    public AddProductCLIView(AddProductCLIController addProductCLIController) {
+    public AddProductViewCLI(AddProductCLIController addProductCLIController) {
         this.addProductCLIController = addProductCLIController;
     }
 
