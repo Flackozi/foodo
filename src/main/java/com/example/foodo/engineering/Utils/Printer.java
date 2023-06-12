@@ -22,4 +22,21 @@ public class Printer {
         System.out.print(typeOfFood);
         System.out.print("\n");
     }
+
+    public static void printInfo(String description, String average) {
+        Printer.printMessage("Description:");
+        Printer.printMessage(description);
+        Printer.printMessage("Review:");
+        Printer.printMessage(average);
+    }
+
+    public static void printIngredient(int i, String ingName, String ingQuantity) {
+        System.out.print(i);
+        System.out.print(") ");
+        System.out.print(ingName);
+        System.out.print(" ");
+        System.out.println(ingQuantity);
+
+
+    }
 }

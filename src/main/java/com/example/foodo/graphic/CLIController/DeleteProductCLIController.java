@@ -3,16 +3,16 @@ package com.example.foodo.graphic.CLIController;
 import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.graphic.viewcli.DeleteProductCLIView;
+import com.example.foodo.graphic.viewcli.DeleteProductViewCLI;
 
 import java.sql.SQLException;
 
 public class DeleteProductCLIController implements GrapghiCLIController{
-    private DeleteProductCLIView deleteProductCLIView;
+    private DeleteProductViewCLI deleteProductCLIView;
 
     @Override
     public void start() {
-        this.deleteProductCLIView= new DeleteProductCLIView(this);
+        this.deleteProductCLIView= new DeleteProductViewCLI(this);
         this.deleteProductCLIView.run();
     }
 

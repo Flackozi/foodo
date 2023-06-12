@@ -28,6 +28,7 @@ public class UserCLIController implements GrapghiCLIController{
             }case KITCHEN -> {
                 KitchenCLIController kitchenCLICOntroller= new KitchenCLIController();
                 kitchenCLICOntroller.start();
+                this.start();
             }case CHEF -> {
                 MyChefCLIController myChefCLIController = new MyChefCLIController();
                 myChefCLIController.start();

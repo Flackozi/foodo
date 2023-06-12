@@ -1,16 +1,15 @@
 package com.example.foodo.graphic.viewcli;
 
 import com.example.foodo.engineering.Utils.Printer;
-import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.CLIController.DeleteProductCLIController;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class DeleteProductCLIView {
+public class DeleteProductViewCLI {
     DeleteProductCLIController deleteProductCLIController= new DeleteProductCLIController();
-    public DeleteProductCLIView(DeleteProductCLIController deleteProductCLIController) {
+    public DeleteProductViewCLI(DeleteProductCLIController deleteProductCLIController) {
         this.deleteProductCLIController=deleteProductCLIController;
     }
 
