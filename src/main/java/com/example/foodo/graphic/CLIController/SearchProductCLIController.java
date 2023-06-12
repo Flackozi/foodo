@@ -3,10 +3,9 @@ package com.example.foodo.graphic.CLIController;
 import com.example.foodo.controllerappl.SearchProductController;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.SearchBean;
-import com.example.foodo.graphic.viewcli.SearchProductCLIView;
+import com.example.foodo.graphic.viewcli.SearchProductViewCLI;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class SearchProductCLIController implements GrapghiCLIController{
@@ -15,23 +14,23 @@ public class SearchProductCLIController implements GrapghiCLIController{
     private static final String PANTRY="3";
 
 
-    private SearchProductCLIView searchProductCLIView;
+    private SearchProductViewCLI searchProductViewCLI;
 
 
 
     @Override
     public void start() {
-        this.searchProductCLIView= new SearchProductCLIView(this);
-        this.searchProductCLIView.run();
+        this.searchProductViewCLI = new SearchProductViewCLI(this);
+        this.searchProductViewCLI.run();
     }
 
     public void executeCommand(String inputLine) {
         switch(inputLine){
             case SEARCHNAME -> {
-                this.searchProductCLIView.searchName();
+                this.searchProductViewCLI.searchName();
                 this.start();
             }case FILTER -> {
-                this.searchProductCLIView.filterSearch();
+                this.searchProductViewCLI.filterSearch();
                 this.start();
             }case PANTRY -> {
                 PantryCLIController pantryCLIController= new PantryCLIController();
@@ -47,8 +46,8 @@ public class SearchProductCLIController implements GrapghiCLIController{
         SearchProductController searchProductController= new SearchProductController();
         productBeanList= searchProductController.searchProduct(searchBean);
         for(ProductBean productBean: productBeanList){
-            SearchProductCLIView searchProductCLIView1= new SearchProductCLIView(this);
-            searchProductCLIView1.printProduct(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getExpiration());
+            SearchProductViewCLI searchProductViewCLI1 = new SearchProductViewCLI(this);
+            searchProductViewCLI1.printProduct(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getExpiration());
         }
 
     }

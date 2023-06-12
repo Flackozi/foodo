@@ -4,22 +4,22 @@ import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.graphic.viewcli.PantryView;
+import com.example.foodo.graphic.viewcli.PantryViewCLI;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PantryCLIController implements GrapghiCLIController {
-    private PantryView pantryView;
+    private PantryViewCLI pantryViewCLI;
     private static final String NEWPRODUCT="1";
     private static final String HOMEPAGE="2";
     private static final String SEARCH="3";
     private static final String DELETE="4";
     @Override
     public void start() {
-        this.pantryView= new PantryView(this);
-        this.pantryView.run();
+        this.pantryViewCLI = new PantryViewCLI(this);
+        this.pantryViewCLI.run();
     }
 
     public List<ProductBean> retrieveProducts() throws SQLException, ConnectionDbException {

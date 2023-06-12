@@ -1,15 +1,12 @@
 package com.example.foodo.graphic.viewcli;
 
-import com.example.foodo.engineering.Utils.ExceptionController;
 import com.example.foodo.engineering.Utils.Printer;
-import com.example.foodo.engineering.exception.CommandNotValidException;
-import com.example.foodo.engineering.exception.NonUsableFunctionException;
 import com.example.foodo.graphic.CLIController.SearchProductCLIController;
 
 import java.util.Objects;
 import java.util.Scanner;
 
-public class SearchProductCLIView {
+public class SearchProductViewCLI {
     private final SearchProductCLIController searchProductCLIController;
     private boolean fruit=false;
     private boolean spices=false;
@@ -20,7 +17,7 @@ public class SearchProductCLIView {
     private boolean fish=false;
     private String name="";
 
-    public SearchProductCLIView(SearchProductCLIController searchProductCLIController) {
+    public SearchProductViewCLI(SearchProductCLIController searchProductCLIController) {
         this.searchProductCLIController = searchProductCLIController;
     }
 

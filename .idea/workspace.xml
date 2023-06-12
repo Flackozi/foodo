@@ -4,27 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="caso d'uso:dlete recipe">
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="fine item per chef">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2023_17_49_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2023_17_49__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_06_2023_11_38_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_06_2023_11_38__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_06_2023_17_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_06_2023_17_11__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_5_2023_11_32_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_5_2023_11_32_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/PantryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/PantryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/ConnectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/ConnectionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/AddProductCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/AddProductCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/ChefCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/ChefCLIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/DeleteProductCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/DeleteProductCLIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/KitchenCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/KitchenCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/MyChefCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/MyChefCLIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/PantryCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/PantryCLIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/AddProductCLIView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/AddProductCLIView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/DeleteProductCLIView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/DeleteProductCLIView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/SearchProductCLIView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/SearchProductCLIView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/ProfileCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/ProfileCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/SearchProductCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/SearchProductCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/AddProductCLIView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/AddProductViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/DeleteProductCLIView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/DeleteProductViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/MyChefView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/MyChefViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/PantryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/PantryViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/SearchProductCLIView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/SearchProductViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet2Chef.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet2Chef.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +82,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.foodo.graphic.CLIController" />
       <recent name="com.example.foodo.graphic.viewcli" />
+      <recent name="com.example.foodo.graphic.CLIController" />
       <recent name="com.example.foodo.CLIController" />
       <recent name="com.example.foodo.engineering.Utils" />
       <recent name="com.example.foodo.exception" />
@@ -166,9 +163,8 @@
       <workItem from="1686312870869" duration="1822000" />
       <workItem from="1686320291866" duration="4432000" />
       <workItem from="1686382790791" duration="2388000" />
-      <workItem from="1686404227189" duration="4422000" />
-      <workItem from="1686558112761" duration="7753000" />
-      <workItem from="1686574247502" duration="3979000" />
+      <workItem from="1686404227189" duration="4243000" />
+      <workItem from="1686558235814" duration="7093000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1681726734682</created>
@@ -408,12 +404,12 @@
       <option name="project" value="LOCAL" />
       <updated>1686326872982</updated>
     </task>
-    <task id="LOCAL-00035" summary="caso d'uso:dlete recipe">
-      <created>1686408817265</created>
+    <task id="LOCAL-00035" summary="fine item per chef">
+      <created>1686409891458</created>
       <option name="number" value="00035" />
       <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
-      <updated>1686408817265</updated>
+      <updated>1686409891458</updated>
     </task>
     <option name="localTasksCounter" value="36" />
     <servers />
@@ -457,8 +453,8 @@
     <MESSAGE value="caso d'uso: sistemazione Observer" />
     <MESSAGE value="caso d'uso: continuto CLI&#10;Fatto add product e Pantry, da finire searchProduct" />
     <MESSAGE value="caso d'uso: continuto CLI&#10;Finito Search Product, da fare DeleteProdct" />
-    <MESSAGE value="caso d'uso:dlete recipe" />
-    <option name="LAST_COMMIT_MESSAGE" value="caso d'uso:dlete recipe" />
+    <MESSAGE value="fine item per chef" />
+    <option name="LAST_COMMIT_MESSAGE" value="fine item per chef" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -467,11 +463,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/foodo/Main.java</url>
           <line>49</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/KitchenViewCLI.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

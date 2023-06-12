@@ -4,7 +4,6 @@ import com.example.foodo.engineering.Utils.Printer;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.engineering.exception.NonUsableFunctionException;
 import com.example.foodo.graphic.CLIController.PantryCLIController;
 
 import java.sql.SQLException;
@@ -12,11 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class PantryView {
+public class PantryViewCLI {
 
     private final PantryCLIController pantryCLIController;
 
-    public PantryView(PantryCLIController pantryCLIController) {
+    public PantryViewCLI(PantryCLIController pantryCLIController) {
         this.pantryCLIController = pantryCLIController;
     }
 
