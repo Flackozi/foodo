@@ -20,12 +20,11 @@ public class KitchenViewCLI {
 
     public void run() {
         Printer.printMessage("\n-------------------------------------------- KITCHEN PAGE --------------------------------------------");
-        Printer.printMessage("\n1) Insert ingredients \n2) Search recipe");
+        Printer.printMessage("\n1) Insert ingredients \n2) Search recipe \n3) Return to home page");
         Scanner scanner= new Scanner(System.in);
         String inputLine= scanner.nextLine();
         try {
             this.kitchenCLIController.executeCommand(inputLine);
-            //moreInfo();
         } catch (CommandNotValidException | SQLException | ConnectionDbException e) {
             ExceptionController.showExceptionCLI(e.getMessage());
             run();

@@ -1,6 +1,7 @@
 package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.controllerappl.ProfileController;
+import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.graphic.viewcli.ProfileViewCLI;
@@ -24,8 +25,13 @@ public class ProfileCLIController implements GrapghiCLIController {
     public void executeCommand(String inputLine) throws CommandNotValidException {
         switch(inputLine){
             case BACKHOME -> {
-                UserCLIController userCLIController= new UserCLIController();
-                userCLIController.start();
+                if(Session.getCurrentSession().getUserBean()!= null){
+                    UserCLIController userCLIController= new UserCLIController();
+                    userCLIController.start();
+                }else{
+                    ChefCLIController chefCLIController = new ChefCLIController();
+                    chefCLIController.start();
+                }
             }
         }
     }

@@ -12,6 +12,6 @@ public class MyRecipesViewCLI {
 
     public void run(){
         Printer.printMessage("\n-------------------------------------------- MY RECIPES PAGE --------------------------------------------");
-
+        Printer.printMessage("\n1) Return to home page");
     }
 }

@@ -1,6 +1,7 @@
 package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.controllerappl.SearchProductController;
+import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.SearchBean;
 import com.example.foodo.graphic.viewcli.SearchProductViewCLI;
@@ -12,6 +13,7 @@ public class SearchProductCLIController implements GrapghiCLIController{
     private static final String SEARCHNAME="1";
     private static final String FILTER="2";
     private static final String PANTRY="3";
+    private static final String BACK="4";
 
 
     private SearchProductViewCLI searchProductViewCLI;
@@ -35,6 +37,14 @@ public class SearchProductCLIController implements GrapghiCLIController{
             }case PANTRY -> {
                 PantryCLIController pantryCLIController= new PantryCLIController();
                 pantryCLIController.start();
+            }case BACK -> {
+                if(Session.getCurrentSession().getUserBean()!= null){
+                    UserCLIController userCLIController= new UserCLIController();
+                    userCLIController.start();
+                }else{
+                    ChefCLIController chefCLIController = new ChefCLIController();
+                    chefCLIController.start();
+                }
             }
         }
 

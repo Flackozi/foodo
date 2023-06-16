@@ -17,7 +17,7 @@ public class ChefViewCLI {
 
     public void run(){
         Printer.printMessage("\n-------------------------------------------- CHEF HOMEPAGE --------------------------------------------");
-        Printer.printMessage(" 1) Pantry \n 2) Profile \n 3) Kitchen \n 4) My Recipes: \n");
+        Printer.printMessage(" 1) Pantry \n 2) Profile \n 3) Kitchen \n 4) My Recipes \n");
         Scanner scanner = new Scanner(System.in);
         String inputLine = scanner.nextLine();
         try{

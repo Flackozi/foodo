@@ -3,6 +3,7 @@ package com.example.foodo.graphic.CLIController;
 import com.example.foodo.controllerappl.KitchenController;
 import com.example.foodo.controllerappl.RecipeDetController;
 import com.example.foodo.controllerappl.SearchRecipeController;
+import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.KitchenBean;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.RecipeBean;
@@ -20,6 +21,7 @@ public class KitchenCLIController implements GrapghiCLIController{
     private static final String INSERTINGREDIENT="1";
 
     private static final String SEARCHRECIPE="2";
+    private static final String BACK="3";
 
     @Override
     public void start() {
@@ -33,6 +35,14 @@ public class KitchenCLIController implements GrapghiCLIController{
                 this.kitchenViewCLI.insertIngredient();
             }case SEARCHRECIPE -> {
                 this.kitchenViewCLI.searchRecipe();
+            }case BACK -> {
+                if(Session.getCurrentSession().getUserBean()!= null){
+                    UserCLIController userCLIController= new UserCLIController();
+                    userCLIController.start();
+                }else{
+                    ChefCLIController chefCLIController = new ChefCLIController();
+                    chefCLIController.start();
+                }
             }
             default -> throw new CommandNotValidException();
         }

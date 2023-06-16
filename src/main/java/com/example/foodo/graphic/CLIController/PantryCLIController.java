@@ -1,10 +1,13 @@
 package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.controllerappl.PantryController;
+import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.ProductBean;
+import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.viewcli.PantryViewCLI;
+import com.example.foodo.engineering.Session.Session;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -16,6 +19,9 @@ public class PantryCLIController implements GrapghiCLIController {
     private static final String HOMEPAGE="2";
     private static final String SEARCH="3";
     private static final String DELETE="4";
+
+    private UserBean userBean;
+    private ChefBean chefBean;
     @Override
     public void start() {
         this.pantryViewCLI = new PantryViewCLI(this);
@@ -36,6 +42,13 @@ public class PantryCLIController implements GrapghiCLIController {
                 addProductCLIController.start();
                 this.start();
             }case HOMEPAGE -> {
+                if(Session.getCurrentSession().getUserBean()!= null){
+                    UserCLIController userCLIController= new UserCLIController();
+                    userCLIController.start();
+                }else{
+                    ChefCLIController chefCLIController = new ChefCLIController();
+                    chefCLIController.start();
+                }
                 UserCLIController userCLIController= new UserCLIController();
                 userCLIController.start();
             }case SEARCH -> {

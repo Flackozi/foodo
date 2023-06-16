@@ -22,8 +22,8 @@ public class SearchProductViewCLI {
     }
 
     public void run() {
-        Printer.printMessage("\n-------------------------------------------- SEARCH PAGE --------------------------------------------");
-        Printer.printMessage("\n 1)Insert the name \n 2)Filter your search \n 3)Pantry");
+        Printer.printMessage("\n-------------------------------------------- SEARCH PRODUCT PAGE --------------------------------------------");
+        Printer.printMessage("\n 1)Insert the name \n 2)Filter your search \n 3)Pantry \n 4)Return to home page");
         Scanner scanner = new Scanner(System.in);
         String inputLine=scanner.nextLine();
         this.searchProductCLIController.executeCommand(inputLine);

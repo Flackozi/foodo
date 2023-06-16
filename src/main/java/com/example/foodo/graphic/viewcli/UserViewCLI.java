@@ -15,7 +15,7 @@ public class UserViewCLI {
     }
     public void run() {
         Printer.printMessage("\n-------------------------------------------- USER HOMEPAGE --------------------------------------------");
-        Printer.printMessage(" 1) Pantry \n 2) Profile \n 3) Kitchen \n 4) Mychef: \n");
+        Printer.printMessage(" 1) Pantry \n 2) Profile \n 3) Kitchen \n 4) Mychef \n");
         Scanner scanner = new Scanner(System.in);
         String inputLine = scanner.nextLine();
         try {
