@@ -61,6 +61,7 @@ public class ConnectionDB {
         Properties properties= new Properties();
         FileInputStream fileInputStream= new FileInputStream("src/main/java/com/example/foodo/engineering/connection/connection.properties.properties");
         properties.load(fileInputStream);
+        fileInputStream.close();
         return properties;
     }
 

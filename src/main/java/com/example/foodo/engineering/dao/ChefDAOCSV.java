@@ -38,7 +38,7 @@ public class ChefDAOCSV extends ChefDAO{
             if(chefModel==null){
                 throw new NotFoundException("Chef Not Found");
             }
-
+            bufferedReader.close();
         } catch (IOException | NotFoundException e) {
             throw new RuntimeException(e);
         }
