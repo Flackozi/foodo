@@ -90,7 +90,6 @@ public class RecipeDet1ChefControllerGUI {
         String average = null;
         RecipeDetController recipeDetController=new RecipeDetController();
         average=recipeDetController.setAverage(rname, chefName);
-
         averageLabel.setText(average.substring(0,3));
     }
 

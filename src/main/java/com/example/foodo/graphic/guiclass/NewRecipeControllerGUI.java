@@ -112,11 +112,13 @@ public class NewRecipeControllerGUI{
             RecipeController recipeController=new RecipeController();
             recipeController.saveRecipe(recipeBean);
             recipeController.saveIngredients(ingredients);
+
         }catch (FieldEmptyException e){
             ExceptionController.showExceptionGUI(e.getMessage());
 
         }
 
+        backHome(event);
 
     }
 

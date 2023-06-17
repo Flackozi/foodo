@@ -109,9 +109,15 @@ public class BasicQueries {
         return stmt.executeQuery(sql);
     }
 
+    public static ResultSet retriveRecipeId3(Statement stmt, String rname, String chefName) throws SQLException {
+
+        String sql= "SELECT recipeId FROM recipes WHERE recipeName='" + rname + "' AND chefName='" + chefName+ "';";
+        return stmt.executeQuery(sql);
+    }
+
     public static ResultSet retriveRecipeId2(Statement stmt, String rname) throws SQLException {
 
-        String sql= "SELECT recipeId FROM recipes WHERE recipeName='" + rname + "' ;";
+        String sql= "SELECT recipeId FROM recipes WHERE recipeName='" + rname + "';";
         return stmt.executeQuery(sql);
     }
 

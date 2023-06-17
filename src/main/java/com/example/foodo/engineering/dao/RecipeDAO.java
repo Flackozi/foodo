@@ -142,6 +142,7 @@ public class RecipeDAO {
 
                 i++;
             }
+            if(sum==0) return 0;
             average= (float) sum /i;
         }catch(SQLException | ConnectionDbException e){
             e.printStackTrace();
@@ -155,7 +156,7 @@ public class RecipeDAO {
 
         try {
             stmt = ConnectionDB.getConnection();
-            ResultSet resultSet= BasicQueries.retriveRecipeId2(stmt, recipeName);
+            ResultSet resultSet= BasicQueries.retriveRecipeId3(stmt, recipeName, chefName);
             resultSet.first();
             id=resultSet.getInt(1);
             BasicQueries.deleteIngredients(stmt, id);
