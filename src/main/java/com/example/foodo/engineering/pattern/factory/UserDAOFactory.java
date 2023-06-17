@@ -9,7 +9,7 @@ import java.util.Random;
 
 //questa classe rappresenta l'applicazione del pattern factory method
 public class UserDAOFactory {
-
+    Random random = new Random();
     private UserDAOFactory(){}
 
     private static UserDAOFactory instance = null;
@@ -23,7 +23,7 @@ public class UserDAOFactory {
 
     public UserDAO getUserDAO(){
 
-        Random random = new Random();
+
         int randomNumber = random.nextInt(10);
         if(randomNumber %2 == 0){
             return new UserDAOJDBC();

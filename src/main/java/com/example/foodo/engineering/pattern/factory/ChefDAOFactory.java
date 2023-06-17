@@ -5,6 +5,7 @@ import com.example.foodo.engineering.dao.*;
 import java.util.Random;
 
 public class ChefDAOFactory {
+    Random random = new Random();
     private ChefDAOFactory(){}
 
     private static ChefDAOFactory instance = null;
@@ -18,7 +19,7 @@ public class ChefDAOFactory {
 
     public ChefDAO getChefDAO(){
 
-        Random random = new Random();
+
         int randomNumber = random.nextInt(10);
         if(randomNumber %2 == 0){
             return new ChefDAOJDBC();

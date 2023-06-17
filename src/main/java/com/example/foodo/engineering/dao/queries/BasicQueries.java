@@ -25,10 +25,8 @@ public class BasicQueries {
         return stmt.executeQuery(sql);
     }
 
-    public static void InsertProduct(Statement stmt, String name, int quantity, Date expiration, String type) throws SQLException{
-        String updateStatement  = String.format("INSERT INTO pantry set name=%s, quantity=%d, expiration=%d/%m/%Y type=%s", name, quantity, expiration, type);
-        stmt.executeQuery(updateStatement);
-    }
+
+
 
     public static ResultSet retriveProduct(Statement stmt, String name) throws SQLException{
         String sql = "SELECT * FROM pantry WHERE accountName= '"+ name +"';";
@@ -74,9 +72,6 @@ public class BasicQueries {
             return stmt.executeQuery(sql);
         }else if (ingredient3.isEmpty()) {
             String sql = "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "');";
-            return stmt.executeQuery(sql);
-        }else if (ingredient4.isEmpty()){
-            String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "');";
             return stmt.executeQuery(sql);
         }else if (ingredient4.isEmpty()){
             String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "');";

@@ -13,8 +13,6 @@
   -fx-background-color: #ffffff;
   -fx-border-color: #ffffff;
   -fx-text-fill: #000000;
-  -fx-alignment: CENTER_LEFT;
-   
 }
 .table-row-cell:selected {
    -fx-background-color: whitesmoke; 
