@@ -12,6 +12,7 @@ import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.viewcli.KitchenViewCLI;
 
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,12 +25,12 @@ public class KitchenCLIController implements GrapghiCLIController{
     private static final String BACK="3";
 
     @Override
-    public void start() {
+    public void start() throws FileNotFoundException {
         this.kitchenViewCLI= new KitchenViewCLI(this);
         this.kitchenViewCLI.run();
     }
 
-    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException {
+    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException {
         switch(inputLine){
             case INSERTINGREDIENT -> {
                 this.kitchenViewCLI.insertIngredient();

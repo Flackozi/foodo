@@ -1,34 +1,28 @@
 package com.example.foodo.graphic.CLIController;
 
-import com.example.foodo.controllerappl.ProfileController;
 import com.example.foodo.engineering.Session.Session;
-import com.example.foodo.engineering.bean.UserBean;
+import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.graphic.viewcli.ProfileViewCLI;
+import com.example.foodo.graphic.viewcli.AddRecipeViewCLI;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 
-public class ProfileCLIController implements GrapghiCLIController {
-    private ProfileViewCLI profileViewCLI;
+public class AddRecipeCLIController implements GrapghiCLIController{
+    private static final String CONFIRM="1";
 
-    private static final String BACKHOME = "1";
+    private AddRecipeViewCLI addRecipeViewCLI;
 
     @Override
-    public void start() throws SQLException, ConnectionDbException {
-        this.profileViewCLI = new ProfileViewCLI(this);
-        this.profileViewCLI.run();
-    }
-
-    public UserBean setUserInfoProfile(UserBean userBean){
-        ProfileController profileController = new ProfileController();
-        return profileController.getUserInfo(userBean);
+    public void start() throws SQLException, ConnectionDbException, FileNotFoundException {
+        this.addRecipeViewCLI = new AddRecipeViewCLI(this);
+        this.addRecipeViewCLI.run();
     }
 
     public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException {
-        switch(inputLine){
-            case BACKHOME -> {
+        switch (inputLine){
+            case CONFIRM -> {
                 if(Session.getCurrentSession().getUserBean()!= null){
                     UserCLIController userCLIController= new UserCLIController();
                     userCLIController.start();
@@ -36,6 +30,7 @@ public class ProfileCLIController implements GrapghiCLIController {
                     ChefCLIController chefCLIController = new ChefCLIController();
                     chefCLIController.start();
                 }
+
             }
         }
     }

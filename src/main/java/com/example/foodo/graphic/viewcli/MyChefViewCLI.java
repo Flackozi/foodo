@@ -8,6 +8,7 @@ import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.CLIController.MyChefCLIController;
 
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
@@ -19,15 +20,15 @@ public class MyChefViewCLI {
         this.myChefCLIController = myChefCLIController;
     }
 
-    public void run() {
+    public void run() throws SQLException, ConnectionDbException, FileNotFoundException {
         Printer.printMessage("\n-------------------------------------------- MY CHEF PAGE --------------------------------------------");
+        this.myChefCLIController.retrieveRecipe();
         Printer.printMessage("\n1) Return to home page");
         List<IngredientBean> ingredientBeans;
         Scanner scanner= new Scanner(System.in);
         String inputLine= scanner.nextLine();
         try{
             this.myChefCLIController.executeCommand(inputLine);
-            this.myChefCLIController.retrieveRecipe();
         } catch (ConnectionDbException | SQLException | CommandNotValidException e) {
             throw new RuntimeException(e);
         }

@@ -6,6 +6,7 @@ import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.CLIController.KitchenCLIController;
 
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.Objects;
 import java.util.Scanner;
@@ -18,7 +19,7 @@ public class KitchenViewCLI {
         this.kitchenCLIController=kitchenCLIController;
     }
 
-    public void run() {
+    public void run() throws FileNotFoundException {
         Printer.printMessage("\n-------------------------------------------- KITCHEN PAGE --------------------------------------------");
         Printer.printMessage("\n1) Insert ingredients \n2) Search recipe \n3) Return to home page");
         Scanner scanner= new Scanner(System.in);

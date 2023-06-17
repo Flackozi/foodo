@@ -20,10 +20,10 @@ public class RecipeController {
 
     private int recipeId;
 
-    public void saveRecipe(RecipeBean recipeBean) throws SQLException, FileNotFoundException, ConnectionDbException {
+    public void saveRecipe(RecipeBean recipeBean, int flag) throws SQLException, FileNotFoundException, ConnectionDbException {
         RecipeDAO recipeDAO=new RecipeDAO();
         RecipeModel recipeModel= new RecipeModel(recipeBean.getRecipeName(), recipeBean.getDescription(), recipeBean.getChefName(), recipeBean.getPath());
-        recipeDAO.AddRecipe(recipeModel);
+        recipeDAO.AddRecipe(recipeModel, flag);
         recipeId=recipeDAO.TakeRecipeId(recipeModel);
 
     }

@@ -13,16 +13,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecipeDAO {
-    public static void AddRecipe(RecipeModel recipe) throws SQLException, FileNotFoundException {
+    public static void AddRecipe(RecipeModel recipe, int flag) throws SQLException, FileNotFoundException {
         Statement stmt;
         PreparedStatement preparedStatement;
         try{
             stmt = ConnectionDB.getConnection();
             preparedStatement= ConnectionDB.addRecipe();
-            preparedStatement.setString(1, recipe.getRecipeName());
-            preparedStatement.setString(2, recipe.getDescription());
-            preparedStatement.setString(3, recipe.getChefName());
-            preparedStatement.setString(4, recipe.getPath());
+            if( flag == 1){
+                preparedStatement.setString(1, recipe.getRecipeName());
+                preparedStatement.setString(2, recipe.getDescription());
+                preparedStatement.setString(3, recipe.getChefName());
+                preparedStatement.setString(4, recipe.getPath());
+            }else{
+                preparedStatement.setString(1, recipe.getRecipeName());
+                preparedStatement.setString(2, recipe.getDescription());
+                preparedStatement.setString(3, recipe.getChefName());
+                preparedStatement.setString(4, null);
+            }
 
             preparedStatement.executeUpdate();
         }catch(SQLException | ConnectionDbException e){
@@ -41,7 +48,7 @@ public class RecipeDAO {
         while(resultSet.next()){
             recipeId = resultSet.getInt(1);
         }
-        System.out.print(recipeId);
+
         }catch(SQLException | ConnectionDbException e){
             e.printStackTrace();;
         }

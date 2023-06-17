@@ -4,8 +4,11 @@ import com.example.foodo.controllerappl.SearchProductController;
 import com.example.foodo.engineering.Session.Session;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.SearchBean;
+import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.viewcli.SearchProductViewCLI;
 
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,12 +24,12 @@ public class SearchProductCLIController implements GrapghiCLIController{
 
 
     @Override
-    public void start() {
+    public void start() throws SQLException, ConnectionDbException, FileNotFoundException {
         this.searchProductViewCLI = new SearchProductViewCLI(this);
         this.searchProductViewCLI.run();
     }
 
-    public void executeCommand(String inputLine) {
+    public void executeCommand(String inputLine) throws SQLException, ConnectionDbException, FileNotFoundException {
         switch(inputLine){
             case SEARCHNAME -> {
                 this.searchProductViewCLI.searchName();

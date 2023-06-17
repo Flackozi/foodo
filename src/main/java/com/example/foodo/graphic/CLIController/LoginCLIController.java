@@ -3,11 +3,11 @@ package com.example.foodo.graphic.CLIController;
 import com.example.foodo.controllerappl.LoginController;
 import com.example.foodo.engineering.Utils.ExceptionController;
 import com.example.foodo.engineering.bean.LoginBean;
-import com.example.foodo.engineering.exception.CommandNotValidException;
-import com.example.foodo.engineering.exception.NonUsableFunctionException;
-import com.example.foodo.engineering.exception.NotFoundException;
-import com.example.foodo.engineering.exception.UserNotFoundException;
+import com.example.foodo.engineering.exception.*;
 import com.example.foodo.graphic.viewcli.LoginViewCLI;
+
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
 
 public class LoginCLIController implements GrapghiCLIController{
     private static final String LOGIN = "1";
@@ -28,7 +28,7 @@ public class LoginCLIController implements GrapghiCLIController{
         }
     }
 
-    public void checkLogin (String username, String password) throws NotFoundException, UserNotFoundException {
+    public void checkLogin (String username, String password) throws NotFoundException, UserNotFoundException, SQLException, ConnectionDbException, FileNotFoundException {
         try{
             LoginBean loginBean= new LoginBean(username, password);
             LoginController loginController= new LoginController();

@@ -9,6 +9,7 @@ import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.viewcli.PantryViewCLI;
 import com.example.foodo.engineering.Session.Session;
 
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ public class PantryCLIController implements GrapghiCLIController {
     private UserBean userBean;
     private ChefBean chefBean;
     @Override
-    public void start() {
+    public void start() throws SQLException, ConnectionDbException, FileNotFoundException {
         this.pantryViewCLI = new PantryViewCLI(this);
         this.pantryViewCLI.run();
     }
@@ -35,7 +36,7 @@ public class PantryCLIController implements GrapghiCLIController {
         return productBeans;
     }
 
-    public void executeCommand(String inputLine) throws CommandNotValidException {
+    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException {
         switch(inputLine){
             case NEWPRODUCT ->{
                 AddProductCLIController addProductCLIController=new AddProductCLIController();

@@ -6,6 +6,7 @@ import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.CLIController.PantryCLIController;
 
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ public class PantryViewCLI {
     }
 
 
-    public void run() {
+    public void run() throws SQLException, ConnectionDbException, FileNotFoundException {
         Printer.printMessage("\n-------------------------------------------- PANTRY PAGE --------------------------------------------");
         Printer.printMessage("\n Product in pantry:");
         List<ProductBean> productBeanList= new ArrayList<>();

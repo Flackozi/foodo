@@ -1,7 +1,11 @@
 package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.engineering.exception.CommandNotValidException;
+import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.viewcli.ChefViewCLI;
+
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
 
 public class ChefCLIController {
     ChefViewCLI chefViewCLI;
@@ -11,12 +15,12 @@ public class ChefCLIController {
     private static final String MYRECIPES="4";
 
 
-    public void start() {
+    public void start() throws FileNotFoundException {
         this.chefViewCLI = new ChefViewCLI(this);
         this.chefViewCLI.run();
     }
 
-    public void executeCommand(String inputLine) throws CommandNotValidException {
+    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException {
         switch(inputLine){
             case PANTRY -> {
                 PantryCLIController pantryCLIController=new PantryCLIController();

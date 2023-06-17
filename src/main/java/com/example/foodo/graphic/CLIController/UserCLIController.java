@@ -1,7 +1,11 @@
 package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.engineering.exception.CommandNotValidException;
+import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.viewcli.UserViewCLI;
+
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
 
 public class UserCLIController implements GrapghiCLIController{
     private static final String PANTRY="1";
@@ -11,12 +15,12 @@ public class UserCLIController implements GrapghiCLIController{
     UserViewCLI userViewCLI;
 
     @Override
-    public void start() {
+    public void start() throws SQLException, ConnectionDbException, FileNotFoundException {
         this.userViewCLI= new UserViewCLI(this);
         this.userViewCLI.run();
     }
 
-    public void executeCommand(String inputLine) throws CommandNotValidException {
+    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException {
         switch(inputLine){
             case PANTRY -> {
                 PantryCLIController pantryCLIController=new PantryCLIController();

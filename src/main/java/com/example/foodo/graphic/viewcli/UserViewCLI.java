@@ -1,10 +1,13 @@
 package com.example.foodo.graphic.viewcli;
 
+import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.CLIController.UserCLIController;
 import com.example.foodo.engineering.Utils.ExceptionController;
 import com.example.foodo.engineering.Utils.Printer;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class UserViewCLI {
@@ -13,7 +16,7 @@ public class UserViewCLI {
     public UserViewCLI(UserCLIController userCLIController) {
         this.userCLIController=userCLIController;
     }
-    public void run() {
+    public void run() throws SQLException, ConnectionDbException, FileNotFoundException {
         Printer.printMessage("\n-------------------------------------------- USER HOMEPAGE --------------------------------------------");
         Printer.printMessage(" 1) Pantry \n 2) Profile \n 3) Kitchen \n 4) Mychef \n");
         Scanner scanner = new Scanner(System.in);

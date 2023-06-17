@@ -1,8 +1,11 @@
 package com.example.foodo.graphic.viewcli;
 
 import com.example.foodo.engineering.Utils.Printer;
+import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.CLIController.SearchProductCLIController;
 
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -21,7 +24,7 @@ public class SearchProductViewCLI {
         this.searchProductCLIController = searchProductCLIController;
     }
 
-    public void run() {
+    public void run() throws SQLException, ConnectionDbException, FileNotFoundException {
         Printer.printMessage("\n-------------------------------------------- SEARCH PRODUCT PAGE --------------------------------------------");
         Printer.printMessage("\n 1)Insert the name \n 2)Filter your search \n 3)Pantry \n 4)Return to home page");
         Scanner scanner = new Scanner(System.in);
