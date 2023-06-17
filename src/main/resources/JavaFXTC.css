@@ -14,12 +14,6 @@
   -fx-border-color: #ffffff;
   -fx-text-fill: #000000;
 }
-.table-row-cell:selected {
-   -fx-background-color: whitesmoke; 
-   -fx-text-background-color: #22cccc;
-   
-       
-}
 
 /* scroll bar starts here */
 
@@ -31,23 +25,10 @@
 }
 
 /* The main scrollbar **track** CSS class  */
-.table-view .scroll-bar:horizontal .track,
-.table-view .scroll-bar:vertical .track{
-	-fx-background-color: #22cccc;
-	-fx-border-color:derive( #22cccc,80%);
 
-	-fx-background-radius: 2em;
-	-fx-border-radius:2em;
-}
 
 /* The main scrollbar **thumb** CSS class which we drag every time (movable) */
-.table-view .scroll-bar:horizontal .thumb,
-.table-view .scroll-bar:vertical .thumb {
-    -fx-background-color:derive( #22cccc,90%);
-	-fx-background-insets: 2, 0, 0;
-	-fx-background-radius: 2em;
 
-}
 
 /* chart properties */
 
