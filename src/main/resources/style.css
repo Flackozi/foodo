@@ -12,7 +12,7 @@
 }
 
 
-.button1:pressed {
+.button1:focused {
     -fx-background-color: #19E1E1;
 }
 
