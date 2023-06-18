@@ -59,9 +59,12 @@ public class AddRecipeViewCLI {
         Printer.printMessage("Insert description:");
         inputLine= scanner.nextLine();
         String description=inputLine;
+        Printer.printMessage("Insert image path:");
+        String path=scanner.nextLine();
         RecipeBean recipeBean = new RecipeBean();
         recipeBean.setRecipeName(nameR);
         recipeBean.setDescription(description);
+        recipeBean.setPath(path);
         ChefBean chefBean=new ChefBean();
         chefBean= Session.getCurrentSession().getChefBean();
         recipeBean.setChefName(chefBean.getUsername());

@@ -19,17 +19,17 @@ public class RecipeDAO {
         try{
             stmt = ConnectionDB.getConnection();
             preparedStatement= ConnectionDB.addRecipe();
-            if( flag == 1){
-                preparedStatement.setString(1, recipe.getRecipeName());
-                preparedStatement.setString(2, recipe.getDescription());
-                preparedStatement.setString(3, recipe.getChefName());
-                preparedStatement.setString(4, recipe.getPath());
-            }else{
-                preparedStatement.setString(1, recipe.getRecipeName());
-                preparedStatement.setString(2, recipe.getDescription());
-                preparedStatement.setString(3, recipe.getChefName());
-                preparedStatement.setString(4, null);
-            }
+//            if( flag == 1){
+            preparedStatement.setString(1, recipe.getRecipeName());
+            preparedStatement.setString(2, recipe.getDescription());
+            preparedStatement.setString(3, recipe.getChefName());
+            preparedStatement.setString(4, recipe.getPath());
+//            }else{
+//                preparedStatement.setString(1, recipe.getRecipeName());
+//                preparedStatement.setString(2, recipe.getDescription());
+//                preparedStatement.setString(3, recipe.getChefName());
+//                preparedStatement.setString(4, null);
+//            }
 
             preparedStatement.executeUpdate();
         }catch(SQLException | ConnectionDbException e){
