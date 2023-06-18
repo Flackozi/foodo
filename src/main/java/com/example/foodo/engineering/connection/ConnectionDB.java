@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.*;
+import java.util.Objects;
 import java.util.Properties;
 
 //usato il pattern singleton
@@ -69,7 +70,7 @@ public class ConnectionDB {
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
-            fileInputStream.close();
+            Objects.requireNonNull(fileInputStream).close();
         }
 
     }
