@@ -71,6 +71,7 @@ public class ProfileControllerGUI {
         Image image= new Image(userBean.getPath());
 
         userImg.setImage(image);
+
     }
 
     public void setChefInfoProfile(ChefBean chefBean) throws IOException {

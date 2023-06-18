@@ -20,6 +20,7 @@ import java.util.List;
 public class MyChefCLIController implements  GrapghiCLIController{
 
     private static final String BACK="1";
+    private static final String REVIEW="2";
     MyChefViewCLI myChefViewCLI;
     @Override
     public void start() throws SQLException, ConnectionDbException, FileNotFoundException {
@@ -41,18 +42,31 @@ public class MyChefCLIController implements  GrapghiCLIController{
         }
     }
 
+
+
     public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException {
         switch(inputLine){
             case BACK -> {
-                if(Session.getCurrentSession().getUserBean()!= null){
-                    UserCLIController userCLIController= new UserCLIController();
-                    userCLIController.start();
-                }else{
-                    ChefCLIController chefCLIController = new ChefCLIController();
-                    chefCLIController.start();
-                }
+//                if(Session.getCurrentSession().getUserBean()!= null){
+//                    UserCLIController userCLIController= new UserCLIController();
+//                    userCLIController.start();
+//                }else{
+//                    ChefCLIController chefCLIController = new ChefCLIController();
+//                    chefCLIController.start();
+//                }
+                UserCLIController userCLIController= new UserCLIController();
+                userCLIController.start();
+            } case REVIEW -> {
+                this.myChefViewCLI.leaveReview();
+                UserCLIController userCLIController= new UserCLIController();
+                userCLIController.start();
             }
             default -> throw new CommandNotValidException();
         }
+    }
+
+    public void leaveReview(String rate, String name) {
+        RecipeDetController recipeDetController= new RecipeDetController();
+        recipeDetController.setRate(Integer.parseInt(rate), name);
     }
 }

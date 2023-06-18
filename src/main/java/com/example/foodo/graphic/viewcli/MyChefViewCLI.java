@@ -23,7 +23,7 @@ public class MyChefViewCLI {
     public void run() throws SQLException, ConnectionDbException, FileNotFoundException {
         Printer.printMessage("\n-------------------------------------------- MY CHEF PAGE --------------------------------------------");
         this.myChefCLIController.retrieveRecipe();
-        Printer.printMessage("\n1) Return to home page");
+        Printer.printMessage("\n1) Return to home page \n2) Leave a review");
         List<IngredientBean> ingredientBeans;
         Scanner scanner= new Scanner(System.in);
         String inputLine= scanner.nextLine();
@@ -43,5 +43,19 @@ public class MyChefViewCLI {
             Printer.printIngredient(i+1, productBeans.get(i).getName(), productBeans.get(i).getSquantity());
         }
         Printer.printInfo(description, average);
+    }
+
+    public void leaveReview(){
+        Scanner scanner;
+        String name;
+        String rate;
+        Printer.printMessage("Recipe name:");
+        scanner= new Scanner(System.in);
+        name= scanner.nextLine();
+        Printer.printMessage("Leave a grade from 1 to 5");
+        scanner=new Scanner(System.in);
+        rate= scanner.nextLine();
+        this.myChefCLIController.leaveReview(rate, name);
+
     }
 }
