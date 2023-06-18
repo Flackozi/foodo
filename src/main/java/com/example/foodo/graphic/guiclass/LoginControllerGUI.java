@@ -95,7 +95,7 @@ public class LoginControllerGUI {
             }else
                 throw new UserNotFoundException();
 
-        }catch( NotFoundException | UserNotFoundException  e){
+        }catch(UserNotFoundException  e){
             ExceptionController.showExceptionGUI(e.getMessage());
         }catch(IOException e){
             e.printStackTrace();

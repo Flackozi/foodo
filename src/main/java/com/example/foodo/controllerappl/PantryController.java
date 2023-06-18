@@ -23,9 +23,9 @@ public class PantryController {
         UserBean userBean= Session.getCurrentSession().getUserBean();
         ChefBean chefBean=Session.getCurrentSession().getChefBean();
         if(userBean!=null){
-            productDAO.InsProduct(productModel, userBean.getUsername());
+            ProductDAO.InsProduct(productModel, userBean.getUsername());
         } else if (chefBean!=null) {
-            productDAO.InsProduct(productModel, chefBean.getUsername());
+            ProductDAO.InsProduct(productModel, chefBean.getUsername());
         }
 
 

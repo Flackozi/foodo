@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class Main extends Application {
     private static Stage stage;
-    private static Stage CLIStage;
+    private static Stage clistage;
 
 
 
@@ -31,12 +31,12 @@ public class Main extends Application {
     public static Stage getStage(){
         return stage;
     }
-    public static Stage getCLIStage() {
-        return CLIStage;
+    public static Stage getClistage() {
+        return clistage;
     }
 
-    public static void setCLIStage(Stage CLIStage) {
-        Main.CLIStage = CLIStage;
+    public static void setClistage(Stage clistage) {
+        Main.clistage = clistage;
     }
     public static void main(String[] args) throws ConnectionDbException {
         ConnectionDB.getConnection();

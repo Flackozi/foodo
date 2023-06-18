@@ -28,7 +28,7 @@ public class LoginCLIController implements GrapghiCLIController{
         }
     }
 
-    public void checkLogin (String username, String password) throws NotFoundException, UserNotFoundException, SQLException, ConnectionDbException, FileNotFoundException {
+    public void checkLogin (String username, String password) throws SQLException, ConnectionDbException, FileNotFoundException {
         try{
             LoginBean loginBean= new LoginBean(username, password);
             LoginController loginController= new LoginController();
@@ -45,7 +45,7 @@ public class LoginCLIController implements GrapghiCLIController{
             }else{
                 throw new UserNotFoundException();
             }
-        }catch(UserNotFoundException | NotFoundException e){
+        }catch(UserNotFoundException e){
             ExceptionController.showExceptionCLI(e.getMessage());
             start();
         }

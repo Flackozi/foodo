@@ -30,7 +30,7 @@ public class ProfileController {
         try{
             ChefDAO chefDAO= ChefDAOFactory.getInstance().getChefDAO();
             ChefModel chefModel = chefDAO.retrieveChefByUsername(chefBean.getUsername());
-            setChefInfo(chefBean, chefModel.getTypeOfCuisine(), chefModel.getWorkplace(), chefModel.getEmail(), chefModel.getNumber(), chefModel.getLocation(), chefModel.getPath(),1);
+            setChefInfo(chefBean, chefModel.getTypeOfCuisine(), chefModel.getWorkplace(), chefModel.getEmail(), chefModel.getNumber(), chefModel.getLocation(), chefModel.getPath());
 
         } catch(Exception e){
             e.printStackTrace();
@@ -38,7 +38,7 @@ public class ProfileController {
         return chefBean;
     }
 
-    private void setUserInfo(UserBean userBean, String favoriteFood, String typeOfDiet, String path, int userType) throws IOException {
+    private void setUserInfo(UserBean userBean, String favoriteFood, String typeOfDiet, String path, int userType){
         userBean.setUserFavoriteFoodBean(favoriteFood);
         userBean.setUserTypeOfDietBean(typeOfDiet);
         userBean.setUserProfileTypeBean(userType);
@@ -51,7 +51,7 @@ public class ProfileController {
     }
 
 
-    private void setChefInfo(ChefBean chefBean , String typeOfCuisine, String workplace, String email, String number, String location, String path, int userType) throws IOException {
+    private void setChefInfo(ChefBean chefBean , String typeOfCuisine, String workplace, String email, String number, String location, String path) {
         chefBean.setTypeOfCuisine(typeOfCuisine);
         chefBean.setWorkplace(workplace);
         chefBean.setEmail(email);

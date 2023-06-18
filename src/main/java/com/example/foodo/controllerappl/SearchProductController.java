@@ -39,18 +39,18 @@ public class SearchProductController {
         }
 
         String type;
-        if(text.isBlank()!=true){
+        if(!text.isBlank()){
             ProductModel productModel= new ProductModel();
-            productModel=searchDAO.retriveBySearchText(text);
+            productModel= SearchDAO.retriveBySearchText(text);
             ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
             productBeans.add(productBean);
         }else{
-            if(searchModel.getSpices() == true){
+            if(searchModel.getSpices()){
                 type = "spices";
                 int i = 0;
 
                 List<ProductModel> spicesModels = new ArrayList<>();
-                spicesModels = searchDAO.retriveByTypeOfFood(type, userName);
+                spicesModels = SearchDAO.retriveByTypeOfFood(type, userName);
                 int length = spicesModels.size();
                 do{
                     ProductModel productModel = spicesModels.get(i);
@@ -60,12 +60,12 @@ public class SearchProductController {
                 }while(i != length);
             }
 
-            if(searchModel.getFruit() == true){
+            if(searchModel.getFruit()){
                 type = "fruit";
                 int i = 0;
 
                 List<ProductModel> fruitModels = new ArrayList<>();
-                fruitModels = searchDAO.retriveByTypeOfFood(type, userName);
+                fruitModels = SearchDAO.retriveByTypeOfFood(type, userName);
 
                 int length = fruitModels.size();
                 do{
@@ -76,11 +76,11 @@ public class SearchProductController {
                 }while(i != length);
             }
 
-            if(searchModel.getMeat() == true){
+            if(searchModel.getMeat()){
                 int i = 0;
                 type = "meat";
                 List<ProductModel> meatModels = new ArrayList<>();
-                meatModels = searchDAO.retriveByTypeOfFood(type, userName);
+                meatModels = SearchDAO.retriveByTypeOfFood(type, userName);
                 int length = meatModels.size();
                 do{
                     ProductModel productModel = meatModels.get(i);
@@ -90,11 +90,11 @@ public class SearchProductController {
                 }while(i != length);
             }
 
-            if(searchModel.getVegetable() == true){
+            if(searchModel.getVegetable()){
                 type = "vegetable";
                 int i = 0;
                 List<ProductModel> vegetableModels = new ArrayList<>();
-                vegetableModels = searchDAO.retriveByTypeOfFood(type, userName);
+                vegetableModels = SearchDAO.retriveByTypeOfFood(type, userName);
                 int length = vegetableModels.size();
                 do{
                     ProductModel productModel = vegetableModels.get(i);
@@ -104,12 +104,12 @@ public class SearchProductController {
                 }while(i != length);
             }
 
-            if(searchModel.getSweet() == true){
+            if(searchModel.getSweet()){
                 type = "sweet";
                 int i = 0;
 
                 List<ProductModel> sweetModels = new ArrayList<>();
-                sweetModels = searchDAO.retriveByTypeOfFood(type, userName);
+                sweetModels = SearchDAO.retriveByTypeOfFood(type, userName);
                 int length = sweetModels.size();
                 do{
                     ProductModel productModel = sweetModels.get(i);
@@ -119,12 +119,12 @@ public class SearchProductController {
                 }while(i != length);
             }
 
-            if(searchModel.getLiquid() == true){
+            if(searchModel.getLiquid()){
                 type = "liquid";
                 int i = 0;
 
                 List<ProductModel> liquidModels = new ArrayList<>();
-                liquidModels = searchDAO.retriveByTypeOfFood(type, userName);
+                liquidModels = SearchDAO.retriveByTypeOfFood(type, userName);
                 int length = liquidModels.size();
                 do{
                     ProductModel productModel = liquidModels.get(i);
@@ -134,11 +134,11 @@ public class SearchProductController {
                 }while(i != length);
             }
 
-            if(searchModel.getFish() == true){
+            if(searchModel.getFish()){
                 type = "fish";
                 int i = 0;
                 List<ProductModel> fishModels = new ArrayList<>();
-                fishModels = searchDAO.retriveByTypeOfFood(type, userName);
+                fishModels = SearchDAO.retriveByTypeOfFood(type, userName);
                 int length = fishModels.size();
                 do{
                     ProductModel productModel = fishModels.get(i);
