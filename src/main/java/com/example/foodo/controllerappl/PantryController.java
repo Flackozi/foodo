@@ -1,6 +1,6 @@
 package com.example.foodo.controllerappl;
 
-import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.UserBean;
@@ -19,7 +19,6 @@ public class PantryController {
 
         productBean.notifyObservers(productBean);
         ProductModel productModel= new ProductModel(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getDay(), productBean.getMonth(), productBean.getYear());
-        ProductDAO productDAO=new ProductDAO();
         UserBean userBean= Session.getCurrentSession().getUserBean();
         ChefBean chefBean=Session.getCurrentSession().getChefBean();
         if(userBean!=null){

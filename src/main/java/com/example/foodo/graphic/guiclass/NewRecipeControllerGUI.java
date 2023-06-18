@@ -1,9 +1,9 @@
 package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.controllerappl.RecipeController;
-import com.example.foodo.engineering.Session.Session;
-import com.example.foodo.engineering.Utils.ExceptionController;
-import com.example.foodo.engineering.Utils.ImageConverterSupport;
+import com.example.foodo.engineering.session.Session;
+import com.example.foodo.engineering.utils.ExceptionController;
+import com.example.foodo.engineering.utils.ImageConverterSupport;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.IngredientBean;
 import com.example.foodo.engineering.bean.RecipeBean;

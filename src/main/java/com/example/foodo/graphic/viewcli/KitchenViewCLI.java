@@ -1,7 +1,7 @@
 package com.example.foodo.graphic.viewcli;
 
-import com.example.foodo.engineering.Utils.ExceptionController;
-import com.example.foodo.engineering.Utils.Printer;
+import com.example.foodo.engineering.utils.ExceptionController;
+import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.CLIController.KitchenCLIController;

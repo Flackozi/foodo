@@ -46,11 +46,10 @@ public class ChefBean {
     public ChefBean() {}
 
 
-    public ChefBean(String username,String typeOfCuisine, String workplace, int profileType, String email, String number, String location, String path){
+    public ChefBean(String username,String typeOfCuisine, String workplace, String email, String number, String location, String path){
         this.username = username;
         this.typeOfCuisine = typeOfCuisine;
         this.workplace = workplace;
-        this.profileType = profileType;
         this.email = email;
         this.number = number;
         this.location = location;

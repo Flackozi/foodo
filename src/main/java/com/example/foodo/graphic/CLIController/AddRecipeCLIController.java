@@ -1,7 +1,6 @@
 package com.example.foodo.graphic.CLIController;
 
-import com.example.foodo.engineering.Session.Session;
-import com.example.foodo.engineering.bean.RecipeBean;
+import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.viewcli.AddRecipeViewCLI;

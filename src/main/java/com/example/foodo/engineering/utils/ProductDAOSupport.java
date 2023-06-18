@@ -1,4 +1,4 @@
-package com.example.foodo.engineering.Utils;
+package com.example.foodo.engineering.utils;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

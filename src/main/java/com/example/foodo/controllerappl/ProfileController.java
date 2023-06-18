@@ -9,8 +9,6 @@ import com.example.foodo.engineering.pattern.factory.UserDAOFactory;
 import com.example.foodo.model.ChefModel;
 import com.example.foodo.model.UserModel;
 
-import java.io.IOException;
-
 public class ProfileController {
 
 

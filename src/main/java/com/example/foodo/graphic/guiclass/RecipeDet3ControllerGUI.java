@@ -2,7 +2,7 @@ package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.Main;
 import com.example.foodo.controllerappl.RecipeDetController;
-import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import javafx.event.ActionEvent;

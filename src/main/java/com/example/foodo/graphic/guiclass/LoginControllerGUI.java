@@ -1,9 +1,8 @@
 package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.controllerappl.LoginController;
-import com.example.foodo.engineering.Utils.ExceptionController;
+import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.engineering.bean.LoginBean;
-import com.example.foodo.engineering.exception.NotFoundException;
 import com.example.foodo.engineering.exception.UserNotFoundException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

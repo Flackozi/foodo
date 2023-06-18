@@ -3,7 +3,7 @@ package com.example.foodo.graphic.CLIController;
 import com.example.foodo.controllerappl.KitchenController;
 import com.example.foodo.controllerappl.RecipeDetController;
 import com.example.foodo.controllerappl.SearchRecipeController;
-import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.KitchenBean;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.RecipeBean;

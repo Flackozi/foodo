@@ -1,17 +1,15 @@
 package com.example.foodo.graphic.viewcli;
 
 import com.example.foodo.controllerappl.RecipeController;
-import com.example.foodo.engineering.Session.Session;
-import com.example.foodo.engineering.Utils.Printer;
+import com.example.foodo.engineering.session.Session;
+import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.IngredientBean;
 import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.CLIController.AddRecipeCLIController;
-import com.example.foodo.graphic.CLIController.PantryCLIController;
 
-import javax.xml.parsers.SAXParser;
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.ArrayList;

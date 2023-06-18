@@ -1,7 +1,7 @@
 package com.example.foodo.graphic.guiclass;
 
 
-import com.example.foodo.engineering.Utils.ExceptionController;
+import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.engineering.exception.NonUsableFunctionException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

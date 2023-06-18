@@ -1,4 +1,4 @@
-package com.example.foodo.engineering.Session;
+package com.example.foodo.engineering.session;
 
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.ProductBean;

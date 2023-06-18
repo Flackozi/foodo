@@ -1,8 +1,7 @@
-package com.example.foodo.engineering.Utils;
+package com.example.foodo.engineering.utils;
 
 import javafx.scene.image.Image;
 
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
@@ -10,8 +9,6 @@ import javafx.scene.image.WritableImage;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.sql.Blob;
-import java.sql.SQLException;
 
 public class ImageConverterSupport {
 

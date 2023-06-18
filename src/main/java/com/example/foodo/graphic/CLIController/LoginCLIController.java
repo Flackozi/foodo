@@ -1,7 +1,7 @@
 package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.controllerappl.LoginController;
-import com.example.foodo.engineering.Utils.ExceptionController;
+import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.engineering.bean.LoginBean;
 import com.example.foodo.engineering.exception.*;
 import com.example.foodo.graphic.viewcli.LoginViewCLI;

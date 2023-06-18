@@ -1,4 +1,4 @@
-package com.example.foodo.engineering.Utils;
+package com.example.foodo.engineering.utils;
 
 import com.example.foodo.Main;
 import com.example.foodo.graphic.guiclass.AlertControllerGUI;

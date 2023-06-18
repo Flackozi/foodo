@@ -1,29 +1,29 @@
 package com.example.foodo.engineering.bean;
 
 public class IngredientBean {
-    private String IngredientName;
-    private String IngredientQuantity;
+    private String ingredientName;
+    private String ingredientQuantity;
 
     public IngredientBean(String name, String quantity) {
-        this.IngredientName = name;
-        this.IngredientQuantity = quantity;
+        this.ingredientName = name;
+        this.ingredientQuantity = quantity;
     }
 
 
 
     public String getName() {
-        return IngredientName;
+        return ingredientName;
     }
 
     public void setName(String name) {
-        IngredientName = name;
+        ingredientName = name;
     }
 
     public String getQuantity() {
-        return IngredientQuantity;
+        return ingredientQuantity;
     }
 
     public void setQuantity(String quantity) {
-        IngredientQuantity = quantity;
+        ingredientQuantity = quantity;
     }
 }

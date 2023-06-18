@@ -1,7 +1,7 @@
 package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.controllerappl.SearchProductController;
-import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.SearchBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;

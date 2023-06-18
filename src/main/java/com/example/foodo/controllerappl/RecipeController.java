@@ -26,7 +26,6 @@ public class RecipeController {
     }
 
     public void saveIngredients(List<IngredientBean> ingredientBeans) {
-        IngredientDAO ingredientDAO=new IngredientDAO();
         List<IngredientModel> ingredients= new ArrayList<>();
         int i = 0;
         int lenght = ingredientBeans.size();

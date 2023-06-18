@@ -1,7 +1,7 @@
 package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.Main;
-import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ChefBean;
 import javafx.scene.control.ScrollPane;
 import javafx.event.ActionEvent;

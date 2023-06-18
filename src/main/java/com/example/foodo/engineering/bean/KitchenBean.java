@@ -1,6 +1,5 @@
 package com.example.foodo.engineering.bean;
 
-import com.example.foodo.model.KitchenModel;
 
 public class KitchenBean {
 

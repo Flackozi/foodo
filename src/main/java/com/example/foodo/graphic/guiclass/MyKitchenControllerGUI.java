@@ -1,8 +1,8 @@
 package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.controllerappl.KitchenController;
-import com.example.foodo.engineering.Session.Session;
-import com.example.foodo.engineering.Utils.MyListener;
+import com.example.foodo.engineering.session.Session;
+import com.example.foodo.engineering.utils.MyListener;
 import com.example.foodo.engineering.bean.KitchenBean;
 import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;

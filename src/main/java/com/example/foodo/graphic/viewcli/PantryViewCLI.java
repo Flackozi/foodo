@@ -1,6 +1,6 @@
 package com.example.foodo.graphic.viewcli;
 
-import com.example.foodo.engineering.Utils.Printer;
+import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;

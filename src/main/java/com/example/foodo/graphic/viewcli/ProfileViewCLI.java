@@ -1,7 +1,7 @@
 package com.example.foodo.graphic.viewcli;
 
-import com.example.foodo.engineering.Session.Session;
-import com.example.foodo.engineering.Utils.Printer;
+import com.example.foodo.engineering.session.Session;
+import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
@@ -10,7 +10,6 @@ import com.example.foodo.graphic.CLIController.ProfileCLIController;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
-import java.util.List;
 import java.util.Scanner;
 
 public class ProfileViewCLI {

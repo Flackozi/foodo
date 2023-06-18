@@ -1,13 +1,12 @@
 package com.example.foodo.controllerappl;
 
-import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.LoginBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.dao.ChefDAO;
 import com.example.foodo.engineering.dao.LoginDAO;
 import com.example.foodo.engineering.dao.UserDAO;
-import com.example.foodo.engineering.exception.NotFoundException;
 import com.example.foodo.engineering.pattern.factory.ChefDAOFactory;
 import com.example.foodo.engineering.pattern.factory.UserDAOFactory;
 import com.example.foodo.model.UserModel;

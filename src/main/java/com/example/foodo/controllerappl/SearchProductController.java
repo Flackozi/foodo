@@ -1,6 +1,6 @@
 package com.example.foodo.controllerappl;
 
-import com.example.foodo.engineering.Session.Session;
+import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.SearchBean;
@@ -8,8 +8,6 @@ import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.dao.SearchDAO;
 import com.example.foodo.model.ProductModel;
 import com.example.foodo.model.SearchModel;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +24,6 @@ public class SearchProductController {
         Boolean liquid = searchBean.getLiquid();
         Boolean fish = searchBean.getFish();
         SearchModel searchModel = new SearchModel(text, spices, fruit, meat, vegetable, sweet, liquid, fish);
-        SearchDAO searchDAO = new SearchDAO();
         List<ProductBean> productBeans = new ArrayList<>();
         //mi setto una variabile userName per passare il nome dell'utente alla DAO
         UserBean userBean= Session.getCurrentSession().getUserBean();
@@ -45,7 +42,7 @@ public class SearchProductController {
             ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
             productBeans.add(productBean);
         }else{
-            if(searchModel.getSpices()){
+            if(Boolean.TRUE.equals(searchModel.getSpices())){
                 type = "spices";
                 int i = 0;
 
@@ -60,7 +57,7 @@ public class SearchProductController {
                 }while(i != length);
             }
 
-            if(searchModel.getFruit()){
+            if(Boolean.TRUE.equals(searchModel.getFruit())){
                 type = "fruit";
                 int i = 0;
 
@@ -76,7 +73,7 @@ public class SearchProductController {
                 }while(i != length);
             }
 
-            if(searchModel.getMeat()){
+            if(Boolean.TRUE.equals(searchModel.getMeat())){
                 int i = 0;
                 type = "meat";
                 List<ProductModel> meatModels = new ArrayList<>();
@@ -90,7 +87,7 @@ public class SearchProductController {
                 }while(i != length);
             }
 
-            if(searchModel.getVegetable()){
+            if(Boolean.TRUE.equals(searchModel.getVegetable())){
                 type = "vegetable";
                 int i = 0;
                 List<ProductModel> vegetableModels = new ArrayList<>();

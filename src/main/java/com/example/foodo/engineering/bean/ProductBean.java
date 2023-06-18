@@ -3,21 +3,20 @@ package com.example.foodo.engineering.bean;
 import com.example.foodo.engineering.pattern.observer.Subject;
 
 public class ProductBean extends Subject {
-    private String Name;
-    private String Squantity;
-    private int Quantity;
-    private String TypeOfFood;
+    private String name;
+    private String squantity;
+    private int quantity;
+    private String typeOfFood;
     private int day;
     private int month;
     private int year;
-    private String Expiration;
+    private String expiration;
 
-    public ProductBean(String name, int quantity, String TypeOfFood, int expirationDay, int expirationMonth, int expirationYear) {
-    }
-    public ProductBean(String name, int quantity, String TypeOfFood, String expiration) {
+
+    public ProductBean(String name, int quantity, String typeOfFood, String expiration) {
         this.setName(name);
         this.setQuantity(quantity);
-        this.setTypeOfFood(TypeOfFood);
+        this.setTypeOfFood(typeOfFood);
         this.setExpiration(expiration);
     }
     public ProductBean(String name, int quantity) {
@@ -25,12 +24,12 @@ public class ProductBean extends Subject {
         this.setQuantity(quantity);
     }
 
-    public ProductBean(String name, String Squantity){
+    public ProductBean(String name, String squantity){
         this.setName(name);
-        this.setSquantity(Squantity);
+        this.setSquantity(squantity);
     }
     public ProductBean (String name){
-        this.Name=name;
+        this.name =name;
     }
     public ProductBean(){}
 
@@ -59,40 +58,40 @@ public class ProductBean extends Subject {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        this.Name = name;
+        this.name = name;
     }
 
     public int getQuantity() {
-        return Quantity;
+        return quantity;
     }
 
     public void setQuantity(int squantity) {
-        this.Quantity = squantity;
+        this.quantity = squantity;
     }
 
     public String getTypeOfFood() {
-        return TypeOfFood;
+        return typeOfFood;
     }
 
     public void setTypeOfFood(String typeOfFood) {
-        this.TypeOfFood = typeOfFood;
+        this.typeOfFood = typeOfFood;
     }
     public String getExpiration() {
-        return Expiration;
+        return expiration;
     }
 
     public void setExpiration(String expiration) {
-        this.Expiration = expiration;
+        this.expiration = expiration;
     }
 
     public void setSquantity(String quantity) {
-        this.Squantity = quantity;
+        this.squantity = quantity;
     }
     public String getSquantity() {
-        return Squantity;
+        return squantity;
     }
 }

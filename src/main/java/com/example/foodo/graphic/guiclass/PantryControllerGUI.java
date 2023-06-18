@@ -1,12 +1,11 @@
 package com.example.foodo.graphic.guiclass;
 import com.example.foodo.controllerappl.PantryController;
-import com.example.foodo.engineering.Session.Session;
-import com.example.foodo.engineering.Utils.ExceptionController;
+import com.example.foodo.engineering.session.Session;
+import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.dao.ProductDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.engineering.pattern.observer.Observer;
-import com.example.foodo.model.ProductModel;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
