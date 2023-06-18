@@ -3,6 +3,7 @@ package com.example.foodo.engineering.connection;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
@@ -57,12 +58,20 @@ public class ConnectionDB {
 
     }
 
-    private static Properties loadProperties() throws IOException{
-        Properties properties= new Properties();
-        FileInputStream fileInputStream= new FileInputStream("src/main/java/com/example/foodo/engineering/connection/connection.properties.properties");
-        properties.load(fileInputStream);
-        fileInputStream.close();
-        return properties;
+    private static Properties loadProperties() throws IOException {
+        FileInputStream fileInputStream = null;
+        try{
+            Properties properties= new Properties();
+            fileInputStream= new FileInputStream("src/main/java/com/example/foodo/engineering/connection/connection.properties.properties");
+            properties.load(fileInputStream);
+
+            return properties;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            fileInputStream.close();
+        }
+
     }
 
     public static PreparedStatement insertProduct() throws SQLException{
