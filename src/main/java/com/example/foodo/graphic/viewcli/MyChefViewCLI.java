@@ -1,5 +1,6 @@
 package com.example.foodo.graphic.viewcli;
 
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.bean.IngredientBean;
 import com.example.foodo.engineering.bean.ProductBean;
@@ -19,7 +20,7 @@ public class MyChefViewCLI {
         this.myChefCLIController = myChefCLIController;
     }
 
-    public void run() throws SQLException, ConnectionDbException, FileNotFoundException {
+    public void run() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         Printer.printMessage("\n-------------------------------------------- MY CHEF PAGE --------------------------------------------");
         this.myChefCLIController.retrieveRecipe();
         Printer.printMessage("\n1) Return to home page \n2) Leave a review");

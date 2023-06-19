@@ -1,6 +1,7 @@
 package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.controllerappl.SearchProductController;
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.SearchBean;
@@ -24,12 +25,12 @@ public class SearchProductCLIController implements GrapghiCLIController{
 
 
     @Override
-    public void start() throws SQLException, ConnectionDbException, FileNotFoundException {
+    public void start() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         this.searchProductViewCLI = new SearchProductViewCLI(this);
         this.searchProductViewCLI.run();
     }
 
-    public void executeCommand(String inputLine) throws SQLException, ConnectionDbException, FileNotFoundException {
+    public void executeCommand(String inputLine) throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         switch(inputLine){
             case SEARCHNAME -> {
                 this.searchProductViewCLI.searchName();
@@ -53,7 +54,7 @@ public class SearchProductCLIController implements GrapghiCLIController{
 
     }
 
-    public void searchName(String name, boolean spices, boolean fruit, boolean meat, boolean vegetable, boolean sweet, boolean liquid, boolean fish) {
+    public void searchName(String name, boolean spices, boolean fruit, boolean meat, boolean vegetable, boolean sweet, boolean liquid, boolean fish) throws ProductNotFoundException {
         SearchBean searchBean= new SearchBean(name, spices, fruit, meat, vegetable, sweet, liquid, fish);
         List<ProductBean> productBeanList= new ArrayList<>();
         SearchProductController searchProductController= new SearchProductController();

@@ -4,6 +4,8 @@ import com.example.foodo.engineering.connection.ConnectionDB;
 import com.example.foodo.engineering.dao.queries.BasicQueries;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.engineering.exception.NotFoundException;
+import com.example.foodo.engineering.exception.ProductNotFoundException;
+import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.model.ProductModel;
 import com.example.foodo.model.SearchModel;
 import javafx.collections.FXCollections;
@@ -26,18 +28,25 @@ public class SearchDAO {
             resultSet.next();
             resultSet.first();
 
-            do{
-                int expDay = resultSet.getInt("expirationDay");
-                int expMonth = resultSet.getInt("expirationMonth");
-                int expYear = resultSet.getInt("expirationYear");
-                String exp = expDay + "/" + expMonth + "/" + expYear;
-                productModel.setName(resultSet.getString("name"));
-                productModel.setQuantity(resultSet.getString("quantity"));
-                productModel.setTypeOfFood(resultSet.getString("type"));
-                productModel.setExpiration(exp);
-            }while(resultSet.next());
-        }catch(SQLException | ConnectionDbException e){
-            e.printStackTrace();;
+            if(resultSet != null){
+                do{
+                    int expDay = resultSet.getInt("expirationDay");
+                    int expMonth = resultSet.getInt("expirationMonth");
+                    int expYear = resultSet.getInt("expirationYear");
+                    String exp = expDay + "/" + expMonth + "/" + expYear;
+                    productModel.setName(resultSet.getString("name"));
+                    productModel.setQuantity(resultSet.getString("quantity"));
+                    productModel.setTypeOfFood(resultSet.getString("type"));
+                    productModel.setExpiration(exp);
+                }while(resultSet.next());
+            }else{
+                throw new ProductNotFoundException();
+            }
+
+
+        }catch(SQLException | ConnectionDbException | ProductNotFoundException e){
+            ExceptionController.showExceptionGUI(e.getMessage());
+
         }
         return productModel;
     }

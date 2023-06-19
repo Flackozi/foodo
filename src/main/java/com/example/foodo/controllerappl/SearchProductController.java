@@ -1,11 +1,13 @@
 package com.example.foodo.controllerappl;
 
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.SearchBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.dao.SearchDAO;
+import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.model.ProductModel;
 import com.example.foodo.model.SearchModel;
 
@@ -13,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchProductController {
-    public List<ProductBean> searchProduct(SearchBean searchBean){
+    public List<ProductBean> searchProduct(SearchBean searchBean) throws ProductNotFoundException{
 
         String text = searchBean.getSearchText();
         Boolean spices = searchBean.getSpices();
@@ -35,13 +37,14 @@ public class SearchProductController {
             userName= chefBean.getUsername();
         }
 
-        String type;
-        if(!text.isBlank()){
-            ProductModel productModel= new ProductModel();
-            productModel= SearchDAO.retriveBySearchText(text);
-            ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
-            productBeans.add(productBean);
-        }
+        try{
+            String type;
+            if(!text.isBlank()){
+                ProductModel productModel= new ProductModel();
+                productModel= SearchDAO.retriveBySearchText(text);
+                ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
+                productBeans.add(productBean);
+            }
             if(Boolean.TRUE.equals(searchModel.getSpices())){
                 type = "spices";
                 int i = 0;
@@ -144,6 +147,15 @@ public class SearchProductController {
                     productBeans.add(productBean);
                 }while(i != length);
             }
+
+            if(productBeans.isEmpty()){
+                throw new ProductNotFoundException();
+            }
+        }catch (ProductNotFoundException e){
+            ExceptionController.showExceptionGUI(e.getMessage());
+
+        }
+
 
 
 

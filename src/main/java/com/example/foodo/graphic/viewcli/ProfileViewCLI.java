@@ -1,5 +1,6 @@
 package com.example.foodo.graphic.viewcli;
 
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.bean.ChefBean;
@@ -22,7 +23,7 @@ public class ProfileViewCLI {
         this.profileCLIController = profileCLIController;
     }
 
-    public void run() throws SQLException, ConnectionDbException {
+    public void run() throws SQLException, ConnectionDbException, ProductNotFoundException {
         Printer.printMessage("\n-------------------------------------------- PROFILE PAGE --------------------------------------------");
         Printer.printMessage("\n INFORMATION:");
         Scanner scanner = new Scanner(System.in);

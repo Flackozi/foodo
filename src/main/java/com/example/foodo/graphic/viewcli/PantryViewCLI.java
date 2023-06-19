@@ -1,5 +1,6 @@
 package com.example.foodo.graphic.viewcli;
 
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
@@ -21,7 +22,7 @@ public class PantryViewCLI {
     }
 
 
-    public void run() throws SQLException, ConnectionDbException, FileNotFoundException {
+    public void run() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         Printer.printMessage("\n-------------------------------------------- PANTRY PAGE --------------------------------------------");
         Printer.printMessage("\n Product in pantry:");
         List<ProductBean> productBeanList= new ArrayList<>();

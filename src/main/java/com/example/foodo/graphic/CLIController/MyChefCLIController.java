@@ -6,6 +6,7 @@ import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.graphic.viewcli.MyChefViewCLI;
 
 import java.io.FileNotFoundException;
@@ -19,7 +20,7 @@ public class MyChefCLIController implements  GrapghiCLIController{
     private static final String REVIEW="2";
     MyChefViewCLI myChefViewCLI;
     @Override
-    public void start() throws SQLException, ConnectionDbException, FileNotFoundException {
+    public void start() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         this.myChefViewCLI= new MyChefViewCLI(this);
         this.myChefViewCLI.run();
     }
@@ -40,7 +41,7 @@ public class MyChefCLIController implements  GrapghiCLIController{
 
 
 
-    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException {
+    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         switch(inputLine){
             case BACK -> {
 //                if(Session.getCurrentSession().getUserBean()!= null){

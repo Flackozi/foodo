@@ -3,6 +3,7 @@ package com.example.foodo.graphic.CLIController;
 import com.example.foodo.controllerappl.KitchenController;
 import com.example.foodo.controllerappl.RecipeDetController;
 import com.example.foodo.controllerappl.SearchRecipeController;
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.KitchenBean;
 import com.example.foodo.engineering.bean.ProductBean;
@@ -25,12 +26,12 @@ public class KitchenCLIController implements GrapghiCLIController{
     private static final String BACK="3";
 
     @Override
-    public void start() throws FileNotFoundException {
+    public void start() throws FileNotFoundException, ProductNotFoundException {
         this.kitchenViewCLI= new KitchenViewCLI(this);
         this.kitchenViewCLI.run();
     }
 
-    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException {
+    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         switch(inputLine){
             case INSERTINGREDIENT -> {
                 this.kitchenViewCLI.insertIngredient();

@@ -2,6 +2,7 @@ package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.controllerappl.MyRecipeController;
 import com.example.foodo.controllerappl.RecipeDetController;
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.RecipeBean;
@@ -20,7 +21,7 @@ public class MyRecipesCLIController implements GrapghiCLIController {
     private static final String ADDRECIPE="2";
 
     @Override
-    public void start() throws SQLException, ConnectionDbException, FileNotFoundException {
+    public void start() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         this.myRecipesViewCLI = new MyRecipesViewCLI(this);
         this.myRecipesViewCLI.run();
     }
@@ -41,7 +42,7 @@ public class MyRecipesCLIController implements GrapghiCLIController {
     }
 
 
-    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException {
+    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         switch(inputLine){
             case BACK -> {
                 if(Session.getCurrentSession().getUserBean()!= null){

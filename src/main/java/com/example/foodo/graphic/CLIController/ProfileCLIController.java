@@ -1,6 +1,7 @@
 package com.example.foodo.graphic.CLIController;
 
 import com.example.foodo.controllerappl.ProfileController;
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
@@ -16,7 +17,7 @@ public class ProfileCLIController implements GrapghiCLIController {
     private static final String BACKHOME = "1";
 
     @Override
-    public void start() throws SQLException, ConnectionDbException {
+    public void start() throws SQLException, ConnectionDbException, ProductNotFoundException {
         this.profileViewCLI = new ProfileViewCLI(this);
         this.profileViewCLI.run();
     }
@@ -26,7 +27,7 @@ public class ProfileCLIController implements GrapghiCLIController {
         return profileController.getUserInfo(userBean);
     }
 
-    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException {
+    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         switch(inputLine){
             case BACKHOME -> {
                 if(Session.getCurrentSession().getUserBean()!= null){

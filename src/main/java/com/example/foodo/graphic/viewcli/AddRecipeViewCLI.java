@@ -1,6 +1,7 @@
 package com.example.foodo.graphic.viewcli;
 
 import com.example.foodo.controllerappl.RecipeController;
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.bean.ChefBean;
@@ -26,7 +27,7 @@ public class AddRecipeViewCLI {
     }
 
 
-    public void run() throws SQLException, ConnectionDbException, FileNotFoundException {
+    public void run() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         int flag = 2;
         Printer.printMessage("\n-------------------------------------------- ADD NEW RECIPE --------------------------------------------");
         Scanner scanner= new Scanner(System.in);

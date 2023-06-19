@@ -28,7 +28,7 @@ public class LoginCLIController implements GrapghiCLIController{
         }
     }
 
-    public void checkLogin (String username, String password) throws SQLException, ConnectionDbException, FileNotFoundException {
+    public void checkLogin (String username, String password) throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         try{
             LoginBean loginBean= new LoginBean(username, password);
             LoginController loginController= new LoginController();

@@ -1,5 +1,6 @@
 package com.example.foodo.graphic.viewcli;
 
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.exception.CommandNotValidException;
@@ -17,7 +18,7 @@ public class ChefViewCLI {
         this.chefCLIController = chefCLIController;
     }
 
-    public void run() throws FileNotFoundException {
+    public void run() throws FileNotFoundException, ProductNotFoundException {
         Printer.printMessage("\n-------------------------------------------- CHEF HOMEPAGE --------------------------------------------");
         Printer.printMessage(" 1) Pantry \n 2) Profile \n 3) Kitchen \n 4) My Recipes \n");
         Scanner scanner = new Scanner(System.in);

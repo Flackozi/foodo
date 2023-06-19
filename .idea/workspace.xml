@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="Sistemazione quantity come string" />
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="Sistemazione quantity come string">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_18_2023_4_15_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_18_2023_4_15_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_19_2023_3_08_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_19_2023_3_08_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/exception/ProductNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/exception/ProductNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/AddRecipeCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/AddRecipeCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/ChefCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/ChefCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/GrapghiCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/GrapghiCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/KitchenCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/KitchenCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/LoginCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/LoginCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/MyChefCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/MyChefCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/MyRecipesCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/MyRecipesCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/PantryCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/PantryCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/ProfileCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/ProfileCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/SearchProductCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/SearchProductCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/UserCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/CLIController/UserCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/AddRecipeViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/AddRecipeViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/ChefViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/ChefViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/KitchenViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/KitchenViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/MyChefViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/MyChefViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/MyRecipesViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/MyRecipesViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/PantryViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/PantryViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/ProfileViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/ProfileViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/SearchProductViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/SearchProductViewCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/UserViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/UserViewCLI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +101,7 @@
       <recent name="C:\Users\flavi\Desktop\università\ISPW\PROJECT\foodo\src\main\resources\guiclass" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.foodo.Main" />
       <module name="foodo_fx" />
@@ -88,9 +115,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestSearchProductController.testSearchProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="foodo_fx" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="junit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="junit" />
+      <option name="MAIN_CLASS_NAME" value="junit.TestSearchProductController" />
+      <option name="METHOD_NAME" value="testSearchProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestSearchProductController.testSearchProduct" />
       </list>
     </recent_temporary>
   </component>

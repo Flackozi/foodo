@@ -1,6 +1,7 @@
 package com.example.foodo.graphic.viewcli;
 
 import com.example.foodo.engineering.exception.ConnectionDbException;
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.graphic.CLIController.UserCLIController;
 import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.engineering.utils.Printer;
@@ -16,7 +17,7 @@ public class UserViewCLI {
     public UserViewCLI(UserCLIController userCLIController) {
         this.userCLIController=userCLIController;
     }
-    public void run() throws SQLException, ConnectionDbException, FileNotFoundException {
+    public void run() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         Printer.printMessage("\n-------------------------------------------- USER HOMEPAGE --------------------------------------------");
         Printer.printMessage(" 1) Pantry \n 2) Profile \n 3) Kitchen \n 4) Mychef \n");
         Scanner scanner = new Scanner(System.in);

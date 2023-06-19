@@ -1,5 +1,6 @@
 package com.example.foodo.graphic.viewcli;
 
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.graphic.CLIController.SearchProductCLIController;
@@ -24,7 +25,7 @@ public class SearchProductViewCLI {
         this.searchProductCLIController = searchProductCLIController;
     }
 
-    public void run() throws SQLException, ConnectionDbException, FileNotFoundException {
+    public void run() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         Printer.printMessage("\n-------------------------------------------- SEARCH PRODUCT PAGE --------------------------------------------");
         Printer.printMessage("\n 1)Insert the name \n 2)Filter your search \n 3)Pantry \n 4)Return to home page");
         Scanner scanner = new Scanner(System.in);
@@ -32,7 +33,7 @@ public class SearchProductViewCLI {
         this.searchProductCLIController.executeCommand(inputLine);
     }
 
-    public void searchName() {
+    public void searchName() throws ProductNotFoundException {
         Printer.printMessage("\n Insert the name:");
         Scanner scanner= new Scanner(System.in);
         String name= scanner.nextLine();
@@ -40,7 +41,7 @@ public class SearchProductViewCLI {
 
     }
 
-    public void filterSearch() {
+    public void filterSearch() throws ProductNotFoundException {
         Scanner scanner;
         String input;
         Printer.printMessage("\n Fruit? y/n");
