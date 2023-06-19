@@ -1,9 +1,11 @@
 package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.controllerappl.SearchProductController;
+import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.bean.SearchBean;
+import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.model.ProductModel;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -70,11 +72,15 @@ public class SearchProductControllerGUI {
             SearchProductController searchProductController = new SearchProductController();
             //ObservableList obl = FXCollections.observableArrayList(searchProductController.searchProduct(searchBean));
             productTable.getItems().clear();
+            if(searchProductController.searchProduct(searchBean) == null){
+                setTable(searchProductController.searchProduct(searchBean));
+            }else{
+                throw new ProductNotFoundException();
+            }
 
-            setTable(searchProductController.searchProduct(searchBean));
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (ProductNotFoundException e) {
+            ExceptionController.showExceptionGUI(e.getMessage());
         }
     }
 

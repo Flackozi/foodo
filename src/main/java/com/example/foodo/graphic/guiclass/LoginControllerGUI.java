@@ -73,7 +73,7 @@ public class LoginControllerGUI {
 //        return scene;
     }
 
-    public void login(ActionEvent event) throws IOException{
+    public void login(ActionEvent event){
         Scene scene;
         try{
             LoginBean loginBean = new LoginBean(usernameTextField.getText(), passwordPasswordField.getText());
