@@ -41,7 +41,7 @@ public class SearchProductController {
             productModel= SearchDAO.retriveBySearchText(text);
             ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
             productBeans.add(productBean);
-        }else{
+        }
             if(Boolean.TRUE.equals(searchModel.getSpices())){
                 type = "spices";
                 int i = 0;
@@ -144,7 +144,7 @@ public class SearchProductController {
                     productBeans.add(productBean);
                 }while(i != length);
             }
-        }
+
 
 
         return productBeans;
