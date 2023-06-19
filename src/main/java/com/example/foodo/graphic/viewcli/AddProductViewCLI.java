@@ -22,8 +22,8 @@ public class AddProductViewCLI {
         String name=inputLine;
         Printer.printMessage("\n Insert quantity:");
         inputLine= scanner.nextLine();
-        int quantity= Integer.parseInt(inputLine);
-        Printer.printMessage("\n Insert expiration day");
+        String quantity= inputLine;
+        Printer.printMessage("\n Insert expiration day:");
         inputLine= scanner.nextLine();
         String day= inputLine;
         Printer.printMessage("\n Insert expiration month:");

@@ -46,7 +46,7 @@ public class PantryController {
 
         for(i=0; i<lenght; i++){
             String name= productModelList.get(i).getName();
-            int quantity= productModelList.get(i).getQuantity();
+            String quantity= productModelList.get(i).getQuantity();
             String type= productModelList.get(i).getTypeOfFood();
             String expiration= productModelList.get(i).getExpiration();
             ProductBean productBean= new ProductBean(name, quantity, type, expiration);

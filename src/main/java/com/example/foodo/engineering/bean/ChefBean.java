@@ -55,6 +55,7 @@ public class ChefBean {
         this.number = number;
         this.location = location;
         this.path=path;
+        this.profileType=profileType;
     }
 
     public String getUsername() {

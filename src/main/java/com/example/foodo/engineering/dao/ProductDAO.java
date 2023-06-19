@@ -27,7 +27,7 @@ public class   ProductDAO {
             stmt = ConnectionDB.getConnection();
             preparedStatement= ConnectionDB.insertProduct();
             preparedStatement.setString(1, product.getName());
-            preparedStatement.setInt(2, product.getQuantity());
+            preparedStatement.setString(2, product.getQuantity());
             preparedStatement.setString(3, product.getTypeOfFood());
             preparedStatement.setInt(4, product.getExpirationDay());
             preparedStatement.setInt(5, product.getExpirationMonth());
@@ -51,7 +51,7 @@ public class   ProductDAO {
 
         do{
             String name = resultSet.getString("name");
-            int quantity = resultSet.getInt("quantity");
+            String quantity = resultSet.getString("quantity");
             String type = resultSet.getString("type");
             int expDay = resultSet.getInt("expirationDay");
             int expMonth = resultSet.getInt("expirationMonth");
