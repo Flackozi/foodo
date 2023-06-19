@@ -77,7 +77,7 @@ public class KitchenCLIController implements GrapghiCLIController{
         List<ProductBean> productBeans= new ArrayList<>();
         productBeans=recipeDetController.getRecipeIngredients(recipeName);
         for(int i=0; i< productBeans.size() ;i++){
-            this.kitchenViewCLI.print(i+1, productBeans.get(i).getName(), productBeans.get(i).getSquantity());
+            this.kitchenViewCLI.print(i+1, productBeans.get(i).getName(), productBeans.get(i).getQuantity());
         }
         String description= recipeDetController.getDescription(recipeName);
         String average= recipeDetController.setAverage(recipeName, chefName);

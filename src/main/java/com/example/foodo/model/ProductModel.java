@@ -2,42 +2,17 @@ package com.example.foodo.model;
 
 public class ProductModel {
     private String Name;
-    private int Quantity;
+    private String Quantity;
     private String TypeOfFood;
     private int expirationDay;
     private int expirationMonth;
     private  int expirationYear;
     private String Expiration;
-    private String Squantity;
-
-    public void setSquantity(String quantity) {
-        this.Squantity = quantity;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public void setQuantity(int quantity) {
-        Quantity = quantity;
-    }
-
-    public void setTypeOfFood(String typeOfFood) {
-        TypeOfFood = typeOfFood;
-    }
-
-    public String getExpiration() {
-        return Expiration;
-    }
-
-    public void setExpiration(String expiration) {
-        Expiration = expiration;
-    }
 
 
     public ProductModel(){}
 
-    public ProductModel(String name, int quantity, String typeOfFood, int expirationDay, int expirationMonth, int expirationYear) {
+    public ProductModel(String name, String quantity, String typeOfFood, int expirationDay, int expirationMonth, int expirationYear) {
         this.Name = name;
         this.Quantity = quantity;
         this.TypeOfFood = typeOfFood;
@@ -45,7 +20,7 @@ public class ProductModel {
         this.expirationMonth=expirationMonth;
         this.expirationYear=expirationYear;
     }
-    public ProductModel(String name, int quantity, String typeOfFood, String expiration) {
+    public ProductModel(String name, String quantity, String typeOfFood, String expiration) {
         this.Name = name;
         this.Quantity = quantity;
         this.TypeOfFood = typeOfFood;
@@ -54,7 +29,7 @@ public class ProductModel {
 
     public ProductModel(String name, String quantity) {
         this.Name = name;
-        this.Squantity = quantity;
+        this.Quantity = quantity;
     }
 
     public ProductModel(String Name){
@@ -64,13 +39,9 @@ public class ProductModel {
         return Name;
     }
 
-    public int getQuantity() {
+    public String getQuantity() {
         return Quantity;
     }
-    public String getSquantity() {
-        return Squantity;
-    }
-
 
     public String getTypeOfFood() {
         return TypeOfFood;
@@ -97,6 +68,25 @@ public class ProductModel {
 
     public void setExpirationYear(int expirationYear) {
         this.expirationYear = expirationYear;
+    }
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public void setQuantity(String quantity) {
+        Quantity = quantity;
+    }
+
+    public void setTypeOfFood(String typeOfFood) {
+        TypeOfFood = typeOfFood;
+    }
+
+    public String getExpiration() {
+        return Expiration;
+    }
+
+    public void setExpiration(String expiration) {
+        Expiration = expiration;
     }
 
 }

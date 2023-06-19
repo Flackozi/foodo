@@ -46,7 +46,7 @@ public class ChefBean {
     public ChefBean() {}
 
 
-    public ChefBean(String username,String typeOfCuisine, String workplace, String email, String number, String location, String path){
+    public ChefBean(String username,String typeOfCuisine, String workplace, int profileType, String email, String number, String location, String path){
         this.username = username;
         this.typeOfCuisine = typeOfCuisine;
         this.workplace = workplace;
@@ -54,6 +54,7 @@ public class ChefBean {
         this.number = number;
         this.location = location;
         this.path=path;
+        this.profileType=profileType;
     }
 
     public String getUsername() {

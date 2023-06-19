@@ -39,7 +39,7 @@ public class MyChefViewCLI {
         Printer.printMessage(recipeName);
         int i;
         for(i=0; i< productBeans.size(); i++){
-            Printer.printIngredient(i+1, productBeans.get(i).getName(), productBeans.get(i).getSquantity());
+            Printer.printIngredient(i+1, productBeans.get(i).getName(), productBeans.get(i).getQuantity());
         }
         Printer.printInfo(description, average);
     }

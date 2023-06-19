@@ -32,7 +32,7 @@ public class SearchDAO {
                 int expYear = resultSet.getInt("expirationYear");
                 String exp = expDay + "/" + expMonth + "/" + expYear;
                 productModel.setName(resultSet.getString("name"));
-                productModel.setQuantity(resultSet.getInt("quantity"));
+                productModel.setQuantity(resultSet.getString("quantity"));
                 productModel.setTypeOfFood(resultSet.getString("type"));
                 productModel.setExpiration(exp);
             }while(resultSet.next());
@@ -54,7 +54,7 @@ public class SearchDAO {
 
             do{
                 String name = resultSet.getString("name");
-                int quantity = resultSet.getInt("quantity");
+                String quantity = resultSet.getString("quantity");
                 String typeOf = resultSet.getString("type");
                 int expDay = resultSet.getInt("expirationDay");
                 int expMonth = resultSet.getInt("expirationMonth");

@@ -147,7 +147,7 @@ public class PantryControllerGUI  implements Initializable, Observer {
             ProductBean productBean = new ProductBean();
             PantryController pantryController = new PantryController();
             productBean.setName(nameText.getText());
-            productBean.setQuantity(Integer.parseInt(quantityField.getText()));
+            productBean.setQuantity(quantityField.getText());
             productBean.setTypeOfFood(typeOfFoodPicker.getValue());
 
             int year;

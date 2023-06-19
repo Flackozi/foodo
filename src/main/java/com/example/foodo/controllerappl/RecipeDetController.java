@@ -19,9 +19,9 @@ public class RecipeDetController {
         productModelList = productDAO.getRecipeIng(name);
         int i ;
         for(i=0; i< productModelList.size(); i++){
-            String ingName=productModelList.get(i).getName();
-            String quantity= productModelList.get(i).getSquantity();
-            ProductBean productBean= new ProductBean(ingName, quantity);
+            String IngName=productModelList.get(i).getName();
+            String Quantity= productModelList.get(i).getQuantity();
+            ProductBean productBean= new ProductBean(IngName, Quantity);
             productBeans.add(productBean);
         }
         return productBeans;
@@ -29,8 +29,9 @@ public class RecipeDetController {
 
     public String getDescription(String rname) {
         RecipeDAO recipeDAO = new RecipeDAO();
+        String description = recipeDAO.retriveDescription(rname);
 
-        return recipeDAO.retriveDescription(rname);
+        return description;
     }
 
     public void setRate(int value, String name) {
@@ -40,7 +41,8 @@ public class RecipeDetController {
 
     public String getPath(String rname) {
         RecipeDAO recipeDAO= new RecipeDAO();
-        return recipeDAO.retrivePath(rname);
+        String path=recipeDAO.retrivePath(rname);
+        return path;
     }
 
     public int verifyFollow(String userName, String chefName) {

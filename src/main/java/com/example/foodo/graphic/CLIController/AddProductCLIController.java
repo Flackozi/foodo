@@ -15,7 +15,7 @@ public class AddProductCLIController implements GrapghiCLIController{
         this.addProductViewCLI.run();
     }
 
-    public void addProduct(String name, int quantity, String typeOfFood, String expiration, String expDay, String expMonth, String expYear) throws SQLException {
+    public void addProduct(String name, String quantity, String typeOfFood, String expiration, String expDay, String expMonth, String expYear) throws SQLException {
         ProductBean productBean= new ProductBean();
         productBean.setName(name);
         productBean.setQuantity(quantity);

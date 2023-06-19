@@ -84,7 +84,7 @@ public class SearchProductViewCLI {
 
     }
 
-    public void printProduct(String name, int quantity, String typeOfFood, String expiration) {
+    public void printProduct(String name, String quantity, String typeOfFood, String expiration) {
         Printer.printProductMessage(name, quantity, typeOfFood, expiration);
     }
 }
