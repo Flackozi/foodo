@@ -9,6 +9,10 @@ public class ChefBean {
     private  String location;
     private String path;
 
+    public ChefBean() {
+        //coastruttore di default
+    }
+
     public String getPath() {
         return path;
     }
@@ -42,8 +46,6 @@ public class ChefBean {
     }
 
     private int profileType;
-
-    public ChefBean() {}
 
 
     public String getUsername() {

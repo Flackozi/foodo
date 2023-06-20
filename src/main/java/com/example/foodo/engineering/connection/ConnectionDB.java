@@ -3,7 +3,6 @@ package com.example.foodo.engineering.connection;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Objects;
@@ -67,7 +66,7 @@ public class ConnectionDB {
             properties.load(fileInputStream);
 
             return properties;
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         } finally {
             Objects.requireNonNull(fileInputStream).close();

@@ -70,7 +70,16 @@ public class SearchProductControllerGUI {
     }
     public void actionSearch(ActionEvent actionEvent) {
         try {
-            SearchBean searchBean = new SearchBean(searchBar.getText(), spicesCheckBox.isSelected(), fruitCheckBox.isSelected(), meatCheckBox.isSelected(), vegetableCheckBox.isSelected(), sweetCheckBox.isSelected(), liquidCheckBox.isSelected(), fishCheckBox.isSelected());
+            SearchBean searchBean = new SearchBean();
+
+            searchBean.setSearchText(searchBean.getSearchText());
+            searchBean.setSpices(spicesCheckBox.isSelected());
+            searchBean.setFruit(fruitCheckBox.isSelected());
+            searchBean.setMeat(meatCheckBox.isSelected());
+            searchBean.setSweet(sweetCheckBox.isSelected());
+            searchBean.setVegetable(vegetableCheckBox.isSelected());
+            searchBean.setFish(fishCheckBox.isSelected());
+            searchBean.setLiquid(liquidCheckBox.isSelected());
             SearchProductController searchProductController = new SearchProductController();
             //ObservableList obl = FXCollections.observableArrayList(searchProductController.searchProduct(searchBean));
             productTable.getItems().clear();

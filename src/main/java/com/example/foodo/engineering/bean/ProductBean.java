@@ -3,29 +3,27 @@ package com.example.foodo.engineering.bean;
 import com.example.foodo.engineering.pattern.observer.Subject;
 
 public class ProductBean extends Subject {
-    private String Name;
-    private String Quantity;
-    private String TypeOfFood;
+    private String name;
+    private String quantity;
+    private String typeOfFood;
     private int day;
     private int month;
     private int year;
-    private String Expiration;
+    private String expiration;
 
-    public ProductBean(String name, String quantity, String TypeOfFood, int expirationDay, int expirationMonth, int expirationYear) {
-    }
-    public ProductBean(String name, String quantity, String TypeOfFood, String expiration) {
+    public ProductBean(String name, String quantity, String typeOfFood, String expiration) {
         this.setName(name);
         this.setQuantity(quantity);
-        this.setTypeOfFood(TypeOfFood);
+        this.setTypeOfFood(typeOfFood);
         this.setExpiration(expiration);
     }
 
-    public ProductBean(String name, String Quantity){
+    public ProductBean(String name, String quantity){
         this.setName(name);
-        this.setQuantity(Quantity);
+        this.setQuantity(quantity);
     }
     public ProductBean (String name){
-        this.Name=name;
+        this.name=name;
     }
     public ProductBean(){}
 
@@ -54,34 +52,34 @@ public class ProductBean extends Subject {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        this.Name = name;
+        this.name = name;
     }
 
     public String getQuantity() {
-        return Quantity;
+        return quantity;
     }
 
     public void setQuantity(String quantity) {
-        this.Quantity = quantity;
+        this.quantity = quantity;
     }
 
     public String getTypeOfFood() {
-        return TypeOfFood;
+        return typeOfFood;
     }
 
     public void setTypeOfFood(String typeOfFood) {
-        this.TypeOfFood = typeOfFood;
+        this.typeOfFood = typeOfFood;
     }
     public String getExpiration() {
-        return Expiration;
+        return expiration;
     }
 
     public void setExpiration(String expiration) {
-        this.Expiration = expiration;
+        this.expiration = expiration;
     }
 
 

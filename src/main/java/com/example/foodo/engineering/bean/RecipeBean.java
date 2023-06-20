@@ -3,56 +3,56 @@ package com.example.foodo.engineering.bean;
 
 
 public class RecipeBean {
-    private String RecipeName;
-    private String Description;
-    private String ChefName;
-    private String Path;
+    private String recipeName;
+    private String description;
+    private String chefName;
+    private String path;
 
     public RecipeBean(){}
 
     public RecipeBean(String recipeName, String description, String chefName, String path) {
-        this.RecipeName = recipeName;
-        this.Description = description;
-        this.ChefName = chefName;
-        this.Path=path;
+        this.recipeName = recipeName;
+        this.description = description;
+        this.chefName = chefName;
+        this.path =path;
     }
 
     public RecipeBean(String recipeName, String chefName, String path) {
-        this.RecipeName = recipeName;
-        this.ChefName = chefName;
-        this.Path=path;
+        this.recipeName = recipeName;
+        this.chefName = chefName;
+        this.path =path;
     }
 
     public String getRecipeName() {
-        return RecipeName;
+        return recipeName;
     }
 
     public void setRecipeName(String recipeName) {
-        RecipeName = recipeName;
+        this.recipeName = recipeName;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getChefName() {
-        return ChefName;
+        return chefName;
     }
 
     public void setChefName(String chefName) {
-        ChefName = chefName;
+        this.chefName = chefName;
     }
 
     public String getPath() {
-        return Path;
+        return path;
     }
 
     public void setPath(String path) {
-        Path = path;
+        this.path = path;
     }
 
 }
