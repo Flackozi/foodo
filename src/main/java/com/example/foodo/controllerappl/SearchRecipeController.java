@@ -17,7 +17,6 @@ public class SearchRecipeController {
         RecipeDAO recipeDAO= new RecipeDAO();
         List<RecipeModel> recipeModels= new ArrayList<>();
         List<RecipeBean> recipeBeans= new ArrayList<>();
-        //try{
         recipeModels=recipeDAO.findRecipe(searchRecipeBean.getRecipeName());
         if(recipeModels.isEmpty()){
             throw new RecipeNotFoundException();
@@ -31,8 +30,6 @@ public class SearchRecipeController {
                 recipeBeans.add(recipeBean);
             }
         }
-        /*} catch (RecipeNotFoundException e) {
-            ExceptionController.showException(e.getMessage());        }*/
         return recipeBeans;
     }
 }
