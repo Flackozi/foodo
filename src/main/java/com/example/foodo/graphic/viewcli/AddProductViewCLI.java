@@ -25,6 +25,7 @@ public class AddProductViewCLI {
         String quantity= inputLine;
         Printer.printMessage("\n Insert expiration day:");
         inputLine= scanner.nextLine();
+        //fare controllo sintattico con Exceptiraton day
         String day= inputLine;
         Printer.printMessage("\n Insert expiration month:");
         inputLine= scanner.nextLine();

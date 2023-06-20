@@ -17,12 +17,13 @@ public class RecipeController {
 
     private int recipeId;
 
-    public void saveRecipe(RecipeBean recipeBean, int flag) throws SQLException, FileNotFoundException, ConnectionDbException {
+    public int saveRecipe(RecipeBean recipeBean) throws SQLException, FileNotFoundException, ConnectionDbException {
+        recipeId=-1;
         RecipeDAO recipeDAO=new RecipeDAO();
         RecipeModel recipeModel= new RecipeModel(recipeBean.getRecipeName(), recipeBean.getDescription(), recipeBean.getChefName(), recipeBean.getPath());
-        RecipeDAO.AddRecipe(recipeModel, flag);
+        RecipeDAO.AddRecipe(recipeModel);
         recipeId=recipeDAO.TakeRecipeId(recipeModel);
-
+        return recipeId;
     }
 
     public void saveIngredients(List<IngredientBean> ingredientBeans) {

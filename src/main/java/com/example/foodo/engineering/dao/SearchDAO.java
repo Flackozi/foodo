@@ -3,11 +3,9 @@ package com.example.foodo.engineering.dao;
 import com.example.foodo.engineering.connection.ConnectionDB;
 import com.example.foodo.engineering.dao.queries.BasicQueries;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.engineering.exception.NotFoundException;
 import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.model.ProductModel;
-import com.example.foodo.model.SearchModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -19,35 +17,37 @@ import java.util.List;
 
 public class SearchDAO {
 
-    public static ProductModel retriveBySearchText(String searchText){
+    public static ProductModel retriveBySearchText(String searchText) throws ConnectionDbException, SQLException, ProductNotFoundException {
         Statement stmt;
         ProductModel productModel=new ProductModel();
-        try{
-            stmt = ConnectionDB.getConnection();
-            ResultSet resultSet = BasicQueries.retriveByText(stmt, searchText);
-            resultSet.next();
-            resultSet.first();
 
-            if(resultSet != null){
+        stmt = ConnectionDB.getConnection();
+        ResultSet resultSet = BasicQueries.retriveByText(stmt, searchText);
+        resultSet.next();
+        resultSet.first();
+
+        if(resultSet != null){
+            try{
                 do{
-                    int expDay = resultSet.getInt("expirationDay");
-                    int expMonth = resultSet.getInt("expirationMonth");
-                    int expYear = resultSet.getInt("expirationYear");
-                    String exp = expDay + "/" + expMonth + "/" + expYear;
-                    productModel.setName(resultSet.getString("name"));
-                    productModel.setQuantity(resultSet.getString("quantity"));
-                    productModel.setTypeOfFood(resultSet.getString("type"));
-                    productModel.setExpiration(exp);
+
+                        int expDay = resultSet.getInt("expirationDay");
+                        int expMonth = resultSet.getInt("expirationMonth");
+                        int expYear = resultSet.getInt("expirationYear");
+                        String exp = expDay + "/" + expMonth + "/" + expYear;
+                        productModel.setName(resultSet.getString("name"));
+                        productModel.setQuantity(resultSet.getString("quantity"));
+                        productModel.setTypeOfFood(resultSet.getString("type"));
+                        productModel.setExpiration(exp);
+
                 }while(resultSet.next());
-            }else{
-                throw new ProductNotFoundException();
+            }catch(SQLException  e){
+                ExceptionController.showExceptionGUI(e.getMessage());
+
             }
-
-
-        }catch(SQLException | ConnectionDbException | ProductNotFoundException e){
-            ExceptionController.showExceptionGUI(e.getMessage());
-
+        }else{
+            throw new ProductNotFoundException();
         }
+
         return productModel;
     }
 

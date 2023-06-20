@@ -1,6 +1,7 @@
 package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.controllerappl.SearchRecipeController;
+import com.example.foodo.engineering.exception.RecipeNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.utils.MyListener;
 import com.example.foodo.engineering.bean.RecipeBean;
@@ -59,7 +60,7 @@ public class KitchenSearchControllerGUI {
         window.show();
     }
 
-    public void searchRecipe(ActionEvent actionEvent) {
+    public void searchRecipe(ActionEvent actionEvent) throws RecipeNotFoundException {
         SearchRecipeBean searchRecipeBean= new SearchRecipeBean();
         searchRecipeBean.setRecipeName(searchTextField.getText());
         List<RecipeBean> recipeBeans= new ArrayList<>();

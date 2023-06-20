@@ -89,8 +89,7 @@ public class NewRecipeControllerGUI{
     }
 
     public void confirmRecipe (ActionEvent event) throws SQLException, IOException, ConnectionDbException {
-        int flag = 1; // 1-> gui
-                      // 2 -> CLi
+
         try{
 
             if(Objects.equals(RecipeName.getText(), "")){
@@ -111,7 +110,7 @@ public class NewRecipeControllerGUI{
 
             //verificato che tutti i dati in RecipeModel siano stati inseriti correttamente
             RecipeController recipeController=new RecipeController();
-            recipeController.saveRecipe(recipeBean,flag);
+            recipeController.saveRecipe(recipeBean);
             recipeController.saveIngredients(ingredients);
 
         }catch (FieldEmptyException e){

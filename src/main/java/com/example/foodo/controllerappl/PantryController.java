@@ -26,8 +26,6 @@ public class PantryController {
         } else if (chefBean!=null) {
             ProductDAO.InsProduct(productModel, chefBean.getUsername());
         }
-
-
     }
 
     public List<ProductBean> retriveAllProduct() throws SQLException, ConnectionDbException {

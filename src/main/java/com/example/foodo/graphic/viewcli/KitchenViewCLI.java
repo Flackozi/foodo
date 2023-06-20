@@ -1,6 +1,7 @@
 package com.example.foodo.graphic.viewcli;
 
 import com.example.foodo.engineering.exception.ProductNotFoundException;
+import com.example.foodo.engineering.exception.RecipeNotFoundException;
 import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.exception.CommandNotValidException;
@@ -27,7 +28,7 @@ public class KitchenViewCLI {
         String inputLine= scanner.nextLine();
         try {
             this.kitchenCLIController.executeCommand(inputLine);
-        } catch (CommandNotValidException | SQLException | ConnectionDbException e) {
+        } catch (CommandNotValidException | SQLException | ConnectionDbException | RecipeNotFoundException e) {
             ExceptionController.showExceptionCLI(e.getMessage());
             run();
         }
@@ -42,7 +43,7 @@ public class KitchenViewCLI {
         kitchenCLIController.viewRecipeInfo(recipeName, chefName);
     }
 
-    public void searchRecipe() throws SQLException, ConnectionDbException {
+    public void searchRecipe() throws SQLException, ConnectionDbException, RecipeNotFoundException {
         Printer.printMessage("\n Enter name of recipe");
         Scanner scanner= new Scanner(System.in);
         String name= scanner.nextLine();

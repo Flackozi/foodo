@@ -1,6 +1,7 @@
 package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.controllerappl.SearchProductController;
+import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ProductBean;
@@ -19,6 +20,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.*;
 
 public class SearchProductControllerGUI {
@@ -81,6 +83,10 @@ public class SearchProductControllerGUI {
 
         } catch (ProductNotFoundException e) {
             ExceptionController.showExceptionGUI(e.getMessage());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ConnectionDbException e) {
+            throw new RuntimeException(e);
         }
     }
 

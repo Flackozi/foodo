@@ -54,7 +54,7 @@ public class SearchProductCLIController implements GrapghiCLIController{
 
     }
 
-    public void searchName(String name, boolean spices, boolean fruit, boolean meat, boolean vegetable, boolean sweet, boolean liquid, boolean fish) throws ProductNotFoundException {
+    public void searchName(String name, boolean spices, boolean fruit, boolean meat, boolean vegetable, boolean sweet, boolean liquid, boolean fish) throws ProductNotFoundException, SQLException, ConnectionDbException {
         SearchBean searchBean= new SearchBean(name, spices, fruit, meat, vegetable, sweet, liquid, fish);
         List<ProductBean> productBeanList= new ArrayList<>();
         SearchProductController searchProductController= new SearchProductController();

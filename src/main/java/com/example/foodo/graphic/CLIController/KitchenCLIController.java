@@ -4,6 +4,7 @@ import com.example.foodo.controllerappl.KitchenController;
 import com.example.foodo.controllerappl.RecipeDetController;
 import com.example.foodo.controllerappl.SearchRecipeController;
 import com.example.foodo.engineering.exception.ProductNotFoundException;
+import com.example.foodo.engineering.exception.RecipeNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.KitchenBean;
 import com.example.foodo.engineering.bean.ProductBean;
@@ -31,7 +32,7 @@ public class KitchenCLIController implements GrapghiCLIController{
         this.kitchenViewCLI.run();
     }
 
-    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
+    public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException, RecipeNotFoundException {
         switch(inputLine){
             case INSERTINGREDIENT -> {
                 this.kitchenViewCLI.insertIngredient();
@@ -50,13 +51,14 @@ public class KitchenCLIController implements GrapghiCLIController{
         }
     }
 
-    public void searchRecipeByName(String name) {
+    public void searchRecipeByName(String name) throws RecipeNotFoundException {
         SearchRecipeBean searchRecipeBean= new SearchRecipeBean();
         searchRecipeBean.setRecipeName(name);
         List<RecipeBean> recipeBeans=new ArrayList<>();
 
 
         SearchRecipeController searchRecipeController= new SearchRecipeController();
+        KitchenController kitchenController= new KitchenController();
         recipeBeans=searchRecipeController.searchRecipe(searchRecipeBean);
         for(int i=0; i<recipeBeans.size(); i++){
             this.kitchenViewCLI.print(i+1,recipeBeans.get(i).getRecipeName(), recipeBeans.get(i).getChefName());

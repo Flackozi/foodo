@@ -33,7 +33,7 @@ public class SearchProductViewCLI {
         this.searchProductCLIController.executeCommand(inputLine);
     }
 
-    public void searchName() throws ProductNotFoundException {
+    public void searchName() throws ProductNotFoundException, SQLException, ConnectionDbException {
         Printer.printMessage("\n Insert the name:");
         Scanner scanner= new Scanner(System.in);
         String name= scanner.nextLine();
@@ -41,7 +41,7 @@ public class SearchProductViewCLI {
 
     }
 
-    public void filterSearch() throws ProductNotFoundException {
+    public void filterSearch() throws ProductNotFoundException, SQLException, ConnectionDbException {
         Scanner scanner;
         String input;
         Printer.printMessage("\n Fruit? y/n");

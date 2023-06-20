@@ -28,7 +28,6 @@ public class AddRecipeViewCLI {
 
 
     public void run() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
-        int flag = 2;
         Printer.printMessage("\n-------------------------------------------- ADD NEW RECIPE --------------------------------------------");
         Scanner scanner= new Scanner(System.in);
         ArrayList<String> product = new ArrayList<String>();
@@ -68,7 +67,7 @@ public class AddRecipeViewCLI {
         chefBean= Session.getCurrentSession().getChefBean();
         recipeBean.setChefName(chefBean.getUsername());
         RecipeController recipeController=new RecipeController();
-        recipeController.saveRecipe(recipeBean, flag);
+        recipeController.saveRecipe(recipeBean);
         for(int i = 0; i< product.size(); i++){
             IngredientBean ingredientBean = new IngredientBean(product.get(i), quantity.get(i) );
             ingredients.add(ingredientBean);

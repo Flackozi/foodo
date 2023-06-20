@@ -39,4 +39,8 @@ public class ExceptionController {
         Printer.printError( "\n**************************************\n" + message + "\n\tPress ENTER to continue");
         ScannerSupport.waitEnter();
     }
+
+    public static void showException(String message) {
+        Printer.printError( "\n**************************************\n" + message );
+    }
 }
