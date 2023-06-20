@@ -26,9 +26,9 @@ public class SearchDAO {
         resultSet.next();
         resultSet.first();
 
-        if(resultSet != null){
-            try{
-                do{
+            if(resultSet.first()){
+
+                    do{
 
                         int expDay = resultSet.getInt("expirationDay");
                         int expMonth = resultSet.getInt("expirationMonth");
@@ -39,14 +39,15 @@ public class SearchDAO {
                         productModel.setTypeOfFood(resultSet.getString("type"));
                         productModel.setExpiration(exp);
 
-                }while(resultSet.next());
-            }catch(SQLException  e){
-                ExceptionController.showExceptionGUI(e.getMessage());
+                    }while(resultSet.next());
 
+
+
+            }else{
+                throw new ProductNotFoundException();
             }
-        }else{
-            throw new ProductNotFoundException();
-        }
+
+
 
         return productModel;
     }

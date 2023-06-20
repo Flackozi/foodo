@@ -58,7 +58,7 @@ public class RecipeDetController {
 
     public String setAverage(String rname, String chefName) {
         RecipeDAO recipeDAO= new RecipeDAO();
-        return String.valueOf(recipeDAO.setAverage(rname, chefName));
+        return String.valueOf(recipeDAO.setAverage(rname));
 
     }
 

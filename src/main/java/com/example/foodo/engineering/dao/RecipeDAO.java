@@ -88,7 +88,7 @@ public class RecipeDAO {
         return description;
     }
 
-    public void setReview(int value, String name) {
+    public void setReview(float value, String name) {
         Statement stmt;
 
         PreparedStatement preparedStatement;
@@ -99,7 +99,7 @@ public class RecipeDAO {
             int id = resultSet.getInt("recipeId");
             preparedStatement = ConnectionDB.setReview();
             preparedStatement.setInt(1, id);
-            preparedStatement.setInt(2, value);
+            preparedStatement.setFloat(2, value);
             preparedStatement.executeUpdate();
         }catch(SQLException | ConnectionDbException e){
             e.printStackTrace();
@@ -124,7 +124,7 @@ public class RecipeDAO {
         return path;
     }
 
-    public float setAverage(String rname, String chefName) {
+    public float setAverage(String rname) {
         Statement stmt;
         float average=0;
         int i=0;

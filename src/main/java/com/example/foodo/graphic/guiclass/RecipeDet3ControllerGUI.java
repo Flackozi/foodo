@@ -113,7 +113,7 @@ public class RecipeDet3ControllerGUI {
 
     private void setAverage(String rname, String chefName) {
         String average = null;
-        RecipeDetController recipeDetController=new RecipeDetController();
+        RecipeDetController recipeDetController = new RecipeDetController();
         average=recipeDetController.setAverage(rname, chefName);
         averageLabel.setText(average);
 

@@ -20,6 +20,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.time.LocalTime;
 import java.util.*;
 import com.example.foodo.engineering.exception.*;
 
@@ -80,15 +81,7 @@ public class PantryControllerGUI  implements Initializable, Observer {
         window.show();
     }
 
-    @FXML
-    public void showLogin(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneLogin.fxml"));
-        Scene scenePantryView = new Scene(scenePantryParent);
 
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scenePantryView);
-        window.show();
-    }
 
     private String[] typeOfFood = {"spices", "fruit", "meat", "vegetable", "sweet", "liquid", "fish", "other"};
     private ProductDAO productDAO = new ProductDAO();
@@ -125,7 +118,7 @@ public class PantryControllerGUI  implements Initializable, Observer {
     public void getType(ActionEvent event){
         String myType = typeOfFoodPicker.getValue();
     }
-    public void addNewProduct(ActionEvent actionEvent) throws  IOException{
+    public void addNewProduct(ActionEvent actionEvent){
 
 
         //prendiamo i dati e li mettiamo nella bean
@@ -158,6 +151,15 @@ public class PantryControllerGUI  implements Initializable, Observer {
             month = expirationDate.getValue().getMonthValue();
             day = expirationDate.getValue().getDayOfMonth();
 
+            if(day > 31 && day <1){
+                throw new DateFormatNotValidException();
+            }
+            if(month > 12 && month < 1){
+                throw new DateFormatNotValidException();
+            }
+            if(year < 2023){
+                throw new DateFormatNotValidException();
+            }
             productBean.setDay(day);
             productBean.setMonth(month);
             productBean.setYear(year);
@@ -172,7 +174,7 @@ public class PantryControllerGUI  implements Initializable, Observer {
 
 
 
-        } catch (FieldEmptyException e){
+        } catch (FieldEmptyException | DateFormatNotValidException e){
             ExceptionController.showExceptionGUI(e.getMessage());
         } catch (SQLException e) {
             throw new RuntimeException(e);

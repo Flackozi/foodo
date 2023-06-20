@@ -74,7 +74,7 @@ public class SearchProductControllerGUI {
             SearchProductController searchProductController = new SearchProductController();
             //ObservableList obl = FXCollections.observableArrayList(searchProductController.searchProduct(searchBean));
             productTable.getItems().clear();
-            if(searchProductController.searchProduct(searchBean) == null){
+            if(searchProductController.searchProduct(searchBean) != null){
                 setTable(searchProductController.searchProduct(searchBean));
             }else{
                 throw new ProductNotFoundException();
@@ -83,9 +83,7 @@ public class SearchProductControllerGUI {
 
         } catch (ProductNotFoundException e) {
             ExceptionController.showExceptionGUI(e.getMessage());
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ConnectionDbException e) {
+        } catch (SQLException | ConnectionDbException e) {
             throw new RuntimeException(e);
         }
     }
