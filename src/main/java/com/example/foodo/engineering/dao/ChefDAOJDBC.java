@@ -19,11 +19,11 @@ public class ChefDAOJDBC  extends ChefDAO{
     private static final String LOCATION="location";
     private static final String PATH="path";
 
-    //private static final Integer CHEFTYPE="";
 
 
-
-    public ChefDAOJDBC(){}
+    public ChefDAOJDBC(){
+        //costruttore di default
+    }
 
     @Override
     public ChefModel retrieveChefByUsername(String username) {
@@ -55,7 +55,6 @@ public class ChefDAOJDBC  extends ChefDAO{
     private static ChefModel setChefInfo(String username, ResultSet resultSet){
         ChefModel chefModel=null;
         try{
-            //int chefTypeOfUser=resultSet.getInt(CHEFTYPE);
             String typeOfCuisine=resultSet.getString(CUISINE);
             String workplace=resultSet.getString(WORKPLACE);
             String email = resultSet.getString(EMAIL);

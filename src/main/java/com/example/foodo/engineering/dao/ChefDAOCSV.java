@@ -4,11 +4,10 @@ import com.example.foodo.engineering.exception.NotFoundException;
 import com.example.foodo.model.ChefModel;
 
 import java.io.*;
-import java.nio.Buffer;
 
 public class ChefDAOCSV extends ChefDAO{
 
-    private static final String FileNameCSV="src/main/file/Chef.csv";
+    private static final String fileNameCSV="src/main/file/Chef.csv";
     private static final int USERNAME=0;
     private static final int TYPEOFCUISINE=1;
     private static final int WORKPLACE=2;
@@ -22,25 +21,26 @@ public class ChefDAOCSV extends ChefDAO{
         ChefModel chefModel= null;
 
         try{
-            File file= new File(FileNameCSV);
+            File file= new File(fileNameCSV);
             BufferedReader bufferedReader= new BufferedReader(new FileReader(file));
             String row;
             String[] data;
 
             while((row=bufferedReader.readLine()) != null){
                 data=row.split(",");
-                if(username != null){
-                    if(data[USERNAME].equals(username)) {
-                        chefModel = new ChefModel(data[USERNAME], data[TYPEOFCUISINE], data[WORKPLACE], data[EMAIL], data[NUMBER], data[LOCATION], data[PATH]);
-                    }
+                if(username != null  && data[USERNAME].equals(username)) {
+                    chefModel = new ChefModel(data[USERNAME], data[TYPEOFCUISINE], data[WORKPLACE], data[EMAIL], data[NUMBER], data[LOCATION], data[PATH]);
                 }
+
             }
             if(chefModel==null){
                 throw new NotFoundException("Chef Not Found");
             }
             bufferedReader.close();
         } catch (IOException | NotFoundException e) {
-            throw new RuntimeException(e);
+            //throw new RuntimeException(e); questo mi dava code smell non so per quale motivo
+            
+            e.printStackTrace();
         }
 
         return chefModel;

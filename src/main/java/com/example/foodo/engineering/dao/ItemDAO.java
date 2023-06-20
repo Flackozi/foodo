@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemDAO {
+
+    public String chefName="chefName";
     public List<RecipeItemModel> getItem() throws ConnectionDbException, SQLException {
         Statement stmt;
         List<RecipeItemModel> recipeItemModels = new ArrayList<>();
@@ -30,8 +32,7 @@ public class ItemDAO {
         List<String> chefNames = new ArrayList<>();
         int i = 0;
         do{
-            String chefName = resultSet.getString("chefName");
-            //ChefModel chefModel = new ChefModel(chefName);
+            String chefName = resultSet.getString(this.chefName);
             chefNames.add(chefName);
 
         }while(resultSet.next());
@@ -39,10 +40,9 @@ public class ItemDAO {
         for(i=0; i<chefNames.size(); i++){
             String name = chefNames.get(i);
             ResultSet resultSet1 = BasicQueries.retriveItem(stmt, name);
-            int j = 0;
             while(resultSet1.next()){
                 String nameR = resultSet1.getString("recipeName");
-                String nameC = resultSet1.getString("chefName");
+                String nameC = resultSet1.getString(this.chefName);
                 String img = resultSet1.getString("image");
                 RecipeItemModel recipeItemModel = new RecipeItemModel(nameR, nameC, img);
                 recipeItemModels.add(recipeItemModel);
@@ -63,10 +63,9 @@ public class ItemDAO {
 
         String chefName = chefBean.getUsername();
         ResultSet resultSet1 = BasicQueries.retriveItem(stmt, chefName);
-        int j = 0;
         while(resultSet1.next()){
             String nameR = resultSet1.getString("recipeName");
-            String nameC = resultSet1.getString("chefName");
+            String nameC = resultSet1.getString(this.chefName);
             String img = resultSet1.getString("image");
             RecipeItemModel recipeItemModel = new RecipeItemModel(nameR, nameC, img);
             recipeItemModels.add(recipeItemModel);

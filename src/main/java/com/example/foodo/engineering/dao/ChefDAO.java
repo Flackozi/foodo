@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public abstract class ChefDAO {
-    private static final String ChefFileCSV="src/main/file/Chef.csv";
+    private static final String chefFileCSV="src/main/file/Chef.csv";
 
     public abstract ChefModel retrieveChefByUsername(String username);
 

@@ -14,7 +14,9 @@ public class SearchBean {
     private Boolean liquid;
     private Boolean fish;
 
-    public SearchBean(){}
+    public SearchBean(){
+        //costruttore di default
+    }
 
     public String getSearchText() {
         return searchText;
