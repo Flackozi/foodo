@@ -106,7 +106,7 @@ public class SearchProductController {
             }while(i != length);
         }
 
-        if(searchModel.getSweet()){
+        if(Boolean.TRUE.equals(searchModel.getSweet())){
             type = "sweet";
             int i = 0;
 
@@ -121,7 +121,7 @@ public class SearchProductController {
             }while(i != length);
         }
 
-        if(searchModel.getLiquid()){
+        if(Boolean.TRUE.equals(searchModel.getLiquid())){
             type = "liquid";
             int i = 0;
 
@@ -136,7 +136,7 @@ public class SearchProductController {
             }while(i != length);
         }
 
-        if(searchModel.getFish()){
+        if(Boolean.TRUE.equals(searchModel.getFish())){
             type = "fish";
             int i = 0;
             List<ProductModel> fishModels = new ArrayList<>();
@@ -150,13 +150,9 @@ public class SearchProductController {
             }while(i != length);
         }
 
-        if(productBeans.isEmpty()){
+        if(Boolean.TRUE.equals(productBeans.isEmpty())){
             throw new ProductNotFoundException();
         }
-        //}catch (ProductNotFoundException e){
-            //ExceptionController.showException(e.getMessage());
-
-        //}
 
         return productBeans;
     }

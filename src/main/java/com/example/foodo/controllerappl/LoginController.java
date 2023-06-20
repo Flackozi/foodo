@@ -24,7 +24,15 @@ public class LoginController {
     public void completeChefLogin(LoginBean loginBean){
         ChefDAO chefDAO = ChefDAOFactory.getInstance().getChefDAO();
         ChefModel chefModel = chefDAO.retrieveChefByUsername(loginBean.getUsername());
-        ChefBean chefBean = new ChefBean(chefModel.getUsername(), chefModel.getTypeOfCuisine(), chefModel.getWorkplace(), chefModel.getProfileType(), chefModel.getEmail(), chefModel.getNumber(), chefModel.getLocation(), chefModel.getPath());
+        ChefBean chefBean = new ChefBean();
+        chefBean.setUsername(chefModel.getUsername());
+        chefBean.setTypeOfCuisine(chefModel.getTypeOfCuisine());
+        chefBean.setWorkplace(chefModel.getWorkplace());
+        chefBean.setProfileType(chefModel.getProfileType());
+        chefBean.setEmail(chefModel.getEmail());
+        chefBean.setNumber(chefModel.getNumber());
+        chefBean.setLocation(chefModel.getLocation());
+        chefBean.setPath(chefModel.getPath());
         Session.setSessionInstance(chefBean);
     }
 

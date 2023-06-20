@@ -124,7 +124,7 @@ public class RecipeDAO {
         return path;
     }
 
-    public float setAverage(String rname) {
+    public float setAverage(String rname, String chefName) {
         Statement stmt;
         float average=0;
         int i=0;
@@ -132,7 +132,7 @@ public class RecipeDAO {
         int rate=0;
         try{
             stmt = ConnectionDB.getConnection();
-            ResultSet resultSet = BasicQueries.retriveRecipeId2(stmt, rname);
+            ResultSet resultSet = BasicQueries.retriveRecipeId3(stmt, rname, chefName);
             resultSet.first();
             int id= resultSet.getInt("recipeId");
             ResultSet resultSet1= BasicQueries.getReview(stmt, id);

@@ -46,18 +46,6 @@ public class ChefBean {
     public ChefBean() {}
 
 
-    public ChefBean(String username,String typeOfCuisine, String workplace, int profileType, String email, String number, String location, String path){
-        this.username = username;
-        this.typeOfCuisine = typeOfCuisine;
-        this.workplace = workplace;
-        this.email = email;
-        this.profileType = profileType;
-        this.number = number;
-        this.location = location;
-        this.path=path;
-        this.profileType=profileType;
-    }
-
     public String getUsername() {
         return username;
     }
@@ -80,10 +68,6 @@ public class ChefBean {
 
     public void setWorkplace(String workplace) {
         this.workplace = workplace;
-    }
-
-    public int getProfileType() {
-        return profileType;
     }
 
     public void setProfileType(int profileType) {

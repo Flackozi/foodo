@@ -4,7 +4,6 @@ import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.engineering.bean.SearchRecipeBean;
 import com.example.foodo.engineering.dao.RecipeDAO;
 import com.example.foodo.engineering.exception.RecipeNotFoundException;
-import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.model.RecipeModel;
 
 import java.util.ArrayList;
