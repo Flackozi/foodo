@@ -68,11 +68,11 @@ public class SearchProductControllerGUI {
         window.setScene(sceneMainView);
         window.show();
     }
-    public void actionSearch(ActionEvent actionEvent) {
+    public void actionSearch(ActionEvent actionEvent) throws ProductNotFoundException {
         try {
             SearchBean searchBean = new SearchBean();
 
-            searchBean.setSearchText(searchBean.getSearchText());
+            searchBean.setSearchText(searchBar.getText());
             searchBean.setSpices(spicesCheckBox.isSelected());
             searchBean.setFruit(fruitCheckBox.isSelected());
             searchBean.setMeat(meatCheckBox.isSelected());
@@ -88,10 +88,6 @@ public class SearchProductControllerGUI {
             }else{
                 throw new ProductNotFoundException();
             }
-
-
-        } catch (ProductNotFoundException e) {
-            ExceptionController.showExceptionGUI(e.getMessage());
         } catch (SQLException | ConnectionDbException e) {
             throw new RuntimeException(e);
         }

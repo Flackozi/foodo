@@ -32,7 +32,7 @@ public class ItemDAO {
         List<String> chefNames = new ArrayList<>();
         int i = 0;
         do{
-            String chefName1 = resultSet.getString(this.chefName);
+            String chefName = resultSet.getString(this.chefName);
             chefNames.add(chefName);
 
         }while(resultSet.next());
@@ -61,7 +61,7 @@ public class ItemDAO {
         stmt = ConnectionDB.getConnection();
         ChefBean chefBean = Session.getCurrentSession().getChefBean();
 
-        String chefName2 = chefBean.getUsername();
+        String chefName = chefBean.getUsername();
         ResultSet resultSet1 = BasicQueries.retriveItem(stmt, chefName);
         while(resultSet1.next()){
             String nameR = resultSet1.getString("recipeName");
