@@ -17,11 +17,7 @@ public class LoginDAO {
         try{
             statement = ConnectionDB.getConnection();
             ResultSet resultSet = BasicQueries.checkLogin(statement, username, password);
-
-            //verifico resultset
-//            if(!resultSet.first()){
-//                throws
-//            }
+            
             resultSet.next();
             resultSet.first();
 

@@ -58,7 +58,7 @@ public class ConnectionDB {
 
     }
 
-    private static Properties loadProperties() throws IOException {
+    private static Properties loadProperties() throws IOException, ConnectionDbException {
         FileInputStream fileInputStream = null;
         try{
             Properties properties= new Properties();
@@ -67,7 +67,7 @@ public class ConnectionDB {
 
             return properties;
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new ConnectionDbException();
         } finally {
             Objects.requireNonNull(fileInputStream).close();
         }

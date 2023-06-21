@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ItemDAO {
 
-    public String chefName="chefName";
+    public static final String chefName="chefName";
     public List<RecipeItemModel> getItem() throws ConnectionDbException, SQLException {
         Statement stmt;
         List<RecipeItemModel> recipeItemModels = new ArrayList<>();
@@ -32,7 +32,7 @@ public class ItemDAO {
         List<String> chefNames = new ArrayList<>();
         int i = 0;
         do{
-            String chefName = resultSet.getString(this.chefName);
+            String chefName1 = resultSet.getString(this.chefName);
             chefNames.add(chefName);
 
         }while(resultSet.next());
@@ -61,7 +61,7 @@ public class ItemDAO {
         stmt = ConnectionDB.getConnection();
         ChefBean chefBean = Session.getCurrentSession().getChefBean();
 
-        String chefName = chefBean.getUsername();
+        String chefName2 = chefBean.getUsername();
         ResultSet resultSet1 = BasicQueries.retriveItem(stmt, chefName);
         while(resultSet1.next()){
             String nameR = resultSet1.getString("recipeName");

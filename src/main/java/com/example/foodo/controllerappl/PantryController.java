@@ -22,9 +22,9 @@ public class PantryController {
         UserBean userBean= Session.getCurrentSession().getUserBean();
         ChefBean chefBean=Session.getCurrentSession().getChefBean();
         if(userBean!=null){
-            ProductDAO.InsProduct(productModel, userBean.getUsername());
+            ProductDAO.insProduct(productModel, userBean.getUsername());
         } else if (chefBean!=null) {
-            ProductDAO.InsProduct(productModel, chefBean.getUsername());
+            ProductDAO.insProduct(productModel, chefBean.getUsername());
         }
     }
 
@@ -62,9 +62,9 @@ public class PantryController {
         UserBean userBean= Session.getCurrentSession().getUserBean();
         ChefBean chefBean=Session.getCurrentSession().getChefBean();
         if(userBean!=null){
-            productDAO.DelProduct(productModel, userBean.getUsername());
+            productDAO.delProduct(productModel, userBean.getUsername());
         } else if (chefBean!=null) {
-            productDAO.DelProduct(productModel, chefBean.getUsername());
+            productDAO.delProduct(productModel, chefBean.getUsername());
         }
 
     }

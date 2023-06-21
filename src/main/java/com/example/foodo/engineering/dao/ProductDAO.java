@@ -18,12 +18,12 @@ import java.util.List;
 public class   ProductDAO {
 
     private ProductBean productBean;
-    public static void InsProduct(ProductModel product, String userName) throws SQLException{
+    public static void insProduct(ProductModel product, String userName) throws SQLException{
 
-        Statement stmt;
-        PreparedStatement preparedStatement;
+
         try{
-
+            Statement stmt;
+            PreparedStatement preparedStatement;
             stmt = ConnectionDB.getConnection();
             preparedStatement= ConnectionDB.insertProduct();
             preparedStatement.setString(1, product.getName());
@@ -60,11 +60,10 @@ public class   ProductDAO {
             ProductModel productModel = new ProductModel(name, quantity, type, exp);
             productModelList.add(productModel);
         }while(resultSet.next());
-        ObservableList obl = FXCollections.observableArrayList(productModelList);
-        return obl;
+        return FXCollections.observableArrayList(productModelList);
     }
 
-    public void DelProduct(ProductModel productModel, String userName) throws ConnectionDbException, SQLException {
+    public void delProduct(ProductModel productModel, String userName) throws ConnectionDbException, SQLException {
         Statement stmt;
         stmt=ConnectionDB.getConnection();
         BasicQueries.deleteProduct(stmt, productModel.getName(), userName);
@@ -91,14 +90,11 @@ public class   ProductDAO {
     public Integer getRecipeId(String rname) throws ConnectionDbException, SQLException {
 
         Statement stmt;
-        List<ProductModel> productModelList = new ArrayList<>();
         stmt = ConnectionDB.getConnection();
 
         ResultSet resultSet = BasicQueries.retriveRecipeId2(stmt, rname);
         resultSet.next();
         resultSet.first();
-        Integer id = resultSet.getInt("recipeId");
-
-        return id;
+        return resultSet.getInt("recipeId");
     }
 }

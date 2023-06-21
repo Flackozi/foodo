@@ -1,9 +1,5 @@
 package junit;
 
-import com.example.foodo.controllerappl.LoginController;
-import com.example.foodo.controllerappl.PantryController;
-import com.example.foodo.engineering.bean.LoginBean;
-import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.dao.ProductDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.model.ProductModel;
@@ -34,7 +30,7 @@ public class TestAddNewProduct {
         productModels=productDAO.getAllProduct("flacko");
         size1=productModels.size();
         ProductModel productModel= new ProductModel("Fanta", "1 cassa", "liquid", 12, 6, 2025);
-        productDAO.InsProduct(productModel, "flacko");
+        productDAO.insProduct(productModel, "flacko");
         productModels=productDAO.getAllProduct("flacko");
         size2=productModels.size();
 

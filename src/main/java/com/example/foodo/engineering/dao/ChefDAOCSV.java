@@ -7,7 +7,7 @@ import java.io.*;
 
 public class ChefDAOCSV extends ChefDAO{
 
-    private static final String fileNameCSV="src/main/file/Chef.csv";
+    private static final String FILE_NAME_CSV ="src/main/file/Chef.csv";
     private static final int USERNAME=0;
     private static final int TYPEOFCUISINE=1;
     private static final int WORKPLACE=2;
@@ -21,7 +21,7 @@ public class ChefDAOCSV extends ChefDAO{
         ChefModel chefModel= null;
 
         try{
-            File file= new File(fileNameCSV);
+            File file= new File(FILE_NAME_CSV);
             BufferedReader bufferedReader= new BufferedReader(new FileReader(file));
             String row;
             String[] data;

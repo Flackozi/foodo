@@ -22,7 +22,7 @@ public class RecipeController {
         RecipeDAO recipeDAO=new RecipeDAO();
         RecipeModel recipeModel= new RecipeModel(recipeBean.getRecipeName(), recipeBean.getDescription(), recipeBean.getChefName(), recipeBean.getPath());
         RecipeDAO.AddRecipe(recipeModel);
-        recipeId=recipeDAO.TakeRecipeId(recipeModel);
+        recipeId=recipeDAO.takeRecipeId(recipeModel);
         return recipeId;
     }
 

@@ -1,11 +1,9 @@
 package com.example.foodo.engineering.dao;
 
 import com.example.foodo.engineering.connection.ConnectionDB;
-import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.model.IngredientModel;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.List;
 
 public class IngredientDAO {
