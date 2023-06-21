@@ -88,8 +88,8 @@ public class SearchProductControllerGUI {
             }else{
                 throw new ProductNotFoundException();
             }
-        } catch (SQLException | ConnectionDbException e) {
-            throw new RuntimeException(e);
+        } catch (SQLException | ConnectionDbException | ProductNotFoundException e) {
+            ExceptionController.showExceptionGUI(e.getMessage());
         }
     }
 
