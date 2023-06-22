@@ -43,7 +43,6 @@ public class SearchProductController {
             userName= chefBean.getUsername();
         }
 
-        String type;
         if(!text.isBlank()){
             ProductModel productModel= new ProductModel();
             productModel= SearchDAO.retriveBySearchText(text);
@@ -92,8 +91,7 @@ public class SearchProductController {
         List<ProductBean> productBeanList=new ArrayList<>();
         productModels = SearchDAO.retriveByTypeOfFood(type, userName);
         for(i=0; i< productModels.size(); i++){
-            ProductModel productModel = productModels.get(i);
-            ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
+            ProductBean productBean = new ProductBean(productModels.get(i).getName(), productModels.get(i).getQuantity(), productModels.get(i).getTypeOfFood(), productModels.get(i).getExpiration());
             productBeanList.add(productBean);
         }
         return productBeanList;

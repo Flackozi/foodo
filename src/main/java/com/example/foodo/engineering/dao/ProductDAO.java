@@ -18,13 +18,11 @@ import java.util.List;
 public class   ProductDAO {
 
     private ProductBean productBean;
-    public static void insProduct(ProductModel product, String userName) throws SQLException{
+    public static void insProduct(ProductModel product, String userName){
 
 
         try{
-            Statement stmt;
             PreparedStatement preparedStatement;
-            stmt = ConnectionDB.getConnection();
             preparedStatement= ConnectionDB.insertProduct();
             preparedStatement.setString(1, product.getName());
             preparedStatement.setString(2, product.getQuantity());
@@ -35,7 +33,7 @@ public class   ProductDAO {
             preparedStatement.setString(7, userName);
             preparedStatement.executeUpdate();
 
-        } catch(SQLException | ConnectionDbException e){
+        } catch(SQLException  e){
             e.printStackTrace();
         }
 

@@ -17,6 +17,8 @@ import java.util.List;
 
 public class SearchDAO {
 
+    private SearchDAO(){}
+
     public static ProductModel retriveBySearchText(String searchText) throws ConnectionDbException, SQLException, ProductNotFoundException {
         Statement stmt;
         ProductModel productModel=new ProductModel();
@@ -60,7 +62,6 @@ public class SearchDAO {
             stmt = ConnectionDB.getConnection();
             ResultSet resultSet = BasicQueries.retriveByType(stmt, type, userName);
             resultSet.next();
-            //resultSet.first();
 
             do{
                 String name = resultSet.getString("name");
@@ -74,10 +75,9 @@ public class SearchDAO {
                 productModelList.add(productModel);
             }while(resultSet.next());
         }catch(SQLException | ConnectionDbException e){
-            e.printStackTrace();;
+            e.printStackTrace();
         }
 
-        ObservableList obl = FXCollections.observableArrayList(productModelList);
-        return obl;
+        return FXCollections.observableArrayList(productModelList);
     }
 }

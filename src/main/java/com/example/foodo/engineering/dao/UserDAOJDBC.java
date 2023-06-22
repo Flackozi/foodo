@@ -46,13 +46,11 @@ public class UserDAOJDBC extends UserDAO{
         return userModel;
     }
 
-    //public UserModel retriveUserByUsername(String username) throws ClassNotFoundException
 
     private static UserModel getUserInfo(String username, ResultSet resultSet) throws SQLException {
         String typeOfDiet = resultSet.getString("typeOfdiet");
         String favoriteFood = resultSet.getString("favoritefood");
         String path=resultSet.getString("path");
-//        int profileType= resultSet.getInt("userType");
 
         return new UserModel(username, favoriteFood, typeOfDiet, path, 2);
     }

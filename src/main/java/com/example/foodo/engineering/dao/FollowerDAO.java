@@ -19,7 +19,6 @@ public class FollowerDAO {
             resultSet.next();
             resultSet.first();
             follow=resultSet.getInt(1);
-            System.out.print(follow);
         }catch(SQLException | ConnectionDbException e){
             e.printStackTrace();
         }

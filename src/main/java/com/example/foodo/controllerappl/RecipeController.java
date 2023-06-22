@@ -7,7 +7,7 @@ import com.example.foodo.engineering.dao.RecipeDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.model.IngredientModel;
 import com.example.foodo.model.RecipeModel;
-import java.io.FileNotFoundException;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ public class RecipeController {
         recipeId=-1;
         RecipeDAO recipeDAO=new RecipeDAO();
         RecipeModel recipeModel= new RecipeModel(recipeBean.getRecipeName(), recipeBean.getDescription(), recipeBean.getChefName(), recipeBean.getPath());
-        RecipeDAO.AddRecipe(recipeModel);
+        RecipeDAO.addRecipe(recipeModel);
         recipeId=recipeDAO.takeRecipeId(recipeModel);
         return recipeId;
     }
