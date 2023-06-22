@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione alcuni code smell">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/RecipeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/SearchProductControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/SearchProductControllerGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +55,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/carlo/Desktop/librerie aggiuntive java/mysql-connector-j-8.0.31/mysql-connector-j-8.0.31.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/carlo/Desktop/PROGETTO_ISPW/PerelliSeleniumAPI&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -245,14 +247,8 @@
       <workItem from="1687107499169" duration="223000" />
       <workItem from="1687178782548" duration="693000" />
       <workItem from="1687246495478" duration="11136000" />
-      <workItem from="1687332979891" duration="3960000" />
-    </task>
-    <task id="LOCAL-00004" summary="commit">
-      <created>1681911710383</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1681911710383</updated>
+      <workItem from="1687332979891" duration="4717000" />
+      <workItem from="1687417055886" duration="2601000" />
     </task>
     <task id="LOCAL-00005" summary="use case: profile &#10;first try">
       <created>1681925097599</created>
@@ -590,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687336196694</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="risoluzione alcuni code smell">
+      <created>1687337241806</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1687337241806</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

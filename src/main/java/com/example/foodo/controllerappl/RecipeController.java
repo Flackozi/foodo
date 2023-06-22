@@ -17,7 +17,7 @@ public class RecipeController {
 
     private int recipeId;
 
-    public int saveRecipe(RecipeBean recipeBean) throws SQLException, FileNotFoundException, ConnectionDbException {
+    public int saveRecipe(RecipeBean recipeBean) throws SQLException, ConnectionDbException {
         recipeId=-1;
         RecipeDAO recipeDAO=new RecipeDAO();
         RecipeModel recipeModel= new RecipeModel(recipeBean.getRecipeName(), recipeBean.getDescription(), recipeBean.getChefName(), recipeBean.getPath());

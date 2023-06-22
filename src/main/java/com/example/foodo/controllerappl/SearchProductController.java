@@ -17,6 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchProductController {
+
+    private String userName;
+    private List<ProductBean> productBeans = new ArrayList<>();
     public List<ProductBean> searchProduct(SearchBean searchBean) throws ProductNotFoundException, SQLException, ConnectionDbException {
 
         String text = searchBean.getSearchText();
@@ -28,18 +31,17 @@ public class SearchProductController {
         Boolean liquid = searchBean.getLiquid();
         Boolean fish = searchBean.getFish();
         SearchModel searchModel = new SearchModel(text, spices, fruit, meat, vegetable, sweet, liquid, fish);
-        List<ProductBean> productBeans = new ArrayList<>();
+
         //mi setto una variabile userName per passare il nome dell'utente alla DAO
         UserBean userBean= Session.getCurrentSession().getUserBean();
         ChefBean chefBean=Session.getCurrentSession().getChefBean();
-        String userName=null;
+
         if(userBean!=null){
-            userName= userBean.getUsername();
+            this.userName= userBean.getUsername();
         } else{
-            userName= chefBean.getUsername();
+            this.userName= chefBean.getUsername();
         }
 
-        //try{
         String type;
         if(!text.isBlank()){
             ProductModel productModel= new ProductModel();
@@ -48,106 +50,31 @@ public class SearchProductController {
             productBeans.add(productBean);
         }
         if(Boolean.TRUE.equals(searchModel.getSpices())){
-            type = "spices";
-            int i = 0;
-
-            List<ProductModel> spicesModels = new ArrayList<>();
-            spicesModels = SearchDAO.retriveByTypeOfFood(type, userName);
-            int length = spicesModels.size();
-            do{
-                ProductModel productModel = spicesModels.get(i);
-                i++;
-                ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
-                productBeans.add(productBean);
-            }while(i != length);
+            retrieveProducts("spices");
         }
 
         if(Boolean.TRUE.equals(searchModel.getFruit())){
-            type = "fruit";
-            int i = 0;
-
-            List<ProductModel> fruitModels = new ArrayList<>();
-            fruitModels = SearchDAO.retriveByTypeOfFood(type, userName);
-
-            int length = fruitModels.size();
-            do{
-                ProductModel productModel = fruitModels.get(i);
-                i++;
-                ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
-                productBeans.add(productBean);
-            }while(i != length);
+            retrieveProducts("fruit");
         }
 
         if(Boolean.TRUE.equals(searchModel.getMeat())){
-            int i = 0;
-            type = "meat";
-            List<ProductModel> meatModels = new ArrayList<>();
-            meatModels = SearchDAO.retriveByTypeOfFood(type, userName);
-            int length = meatModels.size();
-            do{
-                ProductModel productModel = meatModels.get(i);
-                i++;
-                ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
-                productBeans.add(productBean);
-            }while(i != length);
+            retrieveProducts("meat");
         }
 
         if(Boolean.TRUE.equals(searchModel.getVegetable())){
-            type = "vegetable";
-            int i = 0;
-            List<ProductModel> vegetableModels = new ArrayList<>();
-            vegetableModels = SearchDAO.retriveByTypeOfFood(type, userName);
-            int length = vegetableModels.size();
-            do{
-                ProductModel productModel = vegetableModels.get(i);
-                i++;
-                ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
-                productBeans.add(productBean);
-            }while(i != length);
+            retrieveProducts("vegetable");
         }
 
         if(Boolean.TRUE.equals(searchModel.getSweet())){
-            type = "sweet";
-            int i = 0;
-
-            List<ProductModel> sweetModels = new ArrayList<>();
-            sweetModels = SearchDAO.retriveByTypeOfFood(type, userName);
-            int length = sweetModels.size();
-            do{
-                ProductModel productModel = sweetModels.get(i);
-                i++;
-                ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
-                productBeans.add(productBean);
-            }while(i != length);
+            retrieveProducts("sweet");
         }
 
         if(Boolean.TRUE.equals(searchModel.getLiquid())){
-            type = "liquid";
-            int i = 0;
-
-            List<ProductModel> liquidModels = new ArrayList<>();
-            liquidModels = SearchDAO.retriveByTypeOfFood(type, userName);
-            int length = liquidModels.size();
-            do{
-                ProductModel productModel = liquidModels.get(i);
-                i++;
-                ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
-                productBeans.add(productBean);
-            }while(i != length);
+            retrieveProducts("liquid");
         }
 
         if(Boolean.TRUE.equals(searchModel.getFish())){
-            type = "fish";
-            int i = 0;
-            List<ProductModel> fishModels = new ArrayList<>();
-            fishModels = SearchDAO.retriveByTypeOfFood(type, userName);
-            int length = fishModels.size();
-            do{
-                ProductModel productModel = fishModels.get(i);
-                i++;
-                ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
-                productBeans.add(productBean);
-            }while(i != length);
+            retrieveProducts("fish");
         }
 
         if(Boolean.TRUE.equals(productBeans.isEmpty())){
@@ -155,5 +82,17 @@ public class SearchProductController {
         }
 
         return productBeans;
+    }
+
+    public void retrieveProducts(String type){
+        int i = 0;
+        List<ProductModel> fishModels = new ArrayList<>();
+        fishModels = SearchDAO.retriveByTypeOfFood(type, userName);
+        for(i=0; i< fishModels.size(); i++){
+            ProductModel productModel = fishModels.get(i);
+            ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
+            productBeans.add(productBean);
+            //System.out.println(productBean.getName());
+        }
     }
 }

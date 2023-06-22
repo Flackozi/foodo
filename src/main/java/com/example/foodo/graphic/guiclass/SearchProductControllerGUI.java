@@ -68,7 +68,7 @@ public class SearchProductControllerGUI {
         window.setScene(sceneMainView);
         window.show();
     }
-    public void actionSearch(ActionEvent actionEvent) throws ProductNotFoundException {
+    public void actionSearch(ActionEvent actionEvent) {
         try {
             SearchBean searchBean = new SearchBean();
 
