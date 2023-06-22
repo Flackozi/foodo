@@ -19,7 +19,8 @@ import java.util.List;
 public class SearchProductController {
 
     private String userName;
-    private List<ProductBean> productBeans = new ArrayList<>();
+
+
     public List<ProductBean> searchProduct(SearchBean searchBean) throws ProductNotFoundException, SQLException, ConnectionDbException {
 
         String text = searchBean.getSearchText();
@@ -31,15 +32,15 @@ public class SearchProductController {
         Boolean liquid = searchBean.getLiquid();
         Boolean fish = searchBean.getFish();
         SearchModel searchModel = new SearchModel(text, spices, fruit, meat, vegetable, sweet, liquid, fish);
-
+        List<ProductBean> productBeans = new ArrayList<>();
         //mi setto una variabile userName per passare il nome dell'utente alla DAO
         UserBean userBean= Session.getCurrentSession().getUserBean();
         ChefBean chefBean=Session.getCurrentSession().getChefBean();
 
         if(userBean!=null){
-            this.userName= userBean.getUsername();
+            userName= userBean.getUsername();
         } else{
-            this.userName= chefBean.getUsername();
+            userName= chefBean.getUsername();
         }
 
         String type;
@@ -50,31 +51,32 @@ public class SearchProductController {
             productBeans.add(productBean);
         }
         if(Boolean.TRUE.equals(searchModel.getSpices())){
-            retrieveProducts("spices");
+            productBeans.addAll(retrieveProducts("spices"));
+
         }
 
         if(Boolean.TRUE.equals(searchModel.getFruit())){
-            retrieveProducts("fruit");
+            productBeans.addAll(retrieveProducts("fruit"));
         }
 
         if(Boolean.TRUE.equals(searchModel.getMeat())){
-            retrieveProducts("meat");
+            productBeans.addAll(retrieveProducts("meat"));
         }
 
         if(Boolean.TRUE.equals(searchModel.getVegetable())){
-            retrieveProducts("vegetable");
+            productBeans.addAll(retrieveProducts("vegetable"));
         }
 
         if(Boolean.TRUE.equals(searchModel.getSweet())){
-            retrieveProducts("sweet");
+            productBeans.addAll(retrieveProducts("sweet"));
         }
 
         if(Boolean.TRUE.equals(searchModel.getLiquid())){
-            retrieveProducts("liquid");
+            productBeans.addAll(retrieveProducts("liquid"));
         }
 
         if(Boolean.TRUE.equals(searchModel.getFish())){
-            retrieveProducts("fish");
+            productBeans.addAll(retrieveProducts("fish"));
         }
 
         if(Boolean.TRUE.equals(productBeans.isEmpty())){
@@ -84,15 +86,16 @@ public class SearchProductController {
         return productBeans;
     }
 
-    public void retrieveProducts(String type){
+    public List<ProductBean> retrieveProducts(String type){
         int i = 0;
-        List<ProductModel> fishModels = new ArrayList<>();
-        fishModels = SearchDAO.retriveByTypeOfFood(type, userName);
-        for(i=0; i< fishModels.size(); i++){
-            ProductModel productModel = fishModels.get(i);
+        List<ProductModel> productModels = new ArrayList<>();
+        List<ProductBean> productBeanList=new ArrayList<>();
+        productModels = SearchDAO.retriveByTypeOfFood(type, userName);
+        for(i=0; i< productModels.size(); i++){
+            ProductModel productModel = productModels.get(i);
             ProductBean productBean = new ProductBean(productModel.getName(), productModel.getQuantity(), productModel.getTypeOfFood(), productModel.getExpiration());
-            productBeans.add(productBean);
-            //System.out.println(productBean.getName());
+            productBeanList.add(productBean);
         }
+        return productBeanList;
     }
 }
