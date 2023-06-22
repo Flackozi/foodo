@@ -29,7 +29,7 @@ public abstract class Subject {
         observerList.remove(observer);
     }
 
-    public void notifyObservers(ProductBean productBean){
+    public void notifyObservers(){
         for(Observer observer: observerList){
             observer.updateProductList();
         }

@@ -2,7 +2,6 @@ package com.example.foodo.engineering.dao.queries;
 
 import java.sql.SQLException;
 import java.sql.*;
-import java.util.Date;
 
 public class BasicQueries {
 
@@ -61,7 +60,6 @@ public class BasicQueries {
 
     public static ResultSet retrieveRecipeId(Statement stmt, String recipeName, String chefName, String description ) throws SQLException {
         String sql = "SELECT recipeId FROM recipes WHERE recipeName = '" + recipeName + "' AND description = '" + description + "' AND chefName = '" + chefName + "';";
-        //String sql = "SELECT recipeId FROM recipes WHERE recipeName = 'cannoli' AND description = 'bene' AND chefName = 'carlo';";
         return stmt.executeQuery(sql);
     }
 

@@ -176,8 +176,6 @@ public class PantryControllerGUI  implements Initializable, Observer {
 
         } catch (FieldEmptyException | DateFormatNotValidException e){
             ExceptionController.showExceptionGUI(e.getMessage());
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
 
 

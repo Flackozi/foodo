@@ -1,28 +1,35 @@
-package com.example.foodo.graphic.CLIController;
+package com.example.foodo.graphic.controllerCLI;
 
+import com.example.foodo.controllerappl.ProfileController;
 import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.session.Session;
+import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.graphic.viewcli.AddRecipeViewCLI;
+import com.example.foodo.graphic.viewcli.ProfileViewCLI;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 
-public class AddRecipeCLIController implements GrapghiCLIController{
-    private static final String CONFIRM="1";
+public class ProfileCLIController implements GrapghiCLIController {
+    private ProfileViewCLI profileViewCLI;
 
-    private AddRecipeViewCLI addRecipeViewCLI;
+    private static final String BACKHOME = "1";
 
     @Override
-    public void start() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
-        this.addRecipeViewCLI = new AddRecipeViewCLI(this);
-        this.addRecipeViewCLI.run();
+    public void start() throws SQLException, ConnectionDbException, ProductNotFoundException {
+        this.profileViewCLI = new ProfileViewCLI(this);
+        this.profileViewCLI.run();
+    }
+
+    public UserBean setUserInfoProfile(UserBean userBean){
+        ProfileController profileController = new ProfileController();
+        return profileController.getUserInfo(userBean);
     }
 
     public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
-        switch (inputLine){
-            case CONFIRM -> {
+        switch(inputLine){
+            case BACKHOME -> {
                 if(Session.getCurrentSession().getUserBean()!= null){
                     UserCLIController userCLIController= new UserCLIController();
                     userCLIController.start();
@@ -30,8 +37,7 @@ public class AddRecipeCLIController implements GrapghiCLIController{
                     ChefCLIController chefCLIController = new ChefCLIController();
                     chefCLIController.start();
                 }
-
-            }
+            }default -> throw new CommandNotValidException();
         }
     }
 }

@@ -9,7 +9,7 @@ import com.example.foodo.engineering.bean.IngredientBean;
 import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.graphic.CLIController.AddRecipeCLIController;
+import com.example.foodo.graphic.controllerCLI.AddRecipeCLIController;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;

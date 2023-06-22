@@ -1,4 +1,4 @@
-package com.example.foodo.graphic.CLIController;
+package com.example.foodo.graphic.controllerCLI;
 
 import com.example.foodo.controllerappl.MyChefController;
 import com.example.foodo.controllerappl.RecipeDetController;
@@ -44,13 +44,6 @@ public class MyChefCLIController implements  GrapghiCLIController{
     public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         switch(inputLine){
             case BACK -> {
-//                if(Session.getCurrentSession().getUserBean()!= null){
-//                    UserCLIController userCLIController= new UserCLIController();
-//                    userCLIController.start();
-//                }else{
-//                    ChefCLIController chefCLIController = new ChefCLIController();
-//                    chefCLIController.start();
-//                }
                 UserCLIController userCLIController= new UserCLIController();
                 userCLIController.start();
             } case REVIEW -> {

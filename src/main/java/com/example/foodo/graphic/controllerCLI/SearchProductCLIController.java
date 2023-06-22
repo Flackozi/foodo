@@ -1,6 +1,7 @@
-package com.example.foodo.graphic.CLIController;
+package com.example.foodo.graphic.controllerCLI;
 
 import com.example.foodo.controllerappl.SearchProductController;
+import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ProductBean;
@@ -25,12 +26,12 @@ public class SearchProductCLIController implements GrapghiCLIController{
 
 
     @Override
-    public void start() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
+    public void start() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException, CommandNotValidException {
         this.searchProductViewCLI = new SearchProductViewCLI(this);
         this.searchProductViewCLI.run();
     }
 
-    public void executeCommand(String inputLine) throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
+    public void executeCommand(String inputLine) throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException, CommandNotValidException {
         switch(inputLine){
             case SEARCHNAME -> {
                 this.searchProductViewCLI.searchName();
@@ -49,24 +50,24 @@ public class SearchProductCLIController implements GrapghiCLIController{
                     ChefCLIController chefCLIController = new ChefCLIController();
                     chefCLIController.start();
                 }
-            }
+            }default -> throw new CommandNotValidException();
         }
 
     }
 
-    public void searchName(String name, boolean spices, boolean fruit, boolean meat, boolean vegetable, boolean sweet, boolean liquid, boolean fish) throws ProductNotFoundException, SQLException, ConnectionDbException {
-        SearchBean searchBean= new SearchBean();
-        searchBean.setSearchText(name);
-        searchBean.setSpices(spices);
-        searchBean.setFruit(fruit);
-        searchBean.setFish(fish);
-        searchBean.setMeat(meat);
-        searchBean.setLiquid(liquid);
-        searchBean.setSweet(sweet);
-        searchBean.setVegetable(vegetable);
+    public void searchName(String name, SearchBean searchBean) throws ProductNotFoundException, SQLException, ConnectionDbException {
+        SearchBean searchBean1= new SearchBean();
+        searchBean1.setSearchText(name);
+        searchBean1.setSpices(searchBean.getSpices());
+        searchBean1.setFruit(searchBean.getFruit());
+        searchBean1.setFish(searchBean.getFish());
+        searchBean1.setMeat(searchBean.getMeat());
+        searchBean1.setLiquid(searchBean.getLiquid());
+        searchBean1.setSweet(searchBean.getSweet());
+        searchBean1.setVegetable(searchBean.getVegetable());
         List<ProductBean> productBeanList= new ArrayList<>();
         SearchProductController searchProductController= new SearchProductController();
-        productBeanList= searchProductController.searchProduct(searchBean);
+        productBeanList= searchProductController.searchProduct(searchBean1);
         for(ProductBean productBean: productBeanList){
             SearchProductViewCLI searchProductViewCLI1 = new SearchProductViewCLI(this);
             searchProductViewCLI1.printProduct(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getExpiration());

@@ -1,11 +1,10 @@
-package com.example.foodo.graphic.CLIController;
+package com.example.foodo.graphic.controllerCLI;
 
 import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.exception.DateFormatNotValidException;
 import com.example.foodo.graphic.viewcli.AddProductViewCLI;
 
-import java.sql.DataTruncation;
 import java.sql.SQLException;
 
 public class AddProductCLIController implements GrapghiCLIController{

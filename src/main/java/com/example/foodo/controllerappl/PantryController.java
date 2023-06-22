@@ -15,9 +15,9 @@ import java.util.List;
 public class PantryController {
 
 
-    public void addNewProduct (ProductBean productBean) throws SQLException {
+    public void addNewProduct (ProductBean productBean) {
 
-        productBean.notifyObservers(productBean);
+        productBean.notifyObservers();
         ProductModel productModel= new ProductModel(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getDay(), productBean.getMonth(), productBean.getYear());
         UserBean userBean= Session.getCurrentSession().getUserBean();
         ChefBean chefBean=Session.getCurrentSession().getChefBean();

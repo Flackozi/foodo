@@ -1,4 +1,4 @@
-package com.example.foodo.graphic.CLIController;
+package com.example.foodo.graphic.controllerCLI;
 
 import com.example.foodo.controllerappl.KitchenController;
 import com.example.foodo.controllerappl.RecipeDetController;
@@ -58,7 +58,6 @@ public class KitchenCLIController implements GrapghiCLIController{
 
 
         SearchRecipeController searchRecipeController= new SearchRecipeController();
-        KitchenController kitchenController= new KitchenController();
         recipeBeans=searchRecipeController.searchRecipe(searchRecipeBean);
         for(int i=0; i<recipeBeans.size(); i++){
             this.kitchenViewCLI.print(i+1,recipeBeans.get(i).getRecipeName(), recipeBeans.get(i).getChefName());

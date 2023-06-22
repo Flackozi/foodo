@@ -8,7 +8,7 @@ import java.util.List;
 
 public class IngredientDAO {
 
-    public IngredientDAO(){}
+    private IngredientDAO(){}
     public static void addIngredient(List<IngredientModel> ingredients, int recipeId) {
         PreparedStatement preparedStatement;
         try{

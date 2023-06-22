@@ -2,7 +2,7 @@ package com.example.foodo.graphic.viewcli;
 
 import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.graphic.CLIController.DeleteProductCLIController;
+import com.example.foodo.graphic.controllerCLI.DeleteProductCLIController;
 
 import java.sql.SQLException;
 import java.util.Scanner;

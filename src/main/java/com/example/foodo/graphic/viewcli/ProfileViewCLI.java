@@ -7,7 +7,7 @@ import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.graphic.CLIController.ProfileCLIController;
+import com.example.foodo.graphic.controllerCLI.ProfileCLIController;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;

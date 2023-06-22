@@ -1,4 +1,4 @@
-package com.example.foodo.graphic.CLIController;
+package com.example.foodo.graphic.controllerCLI;
 
 import com.example.foodo.controllerappl.LoginController;
 import com.example.foodo.engineering.utils.ExceptionController;
@@ -28,7 +28,7 @@ public class LoginCLIController implements GrapghiCLIController{
         }
     }
 
-    public void checkLogin (String username, String password) throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
+    public void checkLogin (String username, String password) throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException, NotFoundException {
         try{
             LoginBean loginBean= new LoginBean(username, password);
             LoginController loginController= new LoginController();

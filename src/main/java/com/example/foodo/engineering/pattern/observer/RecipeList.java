@@ -21,8 +21,6 @@ public class RecipeList extends Subject{
 
     private void addRecipe(RecipeModel recipe) {
         this.recipeModelList.add(recipe);
-        RecipeBean recipeBean= new RecipeBean(recipe.getRecipeName(), recipe.getDescription(), recipe.getChefName(), recipe.getPath());
-        //this.notifyObservers(recipeBean);
     }
 
     public ChefModel getChef(){return chef;}

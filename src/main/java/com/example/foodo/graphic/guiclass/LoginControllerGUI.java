@@ -1,6 +1,7 @@
 package com.example.foodo.graphic.guiclass;
 
 import com.example.foodo.controllerappl.LoginController;
+import com.example.foodo.engineering.exception.NotFoundException;
 import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.engineering.bean.LoginBean;
 import com.example.foodo.engineering.exception.UserNotFoundException;
@@ -98,6 +99,8 @@ public class LoginControllerGUI {
             ExceptionController.showExceptionGUI(e.getMessage());
         }catch(IOException e){
             e.printStackTrace();
+        } catch (NotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 }

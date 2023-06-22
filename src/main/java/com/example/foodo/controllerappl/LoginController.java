@@ -1,5 +1,6 @@
 package com.example.foodo.controllerappl;
 
+import com.example.foodo.engineering.exception.NotFoundException;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.ChefBean;
 import com.example.foodo.engineering.bean.LoginBean;
@@ -36,7 +37,7 @@ public class LoginController {
         Session.setSessionInstance(chefBean);
     }
 
-    public void completeUserLogin(LoginBean loginBean){
+    public void completeUserLogin(LoginBean loginBean) throws NotFoundException {
         UserDAO userDAO= UserDAOFactory.getInstance().getUserDAO();
         UserModel userModel = userDAO.retrieveUserByUsername(loginBean.getUsername());
         UserBean userBean = new UserBean(userModel.getUsername(), userModel.getFavoriteFood(), userModel.getTypeOfDiet(), userModel.getProfileType(), userModel.getPath());

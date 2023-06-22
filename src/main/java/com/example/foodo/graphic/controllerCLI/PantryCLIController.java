@@ -1,4 +1,4 @@
-package com.example.foodo.graphic.CLIController;
+package com.example.foodo.graphic.controllerCLI;
 
 import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.engineering.bean.ChefBean;
@@ -61,7 +61,7 @@ public class PantryCLIController implements GrapghiCLIController {
                 DeleteProductCLIController deleteProductCLIController= new DeleteProductCLIController();
                 deleteProductCLIController.start();
                 this.start();
-            }
+            }default -> throw new CommandNotValidException();
 
 
         }

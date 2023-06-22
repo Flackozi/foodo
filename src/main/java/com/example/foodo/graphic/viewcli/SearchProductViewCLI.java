@@ -1,9 +1,11 @@
 package com.example.foodo.graphic.viewcli;
 
+import com.example.foodo.engineering.bean.SearchBean;
+import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ProductNotFoundException;
 import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.graphic.CLIController.SearchProductCLIController;
+import com.example.foodo.graphic.controllerCLI.SearchProductCLIController;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
@@ -25,7 +27,7 @@ public class SearchProductViewCLI {
         this.searchProductCLIController = searchProductCLIController;
     }
 
-    public void run() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
+    public void run() throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException, CommandNotValidException {
         Printer.printMessage("\n-------------------------------------------- SEARCH PRODUCT PAGE --------------------------------------------");
         Printer.printMessage("\n 1)Insert the name \n 2)Filter your search \n 3)Pantry \n 4)Return to home page");
         Scanner scanner = new Scanner(System.in);
@@ -37,7 +39,16 @@ public class SearchProductViewCLI {
         Printer.printMessage("\n Insert the name:");
         Scanner scanner= new Scanner(System.in);
         String name= scanner.nextLine();
-        this.searchProductCLIController.searchName(name, spices, fruit, meat, vegetable, sweet, liquid, fish);
+        SearchBean searchBean=new SearchBean();
+        searchBean.setSearchText(name);
+        searchBean.setSpices(spices);
+        searchBean.setFruit(fruit);
+        searchBean.setFish(fish);
+        searchBean.setMeat(meat);
+        searchBean.setLiquid(liquid);
+        searchBean.setSweet(sweet);
+        searchBean.setVegetable(vegetable);
+        this.searchProductCLIController.searchName(name, searchBean);
 
     }
 
@@ -80,8 +91,16 @@ public class SearchProductViewCLI {
         if(Objects.equals(scanner.nextLine(), "y")){
             this.fish=true;
         }
-
-        this.searchProductCLIController.searchName(name, spices, fruit, meat, vegetable, sweet, liquid, fish);
+        SearchBean searchBean=new SearchBean();
+        searchBean.setSearchText(name);
+        searchBean.setSpices(spices);
+        searchBean.setFruit(fruit);
+        searchBean.setFish(fish);
+        searchBean.setMeat(meat);
+        searchBean.setLiquid(liquid);
+        searchBean.setSweet(sweet);
+        searchBean.setVegetable(vegetable);
+        this.searchProductCLIController.searchName(name, searchBean);
 
     }
 
