@@ -5,6 +5,7 @@ import com.example.foodo.engineering.utils.MyListener;
 import com.example.foodo.engineering.bean.RecipeBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -25,8 +26,9 @@ import java.util.ResourceBundle;
 import javafx.geometry.Insets;
 
 public class MyRecipeControllerGUI implements Initializable{
-
+    @FXML
     private GridPane grid;
+    @FXML
     private ScrollPane scroll;
     private MyListener myListener;
     private List<RecipeBean> recipeBeans1 = new ArrayList<>();

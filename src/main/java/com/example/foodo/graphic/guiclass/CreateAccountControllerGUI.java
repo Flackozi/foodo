@@ -72,13 +72,12 @@ public class CreateAccountControllerGUI {
     }
 
 
-    public void confirmButtonAction(ActionEvent event) throws IOException{
+    public void confirmButtonAction() throws IOException{
         String username = usernameTextField.getText();
         String favoritefood= favoriteFoodTextField.getText();
         String typeOfdiet= typeOfDietTextField.getText();
         String password = setPasswordField.getText();
-        String insertFields = "INSERT INTO  user_account(username, favoritefood, typeOfdiet, password) VALUES ('";
-        String insertValues = username + "','" + favoritefood + "','" + typeOfdiet + "','" + password + "')";
+
         try {
             registrationMessageLabel.setText("User has been registered succesfully!");
 

@@ -111,8 +111,6 @@ public class PantryControllerGUI  implements Initializable, Observer {
 
     }
 
-    public void getType(ActionEvent event){
-    }
     public void addNewProduct(ActionEvent actionEvent){
 
 
@@ -132,11 +130,11 @@ public class PantryControllerGUI  implements Initializable, Observer {
                 throw new FieldEmptyException("Date");
             }
 
-            ProductBean productBean = new ProductBean();
+            ProductBean productBean1 = new ProductBean();
             PantryController pantryController = new PantryController();
-            productBean.setName(nameText.getText());
-            productBean.setQuantity(quantityField.getText());
-            productBean.setTypeOfFood(typeOfFoodPicker.getValue());
+            productBean1.setName(nameText.getText());
+            productBean1.setQuantity(quantityField.getText());
+            productBean1.setTypeOfFood(typeOfFoodPicker.getValue());
 
             int year;
             int month;
@@ -155,17 +153,17 @@ public class PantryControllerGUI  implements Initializable, Observer {
             if(year < 2023){
                 throw new DateFormatNotValidException();
             }
-            productBean.setDay(day);
-            productBean.setMonth(month);
-            productBean.setYear(year);
+            productBean1.setDay(day);
+            productBean1.setMonth(month);
+            productBean1.setYear(year);
 
 
 
             String exp = day + "/" + month + "/" + year;
-            productBean.setExpiration(exp);
-            this.productBean=productBean;
+            productBean1.setExpiration(exp);
+            this.productBean=productBean1;
             this.productBean.register(this);
-            pantryController.addNewProduct(productBean);
+            pantryController.addNewProduct(productBean1);
 
 
 

@@ -26,18 +26,19 @@ import java.sql.SQLException;
 import java.util.*;
 
 public class RecipeDet1ControllerGUI {
-
-    public ImageView recipeImage;
-    public Label followLabel;
+    @FXML
+    private ImageView recipeImage;
+    @FXML
+    private Label followLabel;
     @FXML
     private TableView<ProductBean> tableIngredients;
 
 
     @FXML
-    private TableColumn<ProductBean, String> Quantity;
+    private TableColumn<ProductBean, String> quantity;
 
     @FXML
-    private TableColumn<ProductBean, String> Name;
+    private TableColumn<ProductBean, String> name;
     private Parent root;
     private Stage stage;
     private Scene scene;
@@ -52,8 +53,8 @@ public class RecipeDet1ControllerGUI {
 
     public void showDescription(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet2.fxml"));
-        Parent root = fxmlLoader.load();
-        scene = new Scene(root);
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
         RecipeDet2ControllerGUI recipeDet2ControllerGUI = fxmlLoader.getController();
         recipeDet2ControllerGUI.setInterfaceName(interfaceName);
         recipeDet2ControllerGUI.setDescription(rname, chefName);
@@ -64,8 +65,8 @@ public class RecipeDet1ControllerGUI {
 
     public void showReview(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet3.fxml"));
-        Parent root = fxmlLoader.load();
-        scene = new Scene(root);
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
         RecipeDet3ControllerGUI recipeDet3ControllerGUI = fxmlLoader.getController();
         recipeDet3ControllerGUI.setInterfaceName(interfaceName);
         recipeDet3ControllerGUI.setReview(rname,chefName);
@@ -104,8 +105,8 @@ public class RecipeDet1ControllerGUI {
     }
 
     public void setRecipe(String rname, String chefName) throws SQLException, ConnectionDbException {
-        Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
-        Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
+        name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
         this.rname=rname;
         this.chefName=chefName;
         RecipeDetController recipeDetController = new RecipeDetController();
@@ -127,7 +128,7 @@ public class RecipeDet1ControllerGUI {
     }
 
 
-    public void followChef(ActionEvent actionEvent) {
+    public void followChef() {
         RecipeDetController recipeDetController= new RecipeDetController();
         this.userName=Session.getCurrentSession().getUserBean().getUsername();
         if(recipeDetController.verifyFollow(userName, chefName)==0){

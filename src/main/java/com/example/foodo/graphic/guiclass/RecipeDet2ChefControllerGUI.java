@@ -4,6 +4,7 @@ import com.example.foodo.Main;
 import com.example.foodo.controllerappl.RecipeDetController;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -18,17 +19,18 @@ import java.sql.SQLException;
 import java.util.Objects;
 
 public class RecipeDet2ChefControllerGUI {
-
-    public Label descriptionLabel;
-    public Label averageLabel;
+    @FXML
+    private Label descriptionLabel;
+    @FXML
+    private Label averageLabel;
     private String interfaceName;
 
     private Scene scene;
     private Stage stage;
-    private String Rname;
     private String chefName;
     private String name;
-    public ImageView recipeImage;
+    @FXML
+    private ImageView recipeImage;
     private Parent root;
     public void back(ActionEvent event) throws IOException {
 
@@ -61,8 +63,8 @@ public class RecipeDet2ChefControllerGUI {
 
     public void showIngredients(ActionEvent event) throws IOException, SQLException, ConnectionDbException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet1Chef.fxml"));
-        Parent root = fxmlLoader.load();
-        scene = new Scene(root);
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
         RecipeDet1ChefControllerGUI recipeDet1ChefControllerGUI = fxmlLoader.getController();
         recipeDet1ChefControllerGUI.setRecipe(name, chefName);
         recipeDet1ChefControllerGUI.setInterfaceName(interfaceName);

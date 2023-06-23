@@ -28,6 +28,7 @@ public class ItemControllerGUI {
     public Label chefLabel;
     @FXML
     public ImageView img;
+    @FXML
     private Label numberLabel;
     private Parent root;
     private Stage stage;
