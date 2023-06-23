@@ -35,6 +35,6 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnHome" layoutX="136.0" layoutY="755.0" mnemonicParsing="false" onAction="#BackHome" opacity="0.0" prefHeight="89.0" prefWidth="116.0" style="-fx-background-radius: 30;" />
+      <Button fx:id="btnHome" layoutX="136.0" layoutY="755.0" mnemonicParsing="false" onAction="#backHome" opacity="0.0" prefHeight="89.0" prefWidth="116.0" style="-fx-background-radius: 30;" />
    </children>
 </AnchorPane>

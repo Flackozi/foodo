@@ -14,7 +14,7 @@
             <Image url="@../image/profileChef.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnHome" layoutX="138.0" layoutY="756.0" mnemonicParsing="false" onAction="#BackHome" opacity="0.0" prefHeight="88.0" prefWidth="112.0" />
+      <Button fx:id="btnHome" layoutX="138.0" layoutY="756.0" mnemonicParsing="false" onAction="#backHome" opacity="0.0" prefHeight="88.0" prefWidth="112.0" />
       <ImageView fx:id="chefImg" fitHeight="148.0" fitWidth="153.0" layoutX="9.0" layoutY="135.0">
          <image>
             <Image url="@../image/user(1).png" />

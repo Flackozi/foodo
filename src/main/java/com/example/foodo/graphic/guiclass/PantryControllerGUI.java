@@ -20,25 +20,24 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.time.LocalTime;
 import java.util.*;
 import com.example.foodo.engineering.exception.*;
 
 public class PantryControllerGUI  implements Initializable, Observer {
     @FXML
-    private TableColumn<ProductBean, DatePicker> Expiration;
+    private TableColumn<ProductBean, DatePicker> expiration;
 
     @FXML
-    private Button HomeButton;
+    private Button homeButton;
 
     @FXML
-    private TableColumn<ProductBean, String> Name;
+    private TableColumn<ProductBean, String> name;
 
     @FXML
-    private TableColumn<ProductBean, Integer> Quantity;
+    private TableColumn<ProductBean, Integer> quantity;
 
     @FXML
-    private TableColumn<ProductBean, String> TypeOfFood;
+    private TableColumn<ProductBean, String> typeOfFood;
 
     @FXML
     private DatePicker expirationDate;
@@ -83,16 +82,15 @@ public class PantryControllerGUI  implements Initializable, Observer {
 
 
 
-    private String[] typeOfFood = {"spices", "fruit", "meat", "vegetable", "sweet", "liquid", "fish", "other"};
+    private String[] typeOfFood1 = {"spices", "fruit", "meat", "vegetable", "sweet", "liquid", "fish", "other"};
     private ProductDAO productDAO = new ProductDAO();
     public void initialize(URL url, ResourceBundle resourceBundle){
-        Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
-        Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
-        Expiration.setCellValueFactory(new PropertyValueFactory<>("Expiration"));
-        TypeOfFood.setCellValueFactory(new PropertyValueFactory<>("TypeOfFood"));
+        name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
+        expiration.setCellValueFactory(new PropertyValueFactory<>("Expiration"));
+        typeOfFood.setCellValueFactory(new PropertyValueFactory<>("TypeOfFood"));
 
-        typeOfFoodPicker.getItems().addAll(typeOfFood);
-        typeOfFoodPicker.setOnAction(this::getType);
+        typeOfFoodPicker.getItems().addAll(typeOfFood1);
         try{
             PantryController pantryController = new PantryController();
             List<ProductBean> productBeans = new ArrayList<>();
@@ -101,12 +99,10 @@ public class PantryControllerGUI  implements Initializable, Observer {
             Iterator<ProductBean> iteratorProduct= productBeans.iterator();
             obl = tablePantry.getItems();
             while(iteratorProduct.hasNext()) {
-                ProductBean productBean = iteratorProduct.next();
-                //ProductModel productModel=new ProductModel(productBean.getName(), productBean.getQuantity(), productBean.getTypeOfFood(), productBean.getExpiration());
-                //productBean.register(this);
-                obl.add(productBean);
-            }
+                ProductBean productBean1 = iteratorProduct.next();
 
+                obl.add(productBean1);
+            }
             tablePantry.setItems(obl);
 
         }catch(Exception e){
@@ -116,7 +112,6 @@ public class PantryControllerGUI  implements Initializable, Observer {
     }
 
     public void getType(ActionEvent event){
-        String myType = typeOfFoodPicker.getValue();
     }
     public void addNewProduct(ActionEvent actionEvent){
 
@@ -182,21 +177,18 @@ public class PantryControllerGUI  implements Initializable, Observer {
     }
 
     public void deleteProduct(ActionEvent actionEvent) throws SQLException, ConnectionDbException {
-        int year;
-        int month;
-        int day;
 
         PantryController pantryController= new PantryController();
 
 
-        ObservableList<ProductBean> allProduct, SingleProduct;
+        ObservableList<ProductBean> allProduct, singleProduct;
         allProduct=tablePantry.getItems();
-        SingleProduct=tablePantry.getSelectionModel().getSelectedItems();
-        String Name= SingleProduct.get(0).getName();
-        SingleProduct.forEach(allProduct::remove);
-        ProductBean productBean = new ProductBean(Name);
+        singleProduct=tablePantry.getSelectionModel().getSelectedItems();
+        String name1= singleProduct.get(0).getName();
+        singleProduct.forEach(allProduct::remove);
+        ProductBean productBean1 = new ProductBean(name1);
 
-        pantryController.deleteProduct(productBean);
+        pantryController.deleteProduct(productBean1);
 
 
     }

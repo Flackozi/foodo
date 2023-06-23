@@ -62,7 +62,7 @@ public class LoginControllerGUI {
     }
 
     public void login(ActionEvent event) throws NotFoundException {
-        Scene scene;
+
         try{
             LoginBean loginBean = new LoginBean(usernameTextField.getText(), passwordPasswordField.getText());
             LoginController loginController = new LoginController();

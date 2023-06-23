@@ -57,13 +57,13 @@ public class MyChefControllerGUI implements Initializable{
     }
 
     public void initialize(URL location, ResourceBundle resources){
+
         try {
             recipeBeans1.addAll(getData());
-
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } catch (ConnectionDbException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         int column = 0;

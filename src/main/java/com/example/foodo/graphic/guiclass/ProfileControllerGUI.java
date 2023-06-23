@@ -21,9 +21,9 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class ProfileControllerGUI {
-    public Label labelEmail;
-    public Label labelPhone;
-    public Label labelLocation;
+    private Label labelEmail;
+    private Label labelPhone;
+    private Label labelLocation;
     @FXML
     private File file = null;
     @FXML
@@ -87,12 +87,11 @@ public class ProfileControllerGUI {
         labelEmail.setText(chefBean.getEmail());
         labelPhone.setText(chefBean.getNumber());
         labelLocation.setText(chefBean.getLocation());
-        System.out.print(chefBean.getPath());
         Image image= new Image(chefBean.getPath());
         chefImg.setImage(image);
     }
 
-    public void BackHome(ActionEvent event) throws IOException {
+    public void backHome(ActionEvent event) throws IOException {
         if((userBean= Session.getCurrentSession().getUserBean()) != null){
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneHomeUser.fxml")));
             scene = new Scene(root);
@@ -111,11 +110,11 @@ public class ProfileControllerGUI {
 
     public void showInfo(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/sceneChefProfile.fxml"));
-        Parent root = fxmlLoader.load();
-        scene = new Scene(root);
-        ChefBean chefBean = Session.getCurrentSession().getChefBean();
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
+        ChefBean chefBean1 = Session.getCurrentSession().getChefBean();
         ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
-        profileControllerGUI.setChefInfoProfile(chefBean);
+        profileControllerGUI.setChefInfoProfile(chefBean1);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
@@ -123,11 +122,11 @@ public class ProfileControllerGUI {
 
     public void showContact(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/sceneProfile2.fxml"));
-        Parent root = fxmlLoader.load();
-        scene = new Scene(root);
-        ChefBean chefBean = Session.getCurrentSession().getChefBean();
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
+        ChefBean chefBean1 = Session.getCurrentSession().getChefBean();
         ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
-        profileControllerGUI.setChefInfoProfile2(chefBean);
+        profileControllerGUI.setChefInfoProfile2(chefBean1);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
