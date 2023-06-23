@@ -1,6 +1,6 @@
 package com.example.foodo.graphic.viewcli;
 
-import com.example.foodo.graphic.controllerCLI.LoginCLIController;
+import com.example.foodo.graphic.controllercli.LoginCLIController;
 import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.NonUsableFunctionException;

@@ -25,7 +25,7 @@ public class AccessControllerGUI {
     }
 
     @FXML
-    public void showCreateAccount(ActionEvent event) throws IOException {
+    public void showCreateAccount(ActionEvent event) {
        try{
             throw new NonUsableFunctionException();
        }catch(NonUsableFunctionException e){

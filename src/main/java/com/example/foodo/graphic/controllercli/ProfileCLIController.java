@@ -1,4 +1,4 @@
-package com.example.foodo.graphic.controllerCLI;
+package com.example.foodo.graphic.controllercli;
 
 import com.example.foodo.controllerappl.ProfileController;
 import com.example.foodo.engineering.exception.ProductNotFoundException;
@@ -10,6 +10,7 @@ import com.example.foodo.graphic.viewcli.ProfileViewCLI;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class ProfileCLIController implements GrapghiCLIController {
     private ProfileViewCLI profileViewCLI;
@@ -28,16 +29,15 @@ public class ProfileCLIController implements GrapghiCLIController {
     }
 
     public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
-        switch(inputLine){
-            case BACKHOME -> {
-                if(Session.getCurrentSession().getUserBean()!= null){
-                    UserCLIController userCLIController= new UserCLIController();
-                    userCLIController.start();
-                }else{
-                    ChefCLIController chefCLIController = new ChefCLIController();
-                    chefCLIController.start();
-                }
-            }default -> throw new CommandNotValidException();
-        }
+        if(Objects.equals(inputLine, "1")){
+            if(Session.getCurrentSession().getUserBean()!= null){
+                UserCLIController userCLIController= new UserCLIController();
+                userCLIController.start();
+            }else{
+                ChefCLIController chefCLIController = new ChefCLIController();
+                chefCLIController.start();
+            }
+        }else throw new CommandNotValidException();
+
     }
 }

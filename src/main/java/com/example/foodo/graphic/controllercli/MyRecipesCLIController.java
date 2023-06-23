@@ -1,4 +1,4 @@
-package com.example.foodo.graphic.controllerCLI;
+package com.example.foodo.graphic.controllercli;
 
 import com.example.foodo.controllerappl.MyRecipeController;
 import com.example.foodo.controllerappl.RecipeDetController;

@@ -1,6 +1,5 @@
 package com.example.foodo.engineering.pattern.observer;
 
-import com.example.foodo.engineering.bean.ProductBean;
 
 import java.util.List;
 import java.util.Vector;

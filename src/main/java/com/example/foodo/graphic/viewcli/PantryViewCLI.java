@@ -5,7 +5,7 @@ import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.exception.CommandNotValidException;
 import com.example.foodo.engineering.exception.ConnectionDbException;
-import com.example.foodo.graphic.controllerCLI.PantryCLIController;
+import com.example.foodo.graphic.controllercli.PantryCLIController;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;

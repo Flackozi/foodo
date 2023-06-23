@@ -1,7 +1,7 @@
 package junit;
 
 import com.example.foodo.engineering.exception.DateFormatNotValidException;
-import com.example.foodo.graphic.controllerCLI.AddProductCLIController;
+import com.example.foodo.graphic.controllercli.AddProductCLIController;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

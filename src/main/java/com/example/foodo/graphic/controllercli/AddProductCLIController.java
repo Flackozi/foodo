@@ -1,4 +1,4 @@
-package com.example.foodo.graphic.controllerCLI;
+package com.example.foodo.graphic.controllercli;
 
 import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.engineering.bean.ProductBean;
@@ -16,7 +16,7 @@ public class AddProductCLIController implements GrapghiCLIController{
         this.addProductViewCLI.run();
     }
 
-    public void addProduct(String name, String quantity, String typeOfFood, String expiration, String expDay, String expMonth, String expYear) throws SQLException, DateFormatNotValidException {
+    public void addProduct(String name, String quantity, String typeOfFood, String expiration, String expDay, String expMonth, String expYear) throws DateFormatNotValidException {
         ProductBean productBean= new ProductBean();
         productBean.setName(name);
         productBean.setQuantity(quantity);

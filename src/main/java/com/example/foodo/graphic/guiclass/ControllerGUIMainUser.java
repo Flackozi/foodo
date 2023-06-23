@@ -15,7 +15,6 @@ import javafx.stage.Stage;
 
 
 import java.io.IOException;
-import java.text.ParseException;
 
 public class ControllerGUIMainUser {
     private Parent root;
@@ -26,26 +25,18 @@ public class ControllerGUIMainUser {
     @FXML
     private Button addProduct;
 
-    public ControllerGUIMainUser() throws ParseException {
-    }
-
-
-
-
-
-
 
     @FXML
-    private TableColumn<ProductModel, String> Expiration;
+    private TableColumn<ProductModel, String> expiration;
 
     @FXML
-    private Button HomeButton;
+    private Button homeButton;
 
     @FXML
-    private TableColumn<ProductModel, String> Name;
+    private TableColumn<ProductModel, String> name;
 
     @FXML
-    private TableColumn<ProductModel, String> Quantity;
+    private TableColumn<ProductModel, String> quantity;
 
     @FXML
     private TableColumn<ProductModel, String> TypeOfFood;

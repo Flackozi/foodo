@@ -17,11 +17,8 @@ import java.io.IOException;
 
 public class ChefMainPageControllerGUI {
 
-    private Parent root;
     private Stage stage;
     private Scene scene;
-    private ChefBean chefBean;
-    private ScrollPane scroll;
 
     public void showKitchenChef(ActionEvent event) throws IOException {
         Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/myKitchen.fxml"));
@@ -53,8 +50,8 @@ public class ChefMainPageControllerGUI {
 
     public void showChefProfile(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/sceneChefProfile.fxml"));
-        Parent root = fxmlLoader.load();
-        scene = new Scene(root);
+        Parent parentRoot = fxmlLoader.load();
+        scene = new Scene(parentRoot);
         ChefBean chefBean = Session.getCurrentSession().getChefBean();
         ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
         profileControllerGUI.setChefInfoProfile(chefBean);
