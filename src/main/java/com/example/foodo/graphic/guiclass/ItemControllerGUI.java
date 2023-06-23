@@ -48,7 +48,7 @@ public class ItemControllerGUI {
         this.rname = recipeName;
         this.chefName=chefName;
         recipeNameLabel.setText(recipeBean.getRecipeName());
-        numberLabel.setText(String.valueOf(j));
+
         String path = recipeBean.getPath();
         chefLabel.setText(recipeBean.getChefName());
         Image image = new Image(path);
