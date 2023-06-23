@@ -27,14 +27,17 @@ import java.util.List;
 import java.util.Objects;
 
 public class RecipeDet1ChefControllerGUI {
-    public Label averageLabel;
-    public TableView tableIngredients;
-    public ImageView recipeImage;
     @FXML
-    private TableColumn<ProductBean, String> Quantity;
+    private Label averageLabel;
+    @FXML
+    private TableView tableIngredients;
+    @FXML
+    private ImageView recipeImage;
+    @FXML
+    private TableColumn<ProductBean, String> quantity;
 
     @FXML
-    private TableColumn<ProductBean, String> Name;
+    private TableColumn<ProductBean, String> name;
     private String rname;
     private String chefName;
     private List<ProductBean> productBeans = new ArrayList<>();
@@ -42,15 +45,12 @@ public class RecipeDet1ChefControllerGUI {
     private Parent root;
     private Stage stage;
     private Scene scene;
-    private String name;
-    private String Rname;
+    private String recipeName;
 
-
-    private String InterfaceName;
 
     public void setRecipe(String rname, String chefName) throws SQLException, ConnectionDbException {
-        Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
-        Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
+        name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
         this.rname=rname;
         this.chefName=chefName;
         RecipeDetController recipeDetController = new RecipeDetController();
@@ -72,11 +72,11 @@ public class RecipeDet1ChefControllerGUI {
 
     public void showDescription(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet2Chef.fxml"));
-        Parent root = fxmlLoader.load();
-        scene = new Scene(root);
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
         RecipeDet2ChefControllerGUI recipeDet2ChefControllerGUI = fxmlLoader.getController();
         recipeDet2ChefControllerGUI.setInterfaceName(interfaceName);
-        recipeDet2ChefControllerGUI.setInfo(name, chefName);
+        recipeDet2ChefControllerGUI.setInfo(recipeName, chefName);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
@@ -94,7 +94,7 @@ public class RecipeDet1ChefControllerGUI {
     }
 
     public void setReview(String rname, String chefName) {
-        this.name=rname;
+        this.recipeName =rname;
         this.chefName=chefName;
         RecipeDetController recipeDetController= new RecipeDetController();
         String path=recipeDetController.getPath(rname);
@@ -134,12 +134,12 @@ public class RecipeDet1ChefControllerGUI {
         }
     }
 
-    public void DeleteRecipe(ActionEvent event) throws IOException {
+    public void deleteRecipe(ActionEvent event) throws IOException {
         RecipeDetController recipeDetController=new RecipeDetController();
-        recipeDetController.deleteRecipe(name, chefName);
+        recipeDetController.deleteRecipe(recipeName, chefName);
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/myRecipes.fxml"));
-        Parent root = fxmlLoader.load();
-        scene = new Scene(root);
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();

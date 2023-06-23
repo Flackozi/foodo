@@ -22,13 +22,13 @@
          </font></Label>
       <TableView fx:id="tableIngredients" layoutX="17.0" layoutY="467.0" prefHeight="249.0" prefWidth="356.0" stylesheets="@../JavaFXTC.css">
         <columns>
-          <TableColumn fx:id="Name" prefWidth="170.0" text="Name" />
-          <TableColumn fx:id="Quantity" prefWidth="195.0" text="Quantity" />
+          <TableColumn fx:id="name" prefWidth="170.0" text="Name" />
+          <TableColumn fx:id="quantity" prefWidth="195.0" text="Quantity" />
         </columns>
       </TableView>
       <Button layoutX="138.0" layoutY="756.0" mnemonicParsing="false" onAction="#back" opacity="0.0" prefHeight="87.0" prefWidth="112.0" />
       <ImageView fx:id="recipeImage" fitHeight="143.0" fitWidth="153.0" layoutX="14.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" />
       <Button layoutX="223.0" layoutY="378.0" mnemonicParsing="false" onAction="#showDescription" opacity="0.0" prefHeight="25.0" prefWidth="72.0" />
-      <Button layoutX="229.0" layoutY="266.0" mnemonicParsing="false" onAction="#DeleteRecipe" opacity="0.0" prefHeight="36.0" prefWidth="122.0" />
+      <Button layoutX="229.0" layoutY="266.0" mnemonicParsing="false" onAction="#deleteRecipe" opacity="0.0" prefHeight="36.0" prefWidth="122.0" />
    </children>
 </AnchorPane>
