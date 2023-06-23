@@ -31,7 +31,7 @@
          </font>
       </Label>
       <Rating fx:id="ratingBar" layoutX="22.0" layoutY="518.0" rating="0.0" />
-      <Button layoutX="22.0" layoutY="616.0" mnemonicParsing="false" onAction="#AddRating" prefHeight="39.0" prefWidth="103.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" styleClass="button1" stylesheets="@../style.css" text="Submit">
+      <Button layoutX="22.0" layoutY="616.0" mnemonicParsing="false" onAction="#addRating" prefHeight="39.0" prefWidth="103.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" styleClass="button1" stylesheets="@../style.css" text="Submit">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>

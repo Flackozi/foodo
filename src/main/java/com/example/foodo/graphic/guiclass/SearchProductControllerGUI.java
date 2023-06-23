@@ -24,26 +24,36 @@ import java.sql.SQLException;
 import java.util.*;
 
 public class SearchProductControllerGUI {
-    public Button buttonSearchProduct;
-    public TextField searchBar;
-    public CheckBox spicesCheckBox;
-    public CheckBox fruitCheckBox;
-    public CheckBox meatCheckBox;
-    public CheckBox vegetableCheckBox;
-    public CheckBox sweetCheckBox;
-    public CheckBox liquidCheckBox;
-    public CheckBox fishCheckBox;
-    public TableView<ProductModel> productTable;
     @FXML
-    private    TableColumn<ProductModel, String> Name;
+    private Button buttonSearchProduct;
+    @FXML
+    private TextField searchBar;
+    @FXML
+    private CheckBox spicesCheckBox;
+    @FXML
+    private CheckBox fruitCheckBox;
+    @FXML
+    private CheckBox meatCheckBox;
+    @FXML
+    private CheckBox vegetableCheckBox;
+    @FXML
+    private CheckBox sweetCheckBox;
+    @FXML
+    private CheckBox liquidCheckBox;
+    @FXML
+    private CheckBox fishCheckBox;
+    @FXML
+    private TableView<ProductModel> productTable;
+    @FXML
+    private    TableColumn<ProductModel, String> name;
 
     @FXML
-    private  TableColumn<ProductModel, Integer> Quantity;
+    private  TableColumn<ProductModel, Integer> quantity;
 
     @FXML
-    private  TableColumn<ProductModel, String> TypeOfFood;
+    private  TableColumn<ProductModel, String> typeOfFood;
     @FXML
-    private  TableColumn<ProductModel, String> Expiration;
+    private  TableColumn<ProductModel, String> expiration;
     private Parent scenePantryParent;
 
 
@@ -68,7 +78,7 @@ public class SearchProductControllerGUI {
         window.setScene(sceneMainView);
         window.show();
     }
-    public void actionSearch(ActionEvent actionEvent) {
+    public void actionSearch() {
         try {
             SearchBean searchBean = new SearchBean();
 
@@ -81,7 +91,6 @@ public class SearchProductControllerGUI {
             searchBean.setFish(fishCheckBox.isSelected());
             searchBean.setLiquid(liquidCheckBox.isSelected());
             SearchProductController searchProductController = new SearchProductController();
-            //ObservableList obl = FXCollections.observableArrayList(searchProductController.searchProduct(searchBean));
             productTable.getItems().clear();
             if(searchProductController.searchProduct(searchBean) != null){
                 setTable(searchProductController.searchProduct(searchBean));
@@ -94,10 +103,10 @@ public class SearchProductControllerGUI {
     }
 
     private void setTable(List<ProductBean> productBeans){
-        Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
-        Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
-        TypeOfFood.setCellValueFactory(new PropertyValueFactory<>("TypeOfFood"));
-        Expiration.setCellValueFactory(new PropertyValueFactory<>("Expiration"));
+        name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
+        typeOfFood.setCellValueFactory(new PropertyValueFactory<>("TypeOfFood"));
+        expiration.setCellValueFactory(new PropertyValueFactory<>("Expiration"));
 
         Iterator<ProductBean> iteratorProduct=productBeans.iterator();
 

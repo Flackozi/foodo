@@ -6,6 +6,7 @@ import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.bean.UserBean;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -20,12 +21,13 @@ import java.sql.SQLException;
 import java.util.Objects;
 
 public class RecipeDet2ControllerGUI{
-    public ImageView recipeImage;
-    public Label followLabel;
+    @FXML
+    private ImageView recipeImage;
+    @FXML
+    private Label followLabel;
     private Parent root;
-        private Stage stage;
-        private Scene scene;
-    private UserBean userBean;
+    private Stage stage;
+    private Scene scene;
     private String name;
     private String chefName;
     private String userName;
@@ -62,8 +64,8 @@ public class RecipeDet2ControllerGUI{
 
     public void showIngredients(ActionEvent event) throws IOException, SQLException, ConnectionDbException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet1.fxml"));
-        Parent root = fxmlLoader.load();
-        scene = new Scene(root);
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
         RecipeDet1ControllerGUI recipeDet1ControllerGUI = fxmlLoader.getController();
         recipeDet1ControllerGUI.setInterfaceName(interfaceName);
         recipeDet1ControllerGUI.setRecipe(name, chefName);
@@ -74,8 +76,8 @@ public class RecipeDet2ControllerGUI{
 
     public void showReview(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet3.fxml"));
-        Parent root = fxmlLoader.load();
-        scene = new Scene(root);
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
         RecipeDet3ControllerGUI recipeDet3ControllerGUI = fxmlLoader.getController();
         recipeDet3ControllerGUI.setInterfaceName(interfaceName);
         recipeDet3ControllerGUI.setReview(name, chefName);
@@ -97,7 +99,7 @@ public class RecipeDet2ControllerGUI{
         recipeImage.setFitWidth(150);
     }
 
-    public void followChef(ActionEvent actionEvent) {
+    public void followChef() {
         RecipeDetController recipeDetController= new RecipeDetController();
         this.userName=Session.getCurrentSession().getUserBean().getUsername();
         if(recipeDetController.verifyFollow(userName, chefName)==0){
