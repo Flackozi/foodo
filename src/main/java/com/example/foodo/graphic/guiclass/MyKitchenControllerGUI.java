@@ -83,6 +83,8 @@ public class MyKitchenControllerGUI {
         int column = 0;
         int row = 1;
         try {
+
+            grid.getChildren().clear();
             for (int i = 0; i < recipeBeans.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/guiclass/recipeItem.fxml"));

@@ -28,6 +28,8 @@ import java.util.List;
 public class KitchenSearchControllerGUI {
     @FXML
     private Button searchButton;
+
+    @FXML
     private GridPane grid;
     private MyListener myListener;
 
@@ -72,6 +74,7 @@ public class KitchenSearchControllerGUI {
         int row = 1;
         try {
             for (int i = 0; i < recipeBeans.size(); i++) {
+
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/guiclass/recipeItem.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();

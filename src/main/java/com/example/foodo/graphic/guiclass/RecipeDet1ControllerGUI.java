@@ -73,6 +73,8 @@ public class RecipeDet1ControllerGUI {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+
+
     }
 
     public void back(ActionEvent event) throws IOException {
@@ -102,6 +104,8 @@ public class RecipeDet1ControllerGUI {
             stage.setScene(scene);
             stage.show();
         }
+
+
     }
 
     public void setRecipe(String rname, String chefName) throws SQLException, ConnectionDbException {

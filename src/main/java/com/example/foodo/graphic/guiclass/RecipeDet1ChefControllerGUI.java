@@ -132,6 +132,8 @@ public class RecipeDet1ChefControllerGUI {
             stage.setScene(scene);
             stage.show();
         }
+
+
     }
 
     public void deleteRecipe(ActionEvent event) throws IOException {
