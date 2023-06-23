@@ -51,7 +51,7 @@ public class AddProductViewCLI {
             inputLine= scanner.nextLine();
             String type=inputLine;
             this.addProductCLIController.addProduct(name, quantity, type, expiration, day, month, year);
-        }catch (DateFormatNotValidException | SQLException e){
+        }catch (DateFormatNotValidException e){
             ExceptionController.showExceptionCLI("errore nell'inserimento della data");
             run();
         }
