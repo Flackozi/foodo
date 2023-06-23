@@ -28,8 +28,7 @@ import java.util.List;
 public class KitchenSearchControllerGUI {
     @FXML
     private Button searchButton;
-    public GridPane grid;
-    public ScrollPane scroll;
+    private GridPane grid;
     private MyListener myListener;
 
     @FXML
@@ -60,7 +59,7 @@ public class KitchenSearchControllerGUI {
         window.show();
     }
 
-    public void searchRecipe(ActionEvent actionEvent) throws RecipeNotFoundException {
+    public void searchRecipe() throws RecipeNotFoundException {
         SearchRecipeBean searchRecipeBean= new SearchRecipeBean();
         searchRecipeBean.setRecipeName(searchTextField.getText());
         List<RecipeBean> recipeBeans= new ArrayList<>();

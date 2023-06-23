@@ -18,28 +18,28 @@
          </image>
       </ImageView>
       <Button fx:id="addButton" layoutX="177.0" layoutY="223.0" mnemonicParsing="false" onAction="#addIngredient" opacity="0.0" prefHeight="44.0" prefWidth="46.0" />
-      <TextField fx:id="NameTextField" layoutX="11.0" layoutY="205.0" prefHeight="30.0" prefWidth="158.0" promptText="Name">
+      <TextField fx:id="nameTextField" layoutX="11.0" layoutY="205.0" prefHeight="30.0" prefWidth="158.0" promptText="Name">
          <font>
             <Font name="Arial Bold Italic" size="12.0" />
          </font></TextField>
-      <TextField fx:id="QuantiyTextField" layoutX="11.0" layoutY="252.0" prefHeight="30.0" prefWidth="158.0" promptText="Quantity">
+      <TextField fx:id="quantiyTextField" layoutX="11.0" layoutY="252.0" prefHeight="30.0" prefWidth="158.0" promptText="Quantity">
          <font>
             <Font name="Arial Bold Italic" size="12.0" />
          </font></TextField>
-      <TextArea fx:id="DescriptionTextArea" layoutX="20.0" layoutY="575.0" prefHeight="111.0" prefWidth="355.0" />
+      <TextArea fx:id="descriptionTextArea" layoutX="20.0" layoutY="575.0" prefHeight="111.0" prefWidth="355.0" />
       <Button layoutX="138.0" layoutY="756.0" mnemonicParsing="false" onAction="#backHome" opacity="0.0" prefHeight="87.0" prefWidth="112.0" />
       <Button fx:id="confirmButton" layoutX="14.0" layoutY="709.0" mnemonicParsing="false" onAction="#confirmRecipe" opacity="0.0" prefHeight="38.0" prefWidth="96.0" />
-      <TableView fx:id="IngredientsTable" layoutX="24.0" layoutY="336.0" prefHeight="182.0" prefWidth="349.0" stylesheets="@../JavaFXTC.css">
+      <TableView fx:id="ingredientsTable" layoutX="24.0" layoutY="336.0" prefHeight="182.0" prefWidth="349.0" stylesheets="@../JavaFXTC.css">
         <columns>
-          <TableColumn fx:id="Name" prefWidth="174.0" text="Name" />
-          <TableColumn fx:id="Quantity" minWidth="0.0" prefWidth="174.0" text="Quantity" />
+          <TableColumn fx:id="name" prefWidth="174.0" text="Name" />
+          <TableColumn fx:id="quantity" minWidth="0.0" prefWidth="174.0" text="Quantity" />
         </columns>
       </TableView>
-      <TextField fx:id="RecipeName" layoutX="11.0" layoutY="129.0" prefHeight="30.0" prefWidth="158.0" promptText="Recipe Name">
+      <TextField fx:id="recipeName" layoutX="11.0" layoutY="129.0" prefHeight="30.0" prefWidth="158.0" promptText="Recipe Name">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font></TextField>
-      <ImageView fx:id="RecipeImage" fitHeight="138.0" fitWidth="151.0" layoutX="227.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="recipeImage" fitHeight="138.0" fitWidth="151.0" layoutX="227.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="imageButton" layoutX="227.0" layoutY="126.0" mnemonicParsing="false" onAction="#insertImage" opacity="0.0" prefHeight="148.0" prefWidth="158.0" />
    </children>
 </AnchorPane>

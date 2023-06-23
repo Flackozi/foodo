@@ -41,13 +41,6 @@ public class LoginControllerGUI {
         stage.show();
     }
 
-//    public void loginButtonOnAction (ActionEvent event) throws IOException {
-//        ((Node)event.getSource()).getScene().getWindow().hide();
-//        Stage stage = Main.getStage();
-//        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("sceneLogin.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load());
-//        stage.setScene(scene);
-//    }
 
 
     public void showUserHomePage(ActionEvent event) throws IOException {
@@ -66,15 +59,9 @@ public class LoginControllerGUI {
         stage.setScene(scene);
         stage.show();
 
-//        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/GUIclass/chefMainPage.fxml"));
-//        Parent root = fxmlLoader.load();
-//        Scene scene = new Scene(root);
-////        ChefMainPageControllerGUI chefMainPageControllerGUI  = fxmlLoader.getController();
-////        chefMainPageControllerGUI.goToHomePage();
-//        return scene;
     }
 
-    public void login(ActionEvent event){
+    public void login(ActionEvent event) throws NotFoundException {
         Scene scene;
         try{
             LoginBean loginBean = new LoginBean(usernameTextField.getText(), passwordPasswordField.getText());
@@ -83,13 +70,11 @@ public class LoginControllerGUI {
 
             if(loginBean.getAccountType() == 1){
                 loginController.completeChefLogin(loginBean);
-//                scene = showChefHomePage();
-//                Main.getStage().setScene(scene);
+
                 showChefHomePage(event);
             } else if(loginBean.getAccountType() == 2){
                 loginController.completeUserLogin(loginBean);
-//                scene = showUserHomePage();
-//                Main.getStage().setScene(scene);
+
                 showUserHomePage(event);
 
             }else
@@ -99,8 +84,6 @@ public class LoginControllerGUI {
             ExceptionController.showExceptionGUI(e.getMessage());
         }catch(IOException e){
             e.printStackTrace();
-        } catch (NotFoundException e) {
-            throw new RuntimeException(e);
         }
     }
 }

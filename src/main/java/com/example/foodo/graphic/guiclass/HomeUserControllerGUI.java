@@ -30,8 +30,8 @@ public class HomeUserControllerGUI {
 
     public void showProfileUser(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/sceneProfile.fxml"));
-        Parent root = fxmlLoader.load();
-        scene = new Scene(root);
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
         ProfileControllerGUI profileControllerGUI = fxmlLoader.getController();
         if((userBean= Session.getCurrentSession().getUserBean()) != null){
             profileControllerGUI.setUserInfoProfile(userBean);

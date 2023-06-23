@@ -30,7 +30,7 @@ import java.util.Objects;
 public class MyKitchenControllerGUI {
 
     @FXML
-    private Button HomeButton;
+    private Button homeButton;
 
     @FXML
     private Button confirmButton;
@@ -64,7 +64,7 @@ public class MyKitchenControllerGUI {
 
     private MyListener myListener;
 
-    public void confirmIngredients(ActionEvent actionEvent) throws SQLException, ConnectionDbException {
+    public void confirmIngredients() throws SQLException, ConnectionDbException {
         KitchenBean kitchenBean= new KitchenBean();
         List<RecipeBean> recipeBeans= new ArrayList<>();
         kitchenBean.setIngredient1(ingredient1.getText());

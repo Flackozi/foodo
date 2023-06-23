@@ -28,7 +28,7 @@ public class ItemControllerGUI {
     public Label chefLabel;
     @FXML
     public ImageView img;
-    public Label numberLabel;
+    private Label numberLabel;
     private Parent root;
     private Stage stage;
     private Scene scene;
@@ -36,15 +36,15 @@ public class ItemControllerGUI {
 
     private RecipeBean recipeBean;
     private MyListener myListener;
-    private String Rname;
+    private String rname;
     private String chefName;
 
-    private String InterfaceName;
+    private String interfaceName;
 
     public void setData(RecipeBean recipeBean, MyListener myListener, Integer j, String recipeName, String chefName) {
         this.recipeBean = recipeBean;
         this.myListener = myListener;
-        this.Rname = recipeName;
+        this.rname = recipeName;
         this.chefName=chefName;
         recipeNameLabel.setText(recipeBean.getRecipeName());
         numberLabel.setText(String.valueOf(j));
@@ -60,22 +60,22 @@ public class ItemControllerGUI {
     public void openRecipeInfo(ActionEvent event) throws IOException, SQLException, ConnectionDbException {
         if((userBean = Session.getCurrentSession().getUserBean()) != null){
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet1.fxml"));
-            Parent root = fxmlLoader.load();
-            scene = new Scene(root);
+            Parent parent = fxmlLoader.load();
+            scene = new Scene(parent);
             RecipeDet1ControllerGUI recipeDet1ControllerGUI = fxmlLoader.getController();
-            recipeDet1ControllerGUI.setRecipe(Rname, chefName);
-            recipeDet1ControllerGUI.setInterfaceName(InterfaceName);
+            recipeDet1ControllerGUI.setRecipe(rname, chefName);
+            recipeDet1ControllerGUI.setInterfaceName(interfaceName);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
         }else{
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet1Chef.fxml"));
-            Parent root = fxmlLoader.load();
-            scene = new Scene(root);
+            Parent parent = fxmlLoader.load();
+            scene = new Scene(parent);
             RecipeDet1ChefControllerGUI recipeDet1ChefControllerGUI = fxmlLoader.getController();
-            recipeDet1ChefControllerGUI.setRecipe(Rname, chefName);
-            recipeDet1ChefControllerGUI.setInterfaceName(InterfaceName);
-            recipeDet1ChefControllerGUI.setReview(Rname, chefName);
+            recipeDet1ChefControllerGUI.setRecipe(rname, chefName);
+            recipeDet1ChefControllerGUI.setInterfaceName(interfaceName);
+            recipeDet1ChefControllerGUI.setReview(rname, chefName);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
@@ -85,6 +85,6 @@ public class ItemControllerGUI {
     }
 
     public void setInterfaceName(String interfaceName) {
-        this.InterfaceName=interfaceName;
+        this.interfaceName =interfaceName;
     }
 }

@@ -5,7 +5,6 @@ import com.example.foodo.engineering.bean.ProductBean;
 import com.example.foodo.engineering.exception.DateFormatNotValidException;
 import com.example.foodo.graphic.viewcli.AddProductViewCLI;
 
-import java.sql.SQLException;
 
 public class AddProductCLIController implements GrapghiCLIController{
     private AddProductViewCLI addProductViewCLI;

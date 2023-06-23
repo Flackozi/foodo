@@ -26,8 +26,8 @@ import javafx.geometry.Insets;
 
 public class MyRecipeControllerGUI implements Initializable{
 
-    public GridPane grid;
-    public ScrollPane scroll;
+    private GridPane grid;
+    private ScrollPane scroll;
     private MyListener myListener;
     private List<RecipeBean> recipeBeans1 = new ArrayList<>();
 

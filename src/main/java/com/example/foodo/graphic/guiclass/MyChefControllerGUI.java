@@ -39,7 +39,6 @@ public class MyChefControllerGUI implements Initializable{
 
     private List<RecipeBean> getData() throws SQLException, ConnectionDbException {
         List<RecipeBean> recipeBeans = new ArrayList<>();
-        //RecipeItemModel recipeItemModel = new RecipeItemModel();
         //bisogna ottenere il numero di ricette che saranno presenti nella schermata
         //attraverso controller appl. ottengo le info delle sole ricette di chef seguiti dal utente
         //correntemente loggato

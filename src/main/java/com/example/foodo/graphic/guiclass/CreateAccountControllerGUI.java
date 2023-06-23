@@ -1,7 +1,6 @@
 package com.example.foodo.graphic.guiclass;
 
 
-//import com.example.foodo_fx.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -74,21 +73,13 @@ public class CreateAccountControllerGUI {
 
 
     public void confirmButtonAction(ActionEvent event) throws IOException{
-
-        //Connection myConnection = DBConnection.getDBConnection();
-
-
         String username = usernameTextField.getText();
         String favoritefood= favoriteFoodTextField.getText();
         String typeOfdiet= typeOfDietTextField.getText();
         String password = setPasswordField.getText();
         String insertFields = "INSERT INTO  user_account(username, favoritefood, typeOfdiet, password) VALUES ('";
         String insertValues = username + "','" + favoritefood + "','" + typeOfdiet + "','" + password + "')";
-        String insertToRegister= insertFields + insertValues;
-
         try {
-            //Statement statement = myConnection.createStatement();
-            //statement.executeUpdate(insertToRegister);
             registrationMessageLabel.setText("User has been registered succesfully!");
 
         }catch (Exception e){

@@ -31,31 +31,33 @@ import java.util.Objects;
 
 public class NewRecipeControllerGUI{
 
-    public Button confirmButton;
-
-    public TextField RecipeName;
-    public TextField QuantiyTextField;
     @FXML
-    public TextField NameTextField;
+    private TextField recipeName;
+    @FXML
+    private TextField quantiyTextField;
+    @FXML
+    public TextField nameTextField;
 
     @FXML
-    public Button addButton;
-    public ImageView RecipeImage;
-    public Button imageButton;
+    private Button addButton;
+    @FXML
+    private ImageView recipeImage;
+    @FXML
+    private Button imageButton;
 
     private File file;
 
     @FXML
-    private TableView IngredientsTable;
+    private TableView ingredientsTable;
 
     @FXML
-    private TableColumn<IngredientModel, String> Name;
+    private TableColumn<IngredientModel, String> name;
 
     @FXML
-    private TableColumn<IngredientModel, Integer> Quantity;
+    private TableColumn<IngredientModel, Integer> quantity;
 
     @FXML
-    public TextArea DescriptionTextArea;
+    public TextArea descriptionTextArea;
 
     @FXML
     public ScrollPane scrollPane;
@@ -65,20 +67,20 @@ public class NewRecipeControllerGUI{
     String path;
 
 
-    public void addIngredient(javafx.event.ActionEvent event){
+    public void addIngredient(){
         try{
 
-            if(Objects.equals(NameTextField.getText(), "")){
+            if(Objects.equals(nameTextField.getText(), "")){
                 throw new FieldEmptyException("Name");
             }
-            if(Objects.equals(QuantiyTextField.getText(), "")){
+            if(Objects.equals(quantiyTextField.getText(), "")){
                 throw new FieldEmptyException("Quantity");
             }
-            Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
-            Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
-            IngredientBean ingredientBean=new IngredientBean(NameTextField.getText(), QuantiyTextField.getText());
-            IngredientModel ingredientModel=new IngredientModel(NameTextField.getText(), QuantiyTextField.getText());
-            IngredientsTable.getItems().add(ingredientModel);
+            name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+            quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
+            IngredientBean ingredientBean=new IngredientBean(nameTextField.getText(), quantiyTextField.getText());
+            IngredientModel ingredientModel=new IngredientModel(nameTextField.getText(), quantiyTextField.getText());
+            ingredientsTable.getItems().add(ingredientModel);
             ingredients.add(ingredientBean);
 
         }catch(FieldEmptyException e){
@@ -92,17 +94,17 @@ public class NewRecipeControllerGUI{
 
         try{
 
-            if(Objects.equals(RecipeName.getText(), "")){
+            if(Objects.equals(recipeName.getText(), "")){
                 throw new FieldEmptyException("Recipe Name");
             }
-            if(Objects.equals(DescriptionTextArea.getText(), "")){
+            if(Objects.equals(descriptionTextArea.getText(), "")){
                 throw new FieldEmptyException("Description");
             }
 
 
             RecipeBean recipeBean=new RecipeBean();
-            recipeBean.setRecipeName(RecipeName.getText());
-            recipeBean.setDescription(DescriptionTextArea.getText());
+            recipeBean.setRecipeName(recipeName.getText());
+            recipeBean.setDescription(descriptionTextArea.getText());
             ChefBean chefBean=new ChefBean();
             chefBean= Session.getCurrentSession().getChefBean();
             recipeBean.setChefName(chefBean.getUsername());
@@ -138,9 +140,9 @@ public class NewRecipeControllerGUI{
         FileChooser fileChooser=new FileChooser();
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Imagine Files","*.png","*.jpg"));
         file = fileChooser.showOpenDialog(stage).getAbsoluteFile();
-        RecipeImage.setFitHeight(148);
-        RecipeImage.setFitWidth(158);
-        RecipeImage.setImage(ImageConverterSupport.fromFileToImage(file));
+        recipeImage.setFitHeight(148);
+        recipeImage.setFitWidth(158);
+        recipeImage.setImage(ImageConverterSupport.fromFileToImage(file));
         path= file.getAbsolutePath();
     }
 }

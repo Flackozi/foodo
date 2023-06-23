@@ -1,0 +1,19 @@
+Index: src/main/java/com/example/foodo/graphic/viewcli/AddProductViewCLI.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.foodo.graphic.viewcli;\r\n\r\nimport com.example.foodo.engineering.exception.DateFormatNotValidException;\r\nimport com.example.foodo.engineering.utils.ExceptionController;\r\nimport com.example.foodo.engineering.utils.Printer;\r\nimport com.example.foodo.graphic.controllercli.AddProductCLIController;\r\n\r\nimport java.sql.SQLException;\r\nimport java.util.Scanner;\r\n\r\npublic class AddProductViewCLI {\r\n    private final AddProductCLIController addProductCLIController;\r\n\r\n    public AddProductViewCLI(AddProductCLIController addProductCLIController) {\r\n        this.addProductCLIController = addProductCLIController;\r\n    }\r\n\r\n    public void run() {\r\n        Printer.printMessage(\"\\n-------------------------------------------- ADD PRODUCT PAGE --------------------------------------------\");\r\n        Scanner scanner= new Scanner(System.in);\r\n        String inputLine;\r\n        Printer.printMessage(\"\\n Insert name of product:\");\r\n        inputLine= scanner.nextLine();\r\n        String name=inputLine;\r\n        Printer.printMessage(\"\\n Insert quantity:\");\r\n        inputLine= scanner.nextLine();\r\n        String quantity= inputLine;\r\n\r\n        try{\r\n            Printer.printMessage(\"\\n Insert expiration day:\");\r\n            inputLine= scanner.nextLine();\r\n            //fare controllo sintattico con Exceptiraton day\r\n            String day= inputLine;\r\n            if((Integer.parseInt(day) > 31) && (Integer.parseInt(day) < 1)){\r\n                throw new DateFormatNotValidException();\r\n            }\r\n            Printer.printMessage(\"\\n Insert expiration month:\");\r\n            inputLine= scanner.nextLine();\r\n            String month= inputLine;\r\n            if((Integer.parseInt(month) > 12) && (Integer.parseInt(month) < 1)){\r\n                throw new DateFormatNotValidException();\r\n            }\r\n            Printer.printMessage(\"\\n Insert expiration year:\");\r\n            inputLine= scanner.nextLine();\r\n            String year= inputLine;\r\n            if(Integer.parseInt(year) < 2023){\r\n                throw new DateFormatNotValidException();\r\n            }\r\n            String expiration= day + \"/\" + month + \"/\" + year;\r\n            Printer.printMessage(\"\\n Insert type of food. Choose from: fruit, meat, vegetable, liquid, spices, sweet, fish, other \");\r\n            inputLine= scanner.nextLine();\r\n            String type=inputLine;\r\n            this.addProductCLIController.addProduct(name, quantity, type, expiration, day, month, year);\r\n        }catch (DateFormatNotValidException | SQLException e){\r\n            ExceptionController.showExceptionCLI(\"errore nell'inserimento della data\");\r\n            run();\r\n        }\r\n\r\n\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/foodo/graphic/viewcli/AddProductViewCLI.java b/src/main/java/com/example/foodo/graphic/viewcli/AddProductViewCLI.java
+--- a/src/main/java/com/example/foodo/graphic/viewcli/AddProductViewCLI.java	(revision f086b33cfaf3f2c7668dab2a4992eada084a0c1c)
++++ b/src/main/java/com/example/foodo/graphic/viewcli/AddProductViewCLI.java	(date 1687527102896)
+@@ -51,7 +51,7 @@
+             inputLine= scanner.nextLine();
+             String type=inputLine;
+             this.addProductCLIController.addProduct(name, quantity, type, expiration, day, month, year);
+-        }catch (DateFormatNotValidException | SQLException e){
++        }catch (DateFormatNotValidException e){
+             ExceptionController.showExceptionCLI("errore nell'inserimento della data");
+             run();
+         }
