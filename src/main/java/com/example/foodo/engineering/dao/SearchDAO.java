@@ -63,19 +63,27 @@ public class SearchDAO {
             ResultSet resultSet = BasicQueries.retriveByType(stmt, type, userName);
             resultSet.next();
 
-            do{
-                String name = resultSet.getString("name");
-                String quantity = resultSet.getString("quantity");
-                String typeOf = resultSet.getString("type");
-                int expDay = resultSet.getInt("expirationDay");
-                int expMonth = resultSet.getInt("expirationMonth");
-                int expYear = resultSet.getInt("expirationYear");
-                String exp = expDay + "/" + expMonth + "/" + expYear;
-                ProductModel productModel = new ProductModel(name, quantity, typeOf, exp);
-                productModelList.add(productModel);
-            }while(resultSet.next());
-        }catch(SQLException | ConnectionDbException e){
-            e.printStackTrace();
+            if(resultSet != null){
+                do{
+                    String name = resultSet.getString("name");
+                    String quantity = resultSet.getString("quantity");
+                    String typeOf = resultSet.getString("type");
+                    int expDay = resultSet.getInt("expirationDay");
+                    int expMonth = resultSet.getInt("expirationMonth");
+                    int expYear = resultSet.getInt("expirationYear");
+                    String exp = expDay + "/" + expMonth + "/" + expYear;
+                    ProductModel productModel = new ProductModel(name, quantity, typeOf, exp);
+                    productModelList.add(productModel);
+                }while(resultSet.next());
+            }else{
+                throw new ProductNotFoundException();
+            }
+
+
+        }catch(ConnectionDbException | ProductNotFoundException e){
+            ExceptionController.showExceptionGUI(e.getMessage());
+        }catch (SQLException ignored){
+
         }
 
         return FXCollections.observableArrayList(productModelList);
