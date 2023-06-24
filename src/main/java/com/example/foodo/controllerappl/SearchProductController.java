@@ -93,7 +93,7 @@ public class SearchProductController {
         return productBeans;
     }
 
-    public List<ProductBean> retrieveProducts(String type){
+    public List<ProductBean> retrieveProducts(String type) throws SQLException {
         int i = 0;
         List<ProductModel> productModels = new ArrayList<>();
         List<ProductBean> productBeanList=new ArrayList<>();

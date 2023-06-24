@@ -11,7 +11,8 @@ public class SearchModel {
     private Boolean liquid;
     private Boolean fish;
 
-    public SearchModel(){}
+    public SearchModel(){
+    }
     public String getSearchText() {
         return searchText;
     }

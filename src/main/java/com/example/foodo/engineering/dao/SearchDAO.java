@@ -54,7 +54,7 @@ public class SearchDAO {
         return productModel;
     }
 
-    public static ObservableList retriveByTypeOfFood(String type, String userName) {
+    public static ObservableList retriveByTypeOfFood(String type, String userName) throws SQLException {
         Statement stmt;
         List<ProductModel> productModelList = new ArrayList<>();
 
@@ -82,7 +82,7 @@ public class SearchDAO {
 
         }catch(ConnectionDbException | ProductNotFoundException e){
             ExceptionController.showExceptionGUI(e.getMessage());
-        }catch (SQLException ignored){}
+        }
 
         return FXCollections.observableArrayList(productModelList);
     }
