@@ -118,13 +118,13 @@ public class MyKitchenControllerGUI {
     }
 
     public void backHome(ActionEvent event) throws IOException {
-        Parent scenePantryParent;
+        Parent scene;
         if(Session.getCurrentSession().getChefBean() == null){
-            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
         }else{
-            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
         }
-        Scene sceneMainView = new Scene(scenePantryParent);
+        Scene sceneMainView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(sceneMainView);
@@ -132,8 +132,8 @@ public class MyKitchenControllerGUI {
     }
 
     public void showPantry(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneMyPantry.fxml")));
-        Scene sceneMainView = new Scene(scenePantryParent);
+        Parent scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneMyPantry.fxml")));
+        Scene sceneMainView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(sceneMainView);
@@ -141,8 +141,8 @@ public class MyKitchenControllerGUI {
     }
 
     public void searchRecipe(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/KitchenSearch.fxml")));
-        Scene sceneMainView = new Scene(scenePantryParent);
+        Parent scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/KitchenSearch.fxml")));
+        Scene sceneMainView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(sceneMainView);

@@ -54,12 +54,12 @@ public class SearchProductControllerGUI {
     private  TableColumn<ProductModel, String> typeOfFood;
     @FXML
     private  TableColumn<ProductModel, String> expiration;
-    private Parent scenePantryParent;
+    private Parent scene;
 
 
     public void showPantry(ActionEvent event) throws IOException {
-        scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneMyPantry.fxml"));
-        Scene sceneMainView = new Scene(scenePantryParent);
+        scene = FXMLLoader.load(getClass().getResource("/guiclass/sceneMyPantry.fxml"));
+        Scene sceneMainView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(sceneMainView);
@@ -67,11 +67,11 @@ public class SearchProductControllerGUI {
     }
     public void backHome(ActionEvent event) throws IOException {
         if(Session.getCurrentSession().getChefBean() == null){
-            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
         }else{
-            scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
         }
-        Scene sceneMainView = new Scene(scenePantryParent);
+        Scene sceneMainView = new Scene(scene);
 
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

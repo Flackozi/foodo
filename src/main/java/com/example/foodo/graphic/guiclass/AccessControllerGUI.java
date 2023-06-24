@@ -16,11 +16,11 @@ import java.io.IOException;
 public class AccessControllerGUI {
     @FXML
     public void showLogin(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneLogin.fxml"));
-        Scene scenePantryView = new Scene(scenePantryParent);
+        Parent scene = FXMLLoader.load(getClass().getResource("/guiclass/sceneLogin.fxml"));
+        Scene sceneView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scenePantryView);
+        window.setScene(sceneView);
         window.show();
     }
 

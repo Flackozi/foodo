@@ -125,8 +125,8 @@ public class NewRecipeControllerGUI{
     }
 
     public void backHome(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
-        Scene sceneMainView = new Scene(scenePantryParent);
+        Parent scene = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
+        Scene sceneMainView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(sceneMainView);

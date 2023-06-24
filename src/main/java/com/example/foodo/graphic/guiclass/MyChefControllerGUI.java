@@ -48,8 +48,8 @@ public class MyChefControllerGUI implements Initializable{
         return recipeBeans;
     }
     public void backHome(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneHomeUser.fxml")));
-        Scene sceneMainView = new Scene(scenePantryParent);
+        Parent scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneHomeUser.fxml")));
+        Scene sceneMainView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(sceneMainView);

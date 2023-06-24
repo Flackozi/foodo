@@ -21,8 +21,8 @@ public class ChefMainPageControllerGUI {
     private Scene scene;
 
     public void showKitchenChef(ActionEvent event) throws IOException {
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/myKitchen.fxml"));
-        Scene scenePantryView = new Scene(scenePantryParent);
+        Parent scene = FXMLLoader.load(getClass().getResource("/guiclass/myKitchen.fxml"));
+        Scene scenePantryView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scenePantryView);
@@ -31,8 +31,8 @@ public class ChefMainPageControllerGUI {
 
 
     public void showMyRecipes(ActionEvent event) throws IOException{
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/myRecipes.fxml"));
-        Scene scenePantryView = new Scene(scenePantryParent);
+        Parent scene = FXMLLoader.load(getClass().getResource("/guiclass/myRecipes.fxml"));
+        Scene scenePantryView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scenePantryView);
@@ -40,8 +40,8 @@ public class ChefMainPageControllerGUI {
     }
     @FXML
     public void showPantry(ActionEvent event) throws IOException{
-        Parent scenePantryParent = FXMLLoader.load(getClass().getResource("/guiclass/sceneMyPantry.fxml"));
-        Scene scenePantryView = new Scene(scenePantryParent);
+        Parent scene = FXMLLoader.load(getClass().getResource("/guiclass/sceneMyPantry.fxml"));
+        Scene scenePantryView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scenePantryView);
