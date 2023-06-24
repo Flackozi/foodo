@@ -5,8 +5,6 @@ import java.sql.*;
 
 public class BasicQueries {
 
-
-
     private BasicQueries(){}
 
     public static ResultSet checkLogin(Statement statement, String username, String password) throws SQLException {
@@ -23,9 +21,6 @@ public class BasicQueries {
         String sql="SELECT * FROM chef_table WHERE username = '" + username + "';";
         return stmt.executeQuery(sql);
     }
-
-
-
 
     public static ResultSet retriveProduct(Statement stmt, String name) throws SQLException{
         String sql = "SELECT * FROM pantry WHERE accountName= '"+ name +"';";

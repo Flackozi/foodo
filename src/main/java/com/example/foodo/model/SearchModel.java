@@ -12,6 +12,7 @@ public class SearchModel {
     private Boolean fish;
 
     public SearchModel(){
+        //costruttore di default
     }
     public String getSearchText() {
         return searchText;
