@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="sistemato item">
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="sistemato exception search product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ProfileControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ProfileControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/sceneChefProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/sceneChefProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/sceneProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/sceneProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/sceneProfile2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/sceneProfile2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/profileChef.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/profileChef.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/profileUser.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/profileUser.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/userprofile2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/userprofile2.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,14 +256,8 @@
       <workItem from="1687536036768" duration="147000" />
       <workItem from="1687596265830" duration="131000" />
       <workItem from="1687596477053" duration="691000" />
-      <workItem from="1687599056080" duration="208000" />
-    </task>
-    <task id="LOCAL-00016" summary="caso d'uso: MyRecipe&#10;descrizione: Fatto inserimento ricette nel database, da fare inserimento anche degli ingredienti">
-      <created>1684345202929</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1684345202929</updated>
+      <workItem from="1687599056080" duration="368000" />
+      <workItem from="1687600642934" duration="1783000" />
     </task>
     <task id="LOCAL-00017" summary="caso d'uso: MyRecipe&#10;descrizione: Fatto inserimento ricette nel database, da fare inserimento anche degli ingredienti">
       <created>1684422725673</created>
@@ -595,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687597166086</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="sistemato exception search product">
+      <created>1687599403189</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1687599403189</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="caso d'uso: search product&#10;descrizione: inizio" />
     <MESSAGE value="caso d'uso: &#10;descrizione: fine file fxml" />
     <MESSAGE value="caso d'uso: MyRecipe&#10;descrizione: Fatto inserimento ricette nel database, da fare inserimento anche degli ingredienti" />
     <MESSAGE value="caso d'uso: AddNewRecipe&#10;descrizione: finito addNewRecipe" />
@@ -638,7 +644,8 @@
     <MESSAGE value="risoluzione alcuni code smell" />
     <MESSAGE value="risolto kitchen" />
     <MESSAGE value="sistemato item" />
-    <option name="LAST_COMMIT_MESSAGE" value="sistemato item" />
+    <MESSAGE value="sistemato exception search product" />
+    <option name="LAST_COMMIT_MESSAGE" value="sistemato exception search product" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -21,8 +21,11 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class ProfileControllerGUI {
+    @FXML
     private Label labelEmail;
+    @FXML
     private Label labelPhone;
+    @FXML
     private Label labelLocation;
     @FXML
     private File file = null;
