@@ -61,10 +61,9 @@ public class ChefDAOJDBC  extends ChefDAO{
             String number = resultSet.getString(NUMBER);
             String location = resultSet.getString(LOCATION);
             String path= resultSet.getString(PATH);
-            chefModel=new ChefModel(username);
+            chefModel=new ChefModel(username, 1);
             chefModel.setTypeOfCuisine(typeOfCuisine);
             chefModel.setWorkplace(workplace);
-            chefModel.setProfileType(1);
             chefModel.setEmail(email);
             chefModel.setNumber(number);
             chefModel.setLocation(location);

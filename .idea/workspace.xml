@@ -4,37 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="sistemato exception search product">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_06_2023_17_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_06_2023_17_01__Changes_.xml" afterDir="false" />
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione alcuni code smell">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/SearchProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAOJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAOJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ChefMainPageControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ChefMainPageControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ItemControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/ItemControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/KitchenSearchControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/KitchenSearchControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/MyChefControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/MyChefControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/MyKitchenControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/MyKitchenControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/SearchDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/MyRecipeControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/MyRecipeControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet2ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet2ControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/AddProductViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/AddProductViewCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/DeleteProductViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/DeleteProductViewCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/KitchenViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/KitchenViewCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/MyChefViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/MyChefViewCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/MyRecipesViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/MyRecipesViewCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/ProfileViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/ProfileViewCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/SearchProductViewCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/viewcli/SearchProductViewCLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/ChefModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/ChefModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/IngredientModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/IngredientModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/ProductModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/RecipeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/RecipeModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/SearchModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/SearchModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit/TestAddNewProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/TestAddNewProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit/TestAddNewRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/TestAddNewRecipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit/TestAverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/TestAverage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit/TestDateFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/TestDateFormat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit/TestSearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/TestSearchProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit/TestSearchRecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/TestSearchRecipeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +81,7 @@
       <recent name="C:\Users\flavi\Desktop\università\ISPW\PROJECT\foodo\src\main\resources\guiclass" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestSearchRecipeController.testSearchRecipe">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.foodo.Main" />
       <module name="foodo_fx" />
@@ -186,8 +161,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestSearchRecipeController.testSearchRecipe" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestSearchRecipeController.testSearchRecipe" />
         <item itemvalue="JUnit.TestAddNewProduct.AddProduct" />
         <item itemvalue="JUnit.TestSearchProductController.testSearchProduct" />
         <item itemvalue="JUnit.TestAverage.testAverage" />
@@ -281,20 +256,6 @@
       <workItem from="1687596477053" duration="691000" />
       <workItem from="1687599056080" duration="368000" />
       <workItem from="1687600642934" duration="1783000" />
-    </task>
-    <task id="LOCAL-00017" summary="caso d'uso: MyRecipe&#10;descrizione: Fatto inserimento ricette nel database, da fare inserimento anche degli ingredienti">
-      <created>1684422725673</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1684422725673</updated>
-    </task>
-    <task id="LOCAL-00018" summary="caso d'uso: AddNewRecipe&#10;descrizione: finito addNewRecipe">
-      <created>1684784915142</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1684784915142</updated>
     </task>
     <task id="LOCAL-00019" summary="caso d'uso: AddNewRecipe&#10;descrizione: finito addNewRecipe">
       <created>1684834135542</created>
@@ -625,7 +586,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687599403189</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="sistemato exception search product">
+      <created>1687615281332</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1687615281333</updated>
+    </task>
+    <task id="LOCAL-00067" summary="risoluzione alcuni code smell">
+      <created>1687615301152</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1687615301152</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,11 +639,11 @@
     <MESSAGE value="sonarcloud" />
     <MESSAGE value="Sistemazione quantity come string" />
     <MESSAGE value="risoluzione alcuni bug" />
-    <MESSAGE value="risoluzione alcuni code smell" />
     <MESSAGE value="risolto kitchen" />
     <MESSAGE value="sistemato item" />
     <MESSAGE value="sistemato exception search product" />
-    <option name="LAST_COMMIT_MESSAGE" value="sistemato exception search product" />
+    <MESSAGE value="risoluzione alcuni code smell" />
+    <option name="LAST_COMMIT_MESSAGE" value="risoluzione alcuni code smell" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

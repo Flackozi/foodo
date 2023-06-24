@@ -82,9 +82,7 @@ public class SearchDAO {
 
         }catch(ConnectionDbException | ProductNotFoundException e){
             ExceptionController.showExceptionGUI(e.getMessage());
-        }catch (SQLException ignored){
-
-        }
+        }catch (SQLException ignored){}
 
         return FXCollections.observableArrayList(productModelList);
     }
