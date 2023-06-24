@@ -1,6 +1,7 @@
 package com.example.foodo.model;
 
 public class ChefModel extends GenericUserModel{
+    int profileType;
     String username;
     String typeOfCuisine;
     String workplace;
@@ -40,15 +41,6 @@ public class ChefModel extends GenericUserModel{
         super(username);
 
     }
-    public ChefModel(String username, String typeOfCuisine, String workplace, int profileType, String email, String number, String location, String path){
-        super(username,profileType);
-        this.typeOfCuisine=typeOfCuisine;
-        this.workplace=workplace;
-        this.email = email;
-        this.number = number;
-        this.location = location;
-        this.path=path;
-    }
     public ChefModel(String username, String typeOfCuisine, String workplace, String email, String number, String location, String path){
         super(username);
         this.typeOfCuisine=typeOfCuisine;
@@ -76,5 +68,21 @@ public class ChefModel extends GenericUserModel{
     }
     public void setPath(String path) {
         this.path = path;
+    }
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    @Override
+    public int getProfileType() {
+        return profileType;
+    }
+
+    public void setProfileType(int profileType) {
+        this.profileType = profileType;
     }
 }

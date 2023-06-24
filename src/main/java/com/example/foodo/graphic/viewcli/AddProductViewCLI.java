@@ -5,7 +5,6 @@ import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.engineering.utils.Printer;
 import com.example.foodo.graphic.controllercli.AddProductCLIController;
 
-import java.sql.SQLException;
 import java.util.Scanner;
 
 public class AddProductViewCLI {

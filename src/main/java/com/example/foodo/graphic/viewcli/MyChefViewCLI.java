@@ -24,13 +24,12 @@ public class MyChefViewCLI {
         Printer.printMessage("\n-------------------------------------------- MY CHEF PAGE --------------------------------------------");
         this.myChefCLIController.retrieveRecipe();
         Printer.printMessage("\n1) Return to home page \n2) Leave a review");
-        List<IngredientBean> ingredientBeans;
         Scanner scanner= new Scanner(System.in);
         String inputLine= scanner.nextLine();
         try{
             this.myChefCLIController.executeCommand(inputLine);
         } catch (ConnectionDbException | SQLException | CommandNotValidException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         Printer.printMessage("");
     }

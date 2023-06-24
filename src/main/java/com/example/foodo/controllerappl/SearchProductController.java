@@ -31,7 +31,15 @@ public class SearchProductController {
         Boolean sweet = searchBean.getSweet();
         Boolean liquid = searchBean.getLiquid();
         Boolean fish = searchBean.getFish();
-        SearchModel searchModel = new SearchModel(text, spices, fruit, meat, vegetable, sweet, liquid, fish);
+        SearchModel searchModel = new SearchModel();
+        searchModel.setSearchText(text);
+        searchModel.setSpices(spices);
+        searchModel.setFruit(fruit);
+        searchModel.setMeat(meat);
+        searchModel.setVegetable(vegetable);
+        searchModel.setSweet(sweet);
+        searchModel.setLiquid(liquid);
+        searchModel.setFish(fish);
         List<ProductBean> productBeans = new ArrayList<>();
         //mi setto una variabile userName per passare il nome dell'utente alla DAO
         UserBean userBean= Session.getCurrentSession().getUserBean();

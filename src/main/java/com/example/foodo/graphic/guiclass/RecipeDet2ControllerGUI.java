@@ -31,7 +31,8 @@ public class RecipeDet2ControllerGUI{
     private String name;
     private String chefName;
     private String userName;
-    public Label descriptionLabel;
+    @FXML
+    private Label descriptionLabel;
     private String interfaceName;
 
     public void back(ActionEvent event) throws IOException {

@@ -1,54 +1,51 @@
 package com.example.foodo.model;
 
-import java.io.File;
 
 public class RecipeModel {
-    private String RecipeName;
-//    private List<IngredientModel> Ingredients;
-    private String Description;
-    private String ChefName;
-    private String Path;
+    private String recipeName;
+    private String description;
+    private String chefName;
+    private String path;
 
     public RecipeModel(){}
 
     public RecipeModel(String name, String description, String chefName, String path){
         this.setRecipeName(name);
-//        this.setIngredients(ingredients);
         this.setDescription(description);
         this.setChefName(chefName);
         this.setPath(path);
     }
 
     public String getRecipeName() {
-        return RecipeName;
+        return recipeName;
     }
 
     public void setRecipeName(String name) {
-        RecipeName = name;
+        recipeName = name;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
 
     public String getChefName() {
-        return ChefName;
+        return chefName;
     }
 
     public void setChefName(String chefName) {
-        ChefName = chefName;
+        this.chefName = chefName;
     }
     public String getPath() {
-        return Path;
+        return path;
     }
 
     public void setPath(String path) {
-        Path = path;
+        this.path = path;
     }
 
 

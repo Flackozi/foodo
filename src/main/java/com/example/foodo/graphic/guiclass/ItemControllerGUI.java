@@ -42,7 +42,7 @@ public class ItemControllerGUI {
 
     private String interfaceName;
 
-    public void setData(RecipeBean recipeBean, MyListener myListener, Integer j, String recipeName, String chefName) {
+    public void setData(RecipeBean recipeBean, MyListener myListener, String recipeName, String chefName) {
         this.recipeBean = recipeBean;
         this.myListener = myListener;
         this.rname = recipeName;

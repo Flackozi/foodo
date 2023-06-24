@@ -1,50 +1,50 @@
 package com.example.foodo.model;
 
 public class ProductModel {
-    private String Name;
-    private String Quantity;
-    private String TypeOfFood;
+    private String name;
+    private String quantity;
+    private String typeOfFood;
     private int expirationDay;
     private int expirationMonth;
     private  int expirationYear;
-    private String Expiration;
+    private String expiration;
 
 
     public ProductModel(){}
 
     public ProductModel(String name, String quantity, String typeOfFood, int expirationDay, int expirationMonth, int expirationYear) {
-        this.Name = name;
-        this.Quantity = quantity;
-        this.TypeOfFood = typeOfFood;
+        this.name = name;
+        this.quantity = quantity;
+        this.typeOfFood = typeOfFood;
         this.expirationDay=expirationDay;
         this.expirationMonth=expirationMonth;
         this.expirationYear=expirationYear;
     }
     public ProductModel(String name, String quantity, String typeOfFood, String expiration) {
-        this.Name = name;
-        this.Quantity = quantity;
-        this.TypeOfFood = typeOfFood;
-        this.Expiration=expiration;
+        this.name = name;
+        this.quantity = quantity;
+        this.typeOfFood = typeOfFood;
+        this.expiration =expiration;
     }
 
     public ProductModel(String name, String quantity) {
-        this.Name = name;
-        this.Quantity = quantity;
+        this.name = name;
+        this.quantity = quantity;
     }
 
-    public ProductModel(String Name){
-        this.Name=Name;
+    public ProductModel(String name){
+        this.name =name;
     }
     public String getName() {
-        return Name;
+        return name;
     }
 
     public String getQuantity() {
-        return Quantity;
+        return quantity;
     }
 
     public String getTypeOfFood() {
-        return TypeOfFood;
+        return typeOfFood;
     }
     public int getExpirationDay() {
         return expirationDay;
@@ -70,23 +70,23 @@ public class ProductModel {
         this.expirationYear = expirationYear;
     }
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public void setQuantity(String quantity) {
-        Quantity = quantity;
+        this.quantity = quantity;
     }
 
     public void setTypeOfFood(String typeOfFood) {
-        TypeOfFood = typeOfFood;
+        this.typeOfFood = typeOfFood;
     }
 
     public String getExpiration() {
-        return Expiration;
+        return expiration;
     }
 
     public void setExpiration(String expiration) {
-        Expiration = expiration;
+        this.expiration = expiration;
     }
 
 }

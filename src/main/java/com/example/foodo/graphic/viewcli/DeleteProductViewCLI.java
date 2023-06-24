@@ -21,7 +21,7 @@ public class DeleteProductViewCLI {
         try{
             this.deleteProductCLIController.deleteProduct(name);
         } catch (SQLException | ConnectionDbException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }

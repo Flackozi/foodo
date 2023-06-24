@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestAddNewProduct {
+class TestAddNewProduct {
 
 
     /*  CARLO MARIA FIORAMANTI

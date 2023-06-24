@@ -44,7 +44,7 @@ public class ProfileViewCLI {
             } catch (CommandNotValidException e) {
                 run();
             } catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
+               e.printStackTrace();
             }
 
 
@@ -70,7 +70,7 @@ public class ProfileViewCLI {
             } catch (CommandNotValidException e) {
                 run();
             } catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }

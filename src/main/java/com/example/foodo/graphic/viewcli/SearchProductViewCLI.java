@@ -38,9 +38,9 @@ public class SearchProductViewCLI {
     public void searchName() throws ProductNotFoundException, SQLException, ConnectionDbException {
         Printer.printMessage("\n Insert the name:");
         Scanner scanner= new Scanner(System.in);
-        String name= scanner.nextLine();
+        String name1= scanner.nextLine();
         SearchBean searchBean=new SearchBean();
-        searchBean.setSearchText(name);
+        searchBean.setSearchText(name1);
         searchBean.setSpices(spices);
         searchBean.setFruit(fruit);
         searchBean.setFish(fish);
@@ -48,7 +48,7 @@ public class SearchProductViewCLI {
         searchBean.setLiquid(liquid);
         searchBean.setSweet(sweet);
         searchBean.setVegetable(vegetable);
-        this.searchProductCLIController.searchName(name, searchBean);
+        this.searchProductCLIController.searchName(name1, searchBean);
 
     }
 

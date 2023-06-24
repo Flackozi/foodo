@@ -1,27 +1,27 @@
 package com.example.foodo.model;
 
 public class IngredientModel {
-    private String Name;
-    private String Quantity;
+    private String name;
+    private String quantity;
     public IngredientModel(String name, String quantity) {
-        this.Name = name;
-        this.Quantity = quantity;
+        this.name = name;
+        this.quantity = quantity;
     }
 
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getQuantity() {
-        return Quantity;
+        return quantity;
     }
 
     public void setQuantity(String quantity) {
-        Quantity = quantity;
+        this.quantity = quantity;
     }
 }

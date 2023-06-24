@@ -4,7 +4,7 @@ import com.example.foodo.engineering.exception.ProductNotFoundException;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-public class TestSearchProductController {
+class TestSearchProductController {
 
     /* FLAVIO CAMPOBASSO
     il seguente test verifica che venga solletava un exception

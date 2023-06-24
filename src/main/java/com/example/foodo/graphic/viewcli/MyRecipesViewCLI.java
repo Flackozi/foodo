@@ -24,14 +24,12 @@ public class MyRecipesViewCLI {
         Printer.printMessage("\n-------------------------------------------- MY RECIPES PAGE --------------------------------------------");
         this.myRecipesCLIController.retrieveMyRecipe();
         Printer.printMessage("\n1) Return to home page \n2) Add new recipe");
-        List<IngredientBean> ingredientBeans;
         Scanner scanner= new Scanner(System.in);
         String inputLine= scanner.nextLine();
         try{
-            //this.myRecipesCLIController.retrieveMyRecipe();
             this.myRecipesCLIController.executeCommand(inputLine);
         } catch (ConnectionDbException | SQLException | CommandNotValidException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
     }

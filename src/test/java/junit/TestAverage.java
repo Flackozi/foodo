@@ -4,7 +4,7 @@ import com.example.foodo.engineering.dao.RecipeDAO;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestAverage {
+class TestAverage {
 
      /* FLAVIO CAMPOBASSO
         il seguente test verifica che quando viene inserita una recensione (media)

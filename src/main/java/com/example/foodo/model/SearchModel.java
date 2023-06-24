@@ -11,17 +11,7 @@ public class SearchModel {
     private Boolean liquid;
     private Boolean fish;
 
-    public SearchModel(String searchText, Boolean spices, Boolean fruit, Boolean meat, Boolean vegetable, Boolean sweet, Boolean liquid, Boolean fish){
-        this.setSearchText(searchText);
-        this.setSpices(spices);
-        this.setFruit(fruit);
-        this.setMeat(meat);
-        this.setVegetable(vegetable);
-        this.setSweet(sweet);
-        this.setLiquid(liquid);
-        this.setFish(fish);
-    }
-
+    public SearchModel(){}
     public String getSearchText() {
         return searchText;
     }

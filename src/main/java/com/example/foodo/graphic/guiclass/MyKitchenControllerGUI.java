@@ -91,7 +91,7 @@ public class MyKitchenControllerGUI {
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 ItemControllerGUI itemControllerGUI = fxmlLoader.getController();
-                itemControllerGUI.setData(recipeBeans.get(i),myListener, i, recipeBeans.get(i).getRecipeName(), recipeBeans.get(i).getChefName());
+                itemControllerGUI.setData(recipeBeans.get(i),myListener, recipeBeans.get(i).getRecipeName(), recipeBeans.get(i).getChefName());
                 itemControllerGUI.setInterfaceName("myKitchen");
 
                 if (column == 2) {

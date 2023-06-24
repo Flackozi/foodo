@@ -63,17 +63,17 @@ public class KitchenViewCLI {
         if(Objects.equals(scanner.nextLine(), "y")) {
             Printer.printMessage("Enter second ingredient:");
             ingredient2= scanner.nextLine();
-            Printer.printMessage("Want to add another ingredient? y/n");
+            Printer.printMessage("Want to add third ingredient? y/n");
             if(Objects.equals(scanner.nextLine(), "y")) {
-                Printer.printMessage("Enter second ingredient:");
+                Printer.printMessage("Enter third ingredient:");
                 ingredient3= scanner.nextLine();
-                Printer.printMessage("Want to add another ingredient? y/n");
+                Printer.printMessage("Want to add firth ingredient? y/n");
                 if(Objects.equals(scanner.nextLine(), "y")) {
-                    Printer.printMessage("Enter second ingredient:");
+                    Printer.printMessage("Enter firth ingredient:");
                     ingredient4= scanner.nextLine();
-                    Printer.printMessage("Want to add another ingredient? y/n");
+                    Printer.printMessage("Want to add fifth ingredient? y/n");
                     if(Objects.equals(scanner.nextLine(), "y")) {
-                        Printer.printMessage("Enter second ingredient:");
+                        Printer.printMessage("Enter fifth ingredient:");
                         ingredient5= scanner.nextLine();
                     }
                 }

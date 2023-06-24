@@ -5,7 +5,7 @@ import com.example.foodo.graphic.controllercli.AddProductCLIController;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestDateFormat {
+class TestDateFormat {
 
     /* FLAVIO CAMPOBASSO
         il seguente test verifica che venga solletava un exception

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestSearchRecipeController {
+class TestSearchRecipeController {
 
     /*CARLO MARIA FIORAMANTI
     Il seguente test serve a verificare che venga sollevata un eccezione nel momento in cui

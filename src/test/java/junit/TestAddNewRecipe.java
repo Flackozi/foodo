@@ -5,7 +5,7 @@ import com.example.foodo.engineering.bean.RecipeBean;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestAddNewRecipe {
+class TestAddNewRecipe {
 
     /*CARLO MARIA FIORAMANTI
     questo test si occupa di verificare se l'inserimento di una ricetta vada a buon fine.
