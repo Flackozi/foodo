@@ -17,12 +17,12 @@ public class ChefDAOCSV extends ChefDAO{
     private static final int PATH=7;
 
     @Override
-    public ChefModel retrieveChefByUsername(String username){
+    public ChefModel retrieveChefByUsername(String username) throws IOException {
         ChefModel chefModel= null;
-
+        BufferedReader bufferedReader = null;
         try{
             File file= new File(FILE_NAME_CSV);
-            BufferedReader bufferedReader= new BufferedReader(new FileReader(file));
+            bufferedReader= new BufferedReader(new FileReader(file));
             String row;
             String[] data;
 
@@ -36,11 +36,12 @@ public class ChefDAOCSV extends ChefDAO{
             if(chefModel==null){
                 throw new NotFoundException("Chef Not Found");
             }
-            bufferedReader.close();
         } catch (IOException | NotFoundException e) {
             //throw new RuntimeException(e); questo mi dava code smell non so per quale motivo
             
             e.printStackTrace();
+        }finally {
+            bufferedReader.close();
         }
 
         return chefModel;

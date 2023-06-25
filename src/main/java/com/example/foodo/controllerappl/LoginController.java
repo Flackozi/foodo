@@ -13,6 +13,8 @@ import com.example.foodo.engineering.pattern.factory.UserDAOFactory;
 import com.example.foodo.model.UserModel;
 import com.example.foodo.model.ChefModel;
 
+import java.io.IOException;
+
 
 public class LoginController {
     public void checkLogin(LoginBean loginBean) {
@@ -22,7 +24,7 @@ public class LoginController {
 
 
 
-    public void completeChefLogin(LoginBean loginBean){
+    public void completeChefLogin(LoginBean loginBean) throws IOException {
         ChefDAO chefDAO = ChefDAOFactory.getInstance().getChefDAO();
         ChefModel chefModel = chefDAO.retrieveChefByUsername(loginBean.getUsername());
         ChefBean chefBean = new ChefBean();
@@ -37,7 +39,7 @@ public class LoginController {
         Session.setSessionInstance(chefBean);
     }
 
-    public void completeUserLogin(LoginBean loginBean) throws NotFoundException {
+    public void completeUserLogin(LoginBean loginBean) throws NotFoundException, IOException {
         UserDAO userDAO= UserDAOFactory.getInstance().getUserDAO();
         UserModel userModel = userDAO.retrieveUserByUsername(loginBean.getUsername());
         UserBean userBean = new UserBean(userModel.getUsername(), userModel.getFavoriteFood(), userModel.getTypeOfDiet(), userModel.getProfileType(), userModel.getPath());

@@ -7,6 +7,7 @@ import com.example.foodo.engineering.exception.*;
 import com.example.foodo.graphic.viewcli.LoginViewCLI;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class LoginCLIController implements GrapghiCLIController{
@@ -28,7 +29,7 @@ public class LoginCLIController implements GrapghiCLIController{
         }
     }
 
-    public void checkLogin (String username, String password) throws SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException, NotFoundException {
+    public void checkLogin (String username, String password) throws SQLException, ConnectionDbException, ProductNotFoundException, NotFoundException {
         try{
             LoginBean loginBean= new LoginBean(username, password);
             LoginController loginController= new LoginController();
@@ -45,7 +46,7 @@ public class LoginCLIController implements GrapghiCLIController{
             }else{
                 throw new UserNotFoundException();
             }
-        }catch(UserNotFoundException e){
+        }catch(UserNotFoundException | IOException e){
             ExceptionController.showExceptionCLI(e.getMessage());
             start();
         }

@@ -14,12 +14,12 @@ public class UserDAOCSV extends UserDAO{
     private static final int PATH = 4;
 
     @Override
-    public UserModel retrieveUserByUsername(String username) throws NotFoundException {
+    public UserModel retrieveUserByUsername(String username) throws NotFoundException, IOException {
         UserModel userModel = null;
-
+        BufferedReader bufferedReader=null;
         try{
             File file = new File(FILE_NAME_CSV);
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            bufferedReader = new BufferedReader(new FileReader(file));
             String row;
             String[] data;
 
@@ -33,9 +33,11 @@ public class UserDAOCSV extends UserDAO{
             if(userModel == null){
                 throw new NotFoundException("User Not Found");
             }
-            bufferedReader.close();
         } catch (IOException | NotFoundException e) {
             throw new NotFoundException(e.getMessage());
+        }finally {
+            bufferedReader.close();
+
         }
 
         return userModel;
