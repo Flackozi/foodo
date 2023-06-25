@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione alcuni code smell">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAOCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAOCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAOCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAOCSV.java" afterDir="false" />
-    </list>
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione alcuni code smell" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -255,21 +250,7 @@
       <workItem from="1687596477053" duration="691000" />
       <workItem from="1687599056080" duration="368000" />
       <workItem from="1687600642934" duration="1783000" />
-      <workItem from="1687682702422" duration="3146000" />
-    </task>
-    <task id="LOCAL-00026" summary="caso d'uso: show recipe&#10;Foto, calcolo media, follow-unfollow">
-      <created>1685514275674</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1685514275674</updated>
-    </task>
-    <task id="LOCAL-00027" summary="caso d'uso: view profile&#10;Fatto inserimento da db della foto">
-      <created>1685722234851</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1685722234851</updated>
+      <workItem from="1687682702422" duration="3625000" />
     </task>
     <task id="LOCAL-00028" summary="caso d'uso: persistenza sul file system e sistemazione switch di alcune interfacce">
       <created>1686057633202</created>
@@ -600,7 +581,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687685519939</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="risoluzione alcuni code smell">
+      <created>1687685950277</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1687685950278</updated>
+    </task>
+    <task id="LOCAL-00076" summary="risoluzione alcuni code smell">
+      <created>1687686331470</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1687686331470</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

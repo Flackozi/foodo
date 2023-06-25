@@ -35,11 +35,6 @@ public class UserDAOCSV extends UserDAO{
             }
         } catch (IOException | NotFoundException e) {
             throw new NotFoundException(e.getMessage());
-        }finally {
-            if(bufferedReader==null){
-                throw new NotFoundException("Buffered reader null");
-            }
-            bufferedReader.close();
         }
 
         return userModel;
