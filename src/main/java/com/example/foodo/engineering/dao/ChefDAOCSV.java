@@ -17,7 +17,7 @@ public class ChefDAOCSV extends ChefDAO{
     private static final int PATH=7;
 
     @Override
-    public ChefModel retrieveChefByUsername(String username) throws IOException {
+    public ChefModel retrieveChefByUsername(String username) throws IOException, NotFoundException {
         ChefModel chefModel= null;
         BufferedReader bufferedReader = null;
         try{
@@ -37,10 +37,11 @@ public class ChefDAOCSV extends ChefDAO{
                 throw new NotFoundException("Chef Not Found");
             }
         } catch (IOException | NotFoundException e) {
-            //throw new RuntimeException(e); questo mi dava code smell non so per quale motivo
-            
-            e.printStackTrace();
+            throw new NotFoundException(e.getMessage());
         }finally {
+            if(bufferedReader==null){
+                throw new NotFoundException("Buffered reader null");
+            }
             bufferedReader.close();
         }
 
