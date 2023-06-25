@@ -60,23 +60,28 @@ public class BasicQueries {
     }
 
     public static ResultSet retriveRecipeId(Statement stmt, String ingredient1, String ingredient2, String ingredient3, String ingredient4, String ingredient5) throws SQLException {
-        String query1="SELECT recipeId FROM ingredients WHERE name=";
+        String query="SELECT recipeId FROM ingredients WHERE name=";
+        String and="AND recipeId in (";
         String ingr1="'" + ingredient1 + "'";
-        String query2="SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "');";
+        String ingr2="'" + ingredient2 + "'";
+        String ingr3="'" + ingredient3 + "'";
+        String ingr4="'" + ingredient4 + "'";
+        String ingr5="'" + ingredient5 + "'";
+
         if(ingredient2.isEmpty()){
-            String sql= query1 + ingr1 +";";
+            String sql= query + ingr1 +";";
             return stmt.executeQuery(sql);
         }else if (ingredient3.isEmpty()) {
-            String sql = query2;
+            String sql = query + ingr1 + and + query + ingr2+ ")" +";" ;
             return stmt.executeQuery(sql);
         }else if (ingredient4.isEmpty()){
-            String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "');";
+            String sql=query + ingr1 + and + query + ingr2+ ")" + and + query + ingr3+ ")" +";" ;
             return stmt.executeQuery(sql);
         } else if (ingredient5.isEmpty()){
-            String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "');";
+            String sql= query + ingr1 + and + query + ingr2+ ")" + and + query + ingr3+ ")"  + and +query + ingr4+ ")"+";";
             return stmt.executeQuery(sql);
         }else{
-            String sql="SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient4 + "');";
+            String sql=query + ingr1 + and + query + ingr2+ ")" + and + query + ingr3+ ")"  + and +query + ingr4+ ")" + and +query + ingr5+ ")"+";";
             return stmt.executeQuery(sql);
         }
 

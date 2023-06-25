@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione alcuni code smell">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,14 +253,7 @@
       <workItem from="1687596477053" duration="691000" />
       <workItem from="1687599056080" duration="368000" />
       <workItem from="1687600642934" duration="1783000" />
-      <workItem from="1687682702422" duration="1525000" />
-    </task>
-    <task id="LOCAL-00024" summary="caso d'uso: myKitchen&#10;fine caso d'uso">
-      <created>1685174046555</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1685174046555</updated>
+      <workItem from="1687682702422" duration="2745000" />
     </task>
     <task id="LOCAL-00025" summary="caso d'uso: details">
       <created>1685438283450</created>
@@ -597,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687683921277</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="risoluzione alcuni code smell">
+      <created>1687684265875</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1687684265875</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
