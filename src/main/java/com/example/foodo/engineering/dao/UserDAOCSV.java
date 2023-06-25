@@ -16,10 +16,8 @@ public class UserDAOCSV extends UserDAO{
     @Override
     public UserModel retrieveUserByUsername(String username) throws NotFoundException, IOException {
         UserModel userModel = null;
-        BufferedReader bufferedReader=null;
-        try{
-            File file = new File(FILE_NAME_CSV);
-            bufferedReader = new BufferedReader(new FileReader(file));
+        File file = new File(FILE_NAME_CSV);
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(file))){
             String row;
             String[] data;
 

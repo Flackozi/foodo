@@ -19,10 +19,8 @@ public class ChefDAOCSV extends ChefDAO{
     @Override
     public ChefModel retrieveChefByUsername(String username) throws IOException, NotFoundException {
         ChefModel chefModel= null;
-        BufferedReader bufferedReader = null;
-        try{
-            File file= new File(FILE_NAME_CSV);
-            bufferedReader= new BufferedReader(new FileReader(file));
+        File file= new File(FILE_NAME_CSV);
+        try(BufferedReader bufferedReader= new BufferedReader(new FileReader(file))){
             String row;
             String[] data;
 
