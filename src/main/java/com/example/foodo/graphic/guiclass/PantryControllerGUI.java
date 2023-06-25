@@ -178,8 +178,8 @@ public class PantryControllerGUI  implements Initializable, Observer {
 
         PantryController pantryController= new PantryController();
 
-
-        ObservableList<ProductBean> allProduct, singleProduct;
+        ObservableList<ProductBean>  singleProduct;
+        ObservableList<ProductBean> allProduct;
         allProduct=tablePantry.getItems();
         singleProduct=tablePantry.getSelectionModel().getSelectedItems();
         String name1= singleProduct.get(0).getName();
