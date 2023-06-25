@@ -5,6 +5,7 @@ import java.sql.*;
 
 public class BasicQueries {
 
+
     private BasicQueries(){}
 
     public static ResultSet checkLogin(Statement statement, String username, String password) throws SQLException {
@@ -59,12 +60,13 @@ public class BasicQueries {
     }
 
     public static ResultSet retriveRecipeId(Statement stmt, String ingredient1, String ingredient2, String ingredient3, String ingredient4, String ingredient5) throws SQLException {
-
+        String query1="SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' ;";
+        String query2="SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "');";
         if(ingredient2.isEmpty()){
-            String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' ;";
+            String sql= query1;
             return stmt.executeQuery(sql);
         }else if (ingredient3.isEmpty()) {
-            String sql = "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "');";
+            String sql = query2;
             return stmt.executeQuery(sql);
         }else if (ingredient4.isEmpty()){
             String sql= "SELECT recipeId FROM ingredients WHERE name= '" + ingredient1 + "' AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient2 + "') AND recipeId in (SELECT recipeId FROM ingredients WHERE name= '" + ingredient3 + "');";
