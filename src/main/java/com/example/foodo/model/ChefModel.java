@@ -1,12 +1,12 @@
 package com.example.foodo.model;
 
 public class ChefModel extends GenericUserModel{
-    String typeOfCuisine;
-    String workplace;
-    String email;
-    String number;
-    String location;
-    String path;
+    private String typeOfCuisine;
+    private String workplace;
+    private String email;
+    private String number;
+    private String location;
+    private String path;
 
     public String getPath() {
         return path;

@@ -1,11 +1,10 @@
 package com.example.foodo.model;
 
 public class UserModel extends GenericUserModel {
-    String favoriteFood;
-    String typeOfDiet;
-    String path;
-    String pass;
-    String username;
+    private String favoriteFood;
+    private String typeOfDiet;
+    private String path;
+    private String pass;
 
     public UserModel(String username, String favoriteFood, String typeOfDiet, String path, int profileType){
         super(username, profileType);
@@ -15,7 +14,6 @@ public class UserModel extends GenericUserModel {
     }
     public UserModel(String username, String favoriteFood, String typeOfDiet, String pass, String path){
         super(username);
-        this.username = username;
         this.favoriteFood=favoriteFood;
         this.typeOfDiet=typeOfDiet;
         this.pass = pass;
