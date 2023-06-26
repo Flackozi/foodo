@@ -24,7 +24,7 @@ public class LoginController {
 
 
 
-    public void completeChefLogin(LoginBean loginBean) throws IOException {
+    public void completeChefLogin(LoginBean loginBean) throws IOException, NotFoundException {
         ChefDAO chefDAO = ChefDAOFactory.getInstance().getChefDAO();
         ChefModel chefModel = chefDAO.retrieveChefByUsername(loginBean.getUsername());
         ChefBean chefBean = new ChefBean();
