@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione alcuni code smell">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_15_20__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_19_2023_3_08_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_19_2023_4_44_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/ChefModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/ChefModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAOCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAOCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/model/UserModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -260,14 +257,7 @@
       <workItem from="1687682702422" duration="4463000" />
       <workItem from="1687687203440" duration="60000" />
       <workItem from="1687769851094" duration="20000" />
-      <workItem from="1687791110611" duration="1531000" />
-    </task>
-    <task id="LOCAL-00031" summary="caso d'uso: inizio CLI">
-      <created>1686143823572</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1686143823572</updated>
+      <workItem from="1687791110611" duration="2198000" />
     </task>
     <task id="LOCAL-00032" summary="caso d'uso: sistemazione Observer">
       <created>1686149425607</created>
@@ -605,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687791210049</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="risoluzione alcuni code smell">
+      <created>1687792653141</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1687792653141</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

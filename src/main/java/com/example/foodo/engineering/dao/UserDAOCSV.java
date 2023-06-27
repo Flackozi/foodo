@@ -10,7 +10,6 @@ public class UserDAOCSV extends UserDAO{
     private static final int USERNAME = 0;
     private static final int TYPEOFDIET = 1;
     private static final int FAVORITEFOOD = 2;
-    private static final int PASS = 3;
     private static final int PATH = 4;
 
     @Override
@@ -24,7 +23,7 @@ public class UserDAOCSV extends UserDAO{
             while((row = bufferedReader.readLine()) != null){
                 data = row.split(",");
                 if(username != null && data[USERNAME].equals(username)){
-                    userModel = new UserModel(data[USERNAME], data[TYPEOFDIET], data[FAVORITEFOOD], data[PASS], data[PATH]);
+                    userModel = new UserModel(data[USERNAME], data[TYPEOFDIET], data[FAVORITEFOOD],  data[PATH]);
                 }
             }
 

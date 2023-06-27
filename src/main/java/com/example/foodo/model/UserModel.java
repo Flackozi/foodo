@@ -4,7 +4,6 @@ public class UserModel extends GenericUserModel {
     private String favoriteFood;
     private String typeOfDiet;
     private String path;
-    private String pass;
 
     public UserModel(String username, String favoriteFood, String typeOfDiet, String path, int profileType){
         super(username, profileType);
@@ -12,11 +11,10 @@ public class UserModel extends GenericUserModel {
         this.typeOfDiet=typeOfDiet;
         this.path=path;
     }
-    public UserModel(String username, String favoriteFood, String typeOfDiet, String pass, String path){
+    public UserModel(String username, String favoriteFood, String typeOfDiet,  String path){
         super(username);
         this.favoriteFood=favoriteFood;
         this.typeOfDiet=typeOfDiet;
-        this.pass = pass;
         this.path=path;
     }
 
