@@ -24,10 +24,6 @@ public abstract class Subject {
     public void register(Observer observer) {
         observerList.add(observer);
     }
-    public void unregister (Observer observer){
-        observerList.remove(observer);
-    }
-
     public void notifyObservers(){
         for(Observer observer: observerList){
             observer.updateProductList();

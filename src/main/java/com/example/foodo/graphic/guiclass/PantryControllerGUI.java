@@ -3,7 +3,6 @@ import com.example.foodo.controllerappl.PantryController;
 import com.example.foodo.engineering.session.Session;
 import com.example.foodo.engineering.utils.ExceptionController;
 import com.example.foodo.engineering.bean.ProductBean;
-import com.example.foodo.engineering.dao.ProductDAO;
 import com.example.foodo.engineering.exception.ConnectionDbException;
 import com.example.foodo.engineering.pattern.observer.Observer;
 import javafx.collections.ObservableList;
@@ -83,7 +82,7 @@ public class PantryControllerGUI  implements Initializable, Observer {
 
 
     private String[] typeOfFood1 = {"spices", "fruit", "meat", "vegetable", "sweet", "liquid", "fish", "other"};
-    private ProductDAO productDAO = new ProductDAO();
+
     public void initialize(URL url, ResourceBundle resourceBundle){
         name.setCellValueFactory(new PropertyValueFactory<>("Name"));
         quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));

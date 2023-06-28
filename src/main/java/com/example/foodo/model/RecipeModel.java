@@ -32,7 +32,6 @@ public class RecipeModel {
         this.description = description;
     }
 
-
     public String getChefName() {
         return chefName;
     }

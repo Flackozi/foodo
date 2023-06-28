@@ -17,7 +17,6 @@ import java.util.List;
 
 public class   ProductDAO {
 
-    private ProductBean productBean;
     public static void insProduct(ProductModel product, String userName){
 
 
