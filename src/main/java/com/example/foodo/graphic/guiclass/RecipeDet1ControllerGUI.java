@@ -39,9 +39,9 @@ public class RecipeDet1ControllerGUI {
 
     @FXML
     private TableColumn<ProductBean, String> name;
-    private Parent root;
-    private Stage stage;
-    private Scene scene;
+    private Parent r;
+    private Stage stageB;
+    private Scene sceneB;
 
     private String rname;
     private String chefName;
@@ -56,13 +56,13 @@ public class RecipeDet1ControllerGUI {
     public void showReview(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet3.fxml"));
         Parent parent = fxmlLoader.load();
-        scene = new Scene(parent);
+        sceneB = new Scene(parent);
         RecipeDet3ControllerGUI recipeDet3ControllerGUI = fxmlLoader.getController();
         recipeDet3ControllerGUI.setInterfaceName(interfaceName);
         recipeDet3ControllerGUI.setReview(rname,chefName);
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+        stageB = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageB.setScene(sceneB);
+        stageB.show();
 
 
     }
@@ -70,34 +70,34 @@ public class RecipeDet1ControllerGUI {
     public void back(ActionEvent event) throws IOException {
 
         if(Objects.equals(interfaceName, "myRecipe")){
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
-            scene = new Scene(root);
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
+            r = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
+            sceneB = new Scene(r);
+            stageB = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stageB.setScene(sceneB);
+            stageB.show();
         }else if(Objects.equals(interfaceName, "myChef")){
 
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myChef.fxml")));
-            scene = new Scene(root);
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
+            r = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myChef.fxml")));
+            sceneB = new Scene(r);
+            stageB = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stageB.setScene(sceneB);
+            stageB.show();
 
 
         }else if(Objects.equals(interfaceName, "kitchenSearch")){
 
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/KitchenSearch.fxml")));
-            scene = new Scene(root);
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
+            r = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/KitchenSearch.fxml")));
+            sceneB = new Scene(r);
+            stageB = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stageB.setScene(sceneB);
+            stageB.show();
 
         }else if(Objects.equals(interfaceName, "myKitchen")){
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myKitchen.fxml")));
-            scene = new Scene(root);
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
+            r = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myKitchen.fxml")));
+            sceneB = new Scene(r);
+            stageB = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stageB.setScene(sceneB);
+            stageB.show();
         }
 
 
@@ -107,13 +107,13 @@ public class RecipeDet1ControllerGUI {
     public void showDescription(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet2.fxml"));
         Parent parent = fxmlLoader.load();
-        scene = new Scene(parent);
+        sceneB = new Scene(parent);
         RecipeDet2ControllerGUI recipeDet2ControllerGUI = fxmlLoader.getController();
         recipeDet2ControllerGUI.setInterfaceName(interfaceName);
         recipeDet2ControllerGUI.setDescription(rname, chefName);
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+        stageB = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageB.setScene(sceneB);
+        stageB.show();
     }
 
     public void followChef() {
