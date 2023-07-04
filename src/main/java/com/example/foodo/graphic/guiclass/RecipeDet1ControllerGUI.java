@@ -79,26 +79,31 @@ public class RecipeDet1ControllerGUI {
 
     public void back(ActionEvent event) throws IOException {
 
-        if(Objects.equals(interfaceName, "myChef")){
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myChef.fxml")));
-            scene = new Scene(root);
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-        }else if(Objects.equals(interfaceName, "myRecipe")){
+        if(Objects.equals(interfaceName, "myRecipe")){
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
             scene = new Scene(root);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
-        }else if(Objects.equals(interfaceName, "myKitchen")){
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myKitchen.fxml")));
+        }else if(Objects.equals(interfaceName, "myChef")){
+
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myChef.fxml")));
             scene = new Scene(root);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
+
+
         }else if(Objects.equals(interfaceName, "kitchenSearch")){
+
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/KitchenSearch.fxml")));
+            scene = new Scene(root);
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+
+        }else if(Objects.equals(interfaceName, "myKitchen")){
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myKitchen.fxml")));
             scene = new Scene(root);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
