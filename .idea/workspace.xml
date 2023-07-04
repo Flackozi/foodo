@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="duplicate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/controllercli/UserCLIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/controllercli/UserCLIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/MyRecipeControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/MyRecipeControllerGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,20 +260,6 @@
       <workItem from="1687873145501" duration="666000" />
       <workItem from="1687934003843" duration="411000" />
       <workItem from="1687938063438" duration="7368000" />
-    </task>
-    <task id="LOCAL-00043" summary="sonarcloud">
-      <created>1687097598293</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1687097598293</updated>
-    </task>
-    <task id="LOCAL-00044" summary="sonarcloud">
-      <created>1687102058666</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1687102058666</updated>
     </task>
     <task id="LOCAL-00045" summary="sonarcloud">
       <created>1687103987359</created>
@@ -604,7 +590,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688462263779</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="duplicate">
+      <created>1688462598175</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1688462598175</updated>
+    </task>
+    <task id="LOCAL-00093" summary="duplicate">
+      <created>1688462741020</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1688462741020</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

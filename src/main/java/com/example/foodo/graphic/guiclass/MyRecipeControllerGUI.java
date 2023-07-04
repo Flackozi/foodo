@@ -51,35 +51,22 @@ public class MyRecipeControllerGUI implements Initializable{
         window.show();
     }
 
-    public void showAddNewRecipes(ActionEvent event) throws IOException{
-        Parent scene = FXMLLoader.load(getClass().getResource("/guiclass/addNewRecipes.fxml"));
-        Scene sceneMainView = new Scene(scene);
-
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(sceneMainView);
-        window.show();
-    }
-
     public void initialize(URL location, ResourceBundle resources){
-        try {
-            recipeBeans1.addAll(getData());
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ConnectionDbException e) {
-            e.printStackTrace();
-        }
 
         int column = 0;
         int row = 1;
+
+
+
         try {
-            for (int i = 0; i < recipeBeans1.size(); i++) {
+            recipeBeans1.addAll(getData());
+            for (RecipeBean recipeBean : recipeBeans1) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/guiclass/recipeItem.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 ItemControllerGUI itemControllerGUI = fxmlLoader.getController();
-                itemControllerGUI.setData(recipeBeans1.get(i),myListener, recipeBeans1.get(i).getRecipeName(), recipeBeans1.get(i).getChefName());
+                itemControllerGUI.setData(recipeBean, myListener, recipeBean.getRecipeName(), recipeBean.getChefName());
                 itemControllerGUI.setInterfaceName("myRecipe");
 
 
@@ -101,10 +88,21 @@ public class MyRecipeControllerGUI implements Initializable{
 
                 GridPane.setMargin(anchorPane, new Insets(10));
             }
-        } catch (IOException e) {
+        } catch (IOException | SQLException | ConnectionDbException e) {
             e.printStackTrace();
         }
 
     }
+
+    public void showAddNewRecipes(ActionEvent event) throws IOException{
+        Parent scene = FXMLLoader.load(getClass().getResource("/guiclass/addNewRecipes.fxml"));
+        Scene sceneMainView = new Scene(scene);
+
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(sceneMainView);
+        window.show();
+    }
+
+
 }
 
