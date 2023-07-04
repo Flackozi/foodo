@@ -23,19 +23,19 @@ public class UserCLIController implements GrapghiCLIController{
 
     public void executeCommand(String inputLine) throws CommandNotValidException, SQLException, ConnectionDbException, FileNotFoundException, ProductNotFoundException {
         switch(inputLine){
-            case PANTRY -> {
-                PantryCLIController pantryCLIController=new PantryCLIController();
-                pantryCLIController.start();
-            }case PROFILE -> {
+            case PROFILE -> {
                 ProfileCLIController profileCLIController=new ProfileCLIController();
                 profileCLIController.start();
+            }case CHEF -> {
+                MyChefCLIController myChefCLIController = new MyChefCLIController();
+                myChefCLIController.start();
             }case KITCHEN -> {
                 KitchenCLIController kitchenCLICOntroller= new KitchenCLIController();
                 kitchenCLICOntroller.start();
                 this.start();
-            }case CHEF -> {
-                MyChefCLIController myChefCLIController = new MyChefCLIController();
-                myChefCLIController.start();
+            }case PANTRY -> {
+                PantryCLIController pantryCLIController = new PantryCLIController();
+                pantryCLIController.start();
             }
             default -> throw new CommandNotValidException();
         }
