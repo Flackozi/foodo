@@ -74,7 +74,6 @@ public class   ProductDAO {
         ProductDAO productDAO = new ProductDAO();
         Integer id = productDAO.getRecipeId(rname);
         ResultSet resultSet = BasicQueries.retriveRecipeIng(stmt, id);
-
         while(resultSet.next()){
             String name = resultSet.getString("name");
             String quantity = resultSet.getString("quantity");
@@ -85,10 +84,8 @@ public class   ProductDAO {
     }
 
     public Integer getRecipeId(String rname) throws ConnectionDbException, SQLException {
-
         Statement stmt;
         stmt = ConnectionDB.getConnection();
-
         ResultSet resultSet = BasicQueries.retriveRecipeId2(stmt, rname);
         resultSet.next();
         resultSet.first();

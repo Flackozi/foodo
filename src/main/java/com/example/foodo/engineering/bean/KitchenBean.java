@@ -30,6 +30,7 @@ public class KitchenBean {
     public void setIngredient1(String ingredient1) {
         this.ingredient1 = ingredient1;
     }
+    public String getIngredient1(){return ingredient1;}
     public void setIngredient2(String ingredient2) {
         this.ingredient2 = ingredient2;
     }

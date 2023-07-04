@@ -129,7 +129,7 @@ public class RecipeDet1ControllerGUI {
     }
 
 
-    public void setRecipe(String chefName, String rname) throws SQLException, ConnectionDbException {
+    public void setRecipe(String rname, String chefName) throws SQLException, ConnectionDbException {
         name.setCellValueFactory(new PropertyValueFactory<>("Name"));
         quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
         this.rname=rname;
