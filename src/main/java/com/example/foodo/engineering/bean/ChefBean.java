@@ -12,29 +12,25 @@ public class ChefBean {
     public ChefBean() {
         //coastruttore di default
     }
-
-    public String getPath() {
-        return path;
-    }
-
     public void setPath(String path) {
         this.path = path;
     }
-
-    public String getEmail() {
-        return email;
+    public String getPath() {
+        return path;
     }
 
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getNumber() {
-        return number;
+    public String getEmail() {
+        return email;
     }
 
     public void setNumber(String number) {
         this.number = number;
+    }
+    public String getNumber() {
+        return number;
     }
 
     public String getLocation() {

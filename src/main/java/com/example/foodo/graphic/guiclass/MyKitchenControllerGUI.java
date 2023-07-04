@@ -117,13 +117,10 @@ public class MyKitchenControllerGUI {
         }
     }
 
-    public void backHome(ActionEvent event) throws IOException {
-        Parent scene;
-        if(Session.getCurrentSession().getChefBean() == null){
-            scene = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
-        }else{
-            scene = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
-        }
+
+
+    public void showPantry(ActionEvent event) throws IOException {
+        Parent scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneMyPantry.fxml")));
         Scene sceneMainView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -131,8 +128,14 @@ public class MyKitchenControllerGUI {
         window.show();
     }
 
-    public void showPantry(ActionEvent event) throws IOException {
-        Parent scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneMyPantry.fxml")));
+    @FXML
+    public void backHome(ActionEvent event) throws IOException {
+        Parent scene;
+        if(Session.getCurrentSession().getChefBean() == null){
+            scene = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+        }else{
+            scene = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
+        }
         Scene sceneMainView = new Scene(scene);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

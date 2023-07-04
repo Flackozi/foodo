@@ -38,6 +38,17 @@ public class KitchenSearchControllerGUI {
 
 
 
+
+
+    @FXML
+    void showGenerateRecipe(ActionEvent event) throws IOException {
+        Parent scene = FXMLLoader.load(getClass().getResource("/guiclass/myKitchen.fxml"));
+        Scene sceneMainView = new Scene(scene);
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(sceneMainView);
+        window.show();
+    }
+
     @FXML
     void backHome(ActionEvent event) throws IOException {
         Parent scene;
@@ -46,15 +57,6 @@ public class KitchenSearchControllerGUI {
         }else{
             scene = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
         }
-        Scene sceneMainView = new Scene(scene);
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(sceneMainView);
-        window.show();
-    }
-
-    @FXML
-    void showGenerateRecipe(ActionEvent event) throws IOException {
-        Parent scene = FXMLLoader.load(getClass().getResource("/guiclass/myKitchen.fxml"));
         Scene sceneMainView = new Scene(scene);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(sceneMainView);

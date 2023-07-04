@@ -31,28 +31,25 @@ public class RecipeBean {
         this.recipeName = recipeName;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public String getChefName() {
-        return chefName;
+    public String getDescription() {
+        return description;
     }
-
     public void setChefName(String chefName) {
         this.chefName = chefName;
     }
-
+    public String getChefName() {
+        return chefName;
+    }
+    public void setPath(String path) {
+        this.path = path;
+    }
     public String getPath() {
         return path;
     }
 
-    public void setPath(String path) {
-        this.path = path;
-    }
+
 
 }
