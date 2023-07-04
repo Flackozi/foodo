@@ -75,15 +75,15 @@ public class KitchenSearchControllerGUI {
         int column = 0;
         int row = 1;
         try {
-            for (int i = 0; i < recipeBeans.size(); i++) {
+            for (RecipeBean recipeBean : recipeBeans) {
 
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/guiclass/recipeItem.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
-                ItemControllerGUI itemControllerGUI = fxmlLoader.getController();
-                itemControllerGUI.setData(recipeBeans.get(i),myListener, recipeBeans.get(i).getRecipeName(), recipeBeans.get(i).getChefName());
-                itemControllerGUI.setInterfaceName("kitchenSearch");
+                ItemControllerGUI item = fxmlLoader.getController();
+                item.setData(recipeBean, myListener, recipeBean.getRecipeName(), recipeBean.getChefName());
+                item.setInterfaceName("kitchenSearch");
 
                 if (column == 2) {
                     column = 0;
