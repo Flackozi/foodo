@@ -41,14 +41,14 @@ public class RecipeDet3ControllerGUI {
     private String interfaceName;
 
     public void back(ActionEvent event) throws IOException {
-        if(Objects.equals(interfaceName, "myChef")){
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myChef.fxml")));
+        if(Objects.equals(interfaceName, "myRecipe")){
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
             scene = new Scene(root);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
-        }else if(Objects.equals(interfaceName, "myRecipe")){
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
+        }else if(Objects.equals(interfaceName, "myChef")){
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myChef.fxml")));
             scene = new Scene(root);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
