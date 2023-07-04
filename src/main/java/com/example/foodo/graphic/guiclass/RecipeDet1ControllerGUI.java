@@ -51,17 +51,7 @@ public class RecipeDet1ControllerGUI {
     private String interfaceName;
 
 
-    public void showDescription(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet2.fxml"));
-        Parent parent = fxmlLoader.load();
-        scene = new Scene(parent);
-        RecipeDet2ControllerGUI recipeDet2ControllerGUI = fxmlLoader.getController();
-        recipeDet2ControllerGUI.setInterfaceName(interfaceName);
-        recipeDet2ControllerGUI.setDescription(rname, chefName);
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
+
 
     public void showReview(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet3.fxml"));
@@ -113,7 +103,33 @@ public class RecipeDet1ControllerGUI {
 
     }
 
-    public void setRecipe(String rname, String chefName) throws SQLException, ConnectionDbException {
+
+    public void showDescription(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet2.fxml"));
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
+        RecipeDet2ControllerGUI recipeDet2ControllerGUI = fxmlLoader.getController();
+        recipeDet2ControllerGUI.setInterfaceName(interfaceName);
+        recipeDet2ControllerGUI.setDescription(rname, chefName);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void followChef() {
+        RecipeDetController recipeDetController= new RecipeDetController();
+        this.userName=Session.getCurrentSession().getUserBean().getUsername();
+        if(recipeDetController.verifyFollow(userName, chefName)==0){
+            //l'utente già seguiva lo chef, quindi lo unfollow
+            followLabel.setText("Chef unfollowed");
+        }else{
+            //l'utente non seguiva ancora lo chef, quindi lo follow
+            followLabel.setText("Chef followed");
+        }
+    }
+
+
+    public void setRecipe(String chefName, String rname) throws SQLException, ConnectionDbException {
         name.setCellValueFactory(new PropertyValueFactory<>("Name"));
         quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
         this.rname=rname;
@@ -134,19 +150,6 @@ public class RecipeDet1ControllerGUI {
 
         tableIngredients.setItems(obl);
 
-    }
-
-
-    public void followChef() {
-        RecipeDetController recipeDetController= new RecipeDetController();
-        this.userName=Session.getCurrentSession().getUserBean().getUsername();
-        if(recipeDetController.verifyFollow(userName, chefName)==0){
-            //l'utente già seguiva lo chef, quindi lo unfollow
-            followLabel.setText("Chef unfollowed");
-        }else{
-            //l'utente non seguiva ancora lo chef, quindi lo follow
-            followLabel.setText("Chef followed");
-        }
     }
 
     public void setInterfaceName(String interfaceName) {
