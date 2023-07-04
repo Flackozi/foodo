@@ -59,9 +59,9 @@ public class PantryControllerGUI  implements Initializable, Observer {
     public void backHome(ActionEvent event) throws IOException {
         Parent scene;
         if(Session.getCurrentSession().getChefBean() == null){
-            scene = FXMLLoader.load(getClass().getResource("/guiclass/sceneHomeUser.fxml"));
+            scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/sceneHomeUser.fxml")));
         }else{
-            scene = FXMLLoader.load(getClass().getResource("/guiclass/chefMainPage.fxml"));
+            scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/chefMainPage.fxml")));
         }
         Scene sceneMainView = new Scene(scene);
 
