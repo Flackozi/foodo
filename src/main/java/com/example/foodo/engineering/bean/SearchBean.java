@@ -18,20 +18,20 @@ public class SearchBean {
         //costruttore di default
     }
 
-    public String getSearchText() {
-        return searchText;
-    }
+
 
     public void setSearchText(String searchText) {
         this.searchText = searchText;
     }
 
-    public Boolean getSpices() {
-        return spices;
+    public String getSearchText() {
+        return searchText;
     }
-
     public void setSpices(Boolean spices) {
         this.spices = spices;
+    }
+    public Boolean getSpices() {
+        return spices;
     }
 
     public Boolean getFruit() {
@@ -50,12 +50,12 @@ public class SearchBean {
         this.meat = meat;
     }
 
-    public Boolean getVegetable() {
-        return vegetable;
-    }
 
     public void setVegetable(Boolean vegetable) {
         this.vegetable = vegetable;
+    }
+    public Boolean getVegetable() {
+        return vegetable;
     }
 
     public Boolean getSweet() {
@@ -66,21 +66,20 @@ public class SearchBean {
         this.sweet = sweet;
     }
 
-    public Boolean getLiquid() {
-        return liquid;
-    }
 
     public void setLiquid(Boolean liquid) {
         this.liquid = liquid;
     }
-
+    public Boolean getLiquid() {
+        return liquid;
+    }
+    public void setFish(Boolean fish) {
+        this.fish = fish;
+    }
     public Boolean getFish() {
         return fish;
     }
 
-    public void setFish(Boolean fish) {
-        this.fish = fish;
-    }
 
 
 
