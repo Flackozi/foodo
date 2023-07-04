@@ -35,6 +35,20 @@ public class RecipeDet2ControllerGUI{
     private Label descriptionLabel;
     private String interfaceName;
 
+
+
+    public void showIngredients(ActionEvent event) throws IOException, SQLException, ConnectionDbException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet1.fxml"));
+        Parent parent = fxmlLoader.load();
+        scene = new Scene(parent);
+        RecipeDet1ControllerGUI recipeDet1ControllerGUI = fxmlLoader.getController();
+        recipeDet1ControllerGUI.setInterfaceName(interfaceName);
+        recipeDet1ControllerGUI.setRecipe(name, chefName);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void back(ActionEvent event) throws IOException {
         if(Objects.equals(interfaceName, "myChef")){
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myChef.fxml")));
@@ -61,18 +75,6 @@ public class RecipeDet2ControllerGUI{
             stage.setScene(scene);
             stage.show();
         }
-    }
-
-    public void showIngredients(ActionEvent event) throws IOException, SQLException, ConnectionDbException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet1.fxml"));
-        Parent parent = fxmlLoader.load();
-        scene = new Scene(parent);
-        RecipeDet1ControllerGUI recipeDet1ControllerGUI = fxmlLoader.getController();
-        recipeDet1ControllerGUI.setInterfaceName(interfaceName);
-        recipeDet1ControllerGUI.setRecipe(name, chefName);
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
     }
 
     public void showReview(ActionEvent event) throws IOException {
