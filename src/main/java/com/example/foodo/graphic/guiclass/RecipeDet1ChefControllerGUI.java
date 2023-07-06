@@ -32,7 +32,7 @@ public class RecipeDet1ChefControllerGUI {
     @FXML
     private TableView tableIngredients;
     @FXML
-    private ImageView recipeImage;
+    private ImageView imageView;
     @FXML
     private TableColumn<ProductBean, String> quantity;
 
@@ -57,9 +57,9 @@ public class RecipeDet1ChefControllerGUI {
         productBeans = recipeDetController.getRecipeIngredients(rname);
         String path=recipeDetController.getPath(rname);
         Image image= new Image(path);
-        recipeImage.setImage(image);
-        recipeImage.setFitHeight(150);
-        recipeImage.setFitWidth(150);
+        imageView.setImage(image);
+        imageView.setFitHeight(150);
+        imageView.setFitWidth(150);
         Iterator<ProductBean> iteratorProduct=productBeans.iterator();
         ObservableList<ProductBean> obl= tableIngredients.getItems();
         while(iteratorProduct.hasNext()){
@@ -99,9 +99,9 @@ public class RecipeDet1ChefControllerGUI {
         RecipeDetController recipeDetController= new RecipeDetController();
         String path=recipeDetController.getPath(rname);
         Image image= new Image(path);
-        recipeImage.setImage(image);
-        recipeImage.setFitHeight(150);
-        recipeImage.setFitWidth(150);
+        imageView.setImage(image);
+        imageView.setFitHeight(150);
+        imageView.setFitWidth(150);
         setAverage(rname, chefName);
 
     }
