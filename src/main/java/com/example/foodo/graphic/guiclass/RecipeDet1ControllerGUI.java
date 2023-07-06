@@ -105,8 +105,8 @@ public class RecipeDet1ControllerGUI {
     public void setRecipe(String rname, String chefName) throws SQLException, ConnectionDbException {
         name.setCellValueFactory(new PropertyValueFactory<>("Name"));
         quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
-        this.rname=rname;
         this.chefName=chefName;
+        this.rname=rname;
         RecipeDetController recipeDetController = new RecipeDetController();
         productBeans = recipeDetController.getRecipeIngredients(rname);
         String path=recipeDetController.getPath(rname);
