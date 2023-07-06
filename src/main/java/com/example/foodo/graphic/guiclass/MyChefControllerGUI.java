@@ -79,8 +79,8 @@ public class MyChefControllerGUI implements Initializable{
                 itemControllerGUI.setInterfaceName("myChef");
 
                 if (column == 2) {
-                    column = 0;
                     row++;
+                    column = 0;
                 }
 
                 grid.add(anchorPane, column++, row); //(child,column,row)
