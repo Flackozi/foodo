@@ -49,10 +49,6 @@ public class RecipeDet1ControllerGUI {
     private UserBean userBean;
     private List<ProductBean> productBeans = new ArrayList<>();
 
-
-
-
-
     public void showReview(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet3.fxml"));
         Parent parent = fxmlLoader.load();
@@ -64,42 +60,19 @@ public class RecipeDet1ControllerGUI {
         stageB.setScene(sceneB);
         stageB.show();
 
-
     }
 
     public void back(ActionEvent event) throws IOException {
-
-        if(Objects.equals(interfaceName, "myRecipe")){
-            r = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
-            sceneB = new Scene(r);
-            stageB = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stageB.setScene(sceneB);
-            stageB.show();
-        }else if(Objects.equals(interfaceName, "myChef")){
-
-            r = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myChef.fxml")));
-            sceneB = new Scene(r);
-            stageB = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stageB.setScene(sceneB);
-            stageB.show();
-
-
-        }else if(Objects.equals(interfaceName, "kitchenSearch")){
-
-            r = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/KitchenSearch.fxml")));
-            sceneB = new Scene(r);
-            stageB = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stageB.setScene(sceneB);
-            stageB.show();
-
+        if(Objects.equals(interfaceName, "myChef")){
+            changeView("/guiclass/myChef.fxml", event);
+        }else if(Objects.equals(interfaceName, "myRecipe")){
+            changeView("/guiclass/myRecipes.fxml", event);
         }else if(Objects.equals(interfaceName, "myKitchen")){
-            r = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myKitchen.fxml")));
-            sceneB = new Scene(r);
-            stageB = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stageB.setScene(sceneB);
-            stageB.show();
-        }
 
+            changeView("/guiclass/myKitchen.fxml", event);
+        }else if(Objects.equals(interfaceName, "kitchenSearch")){
+            changeView("/guiclass/KitchenSearch.fxml", event);
+        }
 
     }
 
@@ -150,6 +123,13 @@ public class RecipeDet1ControllerGUI {
 
         tableIngredients.setItems(obl);
 
+    }
+    public void changeView(String path, ActionEvent event) throws IOException {
+        r = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(path)));
+        sceneB = new Scene(r);
+        stageB = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageB.setScene(sceneB);
+        stageB.show();
     }
 
     public void setInterfaceName(String interfaceName) {

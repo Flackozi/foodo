@@ -34,20 +34,7 @@ public class RecipeDet2ChefControllerGUI {
     private Parent root2;
     public void back(ActionEvent event) throws IOException {
 
-        if(Objects.equals(interfaceName, "myChef")){
-            changeView("/guiclass/myChef.fxml", event);
-        }else if(Objects.equals(interfaceName, "myRecipe")){
-            /*root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
-            scene = new Scene(root2);
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();*/
-            changeView("/guiclass/myRecipes.fxml", event);
-        }else if(Objects.equals(interfaceName, "myKitchen")){
-            changeView("/guiclass/myKitchen.fxml", event);
-        }else if(Objects.equals(interfaceName, "kitchenSearch")){
-            changeView("/guiclass/KitchenSearch.fxml", event);
-        }
+
     }
 
     public void showIngredients(ActionEvent event) throws IOException, SQLException, ConnectionDbException {
