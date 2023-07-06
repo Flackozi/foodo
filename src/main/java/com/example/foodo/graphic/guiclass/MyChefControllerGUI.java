@@ -28,7 +28,7 @@ import javafx.geometry.Insets;
 public class MyChefControllerGUI implements Initializable{
 
     @FXML
-    public GridPane grid;
+    public GridPane gridPane;
     @FXML
     public ScrollPane scroll;
 
@@ -83,16 +83,16 @@ public class MyChefControllerGUI implements Initializable{
                     column = 0;
                 }
 
-                grid.add(anchorPane, column++, row); //(child,column,row)
+                gridPane.add(anchorPane, column++, row); //(child,column,row)
                 //set grid width
-                grid.setMinWidth(Region.USE_COMPUTED_SIZE);
-                grid.setPrefWidth(Region.USE_COMPUTED_SIZE);
-                grid.setMaxWidth(Region.USE_PREF_SIZE);
+                gridPane.setMinWidth(Region.USE_COMPUTED_SIZE);
+                gridPane.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                gridPane.setMaxWidth(Region.USE_PREF_SIZE);
 
                 //set grid height
-                grid.setMinHeight(Region.USE_COMPUTED_SIZE);
-                grid.setPrefHeight(Region.USE_COMPUTED_SIZE);
-                grid.setMaxHeight(Region.USE_PREF_SIZE);
+                gridPane.setMinHeight(Region.USE_COMPUTED_SIZE);
+                gridPane.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                gridPane.setMaxHeight(Region.USE_PREF_SIZE);
 
                 GridPane.setMargin(anchorPane, new Insets(10));
             }

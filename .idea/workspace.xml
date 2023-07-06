@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="duplicate">
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione duplicate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet2ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet2ControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet1ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet1ControllerGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,21 +261,7 @@
       <workItem from="1687934003843" duration="411000" />
       <workItem from="1687938063438" duration="7368000" />
       <workItem from="1688547751021" duration="1215000" />
-      <workItem from="1688635295692" duration="5224000" />
-    </task>
-    <task id="LOCAL-00057" summary="risoluzione alcuni code smell">
-      <created>1687527129281</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1687527129281</updated>
-    </task>
-    <task id="LOCAL-00058" summary="risoluzione alcuni code smell">
-      <created>1687528658223</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1687528658223</updated>
+      <workItem from="1688635295692" duration="6048000" />
     </task>
     <task id="LOCAL-00059" summary="risoluzione alcuni code smell">
       <created>1687530225042</created>
@@ -606,7 +592,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688653967350</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="duplicate">
+      <created>1688654257861</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1688654257861</updated>
+    </task>
+    <task id="LOCAL-00107" summary="risoluzione duplicate">
+      <created>1688654692410</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1688654692410</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,7 +624,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="caso d'uso: MyRecipe&#10;descrizione: Fatto inserimento ricette nel database, da fare inserimento anche degli ingredienti" />
     <MESSAGE value="caso d'uso: AddNewRecipe&#10;descrizione: finito addNewRecipe" />
     <MESSAGE value="caso d'uso: &#10;fine prima parte myChef&#10;sistemazione bug profilo chef&#10;add css" />
     <MESSAGE value="caso d'uso: myChef&#10;fine caso d'uso" />
@@ -649,7 +648,8 @@
     <MESSAGE value="sistemato exception search product" />
     <MESSAGE value="risoluzione alcuni code smell" />
     <MESSAGE value="duplicate" />
-    <option name="LAST_COMMIT_MESSAGE" value="duplicate" />
+    <MESSAGE value="risoluzione duplicate" />
+    <option name="LAST_COMMIT_MESSAGE" value="risoluzione duplicate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

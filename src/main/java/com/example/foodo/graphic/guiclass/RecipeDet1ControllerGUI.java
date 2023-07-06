@@ -107,9 +107,9 @@ public class RecipeDet1ControllerGUI {
         quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
         this.chefName=chefName;
         this.rname=rname;
-        RecipeDetController recipeDetController = new RecipeDetController();
-        productBeans = recipeDetController.getRecipeIngredients(rname);
-        String path=recipeDetController.getPath(rname);
+        RecipeDetController detController = new RecipeDetController();
+        productBeans = detController.getRecipeIngredients(rname);
+        String path=detController.getPath(rname);
         Image image= new Image(path);
         recipeImage.setImage(image);
         recipeImage.setFitHeight(150);

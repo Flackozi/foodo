@@ -65,9 +65,9 @@ public class MyRecipeControllerGUI implements Initializable{
                 fxmlLoader.setLocation(getClass().getResource("/guiclass/recipeItem.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
-                ItemControllerGUI itemControllerGUI = fxmlLoader.getController();
-                itemControllerGUI.setData(recipeBean, myListener, recipeBean.getRecipeName(), recipeBean.getChefName());
-                itemControllerGUI.setInterfaceName("myRecipe");
+                ItemControllerGUI itemControllerGUI1 = fxmlLoader.getController();
+                itemControllerGUI1.setData(recipeBean, myListener, recipeBean.getRecipeName(), recipeBean.getChefName());
+                itemControllerGUI1.setInterfaceName("myRecipe");
 
 
                 if (column == 2) {
