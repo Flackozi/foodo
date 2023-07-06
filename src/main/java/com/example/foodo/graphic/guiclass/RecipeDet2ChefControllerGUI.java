@@ -40,6 +40,12 @@ public class RecipeDet2ChefControllerGUI {
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
+        }else if(Objects.equals(interfaceName, "myRecipe")){
+            root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
+            scene = new Scene(root2);
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
         }else if(Objects.equals(interfaceName, "myKitchen")){
             root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myKitchen.fxml")));
             scene = new Scene(root2);
@@ -47,12 +53,6 @@ public class RecipeDet2ChefControllerGUI {
             stage.setScene(scene);
             stage.show();
 
-        }else if(Objects.equals(interfaceName, "myRecipe")){
-            root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
-            scene = new Scene(root2);
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
         }else if(Objects.equals(interfaceName, "kitchenSearch")){
             root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/KitchenSearch.fxml")));
             scene = new Scene(root2);
