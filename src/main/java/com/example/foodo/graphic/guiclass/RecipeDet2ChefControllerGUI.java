@@ -35,30 +35,18 @@ public class RecipeDet2ChefControllerGUI {
     public void back(ActionEvent event) throws IOException {
 
         if(Objects.equals(interfaceName, "myChef")){
-            root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myChef.fxml")));
-            scene = new Scene(root2);
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
+            changeView("/guiclass/myChef.fxml", event);
         }else if(Objects.equals(interfaceName, "myRecipe")){
-            root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
+            /*root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myRecipes.fxml")));
             scene = new Scene(root2);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
-            stage.show();
+            stage.show();*/
+            changeView("/guiclass/myRecipes.fxml", event);
         }else if(Objects.equals(interfaceName, "myKitchen")){
-            root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/myKitchen.fxml")));
-            scene = new Scene(root2);
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-
+            changeView("/guiclass/myKitchen.fxml", event);
         }else if(Objects.equals(interfaceName, "kitchenSearch")){
-            root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/guiclass/KitchenSearch.fxml")));
-            scene = new Scene(root2);
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
+            changeView("/guiclass/KitchenSearch.fxml", event);
         }
     }
 
@@ -100,5 +88,13 @@ public class RecipeDet2ChefControllerGUI {
         average=recipeDetController.setAverage(rname, chefName);
 
         averageLabel.setText(average.substring(0,3));
+    }
+
+    public void changeView(String path, ActionEvent event) throws IOException {
+        root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(path)));
+        scene = new Scene(root2);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }
