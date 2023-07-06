@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="duplicate">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_07_2023_10_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_07_2023_10_23__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2023_15_40_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2023_15_40__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/KitchenBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/bean/KitchenBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet1ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet1ControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet2ChefControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet2ChefControllerGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,6 +263,8 @@
       <workItem from="1687873145501" duration="666000" />
       <workItem from="1687934003843" duration="411000" />
       <workItem from="1687938063438" duration="7368000" />
+      <workItem from="1688547751021" duration="1215000" />
+      <workItem from="1688635295692" duration="1064000" />
     </task>
     <task id="LOCAL-00047" summary="risoluzione alcuni bug">
       <created>1687275502771</created>
