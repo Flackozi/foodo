@@ -39,7 +39,7 @@ public class MyKitchenControllerGUI {
     private Button generateRecipe;
 
     @FXML
-    private GridPane grid;
+    private GridPane grid2;
 
     @FXML
     private TextField ingredient1;
@@ -84,7 +84,7 @@ public class MyKitchenControllerGUI {
         int row = 1;
         try {
 
-            grid.getChildren().clear();
+            grid2.getChildren().clear();
             for (int i = 0; i < recipeBeans.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/guiclass/recipeItem.fxml"));
@@ -99,17 +99,17 @@ public class MyKitchenControllerGUI {
                     column = 0;
                 }
 
-                grid.add(anchorPane, column++, row); //(child,column,row)
+                grid2.add(anchorPane, column++, row); //(child,column,row)
 
                 //set grid height
-                grid.setMinHeight(Region.USE_COMPUTED_SIZE);
-                grid.setPrefHeight(Region.USE_COMPUTED_SIZE);
-                grid.setMaxHeight(Region.USE_PREF_SIZE);
+                grid2.setMinHeight(Region.USE_COMPUTED_SIZE);
+                grid2.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                grid2.setMaxHeight(Region.USE_PREF_SIZE);
 
                 //set grid width
-                grid.setMinWidth(Region.USE_COMPUTED_SIZE);
-                grid.setPrefWidth(Region.USE_COMPUTED_SIZE);
-                grid.setMaxWidth(Region.USE_PREF_SIZE);
+                grid2.setMinWidth(Region.USE_COMPUTED_SIZE);
+                grid2.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                grid2.setMaxWidth(Region.USE_PREF_SIZE);
 
                 GridPane.setMargin(anchorPane, new Insets(10));
             }
