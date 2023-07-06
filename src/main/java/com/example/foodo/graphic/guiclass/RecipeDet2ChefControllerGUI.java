@@ -81,8 +81,8 @@ public class RecipeDet2ChefControllerGUI {
     }
 
     public void setInfo(String rname, String chefName) {
-        this.name=rname;
         this.chefName=chefName;
+        this.name=rname;
         RecipeDetController recipeDetController = new RecipeDetController();
         String description = recipeDetController.getDescription(rname);
         descriptionLabel.setText(description);
@@ -95,8 +95,8 @@ public class RecipeDet2ChefControllerGUI {
     }
 
     private void setAverage(String rname, String chefName) {
-        String average = null;
         RecipeDetController recipeDetController=new RecipeDetController();
+        String average = null;
         average=recipeDetController.setAverage(rname, chefName);
 
         averageLabel.setText(average.substring(0,3));
