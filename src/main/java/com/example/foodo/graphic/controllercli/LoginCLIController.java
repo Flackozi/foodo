@@ -6,7 +6,6 @@ import com.example.foodo.engineering.bean.LoginBean;
 import com.example.foodo.engineering.exception.*;
 import com.example.foodo.graphic.viewcli.LoginViewCLI;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 
