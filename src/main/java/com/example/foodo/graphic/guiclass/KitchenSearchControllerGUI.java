@@ -14,7 +14,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -30,7 +29,7 @@ public class KitchenSearchControllerGUI {
     private Button searchButton;
 
     @FXML
-    private GridPane grid;
+    private GridPane grid1;
     private MyListener myListener;
 
     @FXML
@@ -90,16 +89,16 @@ public class KitchenSearchControllerGUI {
                     row++;
                 }
 
-                grid.add(anchorPane, column++, row); //(child,column,row)
+                grid1.add(anchorPane, column++, row); //(child,column,row)
                 //set grid width
-                grid.setMinWidth(Region.USE_COMPUTED_SIZE);
-                grid.setPrefWidth(Region.USE_COMPUTED_SIZE);
-                grid.setMaxWidth(Region.USE_PREF_SIZE);
+                grid1.setMinWidth(Region.USE_COMPUTED_SIZE);
+                grid1.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                grid1.setMaxWidth(Region.USE_PREF_SIZE);
 
                 //set grid height
-                grid.setMinHeight(Region.USE_COMPUTED_SIZE);
-                grid.setPrefHeight(Region.USE_COMPUTED_SIZE);
-                grid.setMaxHeight(Region.USE_PREF_SIZE);
+                grid1.setMinHeight(Region.USE_COMPUTED_SIZE);
+                grid1.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                grid1.setMaxHeight(Region.USE_PREF_SIZE);
 
                 GridPane.setMargin(anchorPane, new Insets(10));
             }
