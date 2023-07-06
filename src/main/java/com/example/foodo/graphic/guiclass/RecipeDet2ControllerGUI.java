@@ -39,8 +39,8 @@ public class RecipeDet2ControllerGUI{
 
     public void showIngredients(ActionEvent event) throws IOException, SQLException, ConnectionDbException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/guiclass/recipeDet1.fxml"));
-        Parent parent = fxmlLoader.load();
-        scene = new Scene(parent);
+        Parent parentIngr = fxmlLoader.load();
+        scene = new Scene(parentIngr);
         RecipeDet1ControllerGUI recipeDet1ControllerGUI = fxmlLoader.getController();
         recipeDet1ControllerGUI.setInterfaceName(interfaceName);
         recipeDet1ControllerGUI.setRecipe(name, chefName);
