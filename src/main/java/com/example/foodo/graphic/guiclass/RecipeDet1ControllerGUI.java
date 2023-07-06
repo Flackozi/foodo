@@ -41,14 +41,14 @@ public class RecipeDet1ControllerGUI {
     private TableColumn<ProductBean, String> name;
     private Parent r;
     private Stage stageB;
-    private Scene sceneB;
-
-    private String rname;
     private String chefName;
+    private Scene sceneB;
+    private String interfaceName;
+    private String rname;
     private String userName;
     private UserBean userBean;
     private List<ProductBean> productBeans = new ArrayList<>();
-    private String interfaceName;
+
 
 
 
