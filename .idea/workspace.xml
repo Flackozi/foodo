@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="inserimento librerie al progetto">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/addNewRecipes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/addNewRecipes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="sistemazione style.css" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -271,14 +267,7 @@
       <workItem from="1688717710206" duration="39000" />
       <workItem from="1688732716820" duration="2414000" />
       <workItem from="1688736470833" duration="475000" />
-      <workItem from="1688737292653" duration="572000" />
-    </task>
-    <task id="LOCAL-00064" summary="sistemato item">
-      <created>1687597166085</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1687597166086</updated>
+      <workItem from="1688737292653" duration="1281000" />
     </task>
     <task id="LOCAL-00065" summary="sistemato exception search product">
       <created>1687599403189</created>
@@ -616,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688736782988</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="inserimento librerie al progetto">
+      <created>1688737874162</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1688737874162</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,7 +630,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="caso d'uso: myKitchen&#10;inizio caso d'uso" />
     <MESSAGE value="caso d'uso: myKitchen&#10;fine caso d'uso" />
     <MESSAGE value="caso d'uso: details" />
     <MESSAGE value="caso d'uso: show recipe&#10;Foto, calcolo media, follow-unfollow" />
@@ -659,7 +654,8 @@
     <MESSAGE value="risoluzione duplicate dcn" />
     <MESSAGE value="risoluzione duplicate s dcjs" />
     <MESSAGE value="inserimento librerie al progetto" />
-    <option name="LAST_COMMIT_MESSAGE" value="inserimento librerie al progetto" />
+    <MESSAGE value="sistemazione style.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="sistemazione style.css" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
