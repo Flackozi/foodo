@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione duplicate s dcjs">
-      <change afterPath="$PROJECT_DIR$/libs/controlsfx-11.1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/mysql-connector-j-8.0.31.jar" afterDir="false" />
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="inserimento librerie al progetto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/file/Users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/file/Users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/addNewRecipes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/addNewRecipes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
     "WebServerToolWindowFactoryState": "false",
     "full.screen.before.presentation.mode": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/carlo/Desktop/PROGETTO_ISPW/foodo/libs/controlsfx-11.1.2.jar",
+    "last_opened_file_path": "C:/Users/carlo/Desktop/UNIVERSITA1/ISPW/esameISPW-francesca/AdoptMe-master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -271,14 +270,8 @@
       <workItem from="1688635295692" duration="7951000" />
       <workItem from="1688717710206" duration="39000" />
       <workItem from="1688732716820" duration="2414000" />
-      <workItem from="1688736470833" duration="293000" />
-    </task>
-    <task id="LOCAL-00063" summary="sistemato item">
-      <created>1687536178208</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1687536178209</updated>
+      <workItem from="1688736470833" duration="475000" />
+      <workItem from="1688737292653" duration="572000" />
     </task>
     <task id="LOCAL-00064" summary="sistemato item">
       <created>1687597166085</created>
@@ -616,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688656356991</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="inserimento librerie al progetto">
+      <created>1688736782987</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1688736782988</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,7 +634,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="caso d'uso: myChef&#10;fine caso d'uso" />
     <MESSAGE value="caso d'uso: myKitchen&#10;inizio caso d'uso" />
     <MESSAGE value="caso d'uso: myKitchen&#10;fine caso d'uso" />
     <MESSAGE value="caso d'uso: details" />
@@ -659,7 +658,8 @@
     <MESSAGE value="risoluzione duplicate" />
     <MESSAGE value="risoluzione duplicate dcn" />
     <MESSAGE value="risoluzione duplicate s dcjs" />
-    <option name="LAST_COMMIT_MESSAGE" value="risoluzione duplicate s dcjs" />
+    <MESSAGE value="inserimento librerie al progetto" />
+    <option name="LAST_COMMIT_MESSAGE" value="inserimento librerie al progetto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
