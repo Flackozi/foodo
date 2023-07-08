@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione duplicate dcn">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_5_2023_10_12_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_5_2023_10_12_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/file/Users.csv">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/file/Chef.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/file/Chef.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/file/Users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/file/Users.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/ConnectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/ConnectionDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,13 +54,13 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/flavi/Desktop/AdoptMe-master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/carlo/Desktop/UNIVERSITA1/ISPW/esameISPW-francesca/AdoptMe-master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -79,7 +76,12 @@
       <recent name="com.example.foodo.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\carlo\Desktop\PROGETTO_ISPW\foodo\libs" />
       <recent name="C:\Users\flavi\Desktop\università\ISPW\PROJECT\foodo\src\main\resources\guiclass" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\carlo\Desktop\PROGETTO_ISPW\foodo\libs" />
+      <recent name="C:\Users\carlo\Desktop\PROGETTO_ISPW\foodo" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -265,52 +267,12 @@
       <workItem from="1687934003843" duration="411000" />
       <workItem from="1687938063438" duration="7368000" />
       <workItem from="1688547751021" duration="1215000" />
-      <workItem from="1688635295692" duration="6993000" />
-      <workItem from="1688732713466" duration="64000" />
-      <workItem from="1688733526231" duration="1000" />
-      <workItem from="1688750139502" duration="15000" />
-      <workItem from="1688750707788" duration="22000" />
-      <workItem from="1688828064518" duration="18000" />
-      <workItem from="1688828607574" duration="34000" />
-      <workItem from="1688829288252" duration="3000" />
-      <workItem from="1688829307277" duration="35000" />
-      <workItem from="1688832550995" duration="135000" />
-      <workItem from="1688832732005" duration="390000" />
-    </task>
-    <task id="LOCAL-00061" summary="risoluzione alcuni code smell">
-      <created>1687531392513</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1687531392513</updated>
-    </task>
-    <task id="LOCAL-00062" summary="risolto kitchen">
-      <created>1687535936848</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1687535936851</updated>
-    </task>
-    <task id="LOCAL-00063" summary="sistemato item">
-      <created>1687536178208</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1687536178209</updated>
-    </task>
-    <task id="LOCAL-00064" summary="sistemato item">
-      <created>1687597166085</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1687597166086</updated>
-    </task>
-    <task id="LOCAL-00065" summary="sistemato exception search product">
-      <created>1687599403189</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1687599403189</updated>
+      <workItem from="1688635295692" duration="7951000" />
+      <workItem from="1688717710206" duration="39000" />
+      <workItem from="1688732716820" duration="2414000" />
+      <workItem from="1688736470833" duration="475000" />
+      <workItem from="1688737292653" duration="1281000" />
+      <workItem from="1688833452128" duration="492000" />
     </task>
     <task id="LOCAL-00066" summary="sistemato exception search product">
       <created>1687615281332</created>
@@ -620,7 +582,42 @@
       <option name="project" value="LOCAL" />
       <updated>1688655480681</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="risoluzione duplicate s dcjs">
+      <created>1688656085295</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1688656085295</updated>
+    </task>
+    <task id="LOCAL-00111" summary="risoluzione duplicate s dcjs">
+      <created>1688656356991</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1688656356991</updated>
+    </task>
+    <task id="LOCAL-00112" summary="inserimento librerie al progetto">
+      <created>1688736782987</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1688736782988</updated>
+    </task>
+    <task id="LOCAL-00113" summary="inserimento librerie al progetto">
+      <created>1688737874162</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1688737874162</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/file/Users.csv">
+      <created>1688833216100</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1688833216100</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,11 +635,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="caso d'uso: &#10;fine prima parte myChef&#10;sistemazione bug profilo chef&#10;add css" />
-    <MESSAGE value="caso d'uso: myChef&#10;fine caso d'uso" />
-    <MESSAGE value="caso d'uso: myKitchen&#10;inizio caso d'uso" />
-    <MESSAGE value="caso d'uso: myKitchen&#10;fine caso d'uso" />
-    <MESSAGE value="caso d'uso: details" />
     <MESSAGE value="caso d'uso: show recipe&#10;Foto, calcolo media, follow-unfollow" />
     <MESSAGE value="caso d'uso: view profile&#10;Fatto inserimento da db della foto" />
     <MESSAGE value="caso d'uso: persistenza sul file system e sistemazione switch di alcune interfacce" />
@@ -663,7 +655,12 @@
     <MESSAGE value="duplicate" />
     <MESSAGE value="risoluzione duplicate" />
     <MESSAGE value="risoluzione duplicate dcn" />
-    <option name="LAST_COMMIT_MESSAGE" value="risoluzione duplicate dcn" />
+    <MESSAGE value="risoluzione duplicate s dcjs" />
+    <MESSAGE value="inserimento librerie al progetto" />
+    <MESSAGE value="sistemazione style.css" />
+    <MESSAGE value="risoluzione security" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/file/Users.csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/file/Users.csv" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
