@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione duplicate dcn">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_5_2023_10_12_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_5_2023_10_12_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet1ChefControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/graphic/guiclass/RecipeDet1ChefControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet1Chef.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guiclass/recipeDet1Chef.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/file/Chef.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/file/Chef.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/file/Users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/file/Users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/ConnectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/connection/ConnectionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/queries/BasicQueries.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,13 +57,13 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/carlo/Desktop/UNIVERSITA1/ISPW/AroundTheWorld-master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/flavi/Desktop/AdoptMe-master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -263,6 +266,16 @@
       <workItem from="1687938063438" duration="7368000" />
       <workItem from="1688547751021" duration="1215000" />
       <workItem from="1688635295692" duration="6993000" />
+      <workItem from="1688732713466" duration="64000" />
+      <workItem from="1688733526231" duration="1000" />
+      <workItem from="1688750139502" duration="15000" />
+      <workItem from="1688750707788" duration="22000" />
+      <workItem from="1688828064518" duration="18000" />
+      <workItem from="1688828607574" duration="34000" />
+      <workItem from="1688829288252" duration="3000" />
+      <workItem from="1688829307277" duration="35000" />
+      <workItem from="1688832550995" duration="135000" />
+      <workItem from="1688832732005" duration="390000" />
     </task>
     <task id="LOCAL-00061" summary="risoluzione alcuni code smell">
       <created>1687531392513</created>
