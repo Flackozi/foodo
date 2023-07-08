@@ -9,22 +9,22 @@ public class BasicQueries {
     private BasicQueries(){}
 
     public static ResultSet checkLogin(Statement statement, String username, String password) throws SQLException {
-        String sql = String.format("SELECT CASE WHEN EXISTS (SELECT username, password FROM chef_table WHERE username = %s AND password = %s) THEN 1 WHEN EXISTS (SELECT username, password FROM user_table WHERE username = %s AND password = %s) THEN 2 END;", username, password, username, password);
+        String sql = String.format("SELECT CASE WHEN EXISTS (SELECT username, password FROM chef_table WHERE username = '%s' AND password = '%s') THEN 1 WHEN EXISTS (SELECT username, password FROM user_table WHERE username = '%s' AND password = '%s') THEN 2 END;", username, password, username, password);
         return statement.executeQuery(sql);
     }
 
     public static ResultSet selectUserByUsername(Statement stmt, String username) throws SQLException {
-        String sql = String.format("SELECT * FROM user_table WHERE username = %s", username);
+        String sql = String.format("SELECT * FROM user_table WHERE username = '%s'", username);
         return stmt.executeQuery(sql);
     }
 
     public static ResultSet selectChefByUsername(Statement stmt, String username) throws SQLException{
-        String sql=String.format("SELECT * FROM chef_table WHERE username = %s", username);
+        String sql=String.format("SELECT * FROM chef_table WHERE username = '%s'", username);
         return stmt.executeQuery(sql);
     }
 
     public static ResultSet retriveProduct(Statement stmt, String name) throws SQLException{
-        String sql = String.format("SELECT * FROM pantry WHERE accountName= %s", name);
+        String sql = String.format("SELECT * FROM pantry WHERE accountName= '%s'", name);
         return stmt.executeQuery(sql);
     }
 
@@ -35,27 +35,27 @@ public class BasicQueries {
 
     public static ResultSet retriveByType(Statement stmt, String type, String userName) throws  SQLException{
 
-        String sql = String.format("SELECT * FROM pantry WHERE type = %s AND accountName= %s", type, userName);
+        String sql = String.format("SELECT * FROM pantry WHERE type = '%s' AND accountName= '%s'", type, userName);
         return stmt.executeQuery(sql);
     }
 
     public static ResultSet retriveByText(Statement stmt, String searchText) throws SQLException {
-        String sql = String.format("SELECT * FROM pantry WHERE name = %s", searchText);
+        String sql = String.format("SELECT * FROM pantry WHERE name = '%s'", searchText);
         return stmt.executeQuery(sql);
     }
 
     public static ResultSet retriveItem(Statement stmt, String name) throws SQLException {
-        String sql = String.format("SELECT * FROM recipes WHERE chefName = %s", name);
+        String sql = String.format("SELECT * FROM recipes WHERE chefName = '%s'", name);
         return stmt.executeQuery(sql);
     }
 
     public static ResultSet retriveFavoriteChef(Statement stmt, String userName) throws SQLException {
-        String sql = String.format("SELECT * FROM favorite WHERE userName = %s", userName);
+        String sql = String.format("SELECT * FROM favorite WHERE userName = '%s'", userName);
         return stmt.executeQuery(sql);
     }
 
     public static ResultSet retrieveRecipeId(Statement stmt, String recipeName, String chefName, String description ) throws SQLException {
-        String sql = String.format("SELECT recipeId FROM recipes WHERE recipeName = %s AND description = %s AND chefName = %s", recipeName, chefName, description);
+        String sql = String.format("SELECT recipeId FROM recipes WHERE recipeName = '%s' AND description = '%s' AND chefName = '%s'", recipeName, chefName, description);
         return stmt.executeQuery(sql);
     }
 
@@ -93,84 +93,84 @@ public class BasicQueries {
     }
 
     public static ResultSet findRecipe(Statement stmt, Integer recipeId) throws SQLException {
-        String sql= String.format("SELECT * FROM recipes WHERE recipeId=%d", recipeId);
+        String sql= String.format("SELECT * FROM recipes WHERE recipeId='%d'", recipeId);
         return stmt.executeQuery(sql);
 
     }
 
     public static ResultSet searchRecipe(Statement stmt, String recipeName) throws SQLException {
-        String sql= String.format("SELECT * FROM recipes WHERE recipeName=%s", recipeName);
+        String sql= String.format("SELECT * FROM recipes WHERE recipeName='%s'", recipeName);
         return stmt.executeQuery(sql);
 
     }
 
 
     public static ResultSet retriveRecipeIng(Statement stmt, Integer id) throws SQLException {
-        String sql= String.format("SELECT * FROM ingredients WHERE recipeId=%d", id);
+        String sql= String.format("SELECT * FROM ingredients WHERE recipeId='%d'", id);
         return stmt.executeQuery(sql);
     }
 
     public static ResultSet retriveRecipeId3(Statement stmt, String rname, String chefName) throws SQLException {
 
-        String sql= String.format("SELECT recipeId FROM recipes WHERE recipeName=%s AND chefName=%s", rname, chefName);
+        String sql= String.format("SELECT recipeId FROM recipes WHERE recipeName='%s' AND chefName='%s'", rname, chefName);
         return stmt.executeQuery(sql);
     }
 
     public static ResultSet retriveRecipeId2(Statement stmt, String rname) throws SQLException {
 
-        String sql= String.format("SELECT recipeId FROM recipes WHERE recipeName=%s", rname);
+        String sql= String.format("SELECT recipeId FROM recipes WHERE recipeName='%s'", rname);
         return stmt.executeQuery(sql);
     }
 
     public static ResultSet searchDescription(Statement stmt, int id) throws SQLException {
-        String sql= String.format("SELECT description FROM recipes WHERE recipeId=%d", id);
+        String sql= String.format("SELECT description FROM recipes WHERE recipeId='%d'", id);
         return stmt.executeQuery(sql);
     }
 
     public static ResultSet retrieveImg(Statement stmt, int id) throws SQLException {
-        String sql= String.format("SELECT image FROM recipes WHERE recipeId=%d", id);
+        String sql= String.format("SELECT image FROM recipes WHERE recipeId='%d'", id);
         return stmt.executeQuery(sql);
     }
 
     public static ResultSet checkFollow(Statement stmt, String userName, String chefName) throws SQLException {
-        String sql = String.format("SELECT CASE WHEN EXISTS (SELECT userName, chefName FROM favorite WHERE userName =%s AND chefName = %s) THEN 0 ELSE 1 END;", userName, chefName);
+        String sql = String.format("SELECT CASE WHEN EXISTS (SELECT userName, chefName FROM favorite WHERE userName ='%s' AND chefName = '%s') THEN 0 ELSE 1 END;", userName, chefName);
         return stmt.executeQuery(sql);
     }
 
     public static void deleteFollow(Statement stmt, String userName, String chefName) throws SQLException {
-        String updateStatement= String.format("DELETE FROM favorite WHERE userName = %s AND chefName = %s ", userName, chefName);
+        String updateStatement= String.format("DELETE FROM favorite WHERE userName = '%s' AND chefName = '%s' ", userName, chefName);
         stmt.executeUpdate(updateStatement);
     }
 
     public static ResultSet getReview(Statement stmt, int id) throws SQLException {
-        String sql= String.format("SELECT rate FROM review WHERE recipeId1=%d", id);
+        String sql= String.format("SELECT rate FROM review WHERE recipeId1='%d'", id);
         return stmt.executeQuery(sql);
     }
 
     public static void updateImage(Statement stmt, String path, String name) throws SQLException {
-        String sql=String.format("UPDATE user_table SET path=%s WHERE username=%s", path, name);
+        String sql=String.format("UPDATE user_table SET path='%s' WHERE username='%s'", path, name);
         stmt.executeUpdate(sql);
 
     }
     public static void updateChefImage(Statement stmt, String path, String name) throws SQLException {
-        String sql= String.format("UPDATE chef_table SET path=%s WHERE username= %s", path, name);
+        String sql= String.format("UPDATE chef_table SET path='%s' WHERE username= '%s'", path, name);
         stmt.executeUpdate(sql);
 
     }
 
     public static void deleteIngredients(Statement stmt, int id) throws SQLException{
-        String sql=String.format("DELETE FROM ingredients WHERE recipeId = %d", id);
+        String sql=String.format("DELETE FROM ingredients WHERE recipeId = '%d'", id);
         stmt.executeUpdate(sql);
     }
 
     public static void deleteRecipe(Statement stmt, int id) throws SQLException {
-        String sql=String.format("DELETE FROM recipes WHERE recipeId = %d", id);
+        String sql=String.format("DELETE FROM recipes WHERE recipeId = '%d'", id);
         stmt.executeUpdate(sql);
 
     }
 
     public static void deleteReview(Statement stmt, int id) throws SQLException {
-        String sql=String.format("DELETE FROM review WHERE recipeId1 = %d", id);
+        String sql=String.format("DELETE FROM review WHERE recipeId1 = '%d'", id);
         stmt.executeUpdate(sql);
 
     }
