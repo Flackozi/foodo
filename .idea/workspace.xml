@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/file/Users.csv">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_07_2023_14_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_07_2023_14_23__Changes_.xml" afterDir="false" />
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione problema inerfaccia UserDao e ChefDao">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/controllerappl/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAOCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAOCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAOJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/ChefDAOJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAOCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAOCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAOJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/dao/UserDAOJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/pattern/observer/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/pattern/observer/Subject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,13 +272,7 @@
       <workItem from="1688736470833" duration="475000" />
       <workItem from="1688737292653" duration="1281000" />
       <workItem from="1688833452128" duration="805000" />
-    </task>
-    <task id="LOCAL-00067" summary="risoluzione alcuni code smell">
-      <created>1687615301152</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1687615301152</updated>
+      <workItem from="1688906590998" duration="1772000" />
     </task>
     <task id="LOCAL-00068" summary="risoluzione alcuni code smell">
       <created>1687617746887</created>
@@ -623,7 +610,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688834225700</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="risoluzione problema inerfaccia UserDao e ChefDao">
+      <created>1688894839861</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1688894839862</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,7 +635,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="caso d'uso: show recipe&#10;Foto, calcolo media, follow-unfollow" />
     <MESSAGE value="caso d'uso: view profile&#10;Fatto inserimento da db della foto" />
     <MESSAGE value="caso d'uso: persistenza sul file system e sistemazione switch di alcune interfacce" />
     <MESSAGE value="caso d'uso: rimosso RecipeItemBean" />
@@ -666,7 +659,8 @@
     <MESSAGE value="sistemazione style.css" />
     <MESSAGE value="risoluzione security" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/file/Users.csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/file/Users.csv" />
+    <MESSAGE value="risoluzione problema inerfaccia UserDao e ChefDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="risoluzione problema inerfaccia UserDao e ChefDao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

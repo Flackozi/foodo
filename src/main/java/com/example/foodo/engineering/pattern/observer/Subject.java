@@ -4,6 +4,10 @@ package com.example.foodo.engineering.pattern.observer;
 import java.util.List;
 import java.util.Vector;
 
+/*definisco la classe astratta anche se tutti i metodi che
+ fornisce sono concreti per impedire l'istanziazione di essa
+ */
+
 public abstract class Subject {
     private final List<Observer> observerList;
 
