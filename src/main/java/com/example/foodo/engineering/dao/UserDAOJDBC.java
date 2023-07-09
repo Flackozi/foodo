@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public class UserDAOJDBC extends UserDAO{
+public class UserDAOJDBC implements UserDAO{
 
 
     @Override

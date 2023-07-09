@@ -5,7 +5,7 @@ import com.example.foodo.model.UserModel;
 
 import java.io.*;
 
-public class UserDAOCSV extends UserDAO{
+public class UserDAOCSV implements UserDAO{
     private static final String FILE_NAME_CSV = "src/main/file/Users.csv";
     private static final int USERNAME = 0;
     private static final int TYPEOFDIET = 1;
@@ -36,6 +36,8 @@ public class UserDAOCSV extends UserDAO{
 
         return userModel;
     }
+
+
 
 
 }

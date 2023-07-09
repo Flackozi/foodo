@@ -43,10 +43,10 @@ public class ProfileController {
         userBean.setPath(path);
    }
 
-    public void setImage(UserBean userBean) {
-        UserDAO.updateImage(userBean.getPath(), userBean.getUsername());
-
-    }
+//    public void setImage(UserBean userBean) {
+//        UserDAO.updateImage(userBean.getPath(), userBean.getUsername());
+//
+//    }
 
 
     private void setChefInfo(ChefBean chefBean , String typeOfCuisine, String workplace, String email, String number, String location, String path) {

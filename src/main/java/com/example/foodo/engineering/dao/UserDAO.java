@@ -11,24 +11,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public abstract class UserDAO {
-
-    private static final String USER_FILE_CSV = "src/main/file/Users.csv";
+public interface  UserDAO {
 
     public abstract UserModel retrieveUserByUsername(String username) throws NotFoundException, IOException;
 
 
-
-    public static void updateImage(String path, String name) {
-        Statement statement;
-
-        try{
-            statement = ConnectionDB.getConnection();
-            //result set query
-            BasicQueries.updateImage(statement, path, name);
-
-        }catch (SQLException | ConnectionDbException e) {
-            e.printStackTrace();
-        }
-    }
 }

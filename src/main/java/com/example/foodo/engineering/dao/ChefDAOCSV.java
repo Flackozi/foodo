@@ -5,7 +5,7 @@ import com.example.foodo.model.ChefModel;
 
 import java.io.*;
 
-public class ChefDAOCSV extends ChefDAO{
+public class ChefDAOCSV implements ChefDAO{
 
     private static final String FILE_NAME_CSV ="src/main/file/Chef.csv";
     private static final int USERNAME=0;

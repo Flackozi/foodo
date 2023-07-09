@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class ChefDAOJDBC  extends ChefDAO{
+public class ChefDAOJDBC  implements ChefDAO{
 
     private static final String CUISINE="typeOfCuisine";
     private static final String WORKPLACE="workplace";

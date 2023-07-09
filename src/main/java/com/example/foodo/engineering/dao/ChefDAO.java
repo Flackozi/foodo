@@ -10,21 +10,9 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public abstract class ChefDAO {
-    private static final String CHEF_FILE_CSV ="src/main/file/Chef.csv";
+public interface ChefDAO {
 
     public abstract ChefModel retrieveChefByUsername(String username) throws IOException, NotFoundException;
 
-    public static void updateImage(String path, String username) {
-        Statement statement;
 
-        try{
-            statement = ConnectionDB.getConnection();
-            //result set query
-            BasicQueries.updateChefImage(statement, path, username);
-
-        }catch (SQLException | ConnectionDbException e) {
-            e.printStackTrace();
-        }
-    }
 }
