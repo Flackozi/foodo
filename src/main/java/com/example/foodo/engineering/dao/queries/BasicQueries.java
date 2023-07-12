@@ -55,7 +55,7 @@ public class BasicQueries {
     }
 
     public static ResultSet retrieveRecipeId(Statement stmt, String recipeName, String chefName, String description ) throws SQLException {
-        String sql = String.format("SELECT recipeId FROM recipes WHERE recipeName = '%s' AND description = '%s' AND chefName = '%s'", recipeName, chefName, description);
+        String sql = String.format("SELECT recipeId FROM recipes WHERE recipeName = '%s' AND description = '%s' AND chefName = '%s'", recipeName, description, chefName);
         return stmt.executeQuery(sql);
     }
 
