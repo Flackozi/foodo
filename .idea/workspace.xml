@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="sistemazione immagini">
-      <change beforePath="$PROJECT_DIR$/src/main/file/Users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/file/Users.csv" afterDir="false" />
-    </list>
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="sistemazione immagini" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -273,14 +271,7 @@
       <workItem from="1688833452128" duration="805000" />
       <workItem from="1688906590998" duration="1784000" />
       <workItem from="1688908406109" duration="26000" />
-      <workItem from="1689152301149" duration="485000" />
-    </task>
-    <task id="LOCAL-00071" summary="risoluzione alcuni code smell">
-      <created>1687682971479</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1687682971479</updated>
+      <workItem from="1689152301149" duration="1173000" />
     </task>
     <task id="LOCAL-00072" summary="risoluzione alcuni code smell">
       <created>1687683921277</created>
@@ -618,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689152490354</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="sistemazione immagini">
+      <created>1689152842739</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1689152842739</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
