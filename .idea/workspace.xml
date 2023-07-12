@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione problema inerfaccia UserDao e ChefDao">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/pattern/observer/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/foodo/engineering/pattern/observer/Subject.java" afterDir="false" />
-    </list>
+    <list default="true" id="d22a01e0-7639-4ce4-994c-0b814fac931a" name="Changes" comment="risoluzione problema inerfaccia UserDao e ChefDao" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -273,13 +270,7 @@
       <workItem from="1688737292653" duration="1281000" />
       <workItem from="1688833452128" duration="805000" />
       <workItem from="1688906590998" duration="1784000" />
-    </task>
-    <task id="LOCAL-00068" summary="risoluzione alcuni code smell">
-      <created>1687617746887</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1687617746887</updated>
+      <workItem from="1688908406109" duration="26000" />
     </task>
     <task id="LOCAL-00069" summary="risoluzione alcuni code smell">
       <created>1687618733260</created>
@@ -617,7 +608,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688894839862</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="risoluzione problema inerfaccia UserDao e ChefDao">
+      <created>1688908420249</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1688908420249</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
